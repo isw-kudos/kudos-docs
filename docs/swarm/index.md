@@ -1,7 +1,5 @@
 # Docker Swarm
 
-# Outstanding
-
 ## General
 
 - Logging is not so reliable, look into custom logging drivers. logstash?
@@ -19,9 +17,9 @@
 - mongodb auth + add creds
 - docker repo access config is basic auth
 
-# STEPS - OUTLINE:
+## STEPS - OUTLINE:
 
-## Gateway + storage
+### Gateway + storage
 
 1. Create a CentOS 7 host with external IP
 2. Map DNS to instance
@@ -29,7 +27,7 @@
 4. Install docker + docker-compose
 5. Deploy nginx load balancer via docker-compose
 
-## Create swarm
+### Create swarm
 
 1. Create CoreOS hosts
 2. Connect all nodes into a swarm
@@ -37,9 +35,9 @@
 4. Set up docker config to access private image repo
 5. Deploy app with required config and images
 
-# STEPS - MANUAL:
+## STEPS - MANUAL:
 
-## Setup NFS server in centos
+### Setup NFS server in centos
 
 ```
 sudo su
@@ -55,7 +53,7 @@ echo "/data/nfs 10.142.0.1/24(rw,sync,no_subtree_check,no_root_squash)" >> /etc/
 exportfs -a
 ```
 
-## Install Docker & Docker-compose on CentOS
+### Install Docker & Docker-compose on CentOS
 
 ```
 curl -fsSL https://get.docker.com -o get-docker.sh
@@ -65,7 +63,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-## RUN NGINX LOAD BALANCER
+### RUN NGINX LOAD BALANCER
 
 - From local machine transfer docker compose and other config :
   `gcloud compute scp . support@gateway-1:/opt/setup/ --recurse`
@@ -76,7 +74,7 @@ cd /opt/setup
  docker-compose up -d 
 ```
 
-## Create Node Swarm
+### Create Node Swarm
 
 ```
 docker swarm init
