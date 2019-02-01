@@ -1,22 +1,5 @@
 # Docker Swarm
 
-## General
-
-- Logging is not so reliable, look into custom logging drivers. logstash?
-- Delivery model? script?
-- Role to deploy Mongo
-- Role to deploy Boards and Ideas
-- Role to deploy with buzzy image
-- Resource allocation through compose
-- Resource monitoring? Does portainer do that?
-
-## SECURITY
-
-- Storage is on externally accessible machine?!
-  - but nfs server is only allowed on local ip mask
-- mongodb auth + add creds
-- docker repo access config is basic auth
-
 ## STEPS - OUTLINE:
 
 ### Gateway + storage
@@ -161,6 +144,25 @@ mongo "mongodb://mongo1:27017,mongo2:27017,mongo3:27017/myDB?replicaSet=rs0"
 sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /opt/bin/docker-compose
 sudo chmod +x /opt/bin/docker-compose
 ```
+## TODO
+
+### General
+
+- Logging is not so reliable, look into custom logging drivers. logstash?
+- Delivery model? script?
+- Role to deploy Mongo
+- Role to deploy Boards and Ideas
+- Role to deploy with buzzy image
+- Resource allocation through compose
+- Resource monitoring? Does portainer do that?
+
+### SECURITY
+
+- Storage is on externally accessible machine?!
+  - but nfs server is only allowed on local ip mask
+- mongodb auth + add creds
+- docker repo access config is basic auth
+
 
 ## Gotchas
 
