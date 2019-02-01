@@ -3,7 +3,7 @@
 ## Getting Started
 
 1. Clone this repo
-2. Install mkdocs & mkdocs-material as per [these simplified instructions](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)
+2. Install mkdocs & mkdocs-material as per [these instructions](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)
 3. Run this command in project dir
 ```
 mkdocs serve
