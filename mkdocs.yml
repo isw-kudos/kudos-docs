@@ -2,7 +2,19 @@ site_name: Kudos Docs
 site_description: Enterprise productivity solutions
 site_author: Jay Agrawal
 site_url: https://docs.kudosapps.com
+repo_url: https://www.kudosapps.com
+repo_name: kudosapps.com
 
+extra:
+  social:
+    - type: "github"
+      link: "https://github.com/isw-kudos"
+    - type: "twitter"
+      link: "https://twitter.com/kudosbadges"
+    - type: "linkedin"
+      link: "https://www.linkedin.com/company/isw_2/about/"
+    - type: "youtube"
+      link: "https://www.youtube.com/channel/UC_9nMUcp6jcweQZML2qIy8A"
 nav:
   - Welcome: index.md
   - Kudos Boards:
@@ -17,11 +29,13 @@ theme:
   palette:
     primary: orange
     accent: light blue
-  favicon: assets/images/favicon.png
+  favicon: assets/images/favicon.ico
   logo:
-    icon: "\uE80C"
+    icon: local_library
 
 extra_css:
-  - "css/custom.css"
+  - "assets/css/custom.css"
 
-google_analytics: ["UA-1747668-5", "docs.kudosapps.com"]
+google_analytics:
+  - "UA-1747668-5"
+  - "auto"
