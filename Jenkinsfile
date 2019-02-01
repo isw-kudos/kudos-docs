@@ -31,28 +31,28 @@ pipeline {
     stage('Deploy') {
       when {
         expression { return deploy }
-        steps {
-          script {
-            echo "Hello"
-          }
+      }
+      steps {
+        script {
+          echo "Hello"
         }
-        post {
-          failure {
-            script { env.FAILURE_STAGE = 'Deploy' }
-          }
+      }
+      post {
+        failure {
+          script { env.FAILURE_STAGE = 'Deploy' }
         }
       }
     }
-    post {
-      success {
-        script {
-          slack.success()
-        }
+  }
+  post {
+    success {
+      script {
+        slack.success()
       }
-      failure {
-        script {
-          slack.failure()
-        }
+    }
+    failure {
+      script {
+        slack.failure()
       }
     }
   }
