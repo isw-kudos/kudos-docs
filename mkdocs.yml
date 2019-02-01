@@ -1,0 +1,27 @@
+site_name: Kudos Docs
+site_description: Enterprise productivity solutions
+site_author: Jay Agrawal
+site_url: https://docs.kudosapps.com
+
+nav:
+  - Welcome: index.md
+  - Kudos Boards:
+      - Overview: boards/index.md
+      - Cloud: boards/cloud.md
+      - On-premise: boards/on-premise.md
+  - Kudos Ideas: ideas/index.md
+  - Docker Swarm: swarm/index.md
+
+theme:
+  name: material
+  palette:
+    primary: orange
+    accent: light blue
+  favicon: assets/images/favicon.png
+  logo:
+    icon: "\uE80C"
+
+extra_css:
+  - "css/custom.css"
+
+google_analytics: ["UA-1747668-5", "docs.kudosapps.com"]
