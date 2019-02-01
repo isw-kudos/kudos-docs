@@ -24,6 +24,10 @@ nav:
   - Kudos Ideas: ideas/index.md
   - Docker Swarm: swarm/index.md
 
+markdown_extensions:
+  - toc:
+      permalink: true
+
 theme:
   name: material
   palette:
