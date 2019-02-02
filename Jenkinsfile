@@ -3,11 +3,16 @@
 pipeline {
   
   agent {
-    docker { image 'squidfunk/mkdocs-material' }
+    docker {
+        image 'squidfunk/mkdocs-material'
+        args '--entrypoint="" -u=root -e GIT_ASKPASS'
+    }
   }
   
   environment {
     SLACK_CHANNEL_NAME = '#kudos-devops-alerts'
+    FAILURE_STAGE = 'Unknown'
+    GIT_CREDENTIALS_ID= 'kudos-devops-git'
   }
   
   stages {
@@ -15,10 +20,7 @@ pipeline {
     stage('Init') {
       steps {
         script {
-          if(GIT_BRANCH=='origin/master') {
-            slack.start()
-            deploy = true
-          }
+          deploy = GIT_BRANCH=='origin/master'
         }
       }
       post {
@@ -27,14 +29,18 @@ pipeline {
         }
       }
     }
-    
     stage('Deploy') {
       when {
         expression { return deploy }
       }
       steps {
-        script {
-          echo "Hello"
+        // script { slack.start() }
+        withCredentials([
+          usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
+        ]) {
+          sh '''
+          mkdocs gh-deploy --remote-name "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/isw-kudos/kudos-docs"
+          '''
         }
       }
       post {
@@ -44,16 +50,16 @@ pipeline {
       }
     }
   }
-  post {
-    success {
-      script {
-        slack.success()
-      }
-    }
-    failure {
-      script {
-        slack.failure()
-      }
-    }
-  }
+  // post {
+  //   success {
+  //     script {
+  //       slack.success()
+  //     }
+  //   }
+  //   failure {
+  //     script {
+  //       slack.failure()
+  //     }
+  //   }
+  // }
 }
