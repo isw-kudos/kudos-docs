@@ -39,10 +39,12 @@ pipeline {
           usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
         ]) {
           sh '''
+          git config remote.origin.url https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/isw-kudos/kudos-docs
           git config --global credential.helper "store --file=gitcred.txt"
           echo "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com" > gitcred.txt
           cat gitcred.txt
           mkdocs gh-deploy
+
           '''
         }
       }
