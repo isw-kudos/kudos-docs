@@ -5,7 +5,7 @@ pipeline {
   agent {
     docker {
         image 'squidfunk/mkdocs-material'
-        args '--entrypoint="" -u=root -e GIT_ASKPASS'
+        args '--entrypoint="" -u=root'
     }
   }
   
@@ -39,7 +39,9 @@ pipeline {
           usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
         ]) {
           sh '''
-          mkdocs gh-deploy --remote-name "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/isw-kudos/kudos-docs"
+          echo "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com" > .git-credentials
+          git config --global credential.helper "store --file=.git-credentials"
+          mkdocs gh-deploy
           '''
         }
       }
