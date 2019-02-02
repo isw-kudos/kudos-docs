@@ -39,8 +39,9 @@ pipeline {
           usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
         ]) {
           sh '''
-          echo "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com" > .git-credentials
-          git config --global credential.helper "store --file=.git-credentials"
+          git config --global credential.helper "store --file=gitcred.txt"
+          echo "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com" > gitcred.txt
+          cat gitcred.txt
           mkdocs gh-deploy
           '''
         }
