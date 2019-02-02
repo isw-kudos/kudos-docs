@@ -13,6 +13,7 @@ pipeline {
     SLACK_CHANNEL_NAME = '#kudos-devops-alerts'
     FAILURE_STAGE = 'Unknown'
     GIT_CREDENTIALS_ID= 'kudos-devops-git'
+    REPO_NAME = 'isw-kudos/kudos-docs'
   }
   
   stages {
@@ -34,12 +35,12 @@ pipeline {
         expression { return deploy }
       }
       steps {
-        // script { slack.start() }
+        script { slack.start() }
         withCredentials([
           usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
         ]) {
           sh '''
-          git config remote.origin.url https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/isw-kudos/kudos-docs
+          git config remote.origin.url https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${REPO_NAME}
           mkdocs gh-deploy
           '''
         }
@@ -51,16 +52,16 @@ pipeline {
       }
     }
   }
-  // post {
-  //   success {
-  //     script {
-  //       slack.success()
-  //     }
-  //   }
-  //   failure {
-  //     script {
-  //       slack.failure()
-  //     }
-  //   }
-  // }
+  post {
+    success {
+      script {
+        slack.success()
+      }
+    }
+    failure {
+      script {
+        slack.failure()
+      }
+    }
+  }
 }
