@@ -1,3 +1,4 @@
+<img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 # Kudos Boards Overview
 
 Here are some quick instructions to help you get started with Kudos Boards. 
@@ -16,23 +17,23 @@ Here are some quick instructions to help you get started with Kudos Boards. 
 ---
 
 ### Add Lists and Cards
-Add lists to a board to categorise todos and entries.  
-Click on *Add a List* to add a new list to your board.  
-     
-Click on *Add a Card* in any list to add a card to that list.  
-Add cards to your lists to represent Tasks, Work Items, Decisions, Ideas, Notes, Options, Sub-lists - Really anything you need them to represent.  
+Add lists to a board to categorise todos and entries.
+Click on *Add a List* to add a new list to your board.
+
+Click on *Add a Card* in any list to add a card to that list.
+Add cards to your lists to represent Tasks, Work Items, Decisions, Ideas, Notes, Options, Sub-lists - Really anything you need them to represent.
 The beauty of this design is that you can use lists and cards to mean anything you need to for the task at hand.
 
 ---
 
 ### Assign Tasks To Others
-Assign Tasks to people in the board by either dragging their photo from the members panel in the right side bar. Or use the *Assign Users* control from the card details view.  
+Assign Tasks to people in the board by either dragging their photo from the members panel in the right side bar. Or use the *Assign Users* control from the card details view.
 When you assign a card to a person, they are notified of the assignment via email and also via any news feeds that board has access to (Workspace chat, Connections activity stream, etc.).
 
 ---
 
 ### Plan Your Tasks
-Boards lets you assign due dates to card to help you better plan your tasks. Go to the Timeline View in a board to view the cards by their due dates. To set a due date on a card, or to change a due date simply drag the card to another list.  
+Boards lets you assign due dates to card to help you better plan your tasks. Go to the Timeline View in a board to view the cards by their due dates. To set a due date on a card, or to change a due date simply drag the card to another list.
 For example, dragging a card from the *No Date* list to the *Tomorrow* list sets the due date of that card to tomorrow.
 
 ---
