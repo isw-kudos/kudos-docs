@@ -19,8 +19,10 @@ nav:
   - Welcome: index.md
   - Kudos Boards:
       - Overview: boards/index.md
-      - Cloud: boards/cloud.md
-      - On-premise: boards/on-premise.md
+      - Installation:
+        - IBM ICP (Kubernetes) : boards/icp.md
+        - Docker Swarm: boards/swarm.md
+        - Websphere: boards/websphere.md
   - Kudos Ideas: ideas/index.md
   - Docker Swarm: swarm/index.md
 
