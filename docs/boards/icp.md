@@ -28,6 +28,11 @@ Basic instructions for deploying Kudos Boards into IBM Cloud Private for on-prem
 
 ---
 
+### Setup Kudos Boards namespace
+    kubectl create namespace kudosboards
+
+---
+
 ### Setup secrets
 1. Dockerhub credentials
 
