@@ -46,8 +46,7 @@ Enter The following:
 
   | Field | Value |
   | ----- | ----- |
-  | Title| `Kudos Boards Activity Stream`|
-  | Description| `Kudos Boards is awesome`|
+  | Title| Kudos Boards Activity Stream |
   | URL Address| `http://<BOARDS_URL>/stream/connections`|
   | Secure URL Address| `https://<BOARDS_URL>/stream/connections`|
   | ICON URL| `http://<BOARDS_URL>/favicon.ico`|
