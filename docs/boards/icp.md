@@ -22,7 +22,7 @@ Basic instructions for deploying Kudos Boards into IBM Cloud Private for on-prem
 3. add new DNS record for Kudos Boards URL ie `boards.isw.net.au`
 
 ### Integrate into IBM Connections
-Please follow [these instructions](/integration.md)
+Please follow [these instructions](/boards/integration/)
 
 ### Notes on IBM Spectrum CFC Naming
 - Application (aka Deployments)

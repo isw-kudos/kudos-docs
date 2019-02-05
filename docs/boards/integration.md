@@ -68,33 +68,32 @@ Basic instructions for integrating Kudos Boards Docker into IBM Connections on-p
     | ICON SECURE URL| `https://<BOARDS_URL>/favicon.ico`|
 
 	Select:
-* Use IBM Connections specific tags
-* Opened by default
+
+    - Use IBM Connections specific tags
+    - Opened by default
 
 	Select the following Prerequisites:
-* oauthprovider
-* webresources
-* oauth
-* opensocial
-	Scroll down and Click Save
 
-4. Register Widgets (IBM Connections 6.0 CR1 onwards)
+    - oauthprovider
+    - webresources
+    - oauth
+    - opensocial
 
-	```
-	execfile("newsAdmin.py")
+    Scroll down and Click Save
 
-	NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://<BOARDS_URL>/boards/community/connection" ,secureUrl="https://<BOARDS_URL>"/boards/community/connections, categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
-	NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
+4. Register Widgets
 
-	NewsWidgetCatalogService.clearWidgetCaches()
-	```
+     Required for IBM Connections 6.0 CR1 onwards
 
-5.	Register OAuth
+        execfile("newsAdmin.py")
 
-	```
-	execfile('oauthAdmin.py')
-	OAuthApplicationRegistrationService.addApplication('kudosboards', 'KudosBoards', '<URL>')
-	```
+        NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://<BOARDS_URL>/boards/community/connection" ,secureUrl="https://<BOARDS_URL>"/boards/community/connections, categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
 
-	<URL> should be your <BOARDS_URL>/auth/connections (TODO confirm)
-	That will return with both a clientsecret and clientid that you need to input in the provider settings in Step 11.
+        NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
+
+        NewsWidgetCatalogService.clearWidgetCaches()
+
+5. Register OAuth
+
+        execfile('oauthAdmin.py')
+        OAuthApplicationRegistrationService.addApplication('kudosboards', 'KudosBoards', '<BOARDS_URL>/auth/connections')
