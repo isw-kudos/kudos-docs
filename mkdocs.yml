@@ -23,6 +23,7 @@ nav:
         - IBM ICP (Kubernetes) : boards/icp.md
         - Docker Swarm: boards/swarm.md
         - Websphere: boards/websphere.md
+		- Connections Integration: boards/integration.md
   - Kudos Ideas: ideas/index.md
   - Docker Swarm: swarm/index.md
 
