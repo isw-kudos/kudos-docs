@@ -50,7 +50,6 @@ all:
       GF_SMTP_PASSWORD:
       DOMAIN: swarm.isw.net.au
       TRAEFIK_PUBLIC_TAG: traefik-public
-      # https://iswkudos.slack.com/services/173265776231?updated=1
       SLACK_URL: slack_hook_url
       SLACK_CHANNEL: slack_channel
       SLACK_USER: slack_user
