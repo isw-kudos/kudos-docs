@@ -1,0 +1,180 @@
+version: '3.4'
+
+x-minio-access: &minio-access <ACCESS_KEY>
+x-minio-secret: &minio-secret <SECRET_KEY>
+
+x-app-env:
+  &app-env
+  APP_URI: <MAIN_URL>
+  COTE_DISCOVERY_REDIS_HOST: redis.internal
+  REDIS_CACHE_HOST: redis.internal
+
+x-s3-env:
+  &s3-env
+  S3_ENDPOINT: minio
+  S3_ACCESS_KEY: *minio-access
+  S3_SECRET_KEY: *minio-secret
+  S3_BUCKET: kudosboards
+  # S3_PORT: "443"
+  # S3_SECURE: "true"
+
+x-db-host: &db-host mongo:27017
+x-db-env:
+  &db-env
+  # MONGO_USER: admin
+  # MONGO_PASSWORD: password
+  MONGO_HOST: *db-host
+  MONGO_PARAMS: replicaSet=replicaset
+
+networks:
+  # proxy external requests to traefik
+  proxy:
+    external: true
+  # used for internal communication between services/db/s3
+  # security requires this should never be exposed to external traffic
+  internal:
+    external: false
+  storage:
+    external: true
+
+services:
+  # Shared DB for internal caching, communication etc
+  redis:
+    image: redis
+    restart: always
+    networks:
+      internal:
+        aliases:
+          - redis.internal
+    environment:
+      MASTER: "true"
+
+  # UI
+  webfront:
+    image: iswkudos/kudos-microservices:boards-webfront-production
+    restart: always
+    networks:
+      - proxy
+    deploy:
+      # traefik labels must be here for the proxy to detect and route here
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=80"
+        - "traefik.docker.network=proxy"
+        - "traefik.backend=boards-webfront"
+        - "traefik.backend.loadbalancer.swarm=true"
+        - "traefik.frontend.entryPoints=http,https"
+        - "traefik.frontend.passHostHeader=true"
+        - "traefik.frontend.rule=Host:<MAIN_URL>"
+    environment:
+      API_GATEWAY: <API_URL>
+
+  # Core App routing logic
+  core:
+    image: iswkudos/kudos-microservices:boards-core-production
+    restart: always
+    depends_on:
+      - redis
+      - minio
+    networks:
+      - proxy
+      - internal
+      - storage
+    # healthcheck:
+    #   test: "/usr/bin/curl --silent --fail -o /dev/null -w %{http_code} http://localhost:9200 || exit 1"
+    #   interval: 30s
+    #   timeout: 10s
+    #   retries: 3
+    deploy:
+      # traefik labels must be here for the proxy to detect and route here
+      labels:
+        - "traefik.enable=true"
+        - "traefik.port=3001"
+        - "traefik.docker.network=proxy"
+        - "traefik.backend=boards-core"
+        - "traefik.backend.loadbalancer.swarm=true"
+        - "traefik.frontend.entryPoints=http,https"
+        - "traefik.frontend.passHostHeader=true"
+        - "traefik.frontend.rule=Host:<API_URL>"
+    environment:
+      << : *app-env
+      << : *s3-env
+
+  # Boards business logic
+  app:
+    image: iswkudos/kudos-microservices:boards-production
+    restart: always
+    networks:
+      - internal
+      - storage
+    depends_on:
+      - redis
+    environment:
+      << : *app-env
+      << : *db-env
+      MONGO_DB: app
+
+  user:
+    image: iswkudos/kudos-microservices:user-production
+    restart: always
+    networks:
+      - internal
+      - storage
+    depends_on:
+      - redis
+    environment:
+      << : *app-env
+      << : *s3-env
+      << : *db-env
+      MONGO_DB: user
+      LEGACY_CALLBACK_URI: "true"
+      ENSURE_TEAMS: >
+        [{
+          "name" : "<COMPANY NAME>",
+          "teamName" : "connections-on-prem",
+          "provider" : "connections",
+          "externalId" : "<EXTERNAL_ID>",
+          "oAuth" : {
+            "clientSecret" : "<OAUTH_SECRET>",
+            "clientID" : "<OAUTH_CLIENT_ID>",
+            "baseURL" : "<CONNECTIONS_URL>"
+          }
+        }]
+  provider:
+    image: iswkudos/kudos-microservices:provider-production
+    restart: always
+    networks:
+      - internal
+      - storage
+    depends_on:
+      - redis
+      - minio
+    environment:
+      << : *app-env
+      << : *s3-env
+
+  notification:
+    image: iswkudos/kudos-microservices:notification-production
+    restart: always
+    networks:
+      - internal
+      - storage
+    depends_on:
+      - redis
+    environment:
+      << : *app-env
+      << : *db-env
+      MONGO_DB: notification
+
+  licence:
+    image: iswkudos/kudos-microservices:licence-production
+    restart: always
+    networks:
+      - internal
+      - storage
+    depends_on:
+      - redis
+    environment:
+      << : *app-env
+      << : *db-env
+      MONGO_DB: licence

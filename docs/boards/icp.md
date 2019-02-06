@@ -84,7 +84,3 @@ Please follow [these instructions](/boards/wasconfig/)
 Please follow [these instructions](/boards/widgets/)
 
 ---
-
-### Notes on IBM Spectrum CFC Naming
-- Application (aka Deployments)
-- PetSet (aka Replica sets)
