@@ -13,7 +13,6 @@ pipeline {
     SLACK_CHANNEL_NAME = '#kudos-devops-alerts'
     FAILURE_STAGE = 'Unknown'
     GIT_CREDENTIALS_ID= 'kudos-devops-git'
-    REPO_NAME = 'isw-kudos/kudos-docs'
   }
   
   stages {
@@ -40,7 +39,8 @@ pipeline {
           usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
         ]) {
           sh '''
-          git config remote.origin.url https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${REPO_NAME}
+          echo "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com" > gitcred
+          git config credential.helper "store --file=gitcred"
           mkdocs gh-deploy
           '''
         }
