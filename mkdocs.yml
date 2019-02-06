@@ -26,7 +26,7 @@ nav:
         - WAS Config: boards/wasconfig.md
         - Connections Widgets: boards/widgets.md
   - Kudos Ideas: ideas/index.md
-  - Docker Swarm: swarm/index.md
+  - Docker Swarm: swarm/setup.md
 
 markdown_extensions:
   - toc:

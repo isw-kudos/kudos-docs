@@ -5,7 +5,6 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 
 ### Pre-Requisites
 1. Docker swarm with portainer is up and running [guide](/swarm/)
-1. WebSphere environment with Web Server
 1. SMTP gateway setup for email notifications
 1. [Config File](/assets/config/boards-swarm.yml) downloaded
 1. Dockerhub account setup with access to Kudos Boards repository, send your account details to support@kudosboards.com if you don't already have this.
@@ -38,8 +37,13 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 
 ---
 
-### Add Websphere Config
-Please follow [these instructions](/boards/wasconfig/)
+### Update DNS
+Update DNS records with a cname entry pointing to your swarm url.
+
+For example:
+
+    kudosboards.com -> swarm.isw.net.au
+    api.kudosboards.com -> swarm.isw.net.au
 
 ---
 
