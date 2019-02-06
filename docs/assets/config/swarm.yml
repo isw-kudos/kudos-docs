@@ -51,9 +51,9 @@ all:
       DOMAIN: swarm.isw.net.au
       TRAEFIK_PUBLIC_TAG: traefik-public
       # https://iswkudos.slack.com/services/173265776231?updated=1
-      SLACK_URL: https://hooks.slack.com/services/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
-      SLACK_CHANNEL: kudos-devops-alerts
-      SLACK_USER: Swarm Alerts
+      SLACK_URL: slack_hook_url
+      SLACK_CHANNEL: slack_channel
+      SLACK_USER: slack_user
       MONGO: false
       MONGODB_URL: mongodb://mongo:27017
     deploy_stacks:

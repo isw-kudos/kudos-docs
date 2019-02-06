@@ -1,6 +1,6 @@
 ## Overview / Introduction
 
-While there are many ways to setup a docker swarm environment, this document will step through setting up a reasonable environment that includes:
+While there are many ways to setup a docker swarm environment, this document will step through setting up a functional environment that includes:
 
 - Shared storage with nfs
 - http(s) proxy _traefik_
