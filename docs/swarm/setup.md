@@ -35,7 +35,7 @@ The Gateway Server will be used for storing all persistent data in nfs shares, i
 | **Memory**         | 2GB          | 4GB                     | 8GB                    |
 | **CPU**            | 2            | 2                       | 4                      |
 | **Disk (Nodes)**   | 20GB         | 40GB                    | 100GB min              |
-| **Disk (Gateway)** | 20GB         | 40GB                    | 100GB min              |
+| **Disk (Gateway)** | 40GB         | 200GB                   | 1000GB min             |
 
 ---
 
