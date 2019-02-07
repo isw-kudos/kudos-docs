@@ -23,9 +23,19 @@ This document will assume the following setup:
 
 If you have more managers or workers just extend the config where indicated below.
 
-If you are testing this setup, you can get away with quite small servers (we have had success with 2 cores and 1.7gb ram) however if you plan to include the logging and/or monitoring services then you should expect to dedicate an additional 2gb ram minimum for each of these sevices.
+If you are testing this setup, you can get away with quite small servers (we have had success with 2 cores and 1.7gb ram) however if you plan to include the logging and/or monitoring services then you should expect to dedicate an additional 1gb ram minimum for each of these sevices.
 
-The Gateway Server will be used for storing all persistent data in nfs shares, if you are setting this environment up for a production system athen you should ensure that you have a suitably performant disk for the path `/data` on this server, you should also ensure that this folder is backed up appropriately.
+The Gateway Server will be used for storing all persistent data in nfs shares, if you are setting this environment up for a production system then you should ensure that you have a suitably performant disk for the path `/data` on this server, you should also ensure that this folder is backed up appropriately.
+
+|                    | Small (test) | Medium (&lt;1000 users) | Large (&gt;1000 users) |
+| ------------------ | ------------ | ----------------------- | ---------------------- |
+| **Gateway**        | 1            | 1                       | 1                      |
+| **Managers**       | 3            | 3                       | 3                      |
+| **Workers**        | 0            | 0                       | 1 per extra 5000 users |
+| **Memory**         | 2GB          | 4GB                     | 8GB                    |
+| **CPU**            | 2            | 2                       | 4                      |
+| **Disk (Nodes)**   | 20GB         | 40GB                    | 100GB min              |
+| **Disk (Gateway)** | 20GB         | 40GB                    | 100GB min              |
 
 ---
 
@@ -46,7 +56,7 @@ Throughout this guide we will use ansible to setup the servers and deploy servic
 
 If you have access to a Mac or Linux machine, [follow these instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) to get up and running.
 
-Whilst that document states windows is not supported, We have success running ansible under windows by enabling WSL (Windows subsystem for Linux), installing Ubuntu from the windows store and proceeding with the Ubuntu instructions linked.
+Whilst that document states windows is not supported, We have had success running ansible under windows by enabling WSL (Windows subsystem for Linux), installing Ubuntu from the windows store and proceeding with the Ubuntu instructions linked.
 
 Refer to [this document from Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for more information on WSL and the windows store options.
 
