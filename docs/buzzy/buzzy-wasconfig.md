@@ -1,16 +1,16 @@
 
-### WebSphere config for Kudos Boards
+### WebSphere config for Buzzy
 
 1. Open WebSphere ISC -> open web server -> edit `http.conf` -> add another VirtualHost
 
         <VirtualHost *:443>
-          ServerName boards.isw.net.au
+          ServerName buzzy.isw.net.au
 
-          #Kudos Boards
+          #Buzzy On-prem
           ProxyPreserveHost On
-          ProxyPass / http://<server-ip>/
-          ProxyPassReverse / http://<server-ip>/
-          #End Kudos Boards
+          ProxyPass / http://<server-ip>:30289/
+          ProxyPassReverse / http://<server-ip>:30289/
+          #End Buzzy On-prem
 
           SSLEnable
             # Disable SSLv2
@@ -24,4 +24,5 @@
 1. Register OAuth
 
         execfile('oauthAdmin.py')
-        OAuthApplicationRegistrationService.addApplication('kudosboards', 'KudosBoards', '<BOARDS_URL>/auth/connections')
+        OAuthApplicationRegistrationService.addApplication('buzzyop', 'buzzyop', '<BUZZY_URL>/pre-oauth-connections/buzzyop')
+  This will return with both a clientsecret and clientid that you need to input in the provider settings. 

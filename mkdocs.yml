@@ -26,6 +26,12 @@ nav:
         - WAS Config: boards/wasconfig.md
         - Connections Widgets: boards/widgets.md
   - Kudos Ideas: ideas/index.md
+  - Buzzy:
+      - Overview: buzzy/index.md
+      - Installation:
+          - IBM ICP (Kubernetes): buzzy/buzzy-icp.md
+          - WAS Config: buzzy/buzzy-wasconfig.md
+          - Connections Widgets: buzzy/buzzy-widgets.md
   - Docker Swarm: swarm/setup.md
 
 markdown_extensions:

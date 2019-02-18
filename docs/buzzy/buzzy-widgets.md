@@ -12,13 +12,13 @@ Check out the widgets-config.xml file.
 
 Edit the widgets-config.xml file. Under the <resource type="community"> section, then under <widgets>, then within <definitions> add the following.
 
-    <!-- Kudos Boards -->
-    <widgetDef defId="KudosBoards" modes="view fullpage" url="https://<BOARDS_URL>/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+    <!-- BUZZY -->
+    <widgetDef defId="Buzzy" modes="view fullpage" url="https://<BUZZY_URL>/assets/connections/communityWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
       <itemSet>
         <item name="resourceId" value="{resourceId}"/>
       </itemSet>
     </widgetDef>
-    <!-- END Kudos Boards -->
+    <!-- END BUZZY -->
 
 Check in the widgets-config.xml file.
 
@@ -46,11 +46,11 @@ Enter The following:
 
   | Field | Value |
   | ----- | ----- |
-  | Title| Kudos Boards Activity Stream |
-  | URL Address| `http://<BOARDS_URL>/stream/connections`|
-  | Secure URL Address| `https://<BOARDS_URL>/stream/connections`|
-  | ICON URL| `http://<BOARDS_URL>/favicon.ico`|
-  | ICON SECURE URL| `https://<BOARDS_URL>/favicon.ico`|
+  | Title| Buzzy Activity Stream |
+  | URL Address| `http://<BUZZY_URL>/assets/connections/gadget.xml`|
+  | Secure URL Address| `https://<BUZZY_URL>/assets/connections/gadget.xml`|
+  | ICON URL| `http://<BUZZY_URL>/assets/ico/favicon-32x32.png`|
+  | ICON SECURE URL| `https://<BUZZY_URL>/assets/ico/favicon-32x32.png`|
 
 Select:
 
@@ -74,7 +74,7 @@ Required for IBM Connections 6.0 CR1 onwards
 
     execfile("newsAdmin.py")
 
-    NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://<BOARDS_URL>/boards/community/connection" ,secureUrl="https://<BOARDS_URL>/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
+    NewsWidgetCatalogService.addWidget(title="Buzzy", url="http://<BUZZY_URL>/assets/connections/communityWidget.xml" ,secureUrl="https://<BUZZY_URL>/assets/connections/communityWidget.xml", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
 
     NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
 
