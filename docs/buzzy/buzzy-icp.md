@@ -7,6 +7,7 @@ Basic instructions for deploying buzzy into IBM Spectrum for on-premise IBM Conn
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. mongodb setup and running
 1. SMTP gateway setup for email notifications
+1. [Config file](/assets/config/buzzy.yml) downloaded
 1. Dockerhub account setup with access to Buzzy repository
 
 
