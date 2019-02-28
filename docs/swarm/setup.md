@@ -60,7 +60,7 @@ Whilst that document states windows is not supported, We have had success runnin
 
 Refer to [this document from Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for more information on WSL and the windows store options.
 
-TODO: they need access to our ansible setup!!!
+Download and extract [This zip file](/assets/docker-swarm-blank.zip)
 
 ---
 
