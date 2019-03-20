@@ -32,7 +32,9 @@ nav:
         - WAS Config: boards/wasconfig.md
         - Connections Widgets: boards/widgets.md
         - FAQ: boards/websphere-faq.md
-  - Kudos Ideas: ideas/index.md
+  - Kudos Ideas:
+      - Overview: ideas/index.md
+      - Connections Cloud: ideas/cloud-setup.md
   - Buzzy:
       - Overview: buzzy/index.md
       - Installation:
