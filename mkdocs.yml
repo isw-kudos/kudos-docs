@@ -26,7 +26,7 @@ nav:
   - Kudos Boards:
       - Overview: boards/index.md
       - Installation:
-        - IBM ICP (Kubernetes): boards/icp.md
+        - Kubernetes (IBM ICP): boards/kubernetes.md
         - Docker Swarm: boards/swarm.md
         - Websphere: boards/websphere.md
         - WAS Config: boards/wasconfig.md
@@ -42,6 +42,7 @@ nav:
           - WAS Config: buzzy/buzzy-wasconfig.md
           - Connections Widgets: buzzy/buzzy-widgets.md
   - Docker Swarm: swarm/setup.md
+  - Kubernetes: kubernetes/index.md
 
 markdown_extensions:
   - toc:

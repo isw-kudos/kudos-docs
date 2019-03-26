@@ -1,6 +1,6 @@
 ## Overview / Introduction
 
-While there are many ways to setup a docker swarm environment, this document will step through setting up a functional environment that includes:
+This document will step through setting up a functional docker swarm environment that includes:
 
 - Shared storage with nfs
 - http(s) proxy _traefik_
@@ -52,13 +52,7 @@ When configuring the servers, you will need to enable the following network rule
 
 ## Setup Ansible
 
-Throughout this guide we will use ansible to setup the servers and deploy services (stacks) to the swarm.
-
-If you have access to a Mac or Linux machine, [follow these instructions](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) to get up and running.
-
-Whilst that document states windows is not supported, We have had success running ansible under windows by enabling WSL (Windows subsystem for Linux), installing Ubuntu from the windows store and proceeding with the Ubuntu instructions linked.
-
-Refer to [this document from Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10) for more information on WSL and the windows store options.
+See [Ansible setup guide](/tools/ansible/).
 
 Download and extract [This zip file](/assets/docker-swarm-blank.zip)
 
