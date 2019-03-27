@@ -11,10 +11,32 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
-1. [Kudos Boards helm chart](/assets/kudos-boards.tgz) downloaded
 1. Ansible is installed, see [Ansible](/tools/ansible/)
+1. [Kudos Boards helm chart]() downloaded (TBC)
+1. [Kudos Boards ansible roles]() downloaded and extracted (TBC)
 1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository, send your account details to support@kudosboards.com if you don't already have this.
-1. SSL certificate - You will need to use a certificate that covers at least the 2 domains you plan to use, for example Kudos Boards cloud uses the domains `https://kudosboards.com` and `https://api.kudosboards.com`. The certificate should be pem encoded with a separate key file. We'll refer to these below as BOARDS_URL and API_URL respectively.
+
+---
+
+### SSL / network setup
+
+Kubernetes for on premise environments requires a reverse proxy in place to properly route traffic, there are a number of different ways this reverse proxy can be configured and Kudos Boards aim to match whatever you already have in place. Some examples of network routing:
+
+**Separate domain(s) for Kudos Boards**
+
+> e.g. https://boards.example.com
+
+- This option requires your reverse proxy to be able to match any current domains as well as the new one for Kudos Boards (either by using SNI or a compatible certificate for all domains)
+- You will require certificate coverage for 2 domains, e.g. `https://example.com` (referred to as BOARDS_URL below) and `https://api.example.com` (referred to as API_URL below).
+- You may resolve the certificate in your proxy and forward the traffic unencrypted to kubernetes -OR- forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).
+
+**Kudos Boards as a path on your existing domain**
+
+> e.g. https://example.com/boards
+
+- All certificate resolution needs to happen on the proxy server
+- additional config required to make Boards webfront handle redirects, details below
+- You will need to proxy 2 paths `https://example.com/boards` (referred to as BOARDS_URL below) and `https://example.com/api-boards` (referred to as API_URL below).
 
 ---
 
@@ -22,23 +44,26 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 Kudos Boards currently supports the following oauth providers for authentication and integration: IBM Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
-You will need to setup an OAuth application with one of these providers for Kudos Boards to function. please refer to the following documentation:
+You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
-IBM Connections (on premise): [IBM Knowledge Centre](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html)
-
-IBM Connections Cloud: [IBM Knowledge Centre](https://www.ibm.com/support/knowledgecenter/en/SSL3JX/admin/bss/topics/manage_custom_apps.html)
-
-Microsoft Office 365: [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
+| Provider                     | Registration / Documentation                                                                                                          | Callback URL                  | Scopes |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------ |
+| IBM Connections (on premise) | [IBM Knowledge Centre](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html) | [BOARDS_URL]/auth/connections |
+| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)                         | [BOARDS_URL]/auth/msgraph     |
+| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                                              | [BOARDS_URL]/auth/google      |
+| LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                                                  | [BOARDS_URL]/auth/linkedin    |
+| Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)                                 | [BOARDS_URL]/auth/facebook    |
+| Github                       | Open your github organisation, go to settings, OAuth Apps                                                                             | [BOARDS_URL]/auth/github      |
 
 ---
 
 ### Configure kubectl
 
-__Kubernetes__
+**Kubernetes**
 
 - copy \$HOME/kube/.config from the primary server to the same location locally (backup any existing local config)
 
-__IBM Cloud Private__
+**IBM Cloud Private**
 
 - Open ICP Console
 - Go to `Admin` (top right)
@@ -73,15 +98,17 @@ Deploy S3 (using minio) only
 
 ---
 
-### Setup secret
+### Setup secrets
 
 1.  Dockerhub credentials
 
         kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=boards
 
-<!-- 1.  SSL certificate details -->
+1.  SSL certificate details
 
-<!-- kubectl create secret tls kudosboards-domain-secret --key </path/to/keyfile> --cert </path/to/certificate> --namespace=boards -->
+    > Only perform this step if you need to resolve certificates in kubernetes
+
+        kubectl create secret tls kudosboards-domain-secret --key </path/to/keyfile> --cert </path/to/certificate> --namespace=boards
 
 ---
 
