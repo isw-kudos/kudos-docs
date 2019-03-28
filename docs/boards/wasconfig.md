@@ -25,3 +25,6 @@
 
         execfile('oauthAdmin.py')
         OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', '<BOARDS_URL>/auth/connections/callback')
+        OAuthApplicationRegistrationService.getApplicationById('kudosboards')
+
+> These commands will define a new OAuth application with `CONNECTIONS_CLIENT_ID=kudosboards`. It will also print the definition. Please take note of the `clientSecret`.  We will refer to this later as `CONNECTIONS_CLIENT_SECRET`.
