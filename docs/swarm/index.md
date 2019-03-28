@@ -1,170 +1,175 @@
 # Docker Swarm
 
-## STEPS - OUTLINE:
+## Overview / Introduction
 
-### Gateway + storage
+This document will step through setting up a functional docker swarm environment that includes:
 
-1. Create a CentOS 7 host with external IP
-2. Map DNS to instance
-3. Set up NFS Server
-4. Install docker + docker-compose
-5. Deploy nginx load balancer via docker-compose
+- Shared storage with nfs
+- http(s) proxy _traefik_
+- Database _mongo_
+- File storage _minio_
+- Management interface _portainer_
+- Logging _elk stack_ - (optional)
+- Monitoring _prometheus/grafana_ - (optional)
 
-### Create swarm
+---
 
-1. Create CoreOS hosts
-2. Connect all nodes into a swarm
-3. Set up proxy and portainer
-4. Set up docker config to access private image repo
-5. Deploy app with required config and images
+## Server information
 
-## STEPS - MANUAL:
+As the name swarm suggests, this setup is designed to run across a number of servers (referred to as nodes). ISW recommends that the minimum number of servers you should start with is 4, being one for the NFS server and http gateway and 3 swarm managers. You may start with small VMs to set this up and expand them as your need increases (either by extending cores and ram on the existing servers or by adding more manager/worker nodes to your swarm).
 
-### Setup NFS server in centos
+This document will assume the following setup:
 
-```
-sudo su
-firewall-cmd --permanent --zone=public --add-service=nfs
-firewall-cmd --reload
-yum -y install nfs-utils
-systemctl enable nfs-server.service
-systemctl start nfs-server.service
-mkdir -p /data/nfs
-chown -R nfsnobody:nfsnobody /data
-chmod -R 755 /data
-echo "/data/nfs 10.142.0.1/24(rw,sync,no_subtree_check,no_root_squash)" >> /etc/exports
-exportfs -a
-```
+- Gateway server (CentOS)
+- 3 Swarm managers (CoreOS)
 
-### Install Docker & Docker-compose on CentOS
+If you have more managers or workers just extend the config where indicated below.
 
-```
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh get-docker.sh
-sudo usermod -aG docker support
-sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
+If you are testing this setup, you can get away with quite small servers (we have had success with 2 cores and 1.7gb ram) however if you plan to include the logging and/or monitoring services then you should expect to dedicate an additional 1gb ram minimum for each of these sevices.
 
-### RUN NGINX LOAD BALANCER
+The Gateway Server will be used for storing all persistent data in nfs shares, if you are setting this environment up for a production system then you should ensure that you have a suitably performant disk for the path `/data` on this server, you should also ensure that this folder is backed up appropriately.
 
-- From local machine transfer docker compose and other config :
-  `gcloud compute scp . support@gateway-1:/opt/setup/ --recurse`
-- On gateway node:
+|                    | Small (test) | Medium (&lt;1000 users) | Large (&gt;1000 users) |
+| ------------------ | ------------ | ----------------------- | ---------------------- |
+| **Gateway**        | 1            | 1                       | 1                      |
+| **Managers**       | 3            | 3                       | 3                      |
+| **Workers**        | 0            | 0                       | 1 per extra 5000 users |
+| **Memory**         | 2GB          | 4GB                     | 8GB                    |
+| **CPU**            | 2            | 2                       | 4                      |
+| **Disk (Nodes)**   | 20GB         | 40GB                    | 100GB min              |
+| **Disk (Gateway)** | 40GB         | 200GB                   | 1000GB min             |
 
-```
-cd /opt/setup
- docker-compose up -d 
-```
+---
 
-### Create Node Swarm
+## Network setup
 
-```
-docker swarm init
-docker swarm join-token manager
-<run printed join command>
-```
+The setup below will establish some internal networking rules to help protect your environment.  
+When configuring the servers, you will need to enable the following network rules:
 
-### Mount NFS ON all swarm nodes
+- http(s) traffic should be allowed to the Gateway only
+- ssh traffic should be allowed to all servers
+- Where possible all servers should be on an additional (internal only) subnet, this allows us to further lock down access to NFS shares
 
-```
-sudo mkdir -p /data/nfs && sudo mount 10.142.0.5:/data/nfs /data/nfs
-```
+---
 
-### Deploy proxy & portainer
+## Setup Ansible
 
-- On a swarm manager node-1:
+See [Ansible setup guide](/tools/ansible/).
 
-```
-sudo mkdir /opt/setup -p
-sudo chmod -R +777 /opt
-```
+Download and extract [This zip file](/assets/docker-swarm-blank.zip)
 
-- From local machine transfer remote files:
+---
 
-```
-gcloud compute scp . support@node-1:/opt/setup/ --recurse
-```
+## Server access
 
-- On a swarm manager node-1:
+Ansible uses ssh to communicate with the servers so you'll need to be able to access them from your shell directly.
 
-```
-cd /opt/setup
-# configure repo credentials
-mkdir -p ~/.docker && cp config.json ~/.docker/config.json
+The ideal way to achieve this is to setup key based authentication, however there are workarounds that can be done if you have to use password based authentication.
 
-# create network for proxy
-docker network create --driver=overlay --internal=false proxy
+For more info on setting up an ssh private key, see [this tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
 
-# create required dirs and move ssl
-sudo mkdir /data/nfs/sslcerts
-sudo mkdir /data/nfs/portainer
-sudo mv /opt/setup/ssl/* /data/nfs/sslcerts
+As mentioned in the linked article, we will need to add each of our servers to our local list of known hosts, this is done by manually connecting to each of them for our shell.
 
-# deploy proxy & portainer
-docker stack deploy -c proxy.yml proxy
-docker stack deploy -c portainer.yml portainer
-```
+    ssh -i path/to/keyfile <username>@<server_ip>
+    e.g. ssh -i /home/nicky/.ssh/id_rsa nicky@10.10.10.1
 
-### Optional commands/steps
+---
 
-- deploy app with registry auth
-  `docker stack deploy -c app.yml app --with-registry-auth`
+## Config
 
-- commands to exec based on service_name
+Download [this hosts file](/assets/config/swarm.yml) and update the values as follows:
 
-```
-docker exec -ti service_name.1.$(docker service ps -f 'name=service_name.1' service_name -q --no-trunc | head -n1) sh
-```
+| Key                                   | Description                                                                                                                                                                                                                      |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| all.hosts.gateway.ansible_host        | IP For Gateway server accessible from your machine                                                                                                                                                                               |
+| all.hosts.nfs_server.ansible_host     | IP For Gateway server accessible from your machine                                                                                                                                                                               |
+| all.hosts.nfs_server.internal_ip      | internal IP For Gateway server, if you do not have an internal subnet, use the same IP as above                                                                                                                                  |
+| all.hosts.manager(1,2,3).ansible_host | IP For Manager node accessible from your machine                                                                                                                                                                                 |
+| all.hosts.manager(1,2,3).internal_ip  | internal IP For Manager node, if you do not have an internal subnet, use the same IP as above                                                                                                                                    |
+| all.vars.ansible_user                 | Your username on all servers                                                                                                                                                                                                     |
+| all.vars.ansible_ssh_private_key_file | Full path to your keyfile (leave blank if using password auth)                                                                                                                                                                   |
+| all.vars.swarm_ip_mask                | ip mask that matches your internal subnet e.g. 10.10.10.10/24, or that matches all swarm nodes if you do not have an internal subnet                                                                                             |
+| all.vars.ssl_certs                    | For ssl to work on your environment, you need to have a pem encoded certificate and keyfile for each domain you plan to serve on. You should name these files name.crt and name.key and then add all of the names in this field  |
+| all.vars.dashboard_host               | The domain name for your portainer dashboard                                                                                                                                                                                     |
+| all.vars.proxy_dashboard_host         | The domain name for your traefik proxy dashboard                                                                                                                                                                                 |
+| all.vars.monitoring                   | This section will be covered in Advanced below, you should get the swarm up and running first before adding monitoring                                                                                                           |
+| all.children                          | This section of the config file is for defining where your nodes will sit, please follow the instructions provided in the file itself, adding all nodes to the coreos group, and managers and workers to their respective groups |
 
-- Mongo replica set
+---
 
-```
-docker exec -ti m_mongo1.1.$(docker service ps -f 'name=m_mongo1.1' m_mongo1 -q --no-trunc | head -n1) bash
-mongo
-> rs.initiate( {
-   _id : "rs0",
-   members: [
-      { _id: 0, host: "mongo1:27017" },
-      { _id: 1, host: "mongo2:27017" },
-      { _id: 2, host: "mongo3:27017" }
-   ]
-})
-#test connection
-mongo --host rs0/mongo1:27017,mongo2:27017,mongo3:27017
-mongo "mongodb://mongo1:27017,mongo2:27017,mongo3:27017/myDB?replicaSet=rs0"
-```
+## Deploy
 
-- Sticky sessions - add following label to container
-  `traefik.backend.loadbalancer.stickiness=true`
+1.  Save your config file in the hosts directory
+1.  run the deploy playbook:
 
-- Docker-compose in CoreOS for debugging stack ymls
+        ansible-playbook -i hosts/swarm.yml deploy.yml -v
 
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /opt/bin/docker-compose
-sudo chmod +x /opt/bin/docker-compose
-```
-## TODO
+---
 
-### General
+## Update DNS records
 
-- Logging is not so reliable, look into custom logging drivers. logstash?
-- Delivery model? script?
-- Role to deploy Mongo
-- Role to deploy Boards and Ideas
-- Role to deploy with buzzy image
-- Resource allocation through compose
-- Resource monitoring? Does portainer do that?
+Ensure that DNS records for your portainer dashbaord and traefik dashboard as defined in your config file are pointing to your Gateway server
 
-### SECURITY
+---
 
-- Storage is on externally accessible machine?!
-  - but nfs server is only allowed on local ip mask
-- mongodb auth + add creds
-- docker repo access config is basic auth
+## Portainer Setup
 
+1.  Open Dashboard as defined in `{{dashboard_host}}` above
 
-## Gotchas
+1.  Create admin user when prompted TODO: confirm this
 
-- Volumes need to be manually removed on all nodes if they are broken or config is updated, they are not removed as part of the stack
-- traefik labels need to be on the container not on the service, i.e. under `deploy:`
+1.  Add Dockerhub auth
+
+    - Open Registries
+    - Tick Authentication
+    - add Username, Password
+
+---
+
+## Run Kudos Boards (and other apps) with Portainer
+
+See [Kudos Boards for Docker Swarm](/boards/swarm/) for a step by step guide to running Kudos Boards on your new environment.
+
+---
+
+## Advanced (logging and monitoring)
+
+TODO
+
+## Troubleshooting
+
+#### Recover from Cluster crash
+
+Start new cluster
+
+    docker swarm init --force-new-cluster --advertise-addr 10.142.0.12:2377
+
+Check other Nodes automatically join new cluster
+
+    docker node ls
+
+If they don't, use the join command provided, ie:
+
+    docker swarm join --token SWMTKN-1-1korweqob1x2530nc34uex84j03pa1e3x7qg5z2pt4bvt2fo5i-0aoijiczvso7socyzlrucbu8y 10.142.0.12:2377
+
+List 'Down' nodes
+
+    docker node ls
+
+Remove 'Down' nodes
+
+    docker node demote <node_id>
+    docker node rm <node_id>
+
+#### Recover from Service crash
+
+- Run deploy stacks again
+- Update each stack/service through Portainer
+
+#### Rebalance containers on Nodes
+
+    docker service update --force <stack>_<service>
+
+ie:
+
+    docker service update --force portainer_portainer proxy_proxy portainer_agent

@@ -17,14 +17,14 @@ extra:
       link: "https://www.youtube.com/channel/UC_9nMUcp6jcweQZML2qIy8A"
 nav:
   - Welcome: index.md
-  - Kudos Analytics:
-    - Installation:
-      - FAQ: analytics/websphere-faq.md
-  - Kudos Badges:
-    - Installation:
-      - FAQ: badges/websphere-faq.md
+  # - Kudos Analytics:
+  #   - Installation:
+  #     - FAQ: analytics/websphere-faq.md
+  # - Kudos Badges:
+  #   - Installation:
+  #     - FAQ: badges/websphere-faq.md
   - Kudos Boards:
-      - Overview: boards/index.md
+      - Versions: boards/index.md
       - Installation:
         - Kubernetes (IBM ICP): boards/kubernetes.md
         - Docker Swarm: boards/swarm.md
@@ -32,8 +32,9 @@ nav:
         - WAS Config: boards/wasconfig.md
         - Connections Widgets: boards/widgets.md
         - FAQ: boards/websphere-faq.md
+      - How To Guide: boards/howto.md
   - Kudos Ideas:
-      - Overview: ideas/index.md
+      - How To Guide: ideas/howto.md
       - Connections Cloud: ideas/cloud-setup.md
   - Buzzy:
       - Overview: buzzy/index.md
@@ -41,8 +42,14 @@ nav:
           - IBM ICP (Kubernetes): buzzy/buzzy-icp.md
           - WAS Config: buzzy/buzzy-wasconfig.md
           - Connections Widgets: buzzy/buzzy-widgets.md
-  - Docker Swarm: swarm/setup.md
-  - Kubernetes: kubernetes/index.md
+  - Docker Swarm:
+      - Installation: swarm/index.md
+      # - Advanced: swarm/advanced.md
+      - Troubleshooting: swarm/troubleshooting.md
+  - Kubernetes:
+      - Installation: kubernetes/index.md
+      # - Advanced: kubernetes/advanced.md
+      # - Troubleshooting: kubernetes/troubleshooting.md
 
 markdown_extensions:
   - toc:
@@ -50,6 +57,8 @@ markdown_extensions:
 
 theme:
   name: material
+  feature:
+    tabs: true
   palette:
     primary: orange
     accent: light blue

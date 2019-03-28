@@ -3,3 +3,9 @@
  {
   display: none;
 }
+
+nav.md-tabs {
+  height: 35px;
+  line-height: 0;
+  overflow: hidden;
+}
