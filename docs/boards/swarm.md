@@ -37,10 +37,10 @@ You will need to setup an OAuth application with one (or more) of these provider
 | x-minio-access                             | Your minio ACCESS KEY as defined in your docker swarm config                                                     |
 | x-minio-secret                             | Your minio SECRET KEY as defined in your docker swarm config                                                     |
 | x-app-env.APP_URI                          | Your main URL                                                                                                    |
-| services.webfront.deploy.labels            | Update the `traefik.frontend.rule` your main URL                                                                 |
+| services.webfront.deploy.labels            | Update the `traefik.frontend.rule` your [BOARDS_URL]
 | services.webfront.environment.API_GATEWAY  | Your api URL                                                                                                     |
 | services.webfront.environment.DEFAULT_TEAM | provide a unique simple (alphanumeric) name for the default login team, see ENSURE_TEAMS below                   |
-| services.core.deploy.labels                | Update the `traefik.frontend.rule` with your api URL                                                             |
+| services.core.deploy.labels                | Update the `traefik.frontend.rule` with your [API_URL]
 | services.user.environment.ENSURE_TEAMS     | See the table below                                                                                              |
 | CONNECTIONS_NAME                           | If you have customised the name of connections on premise in your environment you may adjust it here accordingly |
 | CONNECTIONS_CLIENT_ID                      | Your oAuth client secret as defined in connections                                                               |
