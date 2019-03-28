@@ -24,4 +24,4 @@
 1. Register OAuth
 
         execfile('oauthAdmin.py')
-        OAuthApplicationRegistrationService.addApplication('kudosboards', 'KudosBoards', '<BOARDS_URL>/auth/connections')
+        OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', '<BOARDS_URL>/auth/connections/callback')

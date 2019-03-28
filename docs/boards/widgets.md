@@ -95,7 +95,7 @@ Required for IBM Connections 6.0 CR1 onwards
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
-            --%><img width="16" src="https:/<BOARDS_URL><strong><fmt:message key="connections.component.name.kudos.boards" /></strong></a><%--
+            --%><img width="16" src="https:/<BOARDS_URL>/auth/connections" /><strong><fmt:message key="connections.component.name.kudos.boards" /></strong></a><%--
           --%></th><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
             --%><a href="https://<BOARDS_URL>/todos/assigned"><fmt:message key="label.menu.kudos.boards.todos" /></a><%--
