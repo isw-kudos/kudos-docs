@@ -23,6 +23,8 @@
 
 1. Register OAuth
 
+        cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/
+        ./wsadmin.sh -lang jython -username connectionsadmin -password passw0rd
         execfile('oauthAdmin.py')
         OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', '<BOARDS_URL>/auth/connections/callback')
         OAuthApplicationRegistrationService.getApplicationById('kudosboards')
