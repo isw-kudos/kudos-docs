@@ -1,17 +1,21 @@
 
 ## Register OAuth
-In order for Kudos Boards to authenticate with your Connections environment, you must define a new OAuth widget.  Please open an SSH to the IBM Connections Deployment Manager and run the following commands.
+In order for Kudos Boards to authenticate with your Connections environment, you must define a new OAuth widget.
 
 ---
 
-1. Start wsadmin
+1. SSH to the IBM Connections Deployment Manager (substitute the alias)
+
+        ssh root@deploymentmanager
+
+1. Start wsadmin (substiture your credentials)
 
         cd /opt/IBM/WebSphere/AppServer/profiles/Dmgr01/bin/
         ./wsadmin.sh -lang jython -username connectionsadmin -password passw0rd
-        execfile('oauthAdmin.py')
 
 1. Register the new application definition
 
+        execfile('oauthAdmin.py')
         OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', '[BOARDS_URL]/auth/connections/callback')
 
     Where `[BOARDS_URL]` is the URL of the Boards installation specified previously
