@@ -29,15 +29,15 @@ If you are testing this setup, you can get away with quite small servers (we hav
 
 The Gateway Server will be used for storing all persistent data in nfs shares, if you are setting this environment up for a production system then you should ensure that you have a suitably performant disk for the path `/data` on this server, you should also ensure that this folder is backed up appropriately.
 
-|                    | Small (test) | Medium (&lt;1000 users) | Large (&gt;1000 users) |
-| ------------------ | ------------ | ----------------------- | ---------------------- |
-| **Gateway**        | 1            | 1                       | 1                      |
-| **Managers**       | 3            | 3                       | 3                      |
-| **Workers**        | 0            | 0                       | 1 per extra 5000 users |
-| **Memory**         | 2GB          | 4GB                     | 8GB                    |
-| **CPU**            | 2            | 2                       | 4                      |
-| **Disk (Nodes)**   | 20GB         | 40GB                    | 100GB min              |
-| **Disk (Gateway)** | 40GB         | 200GB                   | 1000GB min             |
+|                    | Test | Small (&lt;1000 users) | Large (&gt;1000 users) |
+| ------------------ | ---- | ----------------------- | ---------------------- |
+| **Gateway**        | 1    | 1                       | 1                      |
+| **Managers**       | 3    | 3                       | 3                      |
+| **Workers**        | 0    | 0                       | 1 per extra 5000 users |
+| **Memory**         | 2GB  | 4GB                     | 8GB                    |
+| **CPU**            | 2    | 2                       | 4                      |
+| **Disk (Nodes)**   | 20GB | 40GB                    | 100GB min              |
+| **Disk (Gateway)** | 40GB | 200GB                   | 1000GB min             |
 
 ---
 
