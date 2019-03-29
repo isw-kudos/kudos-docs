@@ -19,6 +19,12 @@ Kudos Boards for Docker Swarm is able to take advantage of existing services in 
 
 ---
 
+## STMP for email notifications
+
+If you would like to send emails, Kudos Boards docker requires details of a forwarding SMTP server in your environment (or other email provider sich as sendgrid)
+
+---
+
 ## SSL Certificates / DNS
 
 You will need to have certificates and DNS entries that cover the following domains:

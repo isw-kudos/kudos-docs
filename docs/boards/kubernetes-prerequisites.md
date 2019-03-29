@@ -20,6 +20,12 @@ In addition to the above, Kudos Boards for Kubernetes is able to take advantage 
 
 ---
 
+## STMP for email notifications
+
+If you would like to send emails, Kudos Boards docker requires details of a forwarding SMTP server in your environment (or other email provider sich as sendgrid)
+
+---
+
 ## SSL Certificates and domain names for hosting
 
 > In the examples below, replace `example.com` with your actual company domain
@@ -69,4 +75,3 @@ Access to the images for kudos boards is provided through [dockerhub](https://hu
 ## Ansible
 
 We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](/tools/ansible/) prior to the kubernetes / boards install
-
