@@ -28,7 +28,7 @@ nav:
       - Installation:
         - Kubernetes (IBM ICP): boards/kubernetes.md
         - Docker Swarm: boards/swarm.md
-        - Websphere: boards/websphere.md
+        # - Websphere: boards/websphere.md
         - WAS Config: boards/wasconfig.md
         - Connections Widgets: boards/widgets.md
         - FAQ: boards/websphere-faq.md
