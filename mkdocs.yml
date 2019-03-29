@@ -25,13 +25,22 @@ nav:
   #     - FAQ: badges/websphere-faq.md
   - Kudos Boards:
       - Versions: boards/index.md
-      - Installation:
-        - Kubernetes (IBM ICP): boards/kubernetes.md
-        - Docker Swarm: boards/swarm.md
-        # - Websphere: boards/websphere.md
-        - WAS Config: boards/wasconfig.md
-        - Connections Widgets: boards/widgets.md
-        - FAQ: boards/websphere-faq.md
+      - Boards Cloud: https://info.kudosboards.com
+      - Boards Docker:
+        - In Kubernetes:
+          - Overview: boards/kubernetes.md
+          - Web Server Config: boards/connections/httpd.md
+        - In Docker Swarm: boards/swarm.md
+      - Boards Hybrid:
+        - Overview: boards/hybrid/index.md
+        - Setup:
+          - Authentication: boards/connections/auth-hybrid.md
+          - Connections Header: boards/connections/app-loader.md
+          - Connections Apps Menu: boards/connections/apps-menu.md
+          - Connections Widgets: boards/connections/widgets.md
+      - Troubleshooting:
+        - WebSphere: boards/troubleshooting/websphere.md
+
       - How To Guide: boards/howto.md
   - Kudos Ideas:
       - How To Guide: ideas/howto.md

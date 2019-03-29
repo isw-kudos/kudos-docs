@@ -64,3 +64,5 @@ __Advantages__
 __Requirements__
 
 - Your IBM Connections URL must be accessible from the web (no VPN)
+
+See [installation details](/boards/hybrid/) for more information.
