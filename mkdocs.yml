@@ -36,7 +36,7 @@ nav:
         - Setup:
           - Authentication: boards/connections/auth-hybrid.md
           - Connections Header: boards/connections/app-loader.md
-          - Connections Apps Menu: boards/connections/apps-menu.md
+          - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
           - Connections Widgets: boards/connections/widgets.md
       - Troubleshooting:
         - WebSphere: boards/troubleshooting/websphere.md

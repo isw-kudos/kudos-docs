@@ -6,7 +6,7 @@ In order for Kudos Boards to authenticate with your Connections environment, you
 
 1. SSH to the IBM Connections Deployment Manager (substitute the alias)
 
-        ssh root@deploymentmanager
+        ssh root@[DEPLOY_MANAGER_ALIAS]
 
 1. Start wsadmin (substiture your credentials)
 
