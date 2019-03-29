@@ -33,9 +33,9 @@ For example:
 | Web | boards.example.com     | example.com/boards     |
 | API | api-boards.example.com | example.com/api-boards |
 
-You will need a reverse proxy in place to forward network requests to the kubernetes master. 
+> We'll refer to these throughout installation as [BOARDS_URL] and [API_URL]
 
-You will need to have certificates that cover all domains used.
+You will need a reverse proxy in place to forward network requests to the kubernetes master. This proxy should be able to resolve certificates that cover all domains used.
 
 ---
 
