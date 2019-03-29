@@ -1,35 +1,49 @@
-Requirements and considerations before installation
+Requirements and considerations before installation of Kubernetes and Kudos Boards
 
 ## Servers
 
-This solution is designed to be a lightweight, cloud-like setup running locally in your data centre. You should expect to configure a minimum of 4 very small servers, see [Swarm Installation](/swarm/#server-information) for a table showing the requirements.
+This solution is designed to run a cloud-like environment locally in your data centre. You should expect to configure a minimum of 3 servers, see [Kubernetes Installation](/kubernetes/#server-setup) for more details.
+
+This solution is ideal if you already have kubernetes (or IBM Component Pack for connections) as it can run in your existin genvironment. If this is the case, please reach out to Team Kudos for support.
+
+---
 
 ## Existing Infrastructure
 
-Kudos Boards for Docker Swarm is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
+In addition to the above, Kudos Boards for Kubernetes is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
 
-| Service                   | Requirements                                                               |
-| ------------------------- | -------------------------------------------------------------------------- |
-| MongoDB                   | URL, username and password                                                 |
-| S3 Storage                | URL, Bucket name, username and password                                    |
-| NFS Server                | IP address or hostname, must be accessible to all swarm servers            |
-| SNI Capable reverse proxy | admin access to proxy to configure all domains (see SSL Certificate below) |
+| Service    | Requirements                                                    |
+| ---------- | --------------------------------------------------------------- |
+| MongoDB    | URL, username and password                                      |
+| S3 Storage | URL, Bucket name, username and password                         |
+| NFS Server | IP address or hostname, must be accessible to all swarm servers |
 
-## SSL Certificates / DNS
+---
 
-You will need to have certificates and DNS entries that cover the following domains:
+## SSL Certificates and domain names for hosting
 
-> Replace `example.com` with your actual company domain
+> In the examples below, replace `example.com` with your actual company domain
 
-| Service    | Example domain         | DNS                                 |
-| ---------- | ---------------------- | ----------------------------------- |
-| Swarm      | swarm.example.com      | A record pointing to gateway server |
-| Boards     | boards.example.com     | CNAME swarm.example.com             |
-| Boards API | api-boards.example.com | CNAME swarm.example.com             |
+Kudos boards requires 2 domains (or redirects) in your network, one for the web application and one for the api. You can use a new domain or subdomain for this or you can use a path on an existing service.
+
+For example:
+
+|     | Domain                 | Path                   |
+| --- | ---------------------- | ---------------------- |
+| Web | boards.example.com     | example.com/boards     |
+| API | api-boards.example.com | example.com/api-boards |
+
+You will need a reverse proxy in place to forward network requests to the kubernetes master. 
+
+You will need to have certificates that cover all domains used.
+
+---
 
 ## SSH Access
 
 To perform the installation, you need to setup some config files on a local machine that has ssh access to the servers. You should ssh to each server manually before proceeding to ensure they are trusted.
+
+---
 
 ## Authentication
 
@@ -44,10 +58,15 @@ Kudos Boards is designed to be integrated into your current user management syst
 | LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                                                  |
 | Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)                                 |
 
+---
+
 ## Dockerhub
 
 Access to the images for kudos boards is provided through [dockerhub](https://hub.docker.com). Please provide us with your username to grant access and have the credentials at hand for the install.
 
+---
+
 ## Ansible
 
-We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](/tools/ansible/) prior to the swarm / boards install 
+We use [Red Hat Ansible](https://www.ansible.com/) to script the installs. Please ensure this is installed as per [our guide](/tools/ansible/) prior to the kubernetes / boards install
+
