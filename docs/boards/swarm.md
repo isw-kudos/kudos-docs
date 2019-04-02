@@ -30,7 +30,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ---
 
-### Update Config file
+### Update config file
 
 | Key                                        | Description                                                                                                      |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
@@ -56,25 +56,25 @@ Values for ENSURE_TEAMS
 | name          | If defining multiple teams you may use this long description to help determine which is which                                                                     |
 | teamName      | A Unique name to identify your team, this should be kept short and not contain any spaces, punctuation or special characters                                      |
 | provider      | Your oauth provider, available options are <br>'connections' - Connections on premise<br>'smartcloud' - Connections cloud<br>'msgraph' - Office 365 or Azure AD   |
-| externalId    | based on the provider you chose above:<br>'connections' base64 string of your connections domain<br>'smartcloud' your organisation id<br>'msgraph' your tenant id |
-| oAuth.baseURL | your connections url, only needed if you chose 'connections' as your provider.                                                                                    |
-| globalOAuth   | as you may only have one team defined for each provider, please always set this to true                                                                           |
+| externalId    | Based on the provider you chose above:<br>'connections' base64 string of your connections domain<br>'smartcloud' your organisation id<br>'msgraph' your tenant id |
+| oAuth.baseURL | Your connections url, only needed if you chose 'connections' as your provider.                                                                                    |
+| globalOAuth   | As you may only have one team defined for each provider, please always set this to true                                                                           |
 
 ### Deploy
 
-1. Open portainer and login
+1. Open Portainer and login
 1. Select your primary endpoint
 1. Choose Stacks from the side menu
 1. Click Add Stack
 1. Name your stack kudos-boards
-1. paste your config from from above into the web editor
+1. paste your config from above into the web editor
 1. Click "Deploy the stack"
 
 ---
 
 ### Update DNS
 
-Update DNS records with a cname entry pointing to your swarm url.
+Update DNS records with a CNAME entry pointing to your swarm URL.
 
 For example:
 
@@ -83,15 +83,20 @@ For example:
 
 ---
 
-### Add IBM Connections widgets
+### IBM Connections integrations
 
-Please follow [these instructions](/boards/widgets/)
+Please follow these instructions
+
+- [Header](/boards/connections/header/)
+- [Widgets](/boards/connections/widgets/)
+- [Apps Menu](/boards/connections/apps-menu-on-prem/)
+
 
 ---
 
 ### Advanced
 
 You can also run Kudos Boards with externally hosted mongo database and/or S3 storage.
-For assistance with this contact support@kudosboards.com
+For assistance with this contact [support@kudosboards.com](mailto:support@kudosboards.com)
 
 ---

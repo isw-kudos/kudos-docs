@@ -27,15 +27,14 @@ nav:
       - Versions: boards/index.md
       - Boards Cloud: https://info.kudosboards.com
       - Boards Docker:
-        - In Kubernetes:
-          - Overview: boards/kubernetes.md
-          - Web Server Config: boards/connections/httpd.md
+        - In Kubernetes: boards/kubernetes.md
         - In Docker Swarm: boards/swarm.md
+        # - Web Server Config: boards/connections/httpd.md
       - Boards Hybrid:
         - Overview: boards/hybrid/index.md
         - Setup:
           - Authentication: boards/connections/auth-hybrid.md
-          - Connections Header: boards/connections/app-loader.md
+          - Connections Header: boards/connections/header.md
           - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
           - Connections Widgets: boards/connections/widgets.md
       - Troubleshooting:
