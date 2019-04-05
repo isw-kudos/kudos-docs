@@ -1,3 +1,5 @@
+![Outcome](/assets/connections/auth.png)
+
 
 ## Register OAuth
 In order for Kudos Boards to authenticate with your Connections environment, you must define a new OAuth widget.

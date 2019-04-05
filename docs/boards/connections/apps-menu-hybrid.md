@@ -1,3 +1,5 @@
+![Outcome](/assets/connections/apps-menu.png)
+
 
 ### Add to Apps Menu
 - If you have not customised the apps.jsp file for your connections environment, please make a copy of the file.

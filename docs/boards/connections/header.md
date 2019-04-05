@@ -1,3 +1,6 @@
+![Outcome](/assets/connections/header.png)
+
+
 ## Download the Application
 The latest .ear from [releases page](https://github.com/isw-kudos/connections-apps-loader/releases)
 
