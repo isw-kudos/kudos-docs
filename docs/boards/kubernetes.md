@@ -1,19 +1,18 @@
-# Kudos Boards for Kubernetes
+# Kudos Boards for Kubernetes and IBM Cloud Private
 
-Deploying Kudos Boards into Kubernetes or IBM Cloud Private for on-premise environments
+Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise environments
 
 ---
 
 ### Pre-Requisites
 
 1. Kubernetes or IBM Cloud Private is installed and running
-1. WebSphere environment with Web Server
+1. WebSphere environment with Web Server (or another reverse proxy)
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
 1. Ansible is installed, see [Ansible](/tools/ansible/)
-1. [Kudos Boards helm chart]() downloaded (TBC)
-1. [Kudos Boards ansible roles]() downloaded and extracted (TBC)
+1. [Kudos Boards ansible roles](/assets/boards-docker-ansible.zip) downloaded and extracted
 1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository, send your account details to support@kudosboards.com if you don't already have this.
 
 ---
@@ -42,13 +41,13 @@ Kubernetes for on premise environments requires a reverse proxy in place to prop
 
 ### Setup OAuth
 
-Kudos Boards currently supports the following OAuth providers for authentication and integration: IBM Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
+Kudos Boards currently supports the following oauth providers for authentication and integration: IBM Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
 | Provider                     | Registration / Documentation                                                                                                          | Callback URL                  | Scopes |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------ |
-| IBM Connections (on premise) | [Our Instructions](/boards/connections/auth-on-prem/) & [IBM Knowledge Centre](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html) | [BOARDS_URL]/auth/connections/callback |
+| IBM Connections (on premise) | [IBM Knowledge Centre](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html) | [BOARDS_URL]/auth/connections/callback |
 | Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)                         | [BOARDS_URL]/auth/msgraph/callback     |
 | Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                                              | [BOARDS_URL]/auth/google/callback      |
 | LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                                                  | [BOARDS_URL]/auth/linkedin/callback    |
@@ -79,7 +78,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ---
 
-### Setup storage
+### Setup Storage
 
 Kudos Boards uses mongodb database and S3 file storage, If you have these services already then you can use your existing details in the config below, otherwise you may include one or both of these as follows:
 
@@ -111,7 +110,7 @@ Deploy S3 (using minio) only
 
 ---
 
-### Update config file
+### Update Config file
 
 Open the file at ansible/roles/boards-docker/files/boards.yaml and upate the values as below.
 
@@ -152,34 +151,30 @@ Options for ENSURE_TEAMS:
 
 - deploy redis cache
 
-        ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "redis"
+       ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "redis"
 
 - deploy all boards services
 
-        ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "boards"
+       ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "boards"
 
 ---
 
 ### Add Proxy Config
 
-#### Connections On Premise - update WAS config
+## Connections On Premise - update WAS config
 
 > in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 if you have component pack installed)
 
-Please follow [these instructions](/boards/connections/httpd/)
+Please follow [these instructions](/boards/wasconfig/)
 
-#### Connections Cloud or Microsoft Office 365
+## Connections Cloud or Microsoft Office 365
 
 Add a reverse proxy entry in your network that resolves your certificates and forwards your 2 domains to the IP of the kubernetes manager and the http port for your ingress. If any assistance is required
 
 ---
 
-### IBM Connections integrations
+### Add IBM Connections widgets
 
-Please follow these instructions
-
-- [Header](/boards/connections/header/)
-- [Widgets](/boards/connections/widgets/)
-- [Apps Menu](/boards/connections/apps-menu-on-prem/)
+Please follow [these instructions](/boards/widgets/)
 
 ---
