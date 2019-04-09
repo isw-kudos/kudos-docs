@@ -34,7 +34,7 @@ Open `ansible/hosts/kubernetes.yml` and update the following:
 | -------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | vars.ansible_user          | Username for ssh access                                                                                         |
 | vars.ansible_password      | Password for ssh access                                                                                         |
-| vars.docker_device         | secondary drive as defined above<br>run `lsblk` on each server to confirm<br>warning: this device will be wiped |
+| vars.docker_device         | secondary drive as defined above<br>run `lsblk` on each server to confirm<br>__warning__: this device will be wiped |
 | hosts.manager.ansible_host | IP Address of the manager                                                                                       |
 | hosts.worker1.ansible_host | IP Address of worker 1                                                                                          |
 | hosts.worker2.ansible_host | IP Address of worker 2                                                                                          |

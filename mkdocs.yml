@@ -61,8 +61,8 @@ nav:
       - Installation: swarm/index.md
       # - Advanced: swarm/advanced.md
       - Troubleshooting: swarm/troubleshooting.md
-  - Kubernetes:
-      - Installation: kubernetes/index.md
+  # - Kubernetes:
+      # - Installation: kubernetes/index.md
       # - Advanced: kubernetes/advanced.md
       # - Troubleshooting: kubernetes/troubleshooting.md
 

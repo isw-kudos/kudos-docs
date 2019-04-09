@@ -6,7 +6,7 @@ Deploying Kudos Boards into Kubernetes or IBM Cloud Private for on-premise envir
 
 ### Pre-Requisites
 
-1. Kubernetes or IBM Cloud Private is installed and running, for assistance setting up kubernetes (and IBM Component Pack for Connections), see [Kubernetes](/kubernetes/)
+1. Kubernetes or IBM Cloud Private is installed and running
 1. WebSphere environment with Web Server
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
