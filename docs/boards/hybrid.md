@@ -8,7 +8,7 @@ For a comparison of Boards versions please [see here](/boards/versions/)
 
 Setting up the Hybrid Boards Cloud involves:
 
-1. [Contact the Kudos Team](mailto:support@kudosboards.com) with these details
+1. [Contact the Kudos Team](mailto:support@kudosboards.com?subject=Boards%20Hybrid%20Setup) with these details
 
         Company name:
         Connections URL: https://connections.example.com
@@ -18,6 +18,6 @@ Setting up the Hybrid Boards Cloud involves:
 1. [Configure Authentication](/boards/connections/auth-hybrid/)
 
 1. Configure IBM Connections extensions
-    - [Connections Header](/boards/connections/header/)
+    - [Connections Header](/boards/connections/header-hybrid/)
     - [Customise Apps menu](/boards/connections/apps-menu-hybrid/)
     - [Customise Widgets](/boards/connections/widgets/)
