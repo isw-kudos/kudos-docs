@@ -24,7 +24,7 @@ nav:
   #   - Installation:
   #     - FAQ: badges/websphere-faq.md
   - Kudos Boards:
-      - Versions: boards/index.md
+      - Versions: boards/versions.md
       - Boards Cloud:
           - Overview: https://info.kudosboards.com
           - Integrations:
@@ -49,7 +49,7 @@ nav:
             - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
             - Connections Widgets: boards/connections/widgets.md
             - Web Server Config: boards/connections/httpd.md
-      - Boards Hybrid: boards/hybrid/index.md
+      - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
         - WebSphere: boards/troubleshooting/websphere.md
 
