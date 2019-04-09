@@ -2,9 +2,9 @@ Requirements and considerations before installation of Kubernetes and Kudos Boar
 
 ## Servers
 
-This solution is designed to run a cloud-like environment locally in your data centre. You should expect to configure a minimum of 3 servers, see [Kubernetes Installation](/kubernetes/#server-setup) for more details.
+This solution is designed to run a cloud-like environment locally in your data centre. You should expect to configure a minimum of 3 servers.
 
-This solution is ideal if you already have kubernetes (or IBM Component Pack for connections) as it can run in your existin genvironment. If this is the case, please reach out to Team Kudos for support.
+This solution is ideal if you already have kubernetes (or IBM Component Pack for connections) as it can run in your existing environment. If this is the case, please reach out to Team Kudos for support.
 
 ---
 
