@@ -1,7 +1,7 @@
 site_name: Kudos Docs
 site_description: Enterprise productivity solutions
 site_author: Andrew Reynolds
-site_url: https://docs.kudosapps.com
+site_url: https://docs.kudosapps.com/
 repo_url: https://www.kudosapps.com
 repo_name: kudosapps.com
 
@@ -88,7 +88,7 @@ theme:
     icon: local_library
 
 extra_css:
-  - "assets/css/custom.css"
+  - "/assets/css/custom.css"
 
 google_analytics:
   - "UA-1747668-5"
