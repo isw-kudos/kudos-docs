@@ -24,7 +24,7 @@ nav:
   #   - Installation:
   #     - FAQ: badges/websphere-faq.md
   - Kudos Boards:
-      - Versions: boards/versions.md
+      - Versions: boards/index.md
       - Boards Cloud:
           - Overview: https://info.kudosboards.com
           - Integrations:
