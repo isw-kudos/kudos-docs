@@ -31,7 +31,7 @@ nav:
             - IBM Connections Cloud: boards/cloud.md
             - IBM Connections On-Prem:
               - Authentication: boards/connections/auth-hybrid.md
-              - Connections Header: boards/connections/header.md
+              - Connections Header: boards/connections/header-hybrid.md
               - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
               - Connections Widgets: boards/connections/widgets.md
             - Microsoft 365 for Business:
@@ -42,7 +42,13 @@ nav:
       - Boards Docker:
         - In Kubernetes: boards/kubernetes.md
         - In Docker Swarm: boards/swarm.md
-        # - Web Server Config: boards/connections/httpd.md
+        - Integrations:
+          - IBM Connections On-Prem:
+            - Authentication: boards/connections/auth-on-prem.md
+            - Connections Header: boards/connections/header-on-prem.md
+            - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
+            - Connections Widgets: boards/connections/widgets.md
+            - Web Server Config: boards/connections/httpd.md
       - Boards Hybrid: boards/hybrid/index.md
       - Troubleshooting:
         - WebSphere: boards/troubleshooting/websphere.md
