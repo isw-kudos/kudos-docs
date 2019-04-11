@@ -18,7 +18,7 @@ Setting up the Hybrid Boards Cloud involves:
         CONNECTIONS_URL: https://connections.example.com
         CONNECTIONS_CLIENT_ID: kudosboards
         CONNECTIONS_CLIENT_SECRET: [VALUE_PRINTED]
-        BASE64_CONNECTIONS_URL:
+        CONNECTIONS_HOSTNAME_BASE64:
 
 1. Configure IBM Connections extensions
 

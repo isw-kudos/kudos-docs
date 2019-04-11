@@ -18,9 +18,9 @@ In order for Kudos Boards to authenticate with your Connections environment, you
 1. Register the new application definition
 
         execfile('oauthAdmin.py')
-        OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', 'https://kudosboards.com/auth/connections/[BASE64_CONNECTIONS_URL]/callback')
+        OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', 'https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]/callback')
 
-    Where `[BASE64_CONNECTIONS_URL]`is
+    Where `[CONNECTIONS_HOSTNAME_BASE64]`is
 
       - your Connections hostname base64 encoded.  E.g.</br>
         `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>

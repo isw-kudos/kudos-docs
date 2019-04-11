@@ -25,9 +25,9 @@ This is usually accessible through a URL like:
 1. Set the following details and click `OK`
 
         EXTERNAL_APPS_CONFIG
-        {"boards":"https://kudosboards.com/auth/connections/[BASE64_CONNECTIONS_URL]"}
+        {"boards":"https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]"}
 
-    Where `[BASE64_CONNECTIONS_URL]` is
+    Where `[CONNECTIONS_HOSTNAME_BASE64]` is
 
     - your Connections hostname base64 encoded.  E.g.</br>
       `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>

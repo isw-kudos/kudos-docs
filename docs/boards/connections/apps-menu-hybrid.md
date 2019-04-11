@@ -16,7 +16,7 @@
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
-            --%><img width="16" src="https:/<BOARDS_URL>/auth/connections/[BASE64_CONNECTIONS_URL]" /><strong><fmt:message key="connections.component.name.kudos.boards" /></strong></a><%--
+            --%><img width="16" src="https:/<BOARDS_URL>/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]" /><strong><fmt:message key="connections.component.name.kudos.boards" /></strong></a><%--
           --%></th><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
             --%><a href="https://<BOARDS_URL>/todos/assigned"><fmt:message key="label.menu.kudos.boards.todos" /></a><%--
@@ -27,7 +27,7 @@
         --%></tr><%--
 
 
-      Where `[BASE64_CONNECTIONS_URL]`is
+      Where `[CONNECTIONS_HOSTNAME_BASE64]`is
 
       - your Connections hostname base64 encoded.  E.g.</br>
         `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
