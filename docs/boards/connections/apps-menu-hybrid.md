@@ -12,20 +12,26 @@
 
             <installdir>\data\shared\customization\common\nav\templates\menu\apps.jsp
 
-- To add the Kudos Boards App Link add the following lines towards the bottom of the apps.jsp file before the </table> element, replacing <BOARDS_URL> with your URL
+- To add the Kudos Boards App Link add the following lines towards the bottom of the apps.jsp file before the `</table>` element
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
-            --%><img width="16" src="https:/<BOARDS_URL>/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]" /><strong><fmt:message key="connections.component.name.kudos.boards" /></strong></a><%--
+            --%><img width="16" src="https://kudosboards.com/img/logo-small.png" /><%--
+            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]"><%--
+              --%><strong><fmt:message key="connections.component.name.kudos.boards" /></strong><%--
+            --%></a><%--
           --%></th><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://<BOARDS_URL>/todos/assigned"><fmt:message key="label.menu.kudos.boards.todos" /></a><%--
+            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/todos/assigned"><%--
+              --%><fmt:message key="label.menu.kudos.boards.todos" /><%--
+            --%></a><%--
           --%></td><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://<BOARDS_URL>/boards/templates/public"><fmt:message key="label.menu.kudos.boards.templates" /></a><%--
+            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/boards/templates/public"><%--
+              --%><fmt:message key="label.menu.kudos.boards.templates" /><%--
+            --%></a><%--
           --%></td><%--
         --%></tr><%--
-
 
       Where `[CONNECTIONS_HOSTNAME_BASE64]`is
 
