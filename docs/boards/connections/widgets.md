@@ -10,7 +10,7 @@ Check out the widgets-config.xml file.
     execfile("profilesAdmin.py")
     ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the widgets-config.xml file. Under the <resource type="community"> section, then under <widgets>, then within <definitions> add the following.
+Edit the widgets-config.xml file. Under the `<resource type="community">` section, then under `<widgets>`, then within `<definitions>` add the following.
 
     <!-- Kudos Boards -->
     <widgetDef defId="KudosBoards" modes="view fullpage" url="https://<BOARDS_URL>/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
@@ -28,7 +28,7 @@ Check in the widgets-config.xml file.
 
 ### Activity Stream widget
 
-Access Homepage->Administrator
+Access `Homepage`->`Administrator`
 
 Select the following:
 
@@ -37,7 +37,7 @@ Select the following:
   - Show for Activity Stream events
   - All servers
 
-  Click the Add Mapping button.
+  Click the `Add Mapping` button.
 
 Add a Mapping for the Kudos Boards service to the Kudos client. Ensure OAuth Client is set to conn-ee and the Service name is Kudos Boards.
 Click the Ok button
@@ -73,9 +73,6 @@ Select the following Prerequisites:
 Required for IBM Connections 6.0 CR1 onwards
 
     execfile("newsAdmin.py")
-
     NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://<BOARDS_URL>/boards/community/connection" ,secureUrl="https://<BOARDS_URL>/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
-
     NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
-
     NewsWidgetCatalogService.clearWidgetCaches()
