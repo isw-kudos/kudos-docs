@@ -39,6 +39,7 @@ nav:
               - App Tile: boards/msgraph/custom-tiles.md
               - Teams Integration: boards/msgraph/teams.md
               - Outlook Plugin: boards/msgraph/outlook.md
+              - Sharepoint Pages: boards/msgraph/sharepoint.md
       - Boards Docker:
         - In Kubernetes: boards/kubernetes.md
         - In Docker Swarm: boards/swarm.md
