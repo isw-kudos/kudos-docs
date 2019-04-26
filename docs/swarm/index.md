@@ -6,9 +6,9 @@ This document will step through setting up a functional docker swarm environment
 
 - Shared storage with nfs
 - http(s) proxy _traefik_
-- Database _mongo_
-- File storage _minio_
 - Management interface _portainer_
+- Database _mongo_ (optional)
+- S3 Object storage _minio_ (optional)
 - Logging _elk stack_ - (optional)
 - Monitoring _prometheus/grafana_ - (optional)
 
@@ -116,7 +116,7 @@ Ensure that DNS records for your portainer dashbaord and traefik dashboard as de
 
 1.  Open Dashboard as defined in `{{dashboard_host}}` above
 
-1.  Create admin user when prompted TODO: confirm this
+1.  Create admin user when prompted
 
 1.  Add Dockerhub auth
 
@@ -125,6 +125,12 @@ Ensure that DNS records for your portainer dashbaord and traefik dashboard as de
     - add Username, Password
 
 ---
+
+## Storage (Mongo & S3)
+Kudos Boards requires a Mongo database and an S3 object store.  If you do not already have your own externally hosted services for this, please follow [this documentation](/swarm/storage/) to deploy MongoDB and Minio (S3) containers into your Swarm setup.
+
+---
+
 
 ## Run Kudos Boards (and other apps) with Portainer
 

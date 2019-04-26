@@ -66,6 +66,7 @@ nav:
           - Connections Widgets: buzzy/buzzy-widgets.md
   - Docker Swarm:
       - Installation: swarm/index.md
+      - Storage: swarm/storage.md
       # - Advanced: swarm/advanced.md
       - Troubleshooting: swarm/troubleshooting.md
   # - Kubernetes:

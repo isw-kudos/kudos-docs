@@ -6,10 +6,14 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 
 ### Pre-Requisites
 
-1. Docker swarm with portainer is up and running [Guide here](/swarm/setup/)
+1. Docker Swarm with Portainer installed. [Guide here](/swarm/)
+1. Storage - an accessible MongoDB and S3 object store. [Guide here](/swarm/storage/)
 1. SMTP gateway setup for email notifications
 1. [Config File](/assets/config/boards-swarm.yml) downloaded
-1. Dockerhub account setup with access to Kudos Boards repository, send your account details to support@kudosboards.com if you don't already have this.
+1. Dockerhub account with access to Kudos Boards repository.
+
+    Send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
+
 1. SSL certificate - You will need to use a certificate that covers at least the 2 domains you plan to use, for example Kudos Boards cloud uses the domains `https://kudosboards.com` and `https://api.kudosboards.com`. The certificate should be pem encoded with a separate key file.
 
 ---
@@ -37,10 +41,10 @@ You will need to setup an OAuth application with one (or more) of these provider
 | x-minio-access                             | Your minio ACCESS KEY as defined in your docker swarm config                                                     |
 | x-minio-secret                             | Your minio SECRET KEY as defined in your docker swarm config                                                     |
 | x-app-env.APP_URI                          | Your main URL                                                                                                    |
-| services.webfront.deploy.labels            | Update the `traefik.frontend.rule` your [BOARDS_URL]
+| services.webfront.deploy.labels            | Update the `traefik.frontend.rule` your `[BOARDS_URL]`
 | services.webfront.environment.API_GATEWAY  | Your api URL                                                                                                     |
-| services.webfront.environment.DEFAULT_TEAM | provide a unique simple (alphanumeric) name for the default login team, see ENSURE_TEAMS below                   |
-| services.core.deploy.labels                | Update the `traefik.frontend.rule` with your [API_URL]
+| services.webfront.environment.DEFAULT_TEAM | provide a unique simple (alphanumeric) name for the default login team, see `ENSURE_TEAMS` below                   |
+| services.core.deploy.labels                | Update the `traefik.frontend.rule` with your `[API_URL]`
 | services.user.environment.ENSURE_TEAMS     | See the table below                                                                                              |
 | CONNECTIONS_NAME                           | If you have customised the name of connections on premise in your environment you may adjust it here accordingly |
 | CONNECTIONS_CLIENT_ID                      | Your oAuth client secret as defined in connections                                                               |
@@ -67,7 +71,7 @@ Values for ENSURE_TEAMS
 1. Choose Stacks from the side menu
 1. Click Add Stack
 1. Name your stack kudos-boards
-1. paste your config from above into the web editor
+1. Browse to your customised config file
 1. Click "Deploy the stack"
 
 ---
