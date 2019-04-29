@@ -36,6 +36,8 @@ Share files and folders from Onedrive within the context of a Board
 
 ### Teams
 
+[Teams integration admin guide](/boards/msgraph/teams/)
+
 Add boards tabs to Microsoft Teams
 
 ![Teams Tabs](/assets/msgraph/teams_tabs.png)
@@ -50,12 +52,12 @@ Access Kudos Boards directly from Teams as a personal app
 
 Receive notifications as the board updates
 
-[Teams Integration Admin guide](/boards/msgraph/teams/)
-
 
 ---
 
 ### Outlook
+
+[Outlook plugin admin guide](/boards/msgraph/outlook/)
 
 Save emails from Outlook as a card in your board
 
@@ -65,14 +67,12 @@ Attach boards, lists and cards to an email.
 
 ![Attach Boards](/assets/msgraph/outlook_attach.png)
 
-[Outlook Plugin admin guide](/boards/msgraph/outlook/)
-
 ---
 
 ### Sharepoint
 
 Embed boards as pages in Sharepoint.
 
-![Sharepoint Page](/assets/msgraph/sharepoint10.png)
+[Sharepoint pages setup guide](/boards/msgraph/sharepoint/)
 
-[Sharepoint Pages setup guide](/boards/msgraph/sharepoint/)
+![Sharepoint Page](/assets/msgraph/sharepoint10.png)
