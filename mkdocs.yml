@@ -53,8 +53,9 @@ nav:
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
         - WebSphere: boards/troubleshooting/websphere.md
-
       - How To Guide: boards/howto.md
+      - Microsoft 365 for Business: boards/msgraph/overview.md
+
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
       - Connections Cloud: ideas/cloud-setup.md
