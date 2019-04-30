@@ -57,7 +57,7 @@ Receive notifications as the board updates
 
 ### Outlook
 
-[Outlook plugin admin guide](/boards/msgraph/outlook/)
+> You can add the Outlook add-in just for yourself ([Outlook plugin user guide](/boards/msgraph/outlook_personal/))<br /> Or for your whole Microsoft 365 tenant ([Outlook plugin admin guide](/boards/msgraph/outlook/))
 
 Save emails from Outlook as a card in your board
 
@@ -65,7 +65,7 @@ Save emails from Outlook as a card in your board
 
 Attach boards, lists and cards to an email.
 
-![Attach Boards](/assets/msgraph/outlook_attach.png)
+<img src="/assets/msgraph/outlook_attach.png" style="border: 1px solid #ccc;" />
 
 ---
 
