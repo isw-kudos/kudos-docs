@@ -1,6 +1,6 @@
 ## Embedding Kudos Boards pages in Sharepoint.
 
-> Before proceeding, you may need an admin to enable security settings as described [here](/boards/msgraph/sharepoint_admin/)
+Before proceeding, you will need a site admin to enable security settings as described [here](/boards/msgraph/sharepoint_admin/)
 
 ![example](/assets/msgraph/sharepoint10.png)
 

@@ -8,6 +8,11 @@ Embedding Kudos Boards in sharepoint requires iframe permissions for users, it i
 
   ![example](/assets/msgraph/sharepointadmin1.png)
 
+  OR choose `Site information` then `View all site settings`
+
+  ![example](/assets/msgraph/sharepointadmin5.png)
+  ![example](/assets/msgraph/sharepointadmin6.png)
+
 1. Click `HTML Field Security`
 
   ![example](/assets/msgraph/sharepointadmin2.png)
