@@ -1,4 +1,4 @@
-Kudos Boards is tailored for working with Microsoft 365 in the following ways:
+Kudos Boards is tailored for working with Office 365 in the following ways:
 
 ### Login
 
@@ -18,7 +18,7 @@ Share and collaborate with individuals and groups in your office tenant
 
 ### Easy Access
 
-Access Boards from your Office menu, and access other Office apps from the menu in Boards 
+Access Boards from your Office menu, and access other Office apps from the menu in Boards
 
 [Admin setup guide](/boards/msgraph/custom-tiles/)
 
