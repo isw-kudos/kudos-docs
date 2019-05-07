@@ -28,33 +28,33 @@ nav:
       - Boards Cloud:
           - Overview: https://info.kudosboards.com
           - Integrations:
-            - IBM Connections Cloud: boards/cloud.md
-            - IBM Connections On-Prem:
-              - Authentication: boards/connections/auth-hybrid.md
-              - Connections Header: boards/connections/header-hybrid.md
-              - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
-              - Connections Widgets: boards/connections/widgets.md
-            - Office 365 for Business:
-              - Overview: boards/msgraph/overview.md
-              - App Tile: boards/msgraph/custom-tiles.md
-              - Teams Integration: boards/msgraph/teams.md
-              - Outlook Plugin: boards/msgraph/outlook.md
-              - Sharepoint Pages: boards/msgraph/sharepoint.md
+              - IBM Connections Cloud: boards/cloud.md
+              - IBM Connections On-Prem:
+                  - Authentication: boards/connections/auth-hybrid.md
+                  - Connections Header: boards/connections/header-hybrid.md
+                  - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
+                  - Connections Widgets: boards/connections/widgets.md
+              - Office 365 for Business:
+                  - Overview: boards/msgraph/overview.md
+                  - App Tile: boards/msgraph/custom-tiles.md
+                  - Teams Integration: boards/msgraph/teams.md
+                  - Outlook Plugin: boards/msgraph/outlook.md
+                  - Sharepoint Pages: boards/msgraph/sharepoint.md
       - Boards Docker:
-        - In Kubernetes: boards/kubernetes.md
-        - In Docker Swarm: boards/swarm.md
-        - Integrations:
-          - IBM Connections On-Prem:
-            - Authentication: boards/connections/auth-on-prem.md
-            - Connections Header: boards/connections/header-on-prem.md
-            - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
-            - Connections Widgets: boards/connections/widgets.md
-            - Web Server Config: boards/connections/httpd.md
+          - In Kubernetes: boards/kubernetes.md
+          - In Docker Swarm: boards/swarm.md
+          - Integrations:
+              - IBM Connections On-Prem:
+                  - Authentication: boards/connections/auth-on-prem.md
+                  - Connections Header: boards/connections/header-on-prem.md
+                  - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
+                  - Connections Widgets: boards/connections/widgets.md
+                  - Web Server Config: boards/connections/httpd.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
-        - WebSphere: boards/troubleshooting/websphere.md
+          - WebSphere: boards/troubleshooting/websphere.md
+          - Office 365 for Business: boards/troubleshooting/office365.md
       - How To Guide: boards/howto.md
-
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
@@ -71,9 +71,9 @@ nav:
       # - Advanced: swarm/advanced.md
       - Troubleshooting: swarm/troubleshooting.md
   # - Kubernetes:
-      # - Installation: kubernetes/index.md
-      # - Advanced: kubernetes/advanced.md
-      # - Troubleshooting: kubernetes/troubleshooting.md
+  # - Installation: kubernetes/index.md
+  # - Advanced: kubernetes/advanced.md
+  # - Troubleshooting: kubernetes/troubleshooting.md
 
 markdown_extensions:
   - toc:
