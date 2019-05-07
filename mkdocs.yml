@@ -35,7 +35,7 @@ nav:
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Connections Widgets: boards/connections/widgets.md
               - Office 365 for Business:
-                  - Overview: boards/msgraph/index.md
+                  - Overview: boards/msgraph/overview.md
                   - App Tile: boards/msgraph/custom-tiles.md
                   - Teams Integration: boards/msgraph/teams.md
                   - Outlook Plugin: boards/msgraph/outlook.md
@@ -55,7 +55,6 @@ nav:
           - WebSphere: boards/troubleshooting/websphere.md
           - Office 365 for Business: boards/troubleshooting/office365.md
       - How To Guide: boards/howto.md
-      - Office 365 for Business: boards/msgraph/overview.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
