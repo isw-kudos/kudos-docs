@@ -12,6 +12,8 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Quick Tips for Boards](/boards/howto/quick-tips-for-boards/)
 
+[Accessing Global Templates](/boards/howto/accessing-global-templates/)
+
 
 
 
