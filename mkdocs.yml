@@ -54,7 +54,10 @@ nav:
       - Troubleshooting:
           - WebSphere: boards/troubleshooting/websphere.md
           - Office 365 for Business: boards/troubleshooting/office365.md
-      - How To Guide: boards/howto.md
+      - How To Guide:
+          - Knowledge Base & Support: boards/howto/knowledgebase.md
+          - Getting Started with Kudos Boards: boards/howto/getting-started-with-kudos-boards.md
+          - Adding Boards to Teams: boards/howto/adding-boards-to-teams.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
