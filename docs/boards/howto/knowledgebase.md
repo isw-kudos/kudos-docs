@@ -10,7 +10,7 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Adding Boards to Teams](/boards/howto/adding-boards-to-teams/)
 
-
+[Quick Tips for Boards](/boards/howto/quick-tips-for-boards/)
 
 
 
