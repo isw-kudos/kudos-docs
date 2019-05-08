@@ -47,4 +47,4 @@ You can also click on a colour or multiple colours to filter the cards.
 ### Key Board Shortcuts
 Find shortcuts by holding `SHIFT` and pressing `?`
 
-![](\assets\boards\quicktips5.png)
+![](\assets\boards\quicktips5.PNG)
