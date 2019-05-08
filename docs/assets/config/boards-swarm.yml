@@ -51,7 +51,7 @@ services:
 
   # UI
   webfront:
-    image: iswkudos/kudos-microservices:boards-webfront-production
+    image: iswkudos/kudos-boards-docker:webfront
     restart: always
     networks:
       - proxy
@@ -71,7 +71,7 @@ services:
 
   # Core App routing logic
   core:
-    image: iswkudos/kudos-microservices:boards-core-production
+    image: iswkudos/kudos-boards-docker:core
     restart: always
     depends_on:
       - redis
@@ -102,7 +102,7 @@ services:
 
   # Boards business logic
   app:
-    image: iswkudos/kudos-microservices:boards-production
+    image: iswkudos/kudos-boards-docker:boards
     restart: always
     networks:
       - internal
@@ -115,7 +115,7 @@ services:
       MONGO_DB: app
 
   user:
-    image: iswkudos/kudos-microservices:user-production
+    image: iswkudos/kudos-boards-docker:user
     restart: always
     networks:
       - internal
@@ -141,7 +141,7 @@ services:
           }
         }]
   provider:
-    image: iswkudos/kudos-microservices:provider-production
+    image: iswkudos/kudos-boards-docker:provider
     restart: always
     networks:
       - internal
@@ -154,7 +154,7 @@ services:
       << : *s3-env
 
   notification:
-    image: iswkudos/kudos-microservices:notification-production
+    image: iswkudos/kudos-boards-docker:notification
     restart: always
     networks:
       - internal
@@ -167,7 +167,7 @@ services:
       MONGO_DB: notification
 
   licence:
-    image: iswkudos/kudos-microservices:licence-production
+    image: iswkudos/kudos-boards-docker:licence
     restart: always
     networks:
       - internal
