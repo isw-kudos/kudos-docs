@@ -91,3 +91,11 @@ On the right-hand side menu, you have tools that can change the layout of your M
 ***Line***
 
 ![](\assets\boards\mindmapview13.png)
+
+
+
+### Watch The Mind Map Video
+
+Follow along with Kudos Boards guru Maria, as she explores mind maps and how to get the most out of them.   
+
+[![Mind Map Video](\assets\boards\mindmapview_video.png)](https://www.youtube.com/watch?v=hRtW0Npa9Us&t=100s)
