@@ -14,6 +14,8 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Accessing Global Templates](/boards/howto/accessing-global-templates/)
 
+[Adding Members to a Board](/boards/howto/adding-members-to-a-board/)
+
 
 
 
