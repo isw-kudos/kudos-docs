@@ -16,7 +16,9 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Adding Members to a Board](/boards/howto/adding-members-to-a-board/)
 
+[Timeline View in Boards](/boards/howto/timeline-view-in-boards)
 
+[Mind Map View](/boards/howto/mind-map-view)
 
 
 
