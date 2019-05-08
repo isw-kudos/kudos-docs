@@ -112,7 +112,7 @@ Deploy S3 (using minio) only
 
 ### Update Config file
 
-Open the file at ansible/roles/boards-docker/files/boards.yaml and upate the values as below.
+Open the file at boards_docker_ansible/roles/docker-boards/files/boards.yaml and update the values as below.
 
 | Key                                       | Description                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------- |
@@ -126,7 +126,7 @@ Open the file at ansible/roles/boards-docker/files/boards.yaml and upate the val
 | global.env.S3_SECRET_KEY                  | Enter your S3 Secret Key, if using our storage above you may leave the default        |
 | boards.ingress.hosts                      | Your API_URL without the protocol e.g. api.kudosboards.com                            |
 | boards.webfront.webfront.env.API_GATEWAY  | Your BOARDS_URL                                                                       |
-| boards.webfront.webfront.env.DEFAULT_TEAM | A unique name for the team you will login with ( see ENSURE_TEAMS below )             |
+| boards.webfront.webfront.env.DEFAULT_TEAM | OPTIONAL: A unique name for the team you will login with ( see ENSURE_TEAMS below )             |
 | boards.webfront.ingress.hosts             | Your BOARDS_URL url as above without http                                             |
 | boards.core.env.NOTIFIER_EMAIL_HOST       | Your SMTP gateway URL                                                                 |
 | boards.core.env.NOTIFIER_EMAIL_USERNAME   | Your SMTP gateway username                                                            |
