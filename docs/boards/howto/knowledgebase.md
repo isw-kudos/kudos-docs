@@ -20,7 +20,7 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Mind Map View](/boards/howto/mind-map-view)
 
-
+[Creating Templates](/boards/howto/creating-templates)
 
 
 ## Customer Support
