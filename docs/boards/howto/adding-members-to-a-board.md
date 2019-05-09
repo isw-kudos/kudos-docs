@@ -24,7 +24,7 @@ New members will be notified that they have been invited to your board.
 
 ![](\assets\boards\adding-members-to-boards2.png)
 
-### Managing Members in a Team Channel and Board
+### Managing Members in a Microsoft Team Channel and Board
 
 [A board can be added to a channel within Teams](/boards/howto/adding-boards-to-teams/) to help track progress on tasks and create a collaborative work environment.
 
@@ -38,6 +38,6 @@ Click the` …` to the right of your channel. Then select `Manage Team.` From he
 
 ![](\assets\boards\adding-members-to-boards4.png)
 
-Note, that adding members from this location, will allow you to only add members or groups from within your organisation, as this is adding them to both the Channel in Teams and the board.
+Note, that adding members from this location, will allow you to only add members or groups from within your organisation, as this is adding them to both the channel in Microsoft Teams and the board.
 
-To add people external to your organisation, do so directly from the board. They will have access only to the board, not to the Team Channel.
+To add people external to your organisation, do so directly from the board. They will have access only to the board, not to the Microsoft Team Channel.

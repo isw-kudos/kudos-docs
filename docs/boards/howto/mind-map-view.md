@@ -24,13 +24,11 @@ When you create a new mind map, you’ll see the title of the board, sitting fro
 
 ![](\assets\boards\mindmapview3.png)
 
-You can add as many lists as you like and at any stage of your mind map. You can then start adding cards to your list areas, as you would on the Kanban Board view. Use the add a sub-card icon on your desired list to add cards.
+You can add as many lists as you like and at any stage of your mind map. Then add cards to your list areas, as you would on the Kanban Board view. Use the `Add a Sub-Card` icon on your desired list to add cards.
 
 ![](\assets\boards\mindmapview4.png)
 
 You can add as many cards to the blue list titles as you like. Using the `Add a Sub-Card` icon on a card, will create a sub-card.
-
-![](\assets\boards\mindmapview5.png)
 
 As with a board and timeline, you can drag and drop colour labels and members on to your mind map.
 
@@ -42,60 +40,58 @@ On the right-hand side menu, you have tools that can change the layout of your M
 
 ![](\assets\boards\mindmapview6.png)
 
-
+---
 
 ***Layout: Radial***
 
 ![](\assets\boards\mindmapview7.png)
 
-
+---
 
 ***Layout: Horizontal***
 
 ![](\assets\boards\mindmapview8.png)
 
-
+---
 
 ***Layout: Vertical***
 
 ![](\assets\boards\mindmapview9.png)
 
-
+---
 
 ***Mirror / Reverse:*** Flip the layout of your mind map between mirror and reverse.
-
 
 
 ***Type:*** Use Type to dictate how your lists, cards, and sub-cards are connected to each other.
 
 
-
-***Free***
+***Type: Free***
 
 ![](\assets\boards\mindmapview10.png)
 
+---
 
-
-***Step***
+***Type: Step***
 
 ![](\assets\boards\mindmapview11.png)
 
-
+---
 
 ***Curve***
 
 ![](\assets\boards\mindmapview12.png)
 
+---
 
-
-***Line***
+***Type: Line***
 
 ![](\assets\boards\mindmapview13.png)
 
-
+---
 
 ### Watch The Mind Map Video
 
-Follow along with Kudos Boards guru Maria, as she explores mind maps and how to get the most out of them.   
+Follow along with Kudos Boards guru Maria, as she explores the Mind Map features and how to get the most out of them.   
 
 [![Mind Map Video](\assets\boards\mindmapview_video.png)](https://www.youtube.com/watch?v=hRtW0Npa9Us&t=100s)

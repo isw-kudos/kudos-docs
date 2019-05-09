@@ -1,14 +1,14 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-# Adding Boards to Teams
+# Adding Boards to Microsoft Teams
 
-Boards has integrated seamlessly with Office365 Teams so you can supercharge your existing collaboration environments.
+Boards has integrated seamlessly with Microsoft Office 365 Teams so you can supercharge your existing collaboration environments.
 
- [Add boards to Teams as an administrator.](/boards/msgraph/teams/)
+ [Add boards to Microsoft Teams as an administrator.](/boards/msgraph/teams/)
 
-###Accessing all of your Boards in Teams
+###Accessing all of your Boards in Microsoft Teams
 
-When you open Teams, click the `…` icon in the left-hand side menu and select `Add More Apps.`
+When you open Microsoft Teams, click the `…` icon in the left-hand side menu and select `Add More Apps.`
 
 ![](\assets\boards\boards_to_teams1.png)
 
@@ -24,7 +24,7 @@ You can now access all your Boards in one place, by navigating to the `…` on t
 
 ![](\assets\boards\boards_to_teams3.png)
 
-From here, select the `My Boards` tab, next to Conversation. You’ll have access to all your Boards via the My Boards dashboard as normal, but conveniently located within Teams.  
+From here, select the `My Boards` tab, next to Conversation. You’ll have access to all your Boards via the My Boards dashboard as normal, but conveniently located within Microsoft Teams.  
 
 ![](\assets\boards\boards_to_teams4.png)
 
