@@ -22,6 +22,8 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Creating Templates](/boards/howto/creating-templates)
 
+[Archiving and Restoring](/boards/howto/archiving-and-restoring)
+
 
 ## Customer Support
 
