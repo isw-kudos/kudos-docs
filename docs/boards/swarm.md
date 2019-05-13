@@ -93,7 +93,7 @@ Please follow these instructions
 
 - [Header](/boards/connections/header-on-prem/)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
-- [Widgets](/boards/connections/widgets/)
+- [Widgets](/boards/connections/widgets-on-prem/)
 
 
 ---

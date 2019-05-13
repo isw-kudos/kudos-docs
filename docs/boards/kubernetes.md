@@ -177,7 +177,7 @@ Add a reverse proxy entry in your network that resolves your certificates and fo
 
 - [Header](/boards/connections/header-on-prem/)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
-- [Widgets](/boards/connections/widgets/)
+- [Widgets](/boards/connections/widgets-on-prem/)
 
 
 ---

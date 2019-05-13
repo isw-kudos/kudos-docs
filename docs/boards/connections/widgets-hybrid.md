@@ -1,5 +1,5 @@
 # IBM Connections Widget Setup
-Basic instructions for adding Kudos Boards Docker widgets into IBM Connections on-premise environments
+Basic instructions for adding Kudos Boards Hybrid widgets into IBM Connections on-premise environments
 
 ---
 
@@ -10,10 +10,10 @@ Check out the widgets-config.xml file.
     execfile("profilesAdmin.py")
     ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the widgets-config.xml file. Under the `<resource type="community">` section, then under `<widgets>`, then within `<definitions>` add the following.
+Edit the widgets-config.xml file. Under the `<resource type="community">` section, then under `<widgets>`, then within `<definitions>` add the following:
 
     <!-- Kudos Boards -->
-    <widgetDef defId="KudosBoards" modes="view fullpage" url="https://<BOARDS_URL>/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+    <widgetDef defId="KudosBoards" modes="view fullpage" url="https://kudosboards.com/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
       <itemSet>
         <item name="resourceId" value="{resourceId}"/>
       </itemSet>
@@ -42,15 +42,15 @@ Select the following:
 Add a Mapping for the Kudos Boards service to the Kudos client. Ensure OAuth Client is set to conn-ee and the Service name is Kudos Boards.
 Click the Ok button
 
-Enter The following:
+Enter the following:
 
   | Field | Value |
   | ----- | ----- |
   | Title| Kudos Boards Activity Stream |
-  | URL Address| `http://<BOARDS_URL>/stream/connections`|
-  | Secure URL Address| `https://<BOARDS_URL>/stream/connections`|
-  | ICON URL| `http://<BOARDS_URL>/favicon.ico`|
-  | ICON SECURE URL| `https://<BOARDS_URL>/favicon.ico`|
+  | URL Address| `http://kudosboards.com/stream/connections`|
+  | Secure URL Address| `https://kudosboards.com/stream/connections`|
+  | ICON URL| `http://kudosboards.com/favicon.ico`|
+  | ICON SECURE URL| `https://kudosboards.com/favicon.ico`|
 
 Select:
 
@@ -70,9 +70,9 @@ Select the following Prerequisites:
 
 ### Register Widget
 
-Required for IBM Connections 6.0 CR1 onwards
+Required for IBM Connections 6.0 CR1 onwards:
 
     execfile("newsAdmin.py")
-    NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://<BOARDS_URL>/boards/community/connection" ,secureUrl="https://<BOARDS_URL>/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
+    NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://kudosboards.com/boards/community/connections" ,secureUrl="https://kudosboards.com/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
     NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
     NewsWidgetCatalogService.clearWidgetCaches()
