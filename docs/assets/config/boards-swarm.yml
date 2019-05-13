@@ -125,10 +125,10 @@ services:
       << : *app-env
       << : *s3-env
       << : *db-env
-      CONNECTIONS_NAME:
-      CONNECTIONS_CLIENT_ID:
-      CONNECTIONS_CLIENT_SECRET:
-      CONNECTIONS_URL:
+      CONNECTIONS_NAME: Connections
+      CONNECTIONS_CLIENT_ID: kudosboards
+      CONNECTIONS_CLIENT_SECRET: <CLIENT_SECRET>
+      CONNECTIONS_URL: https://<CONNECTIONS_URL>
       ENSURE_TEAMS: >
         [{
           "name" : "<COMPANY NAME>",
