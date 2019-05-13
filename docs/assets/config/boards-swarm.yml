@@ -5,7 +5,7 @@ x-minio-secret: &minio-secret <SECRET_KEY>
 
 x-app-env:
   &app-env
-  APP_URI: <MAIN_URL>
+  APP_URI: https://<MAIN_URL>
   COTE_DISCOVERY_REDIS_HOST: redis.internal
   REDIS_CACHE_HOST: redis.internal
 
@@ -67,7 +67,7 @@ services:
         - "traefik.frontend.passHostHeader=true"
         - "traefik.frontend.rule=Host:<MAIN_URL>"
     environment:
-      API_GATEWAY: <API_URL>
+      API_GATEWAY: https://<API_URL>
 
   # Core App routing logic
   core:
@@ -112,7 +112,6 @@ services:
     environment:
       << : *app-env
       << : *db-env
-      MONGO_DB: app
 
   user:
     image: iswkudos/kudos-boards-docker:user
@@ -126,19 +125,19 @@ services:
       << : *app-env
       << : *s3-env
       << : *db-env
-      MONGO_DB: user
-      LEGACY_CALLBACK_URI: "true"
+      CONNECTIONS_NAME:
+      CONNECTIONS_CLIENT_ID:
+      CONNECTIONS_CLIENT_SECRET:
+      CONNECTIONS_URL:
       ENSURE_TEAMS: >
         [{
           "name" : "<COMPANY NAME>",
-          "teamName" : "connections-on-prem",
+          "teamName" : "connections",
           "provider" : "connections",
-          "externalId" : "<EXTERNAL_ID>",
           "oAuth" : {
-            "clientSecret" : "<OAUTH_SECRET>",
-            "clientID" : "<OAUTH_CLIENT_ID>",
-            "baseURL" : "<CONNECTIONS_URL>"
-          }
+            "baseURL" : "https://<CONNECTIONS_URL>"
+          },
+          "globalOAuth": true
         }]
   provider:
     image: iswkudos/kudos-boards-docker:provider
@@ -164,7 +163,6 @@ services:
     environment:
       << : *app-env
       << : *db-env
-      MONGO_DB: notification
 
   licence:
     image: iswkudos/kudos-boards-docker:licence
@@ -177,4 +175,3 @@ services:
     environment:
       << : *app-env
       << : *db-env
-      MONGO_DB: licence
