@@ -10,7 +10,7 @@ Check out the widgets-config.xml file.
     execfile("profilesAdmin.py")
     ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the widgets-config.xml file. Under the `<resource type="community">` section, then under `<widgets>`, then within `<definitions>` add the following, replacing `<BOARDS_URL>` with your URL:
+Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following, replacing `<BOARDS_URL>` with your URL:
 
     <!-- Kudos Boards -->
     <widgetDef defId="KudosBoards" modes="view fullpage" url="https://<BOARDS_URL>/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">

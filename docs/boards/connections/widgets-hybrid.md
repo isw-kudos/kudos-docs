@@ -10,7 +10,7 @@ Check out the widgets-config.xml file.
     execfile("profilesAdmin.py")
     ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the widgets-config.xml file. Under the `<resource type="community">` section, then under `<widgets>`, then within `<definitions>` add the following:
+Edit the widgets-config.xml file. Under the `<resource ... type="community" ... >` section, then under `<widgets>`, then within `<definitions>` add the following:
 
     <!-- Kudos Boards -->
     <widgetDef defId="KudosBoards" modes="view fullpage" url="https://kudosboards.com/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
