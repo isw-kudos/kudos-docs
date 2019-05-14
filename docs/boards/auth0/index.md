@@ -22,13 +22,13 @@
 
 - Provide the rest of the details as below:
 
-  > In the table below, copy your auth0 domain (listed at the top of the page) into the relevant fields, replacing [domain] where applicable
+  > In the table below, copy your auth0 domain (listed at the top of the page) into the relevant fields, replacing &lt;domain&gt; where applicable
 
   | Field                                | Value                                                |
   | ------------------------------------ | ---------------------------------------------------- |
   | Application Logo                     | https://kudosboards.com/img/logo-large.png           |
   | Token Endpoint Authentication Method | Post                                                 |
-  | Allowed Callback URLs                | https://kudosboards.com/auth/auth0/[domain]/callback |
+  | Allowed Callback URLs                | https://kudosboards.com/auth/auth0/&lt;domain&gt;/callback |
   | Allowed Web Origins                  | https://kudosboards.com                              |
   | Allowed Origins                      | https://*.kudosboards.com                            |
 
@@ -47,9 +47,10 @@
 > If you aren't redirected to the users page, click them to open it
 
 - Scroll down to metadata and add the users full name in the space provided, then click Save.
+    e.g.
 
         {
-          "name": "User Name"
+          "name": "John Smith"
         }
 
 ![User Metadata](/assets/auth0/metadata.png)
