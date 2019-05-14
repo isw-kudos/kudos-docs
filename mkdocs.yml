@@ -65,6 +65,7 @@ nav:
           - Mind Map View: boards/howto/mind-map-view.md
           - Creating Templates: boards/howto/creating-templates.md
           - Archiving and Restoring: boards/howto/archiving-and-restoring.md
+          - Permissions in Kudos Boards: boards/howto/permissions.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
