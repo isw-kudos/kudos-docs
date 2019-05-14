@@ -24,6 +24,8 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Archiving and Restoring](/boards/howto/archiving-and-restoring)
 
+[Permissions in Kudos Boards](/boards/howto/permissions)
+
 
 ## Customer Support
 

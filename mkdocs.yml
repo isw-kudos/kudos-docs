@@ -33,7 +33,7 @@ nav:
                   - Authentication: boards/connections/auth-hybrid.md
                   - Connections Header: boards/connections/header-hybrid.md
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
-                  - Connections Widgets: boards/connections/widgets.md
+                  - Connections Widgets: boards/connections/widgets-hybrid.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
                   - App Tile: boards/msgraph/custom-tiles.md
@@ -65,6 +65,7 @@ nav:
           - Mind Map View: boards/howto/mind-map-view.md
           - Creating Templates: boards/howto/creating-templates.md
           - Archiving and Restoring: boards/howto/archiving-and-restoring.md
+          - Permissions in Kudos Boards: boards/howto/permissions.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
