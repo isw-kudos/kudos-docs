@@ -13,9 +13,12 @@ Check out the widgets-config.xml file.
 Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 
     <!-- Kudos Boards -->
-    <widgetDef defId="KudosBoards" modes="view fullpage" url="https://kudosboards.com/boards/community/connections" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+    <widgetDef defId="Kudos Boards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
       <itemSet>
-        <item name="resourceId" value="{resourceId}"/>
+      <item name="resourceId" value="{resourceId}"/>
+        <item name="width" value="100%"/>
+        <item name="height" value="500px"/>
+        <item name="url" value="https://kudosboards.com/boards/community/connections"/>
       </itemSet>
     </widgetDef>
     <!-- END Kudos Boards -->
@@ -68,6 +71,7 @@ Select the following Prerequisites:
 
 ---
 
+<!-- This is not needed for the iframe widget
 ### Register Widget
 
 Required for IBM Connections 6.0 CR1 onwards:
@@ -76,3 +80,4 @@ Required for IBM Connections 6.0 CR1 onwards:
     NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://kudosboards.com/boards/community/connections" ,secureUrl="https://kudosboards.com/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
     NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
     NewsWidgetCatalogService.clearWidgetCaches()
+-->
