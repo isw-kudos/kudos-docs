@@ -131,7 +131,14 @@ Open the file at boards_docker_ansible/roles/docker-boards/files/boards.yaml and
 | boards.core.env.NOTIFIER_EMAIL_HOST       | Your SMTP gateway URL                                                                 |
 | boards.core.env.NOTIFIER_EMAIL_USERNAME   | Your SMTP gateway username                                                            |
 | boards.core.env.NOTIFIER_EMAIL_PASSWORD   | Your SMTP gateway password                                                            |
+| boards.user.env.CONNECTIONS_NAME                           | If you have customised the name of connections on premise in your environment you may adjust it here accordingly |
+| boards.user.env.CONNECTIONS_CLIENT_ID                      | Your oAuth client secret as defined in connections                                                               |
+| boards.user.env.CONNECTIONS_CLIENT_SECRET                  | Your oAuth client id                                                                                             |
+| boards.user.env.CONNECTIONS_URL                            | Your connections URL                                                                                             |
+| boards.user.env.SMARTCLOUD_CLIENT_ID                       | Your oAuth client id                                                                                             |
+| boards.user.env.SMARTCLOUD_CLIENT_SECRET                   | Your oAuth client secret as defined in connections                                                               |
 | boards.user.env.ENSURE_TEAMS              | See below for details on the values available here                                    |
+
 
 Options for ENSURE_TEAMS:
 
@@ -140,10 +147,9 @@ Options for ENSURE_TEAMS:
 | name               | If defining multiple teams you may use this long description to help determine which is which                                                                     |
 | teamName           | A Unique name to identify your team, this should be kept short and not contain any spaces, punctuation or special characters                                      |
 | provider           | Your oauth provider, available options are <br>'connections' - Connections on premise<br>'smartcloud' - Connections cloud<br>'msgraph' - Office 365 or Azure AD   |
-| externalId         | based on the provider you chose above:<br>'connections' base64 string of your connections domain<br>'smartcloud' your organisation id<br>'msgraph' your tenant id |
-| oAuth.clientID     | The client id from the oauth application you defined previously                                                                                                   |
-| oAuth.clientSecret | The client secret from the oauth application you defined previously                                                                                               |
-| oAuth.baseURL      | your connections url, only needed if you chose 'connections' as your provider.                                                                                    |
+| externalId    | Based on the provider you chose above:<br>*connections*: the base64 string of your connections domain (optional - default is calculated from oAuth.baseURL)<br>*smartcloud*: your organisation id<br>*msgraph*: your tenant id |
+| frameUrl      | The URL of the Connections Header frame configured in  [this step](/boards/connections/header-on-prem/).<br>*OPTIONAL*: Only required if you are running the Connections App Loader WAS application and desire the Boards experience to always include the IBM Connections header   |
+| oAuth.baseURL | Your connections url, only needed if you chose 'connections' as your provider.    
 
 ---
 

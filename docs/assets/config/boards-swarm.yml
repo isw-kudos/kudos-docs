@@ -137,6 +137,7 @@ services:
           "name" : "<COMPANY NAME>",
           "teamName" : "connections",
           "provider" : "connections",
+          "frameUrl": "https://[CONNECTIONS_URL]/boards",
           "oAuth" : {
             "baseURL" : "https://<CONNECTIONS_URL>"
           },

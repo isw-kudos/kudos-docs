@@ -48,22 +48,23 @@ You will need to setup an OAuth application with one (or more) of these provider
 | services.core.environment.NOTIFIER_EMAIL_HOST       | Your SMTP gateway URL                                                                 |
 | services.core.environment.NOTIFIER_EMAIL_USERNAME   | Your SMTP gateway username                                                            |
 | services.core.environment.NOTIFIER_EMAIL_PASSWORD   | Your SMTP gateway password                                                            |
+| services.user.environment.CONNECTIONS_NAME                           | If you have customised the name of connections on premise in your environment you may adjust it here accordingly |
+| services.user.environment.CONNECTIONS_CLIENT_ID                      | Your oAuth client secret as defined in connections                                                               |
+| services.user.environment.CONNECTIONS_CLIENT_SECRET                  | Your oAuth client id                                                                                             |
+| services.user.environment.CONNECTIONS_URL                            | Your connections URL                                                                                             |
+| services.user.environment.SMARTCLOUD_CLIENT_ID                       | Your oAuth client id                                                                                             |
+| services.user.environment.SMARTCLOUD_CLIENT_SECRET                   | Your oAuth client secret as defined in connections                                                               |
 | services.user.environment.ENSURE_TEAMS     | See the table below                                                                                              |
-| CONNECTIONS_NAME                           | If you have customised the name of connections on premise in your environment you may adjust it here accordingly |
-| CONNECTIONS_CLIENT_ID                      | Your oAuth client secret as defined in connections                                                               |
-| CONNECTIONS_CLIENT_SECRET                  | Your oAuth client id                                                                                             |
-| CONNECTIONS_URL                            | Your connections URL                                                                                             |
-| SMARTCLOUD_CLIENT_ID                       | Your oAuth client id                                                                                             |
-| SMARTCLOUD_CLIENT_SECRET                   | Your oAuth client secret as defined in connections                                                               |
 
-Values for ENSURE_TEAMS
+Options for ENSURE_TEAMS:
 
 | Key           | Description                                                                                                                                                       |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name          | If defining multiple teams you may use this long description to help determine which is which                                                                     |
 | teamName      | A Unique name to identify your team, this should be kept short and not contain any spaces, punctuation or special characters                                      |
 | provider      | Your oauth provider, available options are <br>'connections' - Connections on premise<br>'smartcloud' - Connections cloud<br>'msgraph' - Office 365 or Azure AD   |
-| externalId    | Based on the provider you chose above:<br>'connections' base64 string of your connections domain<br>'smartcloud' your organisation id<br>'msgraph' your tenant id |
+| externalId    | Based on the provider you chose above:<br>*connections*: the base64 string of your connections domain (optional - default is calculated from oAuth.baseURL)<br>*smartcloud*: your organisation id<br>*msgraph*: your tenant id |
+| frameUrl      | The URL of the Connections Header frame configured in  [this step](/boards/connections/header-on-prem/).<br>*OPTIONAL*: Only required if you are running the Connections App Loader WAS application and desire the Boards experience to always include the IBM Connections header   |
 | oAuth.baseURL | Your connections url, only needed if you chose 'connections' as your provider.                                                                                    |
 | globalOAuth   | As you may only have one team defined for each provider, please always set this to true                                                                           |
 

@@ -86,9 +86,12 @@ The app should now start. Congratulations, you have installed the app!
 
 ![example](/assets/connections/header/app10.png)
 
-You should now be able to load  app can now be loaded at this path
 
-    https://[CONNECTIONS_COMPANY_URL]/boards
+## Open Boards
+
+You should now be able to load the Boards app with IBM Connections header at this path:
+
+    https://[CONNECTIONS_URL]/boards
 
 For example:
 

@@ -91,7 +91,7 @@ The app should now start. Congratulations, you have installed the app!
 
 You should now be able to load  app can now be loaded at this path
 
-    https://[CONNECTIONS_COMPANY_URL]/boards
+    https://[CONNECTIONS_URL]/boards
 
 For example:
 
