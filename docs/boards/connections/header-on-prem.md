@@ -95,4 +95,4 @@ You should now be able to load the Boards app with IBM Connections header at thi
 
 For example:
 
-    https://connections.company.com/boards
+    https://connections.example.com/boards

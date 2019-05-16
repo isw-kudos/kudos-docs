@@ -95,4 +95,4 @@ You should now be able to load  app can now be loaded at this path
 
 For example:
 
-    https://connections.company.com/boards
+    https://connections.example.com/boards

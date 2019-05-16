@@ -41,8 +41,11 @@ nav:
                   - Outlook Plugin: boards/msgraph/outlook.md
                   - Sharepoint Pages: boards/msgraph/sharepoint.md
       - Boards Docker:
-          - In Kubernetes: boards/kubernetes.md
-          - In Docker Swarm: boards/swarm.md
+          - For Kubernetes: boards/kubernetes.md
+          - For Swarm: boards/swarm.md
+          - Common Config:
+            - Environment: boards/env/common.md
+            - Team Logins: boards/env/teams.md
           - Integrations:
               - IBM Connections On-Prem:
                   - Authentication: boards/connections/auth-on-prem.md

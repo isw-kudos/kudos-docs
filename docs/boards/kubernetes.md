@@ -12,7 +12,7 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
 1. Ansible is installed, see [Ansible](/tools/ansible/)
-1. [Kudos Boards ansible roles](/assets/boards-docker-ansible.zip) downloaded and extracted
+1. [Kudos Boards ansible roles](/assets/config/boards-docker-ansible.zip) downloaded and extracted
 1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository, send your account details to support@kudosboards.com if you don't already have this.
 
 ---
@@ -45,13 +45,13 @@ Kudos Boards currently supports the following oauth providers for authentication
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
-| Provider                     | Registration / Documentation                                                                                                          | Callback URL                  | Scopes |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------- | ------ |
-| IBM Connections (on premise) | [Kudos instructions](/boards/connections/auth-on-prem/) | [BOARDS_URL]/auth/connections/callback |
-| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)                         | [BOARDS_URL]/auth/msgraph/callback     |
-| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                                              | [BOARDS_URL]/auth/google/callback      |
-| LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                                                  | [BOARDS_URL]/auth/linkedin/callback    |
-| Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)                                 | [BOARDS_URL]/auth/facebook/callback    |
+| Provider                     | Registration / Documentation                                                                                  | Callback URL                           | Scopes |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------ |
+| IBM Connections (on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | [BOARDS_URL]/auth/connections/callback |
+| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | [BOARDS_URL]/auth/msgraph/callback     |
+| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | [BOARDS_URL]/auth/google/callback      |
+| LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | [BOARDS_URL]/auth/linkedin/callback    |
+| Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | [BOARDS_URL]/auth/facebook/callback    |
 
 ---
 
@@ -114,42 +114,24 @@ Deploy S3 (using minio) only
 
 Open the file at boards_docker_ansible/roles/docker-boards/files/boards.yaml and update the values as below.
 
-| Key                                       | Description                                                                           |
-| ----------------------------------------- | ------------------------------------------------------------------------------------- |
-| global.env.APP_URI                        | Your BOARDS_URL                                                                       |
-| global.env.MONGO_USER                     | Your mongodb user, if using our storage above you may leave this commented out        |
-| global.env.MONGO_PASSWORD                 | Your mongodb password, if using our storage above you may leave this commented out    |
-| global.env.MONGO_HOST                     | Your mongodb host, if using our storage above you may leave the default               |
-| global.env.MONGO_PARAMS                   | Your mongodb request parameters, if using our storage above you may leave the default |
-| global.env.S3_ENDPOINT                    | Enter your S3 URL, if using our storage above you may leave the default               |
-| global.env.S3_ACCESS_KEY                  | Enter your S3 Access Key, if using our storage above you may leave the default        |
-| global.env.S3_SECRET_KEY                  | Enter your S3 Secret Key, if using our storage above you may leave the default        |
-| boards.ingress.hosts                      | Your API_URL without the protocol e.g. api.kudosboards.com                            |
-| boards.webfront.webfront.env.API_GATEWAY  | Your BOARDS_URL                                                                       |
-| boards.webfront.webfront.env.DEFAULT_TEAM | OPTIONAL: A unique name for the team you will login with ( see ENSURE_TEAMS below )             |
-| boards.webfront.ingress.hosts             | Your BOARDS_URL url as above without http                                             |
-| boards.core.env.NOTIFIER_EMAIL_HOST       | Your SMTP gateway URL                                                                 |
-| boards.core.env.NOTIFIER_EMAIL_USERNAME   | Your SMTP gateway username                                                            |
-| boards.core.env.NOTIFIER_EMAIL_PASSWORD   | Your SMTP gateway password                                                            |
-| boards.user.env.CONNECTIONS_NAME                           | If you have customised the name of connections on premise in your environment you may adjust it here accordingly |
-| boards.user.env.CONNECTIONS_CLIENT_ID                      | Your oAuth client secret as defined in connections                                                               |
-| boards.user.env.CONNECTIONS_CLIENT_SECRET                  | Your oAuth client id                                                                                             |
-| boards.user.env.CONNECTIONS_URL                            | Your connections URL                                                                                             |
-| boards.user.env.SMARTCLOUD_CLIENT_ID                       | Your oAuth client id                                                                                             |
-| boards.user.env.SMARTCLOUD_CLIENT_SECRET                   | Your oAuth client secret as defined in connections                                                               |
-| boards.user.env.ENSURE_TEAMS              | See below for details on the values available here                                    |
+**Kubernetes Variables**:
 
+| Key                       | Description                                                                           |
+| ------------------------- | ------------------------------------------------------------------------------------- |
+| global.env.APP_URI        | Your BOARDS_URL                                                                       |
+| global.env.MONGO_USER     | Your mongodb user, if using our storage above you may leave this commented out        |
+| global.env.MONGO_PASSWORD | Your mongodb password, if using our storage above you may leave this commented out    |
+| global.env.MONGO_HOST     | Your mongodb host, if using our storage above you may leave the default               |
+| global.env.MONGO_PARAMS   | Your mongodb request parameters, if using our storage above you may leave the default |
+| global.env.S3_ENDPOINT    | Enter your S3 URL, if using our storage above you may leave the default               |
+| global.env.S3_ACCESS_KEY  | Enter your S3 Access Key, if using our storage above you may leave the default        |
+| global.env.S3_SECRET_KEY  | Enter your S3 Secret Key, if using our storage above you may leave the default        |
+| boards.ingress.hosts      | Your API_URL without the protocol e.g. api.kudosboards.com                            |
+| webfront.ingress.hosts    | Your BOARDS_URL url as above without http                                             |
 
-Options for ENSURE_TEAMS:
+**Boards Variables**:
 
-| Key                | Description                                                                                                                                                       |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name               | If defining multiple teams you may use this long description to help determine which is which                                                                     |
-| teamName           | A Unique name to identify your team, this should be kept short and not contain any spaces, punctuation or special characters                                      |
-| provider           | Your oauth provider, available options are <br>'connections' - Connections on premise<br>'smartcloud' - Connections cloud<br>'msgraph' - Office 365 or Azure AD   |
-| externalId    | Based on the provider you chose above:<br>*connections*: the base64 string of your connections domain (optional - default is calculated from oAuth.baseURL)<br>*smartcloud*: your organisation id<br>*msgraph*: your tenant id |
-| frameUrl      | The URL of the Connections Header frame configured in  [this step](/boards/connections/header-on-prem/).<br>*OPTIONAL*: Only required if you are running the Connections App Loader WAS application and desire the Boards experience to always include the IBM Connections header   |
-| oAuth.baseURL | Your connections url, only needed if you chose 'connections' as your provider.    
+Follow instructions on [this page](/boards/env/common/)
 
 ---
 
@@ -184,6 +166,5 @@ Add a reverse proxy entry in your network that resolves your certificates and fo
 - [Header](/boards/connections/header-on-prem/)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
-
 
 ---
