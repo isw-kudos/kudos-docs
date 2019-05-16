@@ -1,0 +1,55 @@
+---
+- name: Create namespace for Connections
+  command: kubectl create namespace connections
+
+# https://container-solutions.com/using-google-container-registry-with-kubernetes/
+- name: Setup Docker Repo
+  block:
+    - copy:
+        src: kudos-a31c365430f8.json
+        dest: /root/docker-repo-admin.json
+    - command: kubectl create secret docker-registry myregkey -n connections --docker-server=asia.gcr.io/kudos-220404 --docker-username=_json_key --docker-password="$(cat /root/docker-repo-admin.json)" --docker-email=support@kudosbadges.com
+
+- name: Setup the Persistent Volume
+  command: mkdir -p /pv-connections && mount 192.168.10.42:/pv-connections /pv-connections
+
+- name: Create folders on NFS
+  block:
+    - command: mkdir -p /pv-connections/esdata-0
+    - command: mkdir -p /pv-connections/esdata-1
+    - command: mkdir -p /pv-connections/esdata-2
+    - command: mkdir -p /pv-connections/mongo-node-0/data/db
+    - command: mkdir -p /pv-connections/mongo-node-1/data/db
+    - command: mkdir -p /pv-connections/mongo-node-2/data/db
+    - command: mkdir -p /pv-connections/solr-data-solr-0
+    - command: mkdir -p /pv-connections/solr-data-solr-1
+    - command: mkdir -p /pv-connections/solr-data-solr-2
+    - command: mkdir -p /pv-connections/zookeeper-data-zookeeper-0
+    - command: mkdir -p /pv-connections/zookeeper-data-zookeeper-1
+    - command: mkdir -p /pv-connections/zookeeper-data-zookeeper-2
+    - command: mkdir -p /pv-connections/esbackup
+    - command: mkdir -p /pv-connections/customizations
+    - command: chmod -R 700 /pv-connections
+    - command: chmod -R 005 /pv-connections/customizations
+
+- name: Extract IBM Component Pack from zip
+  unarchive:
+    src: /root/install/IC-ComponentPack-6.0.0.7.zip
+    dest: /root/install/
+    remote_src: yes
+
+- name: Configure NFS
+  block:
+    - command: yum install -y nfs-utils rpcbind nfs-server nfs-lock nfs-idmap
+    - command: bash ./nfsSetup.sh
+      args:
+        chdir: /root/install/microservices_connections/hybridcloud/support/
+    - command: cat /etc/exports
+
+- name: Install PVs and PVCs
+  command: >
+    helm install
+    --name=connections-volumes ./connections-persistent-storage-nfs-0.1.0.tgz
+    --set nfs.server=192.168.10.42
+  args:
+      chdir: /root/install/microservices_connections/hybridcloud/helmbuilds/

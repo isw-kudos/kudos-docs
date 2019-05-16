@@ -1,0 +1,23 @@
+- name: Installing Sanity
+  command: >
+    helm install
+    --name=sanity ./sanity-0.1.8-20190201-143401.tgz
+    --set image.repository=,
+          logLevel=info
+  args:
+    chdir: /root/install/microservices_connections/hybridcloud/helmbuilds/
+
+- name: Installing Sanity Watcher
+  command: >
+    helm install
+    --name=sanity-watcher ./sanity-watcher-0.1.0-20190204-022029.tgz
+    --set image.repository=
+  args:
+    chdir: /root/install/microservices_connections/hybridcloud/helmbuilds/
+
+- name: Check status
+  block:
+    - command: helm list
+    - command: kubectl get pods -n connections
+
+# WAIT FOR ALL PODS TO PULL AND START

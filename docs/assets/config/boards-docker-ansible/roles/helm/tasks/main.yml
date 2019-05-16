@@ -1,0 +1,8 @@
+---
+  - name: Download and extract latest Helm
+    include_tasks: install-latest.yml
+    when: HELM_VERSION is undefined
+
+  - name: Download and extract version of Helm
+    include_tasks: install-version.yml
+    when: HELM_VERSION is defined

@@ -1,0 +1,34 @@
+---
+  - name: Register home dir
+    command: pwd
+    register: user_home
+    args:
+      chdir: $HOME
+    changed_when: false
+
+  - name: Check if helm {{HELM_VERSION}} installed
+    command: "/usr/local/bin/helm version -c"
+    register: helm_output
+    ignore_errors: true
+    changed_when: false
+
+  - name: Upsert Helm
+    when: helm_output is failed or HELM_VERSION not in helm_output.stdout
+    block:
+      - name: Download and extract Helm
+        unarchive:
+          # set client version to match server version
+          src: https://storage.googleapis.com/kubernetes-helm/helm-{{HELM_VERSION}}-linux-amd64.tar.gz
+          dest: "{{ user_home.stdout }}"
+          remote_src: yes
+      # - name: Make Helm executable
+      #   become: true
+      #   become_user: root
+      #   file:
+      #     mode: +x
+      #     state: file
+      #     path: "{{ user_home.stdout }}/linux-amd64/helm"
+      - name: Move Helm executable
+        command: mv -f {{ user_home.stdout }}/linux-amd64/helm /usr/local/bin/helm
+        become: true
+        become_user: root

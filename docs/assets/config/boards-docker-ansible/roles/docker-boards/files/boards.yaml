@@ -1,0 +1,56 @@
+global:
+  env:
+    APP_URI: https://example.com/boards
+    APP_URI_PATH: /boards
+    # MONGO_USER: admin
+    # MONGO_PASSWORD: password
+    MONGO_HOST: mongo-service:27017
+    MONGO_PARAMS: replicaSet=replicaset
+    S3_ENDPOINT: minio-service
+    S3_ACCESS_KEY: ioueygr4t589
+    S3_SECRET_KEY: 7a863d41-2d8f-4143-bc8a-02501edbea6f
+    S3_BUCKET: kudos-boards
+
+boards:
+  ingress:
+    hosts:
+      - example.com
+    path: /api-boards
+    annotations:
+      nginx.ingress.kubernetes.io/rewrite-target: /
+  webfront:
+    webfront:
+      env:
+        API_GATEWAY: https://example.com/api-boards
+    ingress:
+      hosts:
+        - example.com
+      path: /boards
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target: /
+  core:
+    env:
+      NOTIFIER_EMAIL_HOST: smtp.ethereal.email
+      NOTIFIER_EMAIL_USERNAME: user
+      NOTIFIER_EMAIL_PASSWORD: password
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+  provider:
+    env:
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+  user:
+    env:
+      CONNECTIONS_NAME:
+      CONNECTIONS_CLIENT_ID:
+      CONNECTIONS_CLIENT_SECRET:
+      CONNECTIONS_URL:
+      ENSURE_TEAMS: >
+        [{
+          "name" : "",
+          "teamName" : "",
+          "provider" : "",
+          "admins": ["you@example.com"],
+          "globalOAuth": true/false,
+          "oAuth" : {
+            "baseURL" : ""
+          }
+        }]

@@ -1,0 +1,57 @@
+---
+  - name: Setup Kube Repo
+    copy:
+      src: kubernetes.repo
+      dest: /etc/yum.repos.d/kubernetes.repo
+
+  - name: Disable SELinux
+    block:
+      - command: setenforce 0
+      - command: sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config
+
+  - name: Install latest Kube services & lock versions
+    block:
+      - command: yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes
+      - command: yum-config-manager --disable kubernetes*
+
+  - name: Start Kube services
+    block:
+    - systemd:
+        name: kubelet
+        state: started
+        enabled: true
+    - copy:
+        src: k8s.conf
+        dest: /etc/sysctl.d/k8s.conf
+    - command: sysctl --system
+
+  - name: Disable internal firewal :/
+    systemd:
+      name: firewalld
+      state: stopped
+      enabled: false
+
+  - name: Setup Kube Manager
+    when: inventory_hostname in groups.managers
+    block:
+      - name: Create the Kube cluster
+        command: kubeadm init --pod-network-cidr=10.10.0.0/16
+        register: "manager_token_output"
+
+      - name: Setup calico networking
+        block:
+        - command: kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/rbac-kdd.yaml
+        # - command: kubectl apply -f https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+        - command: wget https://docs.projectcalico.org/v3.3/getting-started/kubernetes/installation/hosted/kubernetes-datastore/calico-networking/1.7/calico.yaml
+        - command: sed -i 's/192\.168\.0\.0/10\.10\.0\.0' ./calico.yaml
+        - command: kubectl apply -f ./calico.yaml
+
+  - name: Install Helm
+    include: helm.yml
+    when: inventory_hostname in groups.managers
+
+  - name: Check internal networking
+    when: inventory_hostname in groups.managers
+    block:
+      - command: kubectl create -f https://k8s.io/examples/admin/dns/busybox.yaml
+      - command: kubectl exec -ti busybox -- nslookup kubernetes.default

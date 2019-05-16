@@ -1,0 +1,7 @@
+---
+  - name: install gcloud-sdk
+    yum:
+      name: google-cloud-sdk
+      state: present
+  # - name: Initialise gcloud
+  #   command: gcloud init

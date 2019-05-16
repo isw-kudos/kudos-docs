@@ -1,0 +1,6 @@
+image:
+  repository: 
+ingress:
+  hosts:
+    domain: 
+replicaCount: 1

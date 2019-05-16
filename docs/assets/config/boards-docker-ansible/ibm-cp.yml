@@ -1,0 +1,4 @@
+  - name: Install IBM Component Pack
+    hosts: all
+    roles:
+      - ibm-component-pack

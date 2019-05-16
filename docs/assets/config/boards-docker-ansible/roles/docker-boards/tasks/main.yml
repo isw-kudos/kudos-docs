@@ -1,0 +1,35 @@
+  - name: Install Boards storage
+    when: inventory_hostname in groups.managers
+    include: storage.yml
+
+  - name: Fix for Redis latency
+    tags: redis
+    block:
+      - command: echo never > /sys/kernel/mm/transparent_hugepage/enabled
+      - lineinfile:
+          dest: /etc/rc.local
+          line: echo never > /sys/kernel/mm/transparent_hugepage/enabled
+          state: present
+
+  - name: Install Boards
+    tags: boards
+    when: inventory_hostname in groups.managers
+    block:
+      - file:
+          path: /root/install
+          state: directory
+      - name: Transfer config
+        copy:
+          src: boards.yaml
+          dest: /root/install/boards.yaml
+      - name: Transfer chart
+        copy:
+          src: kudos-boards-1.0.1.tgz
+          dest: /root/install/kudos-boards-1.0.1.tgz
+      - name: Install Boards chart
+        command: >
+          helm upgrade boards ./kudos-boards-1.0.1.tgz
+          -i -f ./boards.yaml
+          --namespace boards
+        args:
+            chdir: /root/install/

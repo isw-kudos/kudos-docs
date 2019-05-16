@@ -1,0 +1,18 @@
+
+- copy:
+    src: ingress-values.yaml
+    dest: /root/install/ingress-values.yaml
+
+- name: Install cnx-ingress
+  command: >
+    helm upgrade
+    cnx-ingress ./cnx-ingress-0.1.0-20190204-024025.tgz
+    -f /root/install/ingress-values.yaml
+    --recreate-pods
+  args:
+    chdir: /root/install/microservices_connections/hybridcloud/helmbuilds/
+
+- name: Check status
+  block:
+    - command: helm list
+    - command: kubectl get pods -n connections

@@ -1,0 +1,30 @@
+all:
+
+  # Add common user credentials here
+  vars:
+    ansible_user: root
+    # ansible_ssh_private_key_file: /home/nicky/.ssh/google_compute_engine
+    # must match one of your intended manger hosts
+    primary_manager: manager1
+
+  # Define all your hosts here
+  hosts:
+    greig:
+      ansible_host: 192.168.10.42
+    holst:
+      ansible_host: 192.168.10.43
+    ireland:
+      ansible_host: 192.168.10.44
+
+  # Groups
+  children:
+    # kube managers group
+    managers:
+      hosts:
+        greig:
+
+    # kube workers group
+    workers:
+      hosts:
+        holst:
+        ireland:
