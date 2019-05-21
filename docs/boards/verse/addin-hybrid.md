@@ -1,16 +1,3 @@
-## Kudos Boards integration points for IBM Verse
-
-Kudos Boards provides 2 integration points with IBM Verse:
-
-#### Save email as a card in Boards
-
-![Create Card 1](/assets/connections/verse-create-card1.png)
-![Create Card 2](/assets/connections/verse-create-card2.png)
-
-#### Attach card from Boards to an email in Verse
-
-![Create Card 1](/assets/connections/verse-attach-card.png)
-
 ## Installation in Verse for Connections Cloud
 
 Download Kudos Boards [applications.json file](https://kudosboards.com/widgets/verse/applications.json) and import as below.
@@ -18,7 +5,7 @@ Download Kudos Boards [applications.json file](https://kudosboards.com/widgets/v
 > The information below is an excerpt from
 > [IBM Connections Developers](https://www-10.lotus.com/ldd/appdevwiki.nsf/xpDocViewer.xsp?lookupName=Dev+Guide+topics#action=openDocument&res_title=Managing_applications_for_Verse_or_the_Top_Navigation_Bar&content=sdkcontent)
 
-To work with the Organization Extensions page, open a browser and sign in to your Connections Cloud organization as an administrator. Click Admin > Manage Organization, then click Organization Extensions in the navigation list. 
+To work with the Organization Extensions page, open a browser and sign in to your Connections Cloud organization as an administrator. Click Admin > Manage Organization, then click Organization Extensions in the navigation list.
 
 Click the Add button.
 
