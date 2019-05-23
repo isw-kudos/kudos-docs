@@ -6,6 +6,14 @@ We are proud to say that Kudos Boards is able to run in many configurations to s
 1. Boards Docker (On-Premise) in Docker Swarm
 1. Boards Hybrid - Cloud integrated with IBM Connections On-Premise
 
+__Browser Support__
+
+We support the most recent two versions of the following browsers:
+
+- Chrome
+- Safari
+- Firefox
+- Microsoft Edge
 
 ## How To Decide Which Version?
 
@@ -59,7 +67,6 @@ __Advantages__
     - Search and utilise your existing Communities
     - Updates posted to your Activity Streams (Homepage, Social, Community)
     - Ability to import existing Activities into Boards
-
 
 __Requirements__
 

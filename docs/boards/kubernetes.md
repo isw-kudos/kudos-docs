@@ -153,7 +153,7 @@ Follow instructions on [this page](/boards/env/common/)
 
 > in the linked document you should use the IP of your kubernetes manager and the http port for your ingress (32080 if you have component pack installed)
 
-Please follow [these instructions](/boards/wasconfig/)
+Please follow [these instructions](/boards/connections/httpd/)
 
 ## Connections Cloud or Microsoft Office 365
 

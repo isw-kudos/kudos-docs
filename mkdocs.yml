@@ -34,6 +34,7 @@ nav:
                   - Connections Header: boards/connections/header-hybrid.md
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Connections Widgets: boards/connections/widgets-hybrid.md
+              - IBM Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
                   - App Tile: boards/msgraph/custom-tiles.md
@@ -53,6 +54,7 @@ nav:
                   - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
                   - Connections Widgets: boards/connections/widgets-on-prem.md
                   - Web Server Config: boards/connections/httpd.md
+              - IBM Verse: boards/verse/addin-on-prem.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
           - WebSphere: boards/troubleshooting/websphere.md
@@ -61,6 +63,7 @@ nav:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
           - Getting Started with Kudos Boards: boards/howto/getting-started-with-kudos-boards.md
           - Adding Boards to Microsoft Teams: boards/howto/adding-boards-to-teams.md
+          - Using IBM Verse with Kudos Boards: boards/howto/use-verse.md
           - Quick Tips for Boards: boards/howto/quick-tips-for-boards.md
           - Accessing Global Templates: boards/howto/accessing-global-templates.md
           - Adding Members to a Board: boards/howto/adding-members-to-a-board.md
