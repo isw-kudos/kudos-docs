@@ -46,14 +46,13 @@
 
 > If you aren't redirected to the users page, click them to open it
 
-- Scroll down to metadata and add the users full name in the space provided, then click Save.
-    e.g.
+- Click `Edit` under the users name
 
-        {
-          "name": "John Smith"
-        }
+![Edit User](/assets/auth0/edit-name.png)
 
-![User Metadata](/assets/auth0/metadata.png)
+- Update the users full name and click `Save`
+
+![Save User](/assets/auth0/save-name.png)
 
 ### Sign in to Kudos Boards with your Auth0 Tenant
 
