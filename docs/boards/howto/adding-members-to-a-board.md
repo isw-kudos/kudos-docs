@@ -10,7 +10,7 @@ In the *New Board* creation phase, type in the name of any colleague or group in
 
 You can also decide if you would like the board to have Public Access, meaning anyone in your organisation will be able to view the board (although not able to contribute unless they have been invited.)
 
-![](\assets\boards\adding-members-to-boards1.png)
+![](/assets/boards/adding-members-to-boards1.png)
 
 ### Adding Members to an Existing Board
 
@@ -22,7 +22,7 @@ Don’t forget to click the `Add Members` button before closing the window.
 
 New members will be notified that they have been invited to your board.  
 
-![](\assets\boards\adding-members-to-boards2.png)
+![](/assets/boards/adding-members-to-boards2.png)
 
 ### Managing Members in a Microsoft Team Channel and Board
 
@@ -30,13 +30,13 @@ New members will be notified that they have been invited to your board.
 
 When members are added to a channel, this automatically adds them as a member of the board.
 
-![](\assets\boards\adding-members-to-boards3.png)
+![](/assets/boards/adding-members-to-boards3.png)
 
 You can add members to a channel when you first create it, or at any point after that. When a board is connected to the channel, the members will automatically be added to the board.
 
 Click the` …` to the right of your channel. Then select `Manage Team.` From here, you’ll see existing members and have the opportunity to `Add Members,` using the button on the right-hand side of the screen.
 
-![](\assets\boards\adding-members-to-boards4.png)
+![](/assets/boards/adding-members-to-boards4.png)
 
 Note, that adding members from this location, will allow you to only add members or groups from within your organisation, as this is adding them to both the channel in Microsoft Teams and the board.
 

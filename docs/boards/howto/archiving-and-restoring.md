@@ -12,11 +12,11 @@ Permanently deleting a card, list or board will remove them completely from the 
 
 Click in to the card you want to archive. Use the `Archive` button at the bottom of the right-hand corner to archive the card. The screen will show it has been archived and when you click away from it, it will disappear from the board.
 
-![](\assets\boards\archiving1.png)
+![](/assets/boards/archiving1.png)
 
 Example of an archived board:
 
-![](\assets\boards\archiving2.png)
+![](/assets/boards/archiving2.png)
 
 Archived the card by mistake? If you're still in archived card screen, use the `Restore` button in the bottom right corner to bring the card back to the board.
 
@@ -24,7 +24,7 @@ Archived the card by mistake? If you're still in archived card screen, use the `
 
 To Archive a list, click the vertical `...` icon on the right-hand side of the blue list header and select `Archive.`
 
-  ![](\assets\boards\archiving2.2.png)
+  ![](/assets/boards/archiving2.2.png)
 
   You'll notice that you also have options to archive all of the cards in the list, or move the list to another board.
 
@@ -32,7 +32,7 @@ To Archive a list, click the vertical `...` icon on the right-hand side of the b
 
 If you’ve moved away from the archiving window above, but need to restore a card, click the `Archived` button in the right-hand side menu. It will bring up a window where you can see your archived cards and lists. Click in to the main area of the card or list to bring it up, then click the `Restore` button to return it to the board.
 
- ![](\assets\boards\archiving3.png)
+ ![](/assets/boards/archiving3.png)
 
 ### How do I permanently delete a card or list?
 
@@ -40,13 +40,13 @@ When you select `Archive` from the right-hand side menu, you’ll have the optio
 
 Before deleting permanently, you’ll need to select which items you want to delete, and you’ll be prompted to confirm you want to delete them. Only complete this process if you are sure you’ll never need the list or card again. ***You cannot retrieve permanently deleted items.***
 
-![](\assets\boards\archiving4.png)
+![](/assets/boards/archiving4.png)
 
 ### How do I Archive a Board?
 
 Open the board you intend to archive. From your board, use the pencil icon in to top right hand corner to `Open Board Options.` Here you’ll see the `Archive` button at the bottom of the right-hand menu. Click this button to archive the board.
 
-![](\assets\boards\archiving5.png)
+![](/assets/boards/archiving5.png)
 
 The board will change appearance to indicate it has been archived.
 
@@ -60,4 +60,4 @@ From the screen that indicates the board has been archived, you have the option 
 
 **Option 2:** Restore any board you’ve archived by navigating to the `Archive` tab on your My Boards dashboard page. Click in to the board you want to restore, click the pencil to `Open Board Options,` and click `Restore.`
 
-![](\assets\boards\archiving6.png)  
+![](/assets/boards/archiving6.png)  
