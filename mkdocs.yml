@@ -41,6 +41,7 @@ nav:
                   - Teams Integration: boards/msgraph/teams.md
                   - Outlook Plugin: boards/msgraph/outlook.md
                   - Sharepoint Pages: boards/msgraph/sharepoint.md
+              - Auth0: boards/auth0/index.md
       - Boards Docker:
           - For Kubernetes: boards/kubernetes.md
           - For Swarm: boards/swarm.md
