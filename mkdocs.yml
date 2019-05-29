@@ -58,7 +58,9 @@ nav:
               - IBM Verse: boards/verse/addin-on-prem.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
-          - WebSphere: boards/troubleshooting/websphere.md
+          - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
+          - Boards Docker: boards/troubleshooting/conn-on-prem.md
+          - Boards WebSphere: boards/troubleshooting/websphere.md
           - Office 365 for Business: boards/troubleshooting/office365.md
       - How To Guide:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
