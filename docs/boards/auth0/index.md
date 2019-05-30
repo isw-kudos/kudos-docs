@@ -1,3 +1,7 @@
+This integration enables you to manage users in Auth0 for login to Kudos Boards Cloud. This enables a standalone use of Kudos Boards if you do not have any of the other integrated services in your business.
+
+You may also add any of our other integrations at a later stage should you wish.
+
 ### Setting up a new Auth0 tenant for use with Kudos Boards
 
 - Sign up at [Auth0](https://auth0.com/) by providing your email and a suitable password.
