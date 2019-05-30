@@ -10,6 +10,10 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Adding Boards to Microsoft Teams](/boards/howto/adding-boards-to-teams/)
 
+[Using IBM Verse](/boards/howto/use-verse/)
+
+[Using Auto0](/boards/howto/use-auth0/)
+
 [Quick Tips for Boards](/boards/howto/quick-tips-for-boards/)
 
 [Accessing Global Templates](/boards/howto/accessing-global-templates/)
