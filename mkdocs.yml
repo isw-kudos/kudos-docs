@@ -67,6 +67,7 @@ nav:
           - Getting Started with Kudos Boards: boards/howto/getting-started-with-kudos-boards.md
           - Adding Boards to Microsoft Teams: boards/howto/adding-boards-to-teams.md
           - Using IBM Verse with Kudos Boards: boards/howto/use-verse.md
+          - Using Auth0 with Kudos Boards: boards/howto/use-auth0.md
           - Quick Tips for Boards: boards/howto/quick-tips-for-boards.md
           - Accessing Global Templates: boards/howto/accessing-global-templates.md
           - Adding Members to a Board: boards/howto/adding-members-to-a-board.md
