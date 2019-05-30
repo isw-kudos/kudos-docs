@@ -40,6 +40,27 @@ You may also add any of our other integrations at a later stage should you wish.
 - Click Save Changes
 - Send An email to [support@kudosboards.com](mailto:support@kudosboards.com?subject=Kudos Boards Auth0 activation) with your domain, Client ID and Client Secret.
 
+---
+
+### Enable user searching
+
+In order to allow your users to find each other, we need to enable one of Auth0's api features.
+
+- Click `APIs` and next to the Auth0 Management API Click the settings button.
+
+![Auth0](/assets/auth0/apis.png)
+
+- Click `Machine to Machine Applications` and next to Kudos Boards click the `AUTHORIZED` slider so it is enabled as below.
+
+![Auth0](/assets/auth0/machine.png)
+
+- The Scopes should automatically open as below, if they do not click the `>` next to the slider above
+- Find and tick the `read:users` scope then click `UPDATE`
+
+![Auth0](/assets/auth0/api-scopes.png)
+
+---
+
 ### Adding Users to your Auth0 tenant
 
 - Login or Sign up to [Auth0](https://auth0.com/)
