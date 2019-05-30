@@ -12,7 +12,7 @@
 
 ![Company Details](/assets/auth0/account.png)
 
-- Create a new application, providing `Kudos Boards` for the name and choose `Regular Web Application` as the type.
+- Create a new application, providing `Kudos Boards` for the name and choose `Regular Web Applications` as the type.
 
 ![Application Wizard 1](/assets/auth0/application1.png)
 
@@ -30,7 +30,7 @@
   | Token Endpoint Authentication Method | Post                                                 |
   | Allowed Callback URLs                | https://kudosboards.com/auth/auth0/&lt;domain&gt;/callback |
   | Allowed Web Origins                  | https://kudosboards.com                              |
-  | Allowed Origins                      | https://*.kudosboards.com                            |
+  | Allowed Origins (CORS)               | https://*.kudosboards.com                            |
 
 - Click Show Advanced Settings -> Grant Types and tick `Implicit`, `Authorization Code`, `Refresh Token` and `Client Credentials`
 - Click Save Changes
@@ -39,7 +39,7 @@
 ### Adding Users to your Auth0 tenant
 
 - Login or Sign up to [Auth0](https://auth0.com/)
-- Click Users and Roles -> Users
+- Click Users under Users and Roles
 - Click `Create New User` and provide the email and password for the user you wish to add. Leave the Connection as Username-Password-Authentication
 
 ![Create User](/assets/auth0/create-user.png)
