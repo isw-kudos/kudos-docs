@@ -26,7 +26,7 @@ You may also add any of our other integrations at a later stage should you wish.
 
 - Provide the rest of the details as below:
 
-  > In the table below, copy your auth0 domain (listed at the top of the page) into the relevant fields, replacing &lt;domain&gt; where applicable
+  > In the table below, copy your auth0 domain (listed at the top of the page) into the relevant fields, replacing &lt;domain&gt; with 'your-domain.au.auth0.com' where applicable
 
   | Field                                | Value                                                |
   | ------------------------------------ | ---------------------------------------------------- |
