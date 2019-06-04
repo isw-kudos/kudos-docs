@@ -37,6 +37,7 @@ nav:
               - IBM Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
+                  - Getting Started: boards/msgraph/getting-started.md
                   - App Tile: boards/msgraph/custom-tiles.md
                   - Teams Integration: boards/msgraph/teams.md
                   - Outlook Plugin: boards/msgraph/outlook.md
