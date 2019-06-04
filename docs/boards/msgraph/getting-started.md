@@ -2,7 +2,7 @@
 
 To get the most out of Kudos Boards in your Office 365 tenant, there are a few steps to take to make the experience seamless for your users.
 
-> The Steps on this page all require that you are an admin in your Office 365 tenant. if you are not an admin, please refer this page to your Administrator, Manager or IT department.
+> The Steps on this page (other than just logging in) require that you are an admin in your Office 365 tenant. if you are not an admin, please refer this page to your Administrator, Manager or IT department.
 
 ---
 
