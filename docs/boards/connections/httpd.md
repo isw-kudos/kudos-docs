@@ -20,7 +20,7 @@
 
 1. Define the Virtual Host Reverse Proxy
 
-    For details on these config options [please see here](/boards/kubernetes/#ssl-network-setup-options)
+    For details on these config options [please see here](/boards/kubernetes/#ssl-network-setup)
 
     **a) Boards as a Domain**
 
