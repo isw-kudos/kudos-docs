@@ -50,6 +50,8 @@ When configuring the servers, you will need to enable the following network rule
 - ssh traffic should be allowed to all servers
 - Where possible all servers should be on an additional (internal only) subnet, this allows us to further lock down access to NFS shares
 
+![Network Diagram](/assets/swarm-net.png)
+
 ---
 
 ## Setup Ansible
