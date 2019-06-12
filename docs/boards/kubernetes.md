@@ -17,25 +17,21 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 ---
 
-### SSL / network setup
+### SSL / Network setup
 
-Kubernetes for on premise environments requires a reverse proxy in place to properly route traffic, there are a number of different ways this reverse proxy can be configured and Kudos Boards aim to match whatever you already have in place. Some examples of network routing:
+Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Kudos Boards aims to match whatever you already have in place. Some examples of network routing:
 
-**Separate domain(s) for Kudos Boards**
+|                         | New domain                                                                                                                                                                                            | Path on existing domain                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Example of `BOARDS_URL` | `https://boards.example.com`                                                                                                                                                                                | `https://example.com/boards`                                                       |
+| Example of `API_URL`    | `https://api.example.com`                                                                                                                                                                                   | `https://example.com/api-boards`                                                   |
+| Requirement             | 1. Reverse proxy able to match any current domains as well as the new one for Kudos Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains | Ability to proxy the 2 paths                                                       |
+| Certificate Resolution  | a) in your proxy and forward the unencrypted traffic to kubernetes</br>**-OR-**</br>b) forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).      | All certificate resolution on the proxy server                                     |
+| Notes                   | IBM HTTP WebServer supports only one certificate. You must have a Wildcard certificate to cover all of your domains including the new Boards domains (ie \*.example.com).                                   | Additional config required to make Boards webfront handle redirects, details below |
 
-> e.g. https://boards.example.com
+Please decide on which configuration will suit your environment best and the corresponding `BOARDS_URL` & `API_URL`. These values will then be used in the following documentation.
 
-- This option requires your reverse proxy to be able to match any current domains as well as the new one for Kudos Boards (either by using SNI or a compatible certificate for all domains)
-- You will require certificate coverage for 2 domains, e.g. `https://example.com` (referred to as BOARDS_URL below) and `https://api.example.com` (referred to as API_URL below).
-- You may resolve the certificate in your proxy and forward the traffic unencrypted to kubernetes -OR- forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).
-
-**Kudos Boards as a path on your existing domain**
-
-> e.g. https://example.com/boards
-
-- All certificate resolution needs to happen on the proxy server
-- additional config required to make Boards webfront handle redirects, details below
-- You will need to proxy 2 paths `https://example.com/boards` (referred to as BOARDS_URL below) and `https://example.com/api-boards` (referred to as API_URL below).
+For more details on configuring an IBM HTTP WebServer as reverse proxy, [please see here](/boards/connections/httpd/)
 
 ---
 
@@ -82,15 +78,15 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 Kudos Boards uses mongodb database and S3 file storage, If you have these services already then you can use your existing details in the config below, otherwise you may include one or both of these as follows:
 
-Deploy both storage services
+a) Deploy both storage services
 
     ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "storage"
 
-Deploy mongodb only
+b) Deploy mongodb only
 
     ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "mongo"
 
-Deploy S3 (using minio) only
+c) Deploy S3 (using minio) only
 
     ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "minio"
 
@@ -137,13 +133,13 @@ Follow instructions on [this page](/boards/env/common/)
 
 ### Deploy Boards
 
-- deploy redis cache
+1.  deploy redis cache
 
-       ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "redis"
+        ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "redis"
 
-- deploy all boards services
+2.  deploy all boards services
 
-       ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "boards"
+        ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "boards"
 
 ---
 
