@@ -8,7 +8,7 @@ If you already have externally hosted mongo database and/or S3 storage please co
 ### Pre-Requisites
 
 1. Docker swarm with Portainer up and running [Guide here](/swarm/)
-1. [Storage Config File](/assets/config/storage.yml) downloaded
+1. [Storage Config File](/assets/config/swarm/storage.yml) downloaded
 
 ---
 
