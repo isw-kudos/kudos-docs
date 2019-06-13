@@ -9,7 +9,7 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 1. Docker Swarm with Portainer installed. [Guide here](/swarm/)
 1. Storage - an accessible MongoDB and S3 object store. [Guide here](/swarm/storage/)
 1. SMTP gateway setup for email notifications
-1. [Config File](/assets/config/boards-swarm.yml) downloaded
+1. [Config File](/assets/config/swarm/boards.yml) downloaded
 1. Dockerhub account with access to Kudos Boards repository.
 
    Send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
