@@ -1,4 +1,0 @@
-  - name: Install Boards
-    hosts: all
-    roles:
-      - docker-boards

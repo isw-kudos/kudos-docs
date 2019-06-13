@@ -1,9 +1,0 @@
----
-  - name: Check Swarm Mode Status
-    command: docker info
-    register: docker_info
-    changed_when: false
-  - include: register-manager.yml
-    when: inventory_hostname in groups.managers
-  - include: register-worker.yml
-    when: inventory_hostname in groups.workers
