@@ -116,9 +116,9 @@ Follow instructions on [this page](/boards/env/common/)
 
 ### Deploy Boards services
 
-1.  Install the Boards services via our Helm chart
+Install the Boards services via our Helm chart
 
-        helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-1.0.1.tgz -i -f ./boards.yaml --namespace boards
+    helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-1.0.1.tgz -i -f ./boards.yaml --namespace boards
 
 ---
 
