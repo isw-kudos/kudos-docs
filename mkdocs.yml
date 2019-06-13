@@ -44,7 +44,7 @@ nav:
                   - Sharepoint Pages: boards/msgraph/sharepoint.md
               - Auth0: boards/auth0/index.md
       - Boards Docker:
-          - For Kubernetes: boards/kubernetes.md
+          - For Kubernetes: boards/kubernetes/index.md
           - For Swarm: boards/swarm.md
           - Common Config:
             - Environment: boards/env/common.md

@@ -76,19 +76,12 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ### Setup Storage
 
-Kudos Boards uses mongodb database and S3 file storage, If you have these services already then you can use your existing details in the config below, otherwise you may include one or both of these as follows:
+Kudos Boards requires a Mongo database and an S3 file storage. If you already have equivalent services already then you can use your existing details in the config below, otherwise you may follow our instructions to deploy one or both of these services as follows:
 
-a) Deploy both storage services
+1. [Mongo database](/boards/kubernetes/mongo)
+1. [S3 storage](/boards/kubernetes/minio)
 
-    ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "storage"
-
-b) Deploy mongodb only
-
-    ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "mongo"
-
-c) Deploy S3 (using minio) only
-
-    ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "minio"
+**Note:** these tasks are very similar to each other and can be performed simultaneously
 
 ---
 

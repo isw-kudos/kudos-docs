@@ -19,7 +19,7 @@ spec:
     - nfsvers=4.1
   nfs:
     path: /pv-kudos/mongo
-    server: storage server ip
+    server: [STORAGE_SERVER_IP]
 
 ---
 apiVersion: v1
