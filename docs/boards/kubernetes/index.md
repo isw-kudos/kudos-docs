@@ -11,9 +11,7 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
-1. Ansible is installed, see [Ansible](/tools/ansible/)
-1. [Kudos Boards ansible roles](/assets/config/boards-docker-ansible.zip) downloaded and extracted
-1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository, send your account details to support@kudosboards.com if you don't already have this.
+1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository.<br>Please send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
 
 ---
 
@@ -21,7 +19,7 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Kudos Boards aims to match whatever you already have in place. Some examples of network routing:
 
-|                         | New domain                                                                                                                                                                                            | Path on existing domain                                                            |
+|                         | New domain                                                                                                                                                                                                  | Path on existing domain                                                            |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Example of `BOARDS_URL` | `https://boards.example.com`                                                                                                                                                                                | `https://example.com/boards`                                                       |
 | Example of `API_URL`    | `https://api.example.com`                                                                                                                                                                                   | `https://example.com/api-boards`                                                   |
@@ -41,34 +39,26 @@ Kudos Boards currently supports the following oauth providers for authentication
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
-| Provider                     | Registration / Documentation                                                                                  | Callback URL                           | Scopes |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------ |
-| IBM Connections (on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | [BOARDS_URL]/auth/connections/callback |
-| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | [BOARDS_URL]/auth/msgraph/callback     |
-| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | [BOARDS_URL]/auth/google/callback      |
-| LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | [BOARDS_URL]/auth/linkedin/callback    |
-| Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | [BOARDS_URL]/auth/facebook/callback    |
+| Provider                        | Registration / Documentation                                                                                  | Callback URL                             |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| IBM Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `[BOARDS_URL]/auth/connections/callback` |
+| Microsoft Office 365            | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `[BOARDS_URL]/auth/msgraph/callback`     |
+| Google                          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `[BOARDS_URL]/auth/google/callback`      |
+| LinkedIn                        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `[BOARDS_URL]/auth/linkedin/callback`    |
+| Facebook                        | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | `[BOARDS_URL]/auth/facebook/callback`    |
 
 ---
 
 ### Configure kubectl
 
-**Kubernetes**
-
-- copy \$HOME/kube/.config from the primary server to the same location locally (backup any existing local config)
-
-**IBM Cloud Private**
-
-- Open ICP Console
-- Go to `Admin` (top right)
-- Click `Config Client`
-- Copy the contents shown
-- Open your command line / terminal
-- Paste the commands copied earlier and press enter
+|                       | Instructions                                                                                                                                                                                                 |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Kubernetes**        | copy `~/kube/.config` from the Kubernetes master server to the same location locally</br>(backup any existing local config)                                                                                  |
+| **IBM Cloud Private** | - Open ICP Console</br>- Go to `Admin` (top right)</br>- Click `Config Client`</br>- Copy the contents shown</br>- Open your command line / terminal</br>- Paste the commands copied earlier and press enter |
 
 ---
 
-### Setup Kudos Boards namespace
+### Create Kudos Boards namespace
 
     kubectl create namespace boards
 
@@ -101,22 +91,22 @@ Kudos Boards requires a Mongo database and an S3 file storage. If you already ha
 
 ### Update Config file
 
-Open the file at boards_docker_ansible/roles/docker-boards/files/boards.yaml and update the values as below.
+Download our [config file](/assets/config/kubernetes/boards.yaml) and update the values as below.
 
 **Kubernetes Variables**:
 
-| Key                       | Description                                                                           |
-| ------------------------- | ------------------------------------------------------------------------------------- |
-| global.env.APP_URI        | Your BOARDS_URL                                                                       |
-| global.env.MONGO_USER     | Your mongodb user, if using our storage above you may leave this commented out        |
-| global.env.MONGO_PASSWORD | Your mongodb password, if using our storage above you may leave this commented out    |
-| global.env.MONGO_HOST     | Your mongodb host, if using our storage above you may leave the default               |
-| global.env.MONGO_PARAMS   | Your mongodb request parameters, if using our storage above you may leave the default |
-| global.env.S3_ENDPOINT    | Enter your S3 URL, if using our storage above you may leave the default               |
-| global.env.S3_ACCESS_KEY  | Enter your S3 Access Key, if using our storage above you may leave the default        |
-| global.env.S3_SECRET_KEY  | Enter your S3 Secret Key, if using our storage above you may leave the default        |
-| boards.ingress.hosts      | Your API_URL without the protocol e.g. api.kudosboards.com                            |
-| webfront.ingress.hosts    | Your BOARDS_URL url as above without http                                             |
+| Key                         | Description                                                                         |
+| --------------------------- | ----------------------------------------------------------------------------------- |
+| `global.env.APP_URI`        | Your `BOARDS_URL`                                                                   |
+| `global.env.MONGO_USER`     | MongoDB user</br>If using our storage above you may leave this commented out        |
+| `global.env.MONGO_PASSWORD` | MongoDB password</br>If using our storage above you may leave this commented out    |
+| `global.env.MONGO_HOST`     | MongoDB host</br>If using our storage above you may leave the default               |
+| `global.env.MONGO_PARAMS`   | MongoDB request parameters</br>If using our storage above you may leave the default |
+| `global.env.S3_ENDPOINT`    | S3 URL</br>If using our storage above you may leave the default                     |
+| `global.env.S3_ACCESS_KEY`  | S3 Access Key</br>If using our storage above you may leave the default              |
+| `global.env.S3_SECRET_KEY`  | S3 Secret Key</br>If using our storage above you may leave the default              |
+| `boards.ingress.hosts`      | Your `API_URL` without the protocol e.g. api.kudosboards.com                        |
+| `webfront.ingress.hosts`    | Your `BOARDS_URL` url as above without http                                         |
 
 **Boards Variables**:
 
@@ -124,15 +114,13 @@ Follow instructions on [this page](/boards/env/common/)
 
 ---
 
-### Deploy Boards
+### Deploy Boards services
 
-1.  deploy redis cache
+1.  Download the [Boards helm chart](/assets/config/kubernetes/kudos-boards-1.0.1.tgz)
 
-        ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "redis"
+1.  Install the Helm chart to deploy the Boards services
 
-2.  deploy all boards services
-
-        ansible-playbook -i hosts/kubernetes.yml boards-docker.yml -v --tags "boards"
+        helm upgrade boards ./kudos-boards-1.0.1.tgz -i -f ./boards.yaml --namespace boards
 
 ---
 

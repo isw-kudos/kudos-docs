@@ -45,7 +45,7 @@ You can also email us for support at [support@kudosboards.com](mailto:support@ku
 
 1.  Install Minio
 
-        kubectl apply -f minio.yaml
+        kubectl apply -f ./minio.yaml
 
 ---
 

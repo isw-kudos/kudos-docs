@@ -43,7 +43,7 @@ You can also email us for support at [support@kudosboards.com](mailto:support@ku
 
 1.  Install Mongo
 
-        kubectl apply -f mongo.yaml
+        kubectl apply -f ./mongo.yaml
 
 ---
 
