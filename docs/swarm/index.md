@@ -79,7 +79,7 @@ As mentioned in the linked article, we will need to add each of our servers to o
 
 ## Config
 
-Download [this hosts file](/assets/config/swarm.yml) and update the values as follows:
+Download [this hosts file](/assets/config/swarm/servers.yml) and update the values as follows:
 
 | Key                                   | Description                                                                                                                                                                                                                      |
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -104,7 +104,7 @@ Download [this hosts file](/assets/config/swarm.yml) and update the values as fo
 1.  Save your config file in the hosts directory
 1.  run the deploy playbook:
 
-        ansible-playbook -i hosts/swarm.yml deploy.yml -v
+        ansible-playbook -i hosts/servers.yml deploy.yml -v
 
 ---
 
@@ -137,4 +137,3 @@ Kudos Boards requires a Mongo database and an S3 object store.  If you do not al
 ## Run Kudos Boards (and other apps) with Portainer
 
 See [Kudos Boards for Docker Swarm](/boards/swarm/) for a step by step guide to running Kudos Boards on your new environment.
-
