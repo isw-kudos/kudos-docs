@@ -12,6 +12,8 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Kudos Boards in Microsoft Outlook](/boards/howto/kudos-boards-in-microsoft-outlook)
 
+[Kudos Boards and Microsoft OneDrive](/boards/howto/kudos-boards-and-microsoft-onedrive)
+
 [Using IBM Verse](/boards/howto/use-verse/)
 
 [Using Auto0](/boards/howto/use-auth0/)
