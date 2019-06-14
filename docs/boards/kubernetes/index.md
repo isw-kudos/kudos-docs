@@ -105,8 +105,8 @@ Download our [config file](/assets/config/kubernetes/boards.yaml) and update the
 | `global.env.S3_ENDPOINT`    | S3 URL</br>If using our storage above you may leave the default                     |
 | `global.env.S3_ACCESS_KEY`  | S3 Access Key</br>If using our storage above you may leave the default              |
 | `global.env.S3_SECRET_KEY`  | S3 Secret Key</br>If using our storage above you may leave the default              |
-| `boards.ingress.hosts`      | Your `API_URL` without the protocol e.g. api.kudosboards.com                        |
 | `webfront.ingress.hosts`    | Your `BOARDS_URL` url as above without http                                         |
+| `core.ingress.hosts`        | Your `API_URL` without the protocol e.g. api.kudosboards.com                        |
 
 **Boards Variables**:
 
