@@ -51,7 +51,7 @@ services:
 
   # UI
   webfront:
-    image: iswkudos/kudos-boards-docker:webfront-latest
+    image: iswkudos/kudos-boards-docker:webfront
     restart: always
     networks:
       - proxy
@@ -71,7 +71,7 @@ services:
 
   # Core App routing logic
   core:
-    image: iswkudos/kudos-boards-docker:core-latest
+    image: iswkudos/kudos-boards-docker:core
     restart: always
     depends_on:
       - redis
@@ -105,7 +105,7 @@ services:
 
   # Boards business logic
   app:
-    image: iswkudos/kudos-boards-docker:boards-latest
+    image: iswkudos/kudos-boards-docker:boards
     restart: always
     networks:
       - internal
@@ -117,7 +117,7 @@ services:
       << : *db-env
 
   user:
-    image: iswkudos/kudos-boards-docker:user-latest
+    image: iswkudos/kudos-boards-docker:user
     restart: always
     networks:
       - internal
@@ -145,7 +145,7 @@ services:
           "globalOAuth": true
         }]
   provider:
-    image: iswkudos/kudos-boards-docker:provider-latest
+    image: iswkudos/kudos-boards-docker:provider
     restart: always
     networks:
       - internal
@@ -158,7 +158,7 @@ services:
       << : *s3-env
 
   notification:
-    image: iswkudos/kudos-boards-docker:notification-latest
+    image: iswkudos/kudos-boards-docker:notification
     restart: always
     networks:
       - internal
@@ -170,7 +170,7 @@ services:
       << : *db-env
 
   licence:
-    image: iswkudos/kudos-boards-docker:licence-latest
+    image: iswkudos/kudos-boards-docker:licence
     restart: always
     networks:
       - internal
