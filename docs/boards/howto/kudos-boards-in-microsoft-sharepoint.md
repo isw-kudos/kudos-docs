@@ -1,6 +1,6 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-## Embedding Kudos Boards pages in Sharepoint.
+## Embedding Kudos Boards in a SharePoint Site Page
 
 Kudos Boards' integration with Microsoft Office 365 allows you to add Kudos Boards to a SharePoint site page and work directly on the board from the page.
 

@@ -69,6 +69,7 @@ nav:
           - Adding Boards to Microsoft Teams: boards/howto/adding-boards-to-teams.md
           - Kudos Boards in Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
           - Kudos Boards and Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
+          - Kudos Boards in Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md 
           - Using IBM Verse with Kudos Boards: boards/howto/use-verse.md
           - Using Auth0 with Kudos Boards: boards/howto/use-auth0.md
           - Quick Tips for Boards: boards/howto/quick-tips-for-boards.md
