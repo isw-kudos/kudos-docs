@@ -76,7 +76,7 @@ spec:
                     "PUBLIC_BUCKET_NAME": "",
                   "S3_REGION": ""
                 },
-                "FIREBASE":{
+                "FIREBASE_DISABLED":{
                 "enabled":true,
                 "webApiKey":"firebaseapikey",
                 "dynamicLinkDomain":"buzzy.page.link",
