@@ -48,8 +48,9 @@ Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private fo
 | spec.containers.env.value | 58 | Enter your SMTP details |
 | spec.containers.env.AWS_BUZZY_FILES | 71-77 | Your individual AWS details for file storage  |
 | spec.containers.env.MAIL_URL | 126 | Enter your SMTP details as above |
-| spec.containers.env.BUZZY_ADMIN_EMAIL | 128 | Enter Admin user email |
+| spec.containers.env.BUZZY_ADMIN_EMAIL | 128 | OPTIONAL: Enter Admin user email, used as the primary owner of the default buzzes and resources that appear on the palette |
 | spec.containers.env.BUZZY_ADMIN_IDS | 129 | Enter Admin user ids |
+| spec.containers.env.BUZZY_CREATE_DEFAULT_ACCOUNTS  | 146 | OPTIONAL: Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL |
 | spec.containers.env.public.AWS_BUZZY_FILES | 233 | More AWS details for files |
 | spec.containers.env.public.BUZZY_CUSTOM.NAME | 368 | Company Name |
 | spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIN | 371 | URL of your main logo |
