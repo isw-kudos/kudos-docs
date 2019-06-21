@@ -125,13 +125,14 @@ spec:
                 },
                 "MAIL_URL": "<as above SMTP user+parssowrd+smtpurl>",
                 "BUZZY_TESTING": false,
+                "BUZZY_ADMIN_EMAIL": "someadminemail",
                 "BUZZY_ADMIN_IDS": ["LIST ADMIN useridwillgohere once they are setup"],
                 "BUZZY_WATSON_USERID": "",
                 "BUZZY_LOGGING_TOKEN": "somelongtoken",
                 "BUZZY_ADMIN_TOKEN": "somelongtoken",
                 "BUZZY_JSON_WEB_TOKE_SECRET": "somelongtoken",
                 "BUZZY_DEBUG": false,
-                "BUZZY_BASIC_BUZZ_ID": "setthisup",
+                "BUZZY_BASIC_BUZZ_ID": "blankbuzz",
                 "BUZZY_WELCOME_BUZZ_ID": "setthisup",
                 "CAMPAIGN_MONITOR": {
                   "AVOID": true,
@@ -146,7 +147,8 @@ spec:
                     "enabled": false,
                     "accounts": [{
                             "email": "someone@test.com",
-                            "password": "somepassword"
+                            "password": "somepassword",
+                            "isAdmin":true
                         },
                         {
                             "email": "someone1@test.com",

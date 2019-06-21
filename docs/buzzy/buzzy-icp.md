@@ -6,6 +6,7 @@ Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private fo
 1. WebSphere environment with Web Server
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. mongodb setup and running
+1. minio setup and running
 1. SMTP gateway setup for email notifications
 1. [Config file](/assets/config/buzzy.yml) downloaded
 1. Dockerhub account setup with access to Buzzy repository
@@ -47,14 +48,15 @@ Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private fo
 | spec.containers.env.value | 58 | Enter your SMTP details |
 | spec.containers.env.AWS_BUZZY_FILES | 71-77 | Your individual AWS details for file storage  |
 | spec.containers.env.MAIL_URL | 126 | Enter your SMTP details as above |
-| spec.containers.env.BUZZY_ADMIN_IDS | 128 | Enter Admin user ids |
-| spec.containers.env.public.AWS_BUZZY_FILES | 230 | More AWS details for files |
-| spec.containers.env.public.BUZZY_CUSTOM.NAME | 366 | Company Name |
-| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIN | 369 | URL of your main logo |
-| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIL | 370 | URL of us in Email |
-| spec.containers.env.public.BUZZY_CUSTOM.EMAIL_FOOTER | 373 | Email Footer |
-| spec.containers.env.public.BUZZY_CUSTOM.PROMO_URL | 376 | Splash image |
-| spec.containers.env.public.BUZZY_CUSTOM.WELCOME_IMAGE | 377 | Welcome Image |
+| spec.containers.env.BUZZY_ADMIN_EMAIL | 128 | Enter Admin user email |
+| spec.containers.env.BUZZY_ADMIN_IDS | 129 | Enter Admin user ids |
+| spec.containers.env.public.AWS_BUZZY_FILES | 233 | More AWS details for files |
+| spec.containers.env.public.BUZZY_CUSTOM.NAME | 368 | Company Name |
+| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIN | 371 | URL of your main logo |
+| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIL | 372 | URL of us in Email |
+| spec.containers.env.public.BUZZY_CUSTOM.EMAIL_FOOTER | 375 | Email Footer |
+| spec.containers.env.public.BUZZY_CUSTOM.PROMO_URL | 378 | Splash image |
+| spec.containers.env.public.BUZZY_CUSTOM.WELCOME_IMAGE | 379 | Welcome Image |
 
 1. create your services   
 `kubectl apply -f buzzy.yml`   
@@ -72,8 +74,8 @@ Please follow [these instructions](/buzzy/buzzy-widgets/)
 ### Setup SSO
 
 * Login with email address - eg as Admin  
-* Create a new team - eg Org Name (Hamburger -> Billing & Teams -> New Team) - choose a really short team name as users will need to type this in and it's case sensitive.  
-* Go to Team -> Settings -> Add Provider -> IBM Connections On Premise  
-* Fill out provider settings for the On Premise server  
+* Create a new Organization, under Organizations
+* Go to Organization -> Settings -> Add Provider -> IBM Connections On Premise. Use the OAuth ID & Secret setup previously.
+* Create a new team - choose a really short team name as users will need to type this in and it's case sensitive.  
 * Restart the Buzzy server  
 * Login with Connections On Prem button and type the team name in.  
