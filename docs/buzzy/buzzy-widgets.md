@@ -13,7 +13,7 @@ Check out the widgets-config.xml file.
 Edit the widgets-config.xml file. Under the <resource type="community"> section, then under <widgets>, then within <definitions> add the following.
 
     <!-- BUZZY -->
-    <widgetDef defId="Buzzy" modes="view fullpage" url="https://<BUZZY_URL>/assets/connections/communityWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+    <widgetDef defId="Buzzy" modes="view fullpage" url="https://<BUZZY_URL>/widget/widget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
       <itemSet>
         <item name="resourceId" value="{resourceId}"/>
       </itemSet>
