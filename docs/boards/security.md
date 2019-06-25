@@ -30,7 +30,7 @@
 #### Requests between Boards Cloud servers and Google Cloud S3 Object Storage are secured by:
 - Encrypted by HTTPS (SSL)
 - Authenticated using username/password
-- Internal IBM network - data is not communicated over the public internet
+- Internal Google network - data is not communicated over the public internet
 
 #### Requests between Boards Cloud servers and providers (Connections, Office365 etc) are secured by:
 - Encrypted by HTTPS (SSL)
@@ -56,7 +56,7 @@ Most data is stored in MongoDB hosted by MongoDB Atlas in a Google Cloud datacen
 - Network encryption and access control
 - All security-specific updates to the operating system and database of the underlying instances are automatically applied by MongoDB engineers.
 - MongoDB, Inc. is also certified under the EU-US Privacy Shield.
-- More information about MongoDB Cloud Services Compliance and Privacy can be obtained: https://www.mongodb.com/cloud/compliance
+- More information about MongoDB Cloud Services Compliance and Privacy can be obtained [here](https://www.mongodb.com/cloud/compliance)
 
 #### Google Cloud Object storage is secured by:
 - No external access other than our server
