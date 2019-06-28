@@ -26,7 +26,7 @@ Check in the widgets-config.xml file.
 
 ### Register Widget
 
-    Required for IBM Connections 6.0 CR1 onwards
+Required for IBM Connections 6.0 CR1 onwards
 
         execfile("newsAdmin.py")
 
