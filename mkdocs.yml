@@ -88,6 +88,7 @@ nav:
       - Overview: buzzy/index.md
       - Installation:
           - For Kubernetes: buzzy/buzzy-icp.md
+          - Connections OAuth Config: buzzy/buzzy-oauth.md
           - WAS Config: buzzy/buzzy-wasconfig.md
           - Connections Widgets: buzzy/buzzy-widgets.md
   - Docker Swarm:

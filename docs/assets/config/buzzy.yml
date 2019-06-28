@@ -126,6 +126,20 @@ spec:
                 "MAIL_URL": "<as above SMTP user+parssowrd+smtpurl>",
                 "BUZZY_TESTING": false,
                 "BUZZY_ADMIN_EMAIL": "someadminemail",
+                "DEFAULT_OAUTH_PROVIDERS": {
+                  "defaultOrganizationName": "SomeOrganizationName",
+                  "providers": [
+                    {
+                      "clientID": "someClientID",
+                      "clientSecret": "someSecret",
+                      "connectionsOrgID": "someConnectionsOrgID",
+                      "name": "thiswillbeyourteamname",
+
+                      "signInDomain": "https://somedomain",
+                      "type": "ibmconnectionsonprem"
+                    }
+                  ]
+                },
                 "BUZZY_ADMIN_IDS": ["LIST ADMIN useridwillgohere once they are setup"],
                 "BUZZY_WATSON_USERID": "",
                 "BUZZY_LOGGING_TOKEN": "somelongtoken",
@@ -365,7 +379,7 @@ spec:
                   },
                   "BUZZY_REDIRECT": "/sign-in",
                   "BUZZY_CUSTOM": {
-                    "NAME": "ThinArrow",
+                    "NAME": "ISW",
                     "APP_URL_IOS": "itunes.apple.com/app/apple-store/id954176500?pt=105534889&ct=buzzyemailcomment&mt=8",
                     "APP_URL_ANDROID": "play.google.com/store/apps/details?id=buzz.buzzy.my1&hl=en&utm_source=buzzy_email&utm_content=buzzyemailcomment",
                     "LOGO_MAIN": "https://s3.amazonaws.com/buzzy-custom-logos/logo_thinarrow_rev.png",

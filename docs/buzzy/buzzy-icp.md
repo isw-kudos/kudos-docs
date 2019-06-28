@@ -36,6 +36,10 @@ Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private fo
 
             kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=buzzy
 
+### Setup OAuth
+
+Please follow [these instructions](/buzzy/buzzy-oauth/)
+
 ### Deploy Buzzy
 
 1. edit buzzy.yml and enter details at the following lines:	 
@@ -49,22 +53,27 @@ Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private fo
 | spec.containers.env.AWS_BUZZY_FILES | 71-77 | Your individual AWS details for file storage  |
 | spec.containers.env.MAIL_URL | 126 | Enter your SMTP details as above |
 | spec.containers.env.BUZZY_ADMIN_EMAIL | 128 | OPTIONAL: Enter Admin user email, used as the primary owner of the default buzzes and resources that appear on the palette |
-| spec.containers.env.BUZZY_ADMIN_IDS | 129 | Enter Admin user ids |
-| spec.containers.env.BUZZY_CREATE_DEFAULT_ACCOUNTS  | 146 | OPTIONAL: Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL |
-| spec.containers.env.public.AWS_BUZZY_FILES | 233 | More AWS details for files |
-| spec.containers.env.public.BUZZY_CUSTOM.NAME | 368 | Company Name |
-| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIN | 371 | URL of your main logo |
-| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIL | 372 | URL of us in Email |
-| spec.containers.env.public.BUZZY_CUSTOM.EMAIL_FOOTER | 375 | Email Footer |
-| spec.containers.env.public.BUZZY_CUSTOM.PROMO_URL | 378 | Splash image |
-| spec.containers.env.public.BUZZY_CUSTOM.WELCOME_IMAGE | 379 | Welcome Image |
+| spec.containers.env.DEFAULT_OAUTH_PROVIDERS | 129-142 | Details for the OAuth provider(s) to be setup. ClientID and ClientSecret are from the OAuth setup in the previous step. |
+| spec.containers.env.BUZZY_ADMIN_IDS | 143 | Enter Admin user ids |
+| spec.containers.env.BUZZY_CREATE_DEFAULT_ACCOUNTS  | 160 | Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL. Make the email the same as one from the OAuth provider to be able to view and edit the provider settings |
+| spec.containers.env.public.AWS_BUZZY_FILES | 246 | More AWS details for files |
+| spec.containers.env.public.BUZZY_CUSTOM.NAME | 382 | Company Name |
+| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIN | 385 | URL of your main logo |
+| spec.containers.env.public.BUZZY_CUSTOM.LOGO_MAIL | 386 | URL of us in Email |
+| spec.containers.env.public.BUZZY_CUSTOM.EMAIL_FOOTER | 389 | Email Footer |
+| spec.containers.env.public.BUZZY_CUSTOM.PROMO_URL | 391 | Splash image |
+| spec.containers.env.public.BUZZY_CUSTOM.WELCOME_IMAGE | 393 | Welcome Image |
 
-1. create your services   
+1. Create your services   
 `kubectl apply -f buzzy.yml`   
 service has NodePort (ie 30289 which maps to 30buz on keypads)   
 accessible on `<server-ip>:30289`
-1. add new DNS record for Buzzy URL   
+1. Add new DNS record for Buzzy URL   
 ie `buzzy.isw.net.au`
+
+1. Login to Buzzy with the account set up in BUZZY_CREATE_DEFAULT_ACCOUNTS above and confirm the org and provider details are correct
+
+1. Restart the Buzzy Application
 
 ### Add Websphere Config
 Please follow [these instructions](/buzzy/buzzy-wasconfig/)
