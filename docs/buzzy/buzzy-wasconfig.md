@@ -23,11 +23,11 @@
 
     Where:
 
-    <BUZZY_URL> is the URL of your Boards deployment (as a domain)
+      `<BUZZY_URL>` is the URL of your Boards deployment (as a domain)
 
-    <KUBERNETES_NAME> is the hostname/IP of the master in your cluster
+      `<KUBERNETES_NAME>` is the hostname/IP of the master in your cluster
 
-    <KUBERNETES_PORT> is the port of your Ingress Controller (ie 32080)
+      `<KUBERNETES_PORT>` is the port of your Ingress Controller (ie 32080)
 
 ### Configure Proxy
 
