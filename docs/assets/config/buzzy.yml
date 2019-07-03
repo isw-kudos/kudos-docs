@@ -1,12 +1,4 @@
 ---
-#
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: buzzy
-#
-# ---
-
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
@@ -20,19 +12,17 @@ spec:
     rollingUpdate:
       maxUnavailable: 0
       maxSurge: 1
-  template: # create pods using pod definition in this template
+  template:
     metadata:
-      # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
-      # generated from the deployment name
       labels:
         app: buzzy-app
     spec:
-#      hostAliases:
-#        - ip: "IHS IP"
-#          hostnames:
-#            - "<minio>"
-#            - "<logging>"
-#            - "<buzzy>"
+      # hostAliases: # Use this for testing when DNS is not yet set up
+      #   - ip: IHS IP ADDRESS, e.g. "192.168.1.1"
+      #     hostnames:
+      #       - "minio.buzzy.net.au"
+      #       - "logging.buzzy.net.au"
+      #       - "buzzy.net.au"
       imagePullSecrets:
         - name: dockerhub
       containers:
@@ -42,26 +32,19 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
-        #   resources:
-        #     # limits:
-        #     #   memory: 256M
-        #     #   cpu: 100m
-        #     requests:
-        #       memory: 512M
-        #     #   cpu: 100m
           env:
             - name: PORT
               value: "8080"
-#            - name: NODE_TLS_REJECT_UNAUTHORIZED
-#              value: '0'
+            # - name: NODE_TLS_REJECT_UNAUTHORIZED
+            #   value: '0'
             - name: ROOT_URL
-              value: "<BUZZY_URL>"
+              value: "https://buzzy.net"
             - name: LOG_TO_STDOUT
               value: "1"
             - name: MONGO_URL
-              value:  "mongodb://<mongodbuser>:<mongodbuserpassword>@<MONGO_URL1>,<MONGO_URL2>,<MONGO_URL3>,...,<MONGO_URLN>/buzzy_debug?ssl=true&authSource=admin"
+              value:  "mongodb://<username>:<password>@mongo-service:27017/buzzy?replicaSet=replicaset&authSource=admin"
             - name: MONGO_OPLOG_URL
-              value: "mongodb://<oploguser>:<oplogpassword>@<MONGO_URL1>,<MONGO_URL2>,<MONGO_URL3>,...,<MONGO_URLN>/local?authSource=admin&ssl=true"
+              value: "mongodb://<username>:<password>@mongo-service:27017/local?replicaSet=replicaset&authSource=admin"
             - name: MAIL_URL
               value: "smtp://someuser:somepassword@smtp.sendgrid.net:587"
             - name: METEOR_SETTINGS
@@ -77,18 +60,18 @@ spec:
 
                 },
                 "AWS_BUZZY_FILES": {
-                  "enabled": false,
-                  "accessKeyId": "",
-                  "secretAccessKey": "",
-                  "BUCKET_NAME": "",
-                    "PUBLIC_BUCKET_NAME": "",
-                  "S3_REGION": ""
-                  "endpoint": "<minio_url>",
+                  "enabled": true,
+                  "accessKeyId": "ioueygr4t589",
+                  "secretAccessKey": "7a863d41-2d8f-4143-bc8a-02501edbea6f",
+                  "BUCKET_NAME": "buzzy-files",
+                  "PUBLIC_BUCKET_NAME": "buzzy-files-public",
+                  "S3_REGION": "",
+                  "endpoint": "https://minio.buzzy.net.au",
                   "s3ForcePathStyle": true,
-                  "signatureVersion": "v4"                  
+                  "signatureVersion": "v4"
                 },
                 "FIREBASE_DISABLED":{
-                "enabled":true,
+                "enabled":false,
                 "webApiKey":"firebaseapikey",
                 "dynamicLinkDomain":"buzzy.page.link",
                 "androidPackageName":"buzz.buzzy.app",
@@ -134,24 +117,23 @@ spec:
                   "secret": "will become obsolete"
 
                 },
-                "MAIL_URL": "<as above SMTP user+parssowrd+smtpurl>",
+                "MAIL_URL": "smtp://someuser:somepassword@smtp.sendgrid.net:587",
                 "BUZZY_TESTING": false,
                 "BUZZY_ADMIN_EMAIL": "someadminemail",
                 "DEFAULT_OAUTH_PROVIDERS": {
-                  "defaultOrganizationName": "SomeOrganizationName",
+                  "defaultOrganizationName": "Organisation name",
                   "providers": [
                     {
                       "clientID": "someClientID",
                       "clientSecret": "someSecret",
                       "connectionsOrgID": "someConnectionsOrgID",
-                      "name": "thiswillbeyourteamname",
-
-                      "signInDomain": "https://somedomain",
-                      "type": "ibmconnectionscloud"
+                      "name": "this will be your team name on login",
+                      "signInDomain": "https://my.connections.com",
+                      "type": "ibmconnectionsonprem"
                     }
                   ]
                 },
-                "BUZZY_ADMIN_IDS": ["LIST ADMIN useridwillgohere once they are setup"],
+                "BUZZY_ADMIN_IDS": ["adminuserid"],
                 "BUZZY_WATSON_USERID": "",
                 "BUZZY_LOGGING_TOKEN": "somelongtoken",
                 "BUZZY_ADMIN_TOKEN": "somelongtoken",
@@ -169,19 +151,11 @@ spec:
 
                 },
                 "BUZZY_CREATE_DEFAULT_ACCOUNTS": {
-                    "enabled": false,
+                    "enabled": true,
                     "accounts": [{
                             "email": "someone@test.com",
                             "password": "somepassword",
                             "isAdmin":true
-                        },
-                        {
-                            "email": "someone1@test.com",
-                            "password": "somepassword"
-                        },
-                        {
-                            "email": "someone2@test.com",
-                            "password": "somepassword"
                         }
                     ]
                 },
@@ -255,12 +229,12 @@ spec:
                         "enabled": false
                         },
                   "AWS_BUZZY_FILES": {
-                    "enabled":false,
+                    "enabled":true,
                     "S3FileExpiry": 604800,
-                    "BUCKET_NAME": "bucket name on AWS S3 or other on prem S3 server",
+                    "BUCKET_NAME": "buzzy-files",
                     "PUBLIC_BUCKET_NAME": "buzzy-files-public",
                     "s3ForcePathStyle": true,
-                    "URL_PATTERN": "s3.amazonaws.com"
+                    "URL_PATTERN": "https://minio.buzzy.net.au/buzzy-files"
                   },
                     "SUPERHERO_BUZZ_ID": "somebuzzid",
                   "CLOUD_IMAGE": {
@@ -356,9 +330,11 @@ spec:
                     "PASSWORD": {
                       "enabled": true
                     },
+                    "PASSWORDLESS": {
+                        "enabled": true
+                    },
                     "GOOGLE": {
                       "enabled": false
-
                     },
                     "MICROSOFT": {
                       "enabled": false,
@@ -366,48 +342,41 @@ spec:
                             "secret": "msftsecret",
                             "scope": "User.Read",
                             "display": "popup"
-
                     },
                     "IBM_CONNECTIONS_CLOUD": {
                       "enabled": false
-
                     },
                     "IBM_CONNECTIONS_ONPREM": {
                       "enabled": true
-
                     },
                     "FACEBOOK": {
                       "enabled": false
-
                     },
                     "SLACK": {
                       "enabled": false,
                       "oauthCallback": "https://<domain>/_oauth/slack",
                       "clientID": "slack client ID"
-
                     },
                     "IBM_WATSON_WORKSPACE": {
                       "enabled": false,
                       "oauthCallback": "https://<domain>/_oauth/ibmwatsonworkspace",
                       "clientID": "WW client ID"
                     }
-
                   },
                   "BUZZY_REDIRECT": "/sign-in",
                   "BUZZY_CUSTOM": {
-                    "NAME": "ThinArrow",
-                    "APP_URL_IOS": "itunes.apple.com/app/apple-store/id954176500?pt=105534889&ct=buzzyemailcomment&mt=8",
-                    "APP_URL_ANDROID": "play.google.com/store/apps/details?id=buzz.buzzy.my1&hl=en&utm_source=buzzy_email&utm_content=buzzyemailcomment",
-                    "LOGO_MAIN": "https://s3.amazonaws.com/buzzy-custom-logos/logo_thinarrow_rev.png",
-                    "LOGO_MAIL": "https://s3.amazonaws.com/buzzy-custom-logos/logo_thinarrow.png",
-                        "LOGO_MAIL_WIDTH": "60",
-                        "LOGO_MAIL_HEIGHT": "25",
-                    "EMAIL_FOOTER": "The thinnest arrow of them all.",
-                    "PROMO": "Buzzy is the easiest way to communicate and manage group projects in both your personal and professional life.",
-                    "PROMO_URL": "http://www.buzzy.buzz",
-                        "SPLASH_IMAGE": "<url to some image>",
-                        "WELCOME_IMAGE": "<url to some image>"
-
+                    "NAME": "Orgnisation Name",
+                    "APP_URL_IOS": "",
+                    "APP_URL_ANDROID": "",
+                    "LOGO_MAIN": "",
+                    "LOGO_MAIL": "",
+                    "LOGO_MAIL_WIDTH": "60",
+                    "LOGO_MAIL_HEIGHT": "25",
+                    "EMAIL_FOOTER": "",
+                    "PROMO": "",
+                    "PROMO_URL": "",
+                    "SPLASH_IMAGE": "",
+                    "WELCOME_IMAGE": ""
                   },
                   "BUZZY_VERSION": "3.0.1",
                   "BUZZY_DEBUG_CLIENT": true,
@@ -419,15 +388,7 @@ spec:
                     {
                       "name": "ibmconnectionsonprem",
                       "displayName": "IBM Connections On Premise",
-                      "domain": "https://apps.collabservintegration.com"
-                    },
-                    {
-                      "name": "ibmwatsonworkspace",
-                      "displayName": "IBM Watson Workspace"
-                    },
-                    {
-                      "name": "slack",
-                      "displayName": "Slack"
+                      "domain": "https://my.connections.url"
                     }
                   ],
                   "MIXPANEL_ENABLED": false,
@@ -442,7 +403,7 @@ spec:
                     "pickSignature": "will become obsolete",
                     "pickPolicy": "will become obsolete"
                   },
-                  "BUZZY_LOGGING_SERVER": "<Buzzy logging server url>",
+                  "BUZZY_LOGGING_SERVER": "https://logging.buzzy.net.au",
                     "BUZZY_TEMPLATE_SERVER": "https://a.buzzy.buzz",
                   "stripe": {
                     "enabled": false,
@@ -486,43 +447,6 @@ spec:
 
               }'
 
-            # - name: NODE_ENV
-        #       value: production
-        #     - name: MONGO_COMPOSE_URL
-        #       value: mongodb://secret
-        #     - name: SESSION_SECRET
-        #       value: secret
-        #     - name: SEED_OAUTH_CLIENT_ID
-        #       value: secret
-        #     - name: SEED_OAUTH_CLIENT_PWD
-        #       value: secret
-        #     - name: MAILER_FROM_NAME
-        #       value: Kudos Boards
-        #     - name: MAILER_FROM_ADDRESS
-        #       value: notifications@kudosboards.com
-        #     - name: MAILER_SERVICE_PROVIDER
-        #       value: sendgrid
-        #     - name: MAILER_EMAIL_ID
-        #       value: secret
-        #     - name: MAILER_PASSWORD
-        #       value: secret
-        #     - name: RUN_COMMAND
-        #       value: gulp prod
-        #     - name: PORT
-        #       value: "8080"
-        #     - name: REDIS_HOST
-        #       value: redis-boards-prod-service
-        #     - name: REDIS_PORT
-        #       value: "6379"
-        #     - name: STRIPE_SECRET
-        #       value: secret
-        #     - name: STRIPE_SIGNING_SECRET
-        #       value: secret
-        #     - name: STRIPE_TEST_CUSTOMER
-        #       value: secret
-        #     - name: STRIPE_PUBLISHABLE_KEY
-        #       value: secret
-
 ---
 
 apiVersion: v1
@@ -537,52 +461,31 @@ spec:
   ports:
     - port: 80
       targetPort: 8080
-      nodePort: 30289
+      name: http
+      protocol: TCP
 
 ---
 
-# apiVersion: extensions/v1beta1
-# kind: Ingress
-# metadata:
-#   name: buzzy-ingress-prod
-#   namespace: buzzy
-#   annotations:
-#     ingress.bluemix.net/sticky-cookie-services: serviceName=buzzy-service name=sticky_session_cookie
-#     ingress.bluemix.net/websocket-services: buzzy-service
-#     ingress.bluemix.net/redirect-to-https: "true"
-#     ingress.bluemix.net/proxy-buffering: "false"
-#     ingress.bluemix.net/client-max-body-size: "200m"
-#     ingress.bluemix.net/location-snippets: "proxy-buffer-size 128k;"
-# spec:
-#   tls:
-#     - hosts:
-#         - blue.buzzy.buzz
-#         # - www.kudosboards.com
-#         # - api.kudosboards.com
-#         # - my.kudosboards.com
-#       secretName: buzzy-domain-secret
-#   rules:
-#     - host: blue.buzzy.buzz
-#       http:
-#         paths:
-#           - backend:
-#               serviceName: buzzy-service
-#               servicePort: 80
-#     # - host: www.kudosboards.com
-#     #   http:
-#     #     paths:
-#     #       - backend:
-#     #           serviceName: kudos-boards-cloud-prod-service
-#     #           servicePort: 80
-#     # - host: api.kudosboards.com
-#     #   http:
-#     #     paths:
-#     #       - backend:
-#     #           serviceName: kudos-boards-cloud-prod-service
-#     #           servicePort: 80
-#     # - host: my.kudosboards.com
-#     #   http:
-#     #     paths:
-#     #       - backend:
-#     #           serviceName: kudos-boards-cloud-prod-service
-#     #           servicePort: 80
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: buzzy-ingress
+  namespace: buzzy
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "200m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/client-body-buffer-size: "200m"
+    nginx.ingress.kubernetes.io/proxy-buffer-size: "128k"
+spec:
+  # tls:
+  #   - hosts:
+  #       - buzzy.net.au
+  #     secretName: buzzy-domain-secret
+  rules:
+     - host: buzzy.net.au
+       http:
+         paths:
+           - backend:
+              serviceName: buzzy-service
+              servicePort: http
