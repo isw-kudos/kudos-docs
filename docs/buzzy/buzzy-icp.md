@@ -58,7 +58,7 @@ NOTE: Is using self-signed certificates you will need to uncomment NODE_TLS_REJE
 | spec.containers.env.BUZZY_ADMIN_EMAIL | 139 | OPTIONAL: Enter Admin user email, used as the primary owner of the default buzzes and resources that appear on the palette |
 | spec.containers.env.DEFAULT_OAUTH_PROVIDERS | 140-153 | Details for the OAuth provider(s) to be setup. ClientID and ClientSecret are from the OAuth setup in the previous step |
 | spec.containers.env.BUZZY_ADMIN_IDS | 154 | Enter Admin user ids |
-| spec.containers.env.BUZZY_LOGGING_TOKEN | 156 | Token used for access to the Buzzy logging server |
+| spec.containers.env.BUZZY_LOGGING_TOKEN | 156 | Token used for access to the Buzzy logging server. Must be the same in the buzzy-logging.yml |
 | spec.containers.env.BUZZY_CREATE_DEFAULT_ACCOUNTS  | 171 | Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL. Make the email the same as one from the OAuth provider to be able to view and edit the provider settings |
 | spec.containers.env.public.AWS_BUZZY_FILES | 257 | More AWS details for files |
 | spec.containers.env.public.IBMConnectionsOnPrem.signInDomains | 280 | IBM Connections URLs you are connecting to this Buzzy instance |
@@ -93,6 +93,7 @@ NOTE: This is optional and will not work if you are using IHS
 | spec.containers.env.value | 55 | Enter your mongoDB credentials   |
 | spec.containers.env.value | 57 | Enter your mongoDB debug credentials   |
 | spec.containers.env.value | 59 | Enter your SMTP details |
+| spec.containers.env.value.BUZZY_LOGGING_TOKEN | 62 | Token used for access to the Buzzy logging server. Must be the same in the buzzy.yml |
 | spec.containers.env.public.BUZZY_LOGGING_SERVER | 64 | URL you are deploying Buzzy logging to, including https:// |
 | spec.containers.env.public.BUZZY_APP_SERVER | 65 | Buzzy URL |
 | spec.rules.host | 105 | URL you are deploying Buzzy logging to, excluding https://  |
