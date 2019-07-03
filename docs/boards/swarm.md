@@ -9,7 +9,7 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 1. Docker Swarm with Portainer installed. [Guide here](/swarm/)
 1. Storage - an accessible MongoDB and S3 object store. [Guide here](/swarm/storage/)
 1. SMTP gateway setup for email notifications
-1. [Config File](/assets/config/boards-swarm.yml) downloaded
+1. [Config File](/assets/config/swarm/boards.yml) downloaded
 1. Dockerhub account with access to Kudos Boards repository.
 
    Send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
@@ -24,13 +24,13 @@ Kudos Boards currently supports the following oAuth providers for authentication
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
-| Provider                     | Registration / Documentation                                                                                  | Callback URL                           | Scopes |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------ |
-| IBM Connections (on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | [BOARDS_URL]/auth/connections/callback |
-| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | [BOARDS_URL]/auth/msgraph/callback     |
-| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | [BOARDS_URL]/auth/google/callback      |
-| LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | [BOARDS_URL]/auth/linkedin/callback    |
-| Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | [BOARDS_URL]/auth/facebook/callback    |
+| Provider                     | Registration / Documentation                                                                                  | Callback URL                             |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| IBM Connections (on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `[BOARDS_URL]/auth/connections/callback` |
+| Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `[BOARDS_URL]/auth/msgraph/callback`     |
+| Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `[BOARDS_URL]/auth/google/callback`      |
+| LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `[BOARDS_URL]/auth/linkedin/callback`    |
+| Facebook                     | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | `[BOARDS_URL]/auth/facebook/callback`    |
 
 ---
 
@@ -38,13 +38,13 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 **Swarm Variables**:
 
-| Key                             | Description                                                  |
-| ------------------------------- | ------------------------------------------------------------ |
-| x-minio-access                  | Your minio ACCESS KEY as defined in your docker swarm config |
-| x-minio-secret                  | Your minio SECRET KEY as defined in your docker swarm config |
-| x-app-env.APP_URI               | Your `[BOARDS_URL]`                                          |
-| services.webfront.deploy.labels | Update the `traefik.frontend.rule` your `[BOARDS_URL]`       |
-| services.core.deploy.labels     | Update the `traefik.frontend.rule` with your `[API_URL]`     |
+| Key                               | Description                                                    |
+| --------------------------------- | -------------------------------------------------------------- |
+| `x-minio-access`                  | Your minio `ACCESS_KEY` as defined in your docker swarm config |
+| `x-minio-secret`                  | Your minio `SECRET_KEY` as defined in your docker swarm config |
+| `x-app-env.APP_URI`               | Your `[BOARDS_URL]`                                            |
+| `services.webfront.deploy.labels` | Update the `traefik.frontend.rule` your `[BOARDS_URL]`         |
+| `services.core.deploy.labels`     | Update the `traefik.frontend.rule` with your `[API_URL]`       |
 
 **Boards Variables**:
 

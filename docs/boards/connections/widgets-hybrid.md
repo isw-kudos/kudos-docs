@@ -31,19 +31,26 @@ Check in the widgets-config.xml file.
 
 ### Activity Stream widget
 
-Access `Homepage`->`Administrator`
+Access `Homepage`->`Administrator` or https://connections.example.com/homepage/admin/openAdminPage.action
+
+Click `Add another app`
 
 Select the following:
+- App Type: <br>
+    🔘Open Social Gadget
+  - Gadget settings with Activity stream or Share dialog
+    - Security: <br>
+      🔘Trusted <br>
+      &emsp;✅Use SSO
+    - UI Integration Points:<br>
+      ✅Show for Activity Stream events
+    - Server access via Proxy: <br>
+      🔘All servers
 
-  - Open Social Gadget
-  - Trusted and Use SSO
-  - Show for Activity Stream events
-  - All servers
-
-  Click the `Add Mapping` button.
+Click the `Add Mapping` button.
 
 Add a Mapping for the Kudos Boards service to the Kudos client. Ensure OAuth Client is set to conn-ee and the Service name is Kudos Boards.
-Click the Ok button
+Click the `Ok` button. You should see `Kudos Boards->conn-ee` listed in `Service Mappings`
 
 Enter the following:
 
@@ -56,18 +63,17 @@ Enter the following:
   | ICON SECURE URL| `https://kudosboards.com/favicon.ico`|
 
 Select:
-
-  - Use IBM Connections specific tags
-  - Opened by default
+  - ✅Use IBM Connections specific tags
+  - ✅Opened by default
 
 Select the following Prerequisites:
 
-  - oauthprovider
-  - webresources
-  - oauth
-  - opensocial
+  - ✅oauthprovider
+  - ✅webresources
+  - ✅oauth
+  - ✅opensocial
 
-  Scroll down and Click Save
+  Scroll down and Click `Save`
 
 ---
 

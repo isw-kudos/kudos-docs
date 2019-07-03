@@ -84,3 +84,7 @@ In order to allow your users to find each other, we need to enable one of Auth0'
 Once your Auth0 tenant has been activated you will get an email from our support team with confirmation, you may then go to [Kudos Boards](https://kudosboards.com) and use your Auth0 domain as the team name to login.
 
 ![Kudos Boards Login](/assets/auth0/boards-login.png)
+
+After submitting your Team Name, you'll be asked for the email address and password associated with your Auth0 user account, to finalise your login.
+***
+![Company Details](/assets/auth0/boards-login2.PNG)

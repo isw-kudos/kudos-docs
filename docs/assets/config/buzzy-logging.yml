@@ -1,0 +1,110 @@
+---
+#
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   name: buzzy-logging
+#
+# ---
+
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: buzzy-logging
+  namespace: buzzy
+spec:
+  replicas: 1
+  minReadySeconds: 10
+  revisionHistoryLimit: 1
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  template: # create pods using pod definition in this template
+    metadata:
+      # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
+      # generated from the deployment name
+      labels:
+        app: buzzy-logging
+    spec:
+#      hostAliases:
+#        - ip: "IHS IP"
+#          hostnames:
+#            - "<minio>"
+#            - "<logging>"
+#            - "<buzzy>"
+      imagePullSecrets:
+        - name: dockerhub
+      containers:
+        - name: buzzy-app-container
+          image: docker.io/buzzybuzz/buzzy-logging:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
+          env:
+            - name: PORT
+              value: "8080"
+#            - name: NODE_TLS_REJECT_UNAUTHORIZED
+#              value: '0'
+            - name: ROOT_URL
+              value: "<BUZZY_LOGGING_URL>"
+            - name: LOG_TO_STDOUT
+              value: "1"
+            - name: MONGO_URL
+              value:  "mongodb://mongodb://<mongodbuser>:<mongodbuserpassword>@<MONGO_URL1>,<MONGO_URL2>,<MONGO_URL3>,...,<MONGO_URLN>/buzzy_logging?replicaSet=replicaset&authSource=admin"
+            - name: MONGO_OPLOG_URL
+              value: "mongodb://mongodb://<mongodbuser>:<mongodbuserpassword>@<MONGO_URL1>,<MONGO_URL2>,<MONGO_URL3>,...,<MONGO_URLN>/local?replicaSet=replicaset&authSource=admin"
+            - name: MAIL_URL
+              value: "smtp://someuser:somepassword@smtp.sendgrid.net:587"
+            - name: METEOR_SETTINGS
+              value: '{
+                "BUZZY_LOGGING_TOKEN": "somelongtoken",
+                "public": {
+                  "BUZZY_LOGGING_SERVER": "<BUZZY_LOGGING_URL>",
+                  "BUZZY_APP_SERVER": "<BUZZY_URL>"
+                }
+              }'
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: buzzy-logging
+  namespace: buzzy
+spec:
+  type: NodePort
+  selector:
+    app: buzzy-logging
+  ports:
+    - port: 80
+      targetPort: 8080
+      name: http
+      protocol: TCP
+
+---
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: buzzy-logging-ingress
+  namespace: buzzy
+  annotations: {
+          "nginx.ingress.kubernetes.io/proxy-body-size": "200m",
+          "nginx.ingress.kubernetes.io/proxy-read-timeout": "3600",
+          "nginx.ingress.kubernetes.io/proxy-send-timeout": "3600",
+          "nginx.ingress.kubernetes.io/client-body-buffer-size": "200m",
+          "nginx.ingress.kubernetes.io/proxy-buffer-size": "128k"
+      }
+spec:
+#   tls:
+#     - hosts:
+#         - <BUZZY_LOGGING_URL>
+#       secretName: buzzy-domain-secret
+  rules:
+    - host: <BUZZY_LOGGING_URL>
+      http:
+        paths:
+          - backend:
+              serviceName: buzzy-logging
+              servicePort: http

@@ -13,7 +13,7 @@ Check out the widgets-config.xml file.
 Edit the widgets-config.xml file. Under the <resource type="community"> section, then under <widgets>, then within <definitions> add the following.
 
     <!-- BUZZY -->
-    <widgetDef defId="Buzzy" modes="view fullpage" url="https://<BUZZY_URL>/assets/connections/communityWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+    <widgetDef defId="Buzzy" modes="view fullpage" url="https://<BUZZY_URL>/widget/widget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
       <itemSet>
         <item name="resourceId" value="{resourceId}"/>
       </itemSet>
@@ -23,6 +23,19 @@ Edit the widgets-config.xml file. Under the <resource type="community"> section,
 Check in the widgets-config.xml file.
 
     ProfilesConfigService.checkInWidgetConfig()
+
+### Register Widget
+
+Required for IBM Connections 6.0 CR1 onwards
+
+        execfile("newsAdmin.py")
+
+        NewsWidgetCatalogService.addWidget(title="Buzzy", url="http://<BUZZY_URL>/widget/widget.xml" ,secureUrl="https://<BUZZY_URL>/widget/widget.xml", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
+
+        NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
+
+        NewsWidgetCatalogService.clearWidgetCaches()
+
 
 ---
 
@@ -56,6 +69,7 @@ Select:
 
   - Use IBM Connections specific tags
   - Opened by default
+  - Display on Updates pages
 
 Select the following Prerequisites:
 
@@ -65,17 +79,3 @@ Select the following Prerequisites:
   - opensocial
 
   Scroll down and Click Save
-
----
-
-### Register Widget
-
-Required for IBM Connections 6.0 CR1 onwards
-
-    execfile("newsAdmin.py")
-
-    NewsWidgetCatalogService.addWidget(title="Buzzy", url="http://<BUZZY_URL>/assets/connections/communityWidget.xml" ,secureUrl="https://<BUZZY_URL>/assets/connections/communityWidget.xml", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
-
-    NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
-
-    NewsWidgetCatalogService.clearWidgetCaches()
