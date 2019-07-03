@@ -1,12 +1,4 @@
 ---
-#
-# apiVersion: v1
-# kind: Namespace
-# metadata:
-#   name: buzzy-logging
-#
-# ---
-
 kind: Deployment
 apiVersion: extensions/v1beta1
 metadata:
@@ -20,10 +12,8 @@ spec:
     rollingUpdate:
       maxUnavailable: 0
       maxSurge: 1
-  template: # create pods using pod definition in this template
+  template:
     metadata:
-      # unlike pod-nginx.yaml, the name is not included in the meta data as a unique name is
-      # generated from the deployment name
       labels:
         app: buzzy-logging
     spec:
@@ -48,7 +38,7 @@ spec:
 #            - name: NODE_TLS_REJECT_UNAUTHORIZED
 #              value: '0'
             - name: ROOT_URL
-              value: "<BUZZY_LOGGING_URL>"
+              value: "https://logging.buzzy.net"
             - name: LOG_TO_STDOUT
               value: "1"
             - name: MONGO_URL
@@ -61,8 +51,8 @@ spec:
               value: '{
                 "BUZZY_LOGGING_TOKEN": "somelongtoken",
                 "public": {
-                  "BUZZY_LOGGING_SERVER": "<BUZZY_LOGGING_URL>",
-                  "BUZZY_APP_SERVER": "<BUZZY_URL>"
+                  "BUZZY_LOGGING_SERVER": "https://logging.buzzy.net",
+                  "BUZZY_APP_SERVER": "https://buzzy.net"
                 }
               }'
 
@@ -97,12 +87,12 @@ metadata:
           "nginx.ingress.kubernetes.io/proxy-buffer-size": "128k"
       }
 spec:
-#   tls:
-#     - hosts:
-#         - <BUZZY_LOGGING_URL>
-#       secretName: buzzy-domain-secret
+  # tls:
+  #   - hosts:
+  #       - logging.buzzy.net
+  #     secretName: buzzy-domain-secret
   rules:
-    - host: <BUZZY_LOGGING_URL>
+    - host: logging.buzzy.net
       http:
         paths:
           - backend:
