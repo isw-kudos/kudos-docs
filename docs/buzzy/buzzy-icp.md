@@ -35,7 +35,7 @@ Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private fo
 ### Setup secrets
 1.  Dockerhub credentials
 
-            kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=buzzy
+        kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=buzzy
 
 ### Setup OAuth
 
