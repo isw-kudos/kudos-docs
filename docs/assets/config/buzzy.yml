@@ -27,6 +27,12 @@ spec:
       labels:
         app: buzzy-app
     spec:
+#      hostAliases:
+#        - ip: "IHS IP"
+#          hostnames:
+#            - "<minio>"
+#            - "<logging>"
+#            - "<buzzy>"
       imagePullSecrets:
         - name: dockerhub
       containers:
@@ -46,6 +52,8 @@ spec:
           env:
             - name: PORT
               value: "8080"
+#            - name: NODE_TLS_REJECT_UNAUTHORIZED
+#              value: '0'
             - name: ROOT_URL
               value: "<BUZZY_URL>"
             - name: LOG_TO_STDOUT
@@ -75,6 +83,9 @@ spec:
                   "BUCKET_NAME": "",
                     "PUBLIC_BUCKET_NAME": "",
                   "S3_REGION": ""
+                  "endpoint": "<minio_url>",
+                  "s3ForcePathStyle": true,
+                  "signatureVersion": "v4"                  
                 },
                 "FIREBASE_DISABLED":{
                 "enabled":true,
@@ -136,7 +147,7 @@ spec:
                       "name": "thiswillbeyourteamname",
 
                       "signInDomain": "https://somedomain",
-                      "type": "ibmconnectionsonprem"
+                      "type": "ibmconnectionscloud"
                     }
                   ]
                 },
@@ -247,7 +258,9 @@ spec:
                     "enabled":false,
                     "S3FileExpiry": 604800,
                     "BUCKET_NAME": "bucket name on AWS S3 or other on prem S3 server",
-                        "URL_PATTERN": "s3.amazonaws.com"
+                    "PUBLIC_BUCKET_NAME": "buzzy-files-public",
+                    "s3ForcePathStyle": true,
+                    "URL_PATTERN": "s3.amazonaws.com"
                   },
                     "SUPERHERO_BUZZ_ID": "somebuzzid",
                   "CLOUD_IMAGE": {
@@ -264,6 +277,9 @@ spec:
                   },
                   "GOOGLEBROWSER_API_KEY": "google key for API services like Maps etc",
                   "GOOGLEIOS_API_KEY": "specific Google key for IOS",
+                  "IBMConnectionsOnPrem": {
+                    "signInDomains": ["https://connections.isw.net.au","https://devconn6.internal.isw.net.au"]
+                  },
                   "IBMConnectionsCloud": {
                     "adminWelcomeBuzzID": "ID of file when new cloud signup",
                     "defaultSignInDomain": "https://apps.collabservintegration.com",
@@ -379,7 +395,7 @@ spec:
                   },
                   "BUZZY_REDIRECT": "/sign-in",
                   "BUZZY_CUSTOM": {
-                    "NAME": "ISW",
+                    "NAME": "ThinArrow",
                     "APP_URL_IOS": "itunes.apple.com/app/apple-store/id954176500?pt=105534889&ct=buzzyemailcomment&mt=8",
                     "APP_URL_ANDROID": "play.google.com/store/apps/details?id=buzz.buzzy.my1&hl=en&utm_source=buzzy_email&utm_content=buzzyemailcomment",
                     "LOGO_MAIN": "https://s3.amazonaws.com/buzzy-custom-logos/logo_thinarrow_rev.png",

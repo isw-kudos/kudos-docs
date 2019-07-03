@@ -1,4 +1,11 @@
 
+### Configure Activity Stream posting access
+
+1. Open WebSphere ISC & browse to the list of applications
+1. Open the WidgetContainer application and choose 'Security role to user/group mapping'
+1. Map the 'trustedExternalApplication' role to the special subject of 'All Authenticated in Application's Realm', then click OK
+1. Save the changes
+
 ### WebSphere config for Buzzy
 
 1. Open WebSphere ISC -> open web server -> edit `http.conf` -> add another VirtualHost
@@ -21,9 +28,29 @@
             SSLCipherSpec SSL_RSA_WITH_3DES_EDE_CBC_SHA
         </VirtualHost>
 
+        <VirtualHost *:443>
+          ServerName <BUZZY_LOGGING_URL>
+
+          #Buzzy On-prem
+          ProxyPreserveHost On
+          ProxyPass / http://<KUBERNETES_NAME>:<KUBERNETES_PORT>/
+          ProxyPassReverse / http://<KUBERNETES_NAME>:<KUBERNETES_PORT>/
+          #End Buzzy On-prem
+
+          SSLEnable
+            # Disable SSLv2
+            SSLProtocolDisable SSLv2
+            # Set strong ciphers
+            SSLCipherSpec TLS_RSA_WITH_AES_128_CBC_SHA
+            SSLCipherSpec TLS_RSA_WITH_AES_256_CBC_SHA
+            SSLCipherSpec SSL_RSA_WITH_3DES_EDE_CBC_SHA
+        </VirtualHost>
+
     Where:
 
       `<BUZZY_URL>` is the URL of your Boards deployment (as a domain)
+
+      `<BUZZY_LOGGING_URL>` is the URL of your Boards deployment (as a domain)
 
       `<KUBERNETES_NAME>` is the hostname/IP of the master in your cluster
 
