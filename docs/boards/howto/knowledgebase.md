@@ -8,6 +8,8 @@ Here are some quick how to guides to help you get started with Kudos Boards. 
 
 [Getting Started with Kudos Boards](/boards/howto/getting-started-with-kudos-boards/)
 
+[Importing Activities](/boards/howto/kudos-boards-import-activity/)
+
 [Adding Boards to Microsoft Teams](/boards/howto/adding-boards-to-teams/)
 
 [Kudos Boards in Microsoft Outlook](/boards/howto/kudos-boards-in-microsoft-outlook)
