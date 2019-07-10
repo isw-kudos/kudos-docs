@@ -1,14 +1,20 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-Kudos Boards allows attaching files under `20mb` directly to a card.
+Kudos Boards allows files under `20mb` to be attached to cards directly.
 
-Unlike uploading your file to an external service, the access to the attached file is managed by Boards, anyone who has access to view the card will be able to view and download the attachment.
+### Office 365 & IBM Connections
 
-Note that this feature may not be available if your administrator has disabled it.
+If you use Office 365 or IBM Connections as your authentication method, uploaded files and the security will be managed by your respective provider.  
 
-To attach a file:
+### Auth0, Google, Facebook, LinkedIn
 
-Click the + next to Links and Attachments
+If you use Auth0, Google, Facebook or LinkedIn to authenticate your entry into Kudos Boards, uploaded files will be managed by Kudos Boards, not your respective provider. Anyone who has access to view the card will be able to view and download the attachment.
+
+File upload to Kudos Boards with Auth0, Google, Facebook, and LinkedIn can be disabled by an administrator if desired.
+
+### Attaching a File to a Card
+
+Enter your desired card, click the + next to Links and Attachments
 ![](/assets/boards/attaching1.png)
 
 In the menu that appears, choose Upload.
@@ -23,22 +29,26 @@ Your file will now appear in the Links and Attachments list.
 
 ![](/assets/boards/attaching4.png)
 
-### Additional information on files attached to Kudos Boards
+### Removing an Attached File
 
-<dl>
+To remove an attached file, hover over the file in the card and click the `X` to remove the link. The file will be deleted and the link will no longer work. Please ensure you still have a copy of the file if needed before doing this.
 
-<dt>Removing an attached file</dt>
-<dd>To remove the attached file, simply remove the link to it. The file will be deleted and the link will no longer work. Please ensure you still have a copy of the file if needed before doing this.</dd>
+### Who Can Remove Files?
 
-<dt>Who can remove files</dt>
-<dd>Anyone who can edit the card can also remove the attached files.</dd>
+Anyone who can edit the card can also remove the attached files.
 
-<dt>Where are files stored</dt>
-<dd>Files attached to cards in Kudos Boards Cloud are stored in <a target="_blank" href="https://cloud.google.com/storage/">Google Cloud Storage</a> If you are hosting Kudos Boards yourself then they are stored in the default file storage as defined in your environment.</dd>
+### Where are Files Stored?
 
-<dt>What happens when I delete a card that had attachments on it</dt>
-<dd>When you archive a card, the attachments will still be accessible however, if you delete the card entirely then the attachments will also be deleted.</dd>
+Files attached to cards in Kudos Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in <a target="_blank" href="https://cloud.google.com/storage/">Google Cloud Storage</a>
 
-<dt>Can I increase the upload limit</dt>
-<dd>Contact <a href="mailto:support@kudosboards.com">support@kudosboards.com</a> to request an increase in upload limit.</dd>
-</dl>
+If you are hosting Kudos Boards yourself then files are stored in the default file storage as defined in your environment.
+
+If you are using Office 365 or IBM Connections, your files are stored within these environments.
+
+### Deleting a Card that has Attachments
+
+When you archive a card, the attachments will still be accessible however, if you delete the card permanently then the attachments will also be deleted.
+
+### Increasing the Upload Limit
+
+Please contact <a href="mailto:support@kudosboards.com">support@kudosboards.com</a> to request an increase in upload limit.
