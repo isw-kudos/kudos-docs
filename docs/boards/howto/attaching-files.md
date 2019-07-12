@@ -2,26 +2,24 @@
 
 Kudos Boards allows files under `20mb` to be attached to cards directly.
 
-### Office 365 & IBM Connections
+Anyone who has access to view the card will be able to view and download the attachment.
 
-If you use Office 365 or IBM Connections as your authentication method, uploaded files and the security will be managed by your respective provider.  
+> This feature can be disabled organisation wide by an administrator if desired.
 
-### Auth0, Google, Facebook, LinkedIn
+### Office 365 (OneDrive) & IBM Connections (Files)
 
-If you use Auth0, Google, Facebook or LinkedIn to authenticate your entry into Kudos Boards, uploaded files will be managed by Kudos Boards, not your respective provider. Anyone who has access to view the card will be able to view and download the attachment.
-
-File upload to Kudos Boards with Auth0, Google, Facebook, and LinkedIn can be disabled by an administrator if desired.
+If you use Office 365 or IBM Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Kudos Boards will only save a link to open these.
 
 ### Attaching a File to a Card
 
-Enter your desired card, click the + next to Links and Attachments
+Open your desired card, click the + next to Links and Attachments
 ![](/assets/boards/attaching1.png)
 
 In the menu that appears, choose Upload.
 
 ![](/assets/boards/attaching2.png)
 
-Locate the file(s) you wish to attach and click Open, Boards will examine the selected files and prompt you where to upload them as below. choose `Upload to Kudos Boards` and click `Upload`.
+Locate the file(s) you wish to attach and click open, Kudos Boards will examine the selected files and prompt you where to upload them as below. choose `Upload to Kudos Boards` and click `Upload`.
 
 ![](/assets/boards/attaching3.png)
 
@@ -48,4 +46,3 @@ If you are using Office 365 or IBM Connections, your files are stored within the
 ### Deleting a Card that has Attachments
 
 When you archive a card, the attachments will still be accessible however, if you delete the card permanently then the attachments will also be deleted.
-
