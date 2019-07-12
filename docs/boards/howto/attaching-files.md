@@ -49,6 +49,3 @@ If you are using Office 365 or IBM Connections, your files are stored within the
 
 When you archive a card, the attachments will still be accessible however, if you delete the card permanently then the attachments will also be deleted.
 
-### Increasing the Upload Limit
-
-Please contact <a href="mailto:support@kudosboards.com">support@kudosboards.com</a> to request an increase in upload limit.
