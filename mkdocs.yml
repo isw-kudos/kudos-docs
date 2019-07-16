@@ -94,6 +94,7 @@ nav:
               - Overview: buzzy/buzzy-icp.md
               - Connections OAuth Config: buzzy/buzzy-oauth.md
               - WAS Config: buzzy/buzzy-wasconfig.md
+              - Header Config: buzzy/buzzy-header.md
               - Connections Widgets: buzzy/buzzy-widgets.md
               - Mongo: buzzy/mongo.md
               - Minio: buzzy/minio.md
