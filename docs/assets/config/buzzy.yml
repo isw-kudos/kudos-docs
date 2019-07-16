@@ -260,7 +260,7 @@ spec:
                     "alternateSignInDomains": ["https://apps.ce.collabserv.com", "https://apps.ap.collabserv.com", "https://apps.na.collabserv.com"],
                     "defaultService": "connectionscloud",
                     "defaultClientID": "isv_buzzy_buzzy",
-                    "headerVisible": true,
+                    "headerVisible": false,
                     "display": "redirect",
                     "files": {
                       "options": [{
