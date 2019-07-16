@@ -113,5 +113,8 @@ ie `logging.buzzy.net.au`
 ### Add Websphere Config
 Please follow [these instructions](/buzzy/buzzy-wasconfig/)
 
+### Add Header Integration
+Please follow [these instructions](/buzzy/buzzy-header/)
+
 ### Add IBM Connections widgets
 Please follow [these instructions](/buzzy/buzzy-widgets/)
