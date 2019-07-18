@@ -45,8 +45,6 @@ spec:
               value:  "mongodb://mongodb://<mongodbuser>:<mongodbuserpassword>@<MONGO_URL1>,<MONGO_URL2>,<MONGO_URL3>,...,<MONGO_URLN>/buzzy_logging?replicaSet=replicaset&authSource=admin"
             - name: MONGO_OPLOG_URL
               value: "mongodb://mongodb://<mongodbuser>:<mongodbuserpassword>@<MONGO_URL1>,<MONGO_URL2>,<MONGO_URL3>,...,<MONGO_URLN>/local?replicaSet=replicaset&authSource=admin"
-            - name: MAIL_URL
-              value: "smtp://someuser:somepassword@smtp.sendgrid.net:587"
             - name: METEOR_SETTINGS
               value: '{
                 "BUZZY_LOGGING_TOKEN": "somelongtoken",

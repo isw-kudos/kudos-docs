@@ -54,28 +54,27 @@ NOTE: If using self-signed certificates you will need to uncomment NODE_TLS_REJE
 
 1. Edit [buzzy.yml](/assets/config/buzzy.yml) and enter details at the following lines:	 
 
-| Key | Line | Description |
-| --- | ---- | ----------- |
-| ROOT_URL | 41 | URL you are deploying Buzzy to, including https://  |
-| MONGO_URL | 45 | Enter your mongoDB credentials and URL   |
-| MONGO_OPLOG_URL | 47 | Enter your mongoDB credentials and URL   |
-| MAIL_URL | 49 | Enter your SMTP details |
-| METEOR_SETTINGS.AWS_BUZZY_FILES | 62-72 | Your s3 file storage config  |
-| METEOR_SETTINGS.MAIL_URL | 120 | Enter your SMTP details (same as above) |
-| METEOR_SETTINGS.BUZZY_ADMIN_EMAIL | 122 | OPTIONAL: Enter Admin user email, used as the primary owner of the default buzzes and resources that appear on the palette |
-| METEOR_SETTINGS.DEFAULT_OAUTH_PROVIDERS | 123-135 | Details for the OAuth provider to be set up (e.g. IBM Connections). ClientID and ClientSecret are from the OAuth setup in the previous step |
-| METEOR_SETTINGS.BUZZY_LOGGING_TOKEN | 138 | Token used for access to the Buzzy logging server. Must be the same in the buzzy-logging.yml |
-| METEOR_SETTINGS.BUZZY_CREATE_DEFAULT_ACCOUNTS  | 153 | Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL. Make the email the same as one from the OAuth provider to be able to view and edit the provider settings |
-| METEOR_SETTINGS.public.AWS_BUZZY_FILES | 231 | public AWS details for files |
-| METEOR_SETTINGS.public.IBMConnectionsOnPrem.signInDomains | 255 | IBM Connections URLs you are connecting to this Buzzy instance |
-| METEOR_SETTINGS.public.BUZZY_CUSTOM.NAME | 368 | Company Name |
-| METEOR_SETTINGS.public.BUZZY_CUSTOM.LOGO_MAIN | 371 | URL of your main logo |
-| METEOR_SETTINGS.public.BUZZY_CUSTOM.LOGO_MAIL | 372 | URL of us in Email |
-| METEOR_SETTINGS.public.BUZZY_CUSTOM.EMAIL_FOOTER | 375 | Email Footer |
-| METEOR_SETTINGS.public.BUZZY_CUSTOM.PROMO_URL | 377 | Splash image |
-| METEOR_SETTINGS.public.BUZZY_CUSTOM.WELCOME_IMAGE | 379 | Welcome Image |
-| METEOR_SETTINGS.public.BUZZY_LOGGING_SERVER | 406 | URL of the Buzzy logging server |
-| Ingress.spec.rules.host | 487 | host name for the buzzy app |
+| Key | Description |
+| --- | ----------- |
+| ROOT_URL | URL you are deploying Buzzy to, including https://  |
+| MONGO_URL | Enter your mongoDB credentials and URL   |
+| MONGO_OPLOG_URL | Enter your mongoDB credentials and URL   |
+| METEOR_SETTINGS.AWS_BUZZY_FILES | Your s3 file storage config  |
+| METEOR_SETTINGS.MAIL_URL | Enter your SMTP details (same as above) |
+| METEOR_SETTINGS.BUZZY_ADMIN_EMAIL | OPTIONAL: Enter Admin user email, used as the primary owner of the default buzzes and resources that appear on the palette |
+| METEOR_SETTINGS.DEFAULT_OAUTH_PROVIDERS | Details for the OAuth provider to be set up (e.g. IBM Connections). ClientID and ClientSecret are from the OAuth setup in the previous step |
+| METEOR_SETTINGS.BUZZY_LOGGING_TOKEN | Token used for access to the Buzzy logging server. Must be the same in the buzzy-logging.yml |
+| METEOR_SETTINGS.BUZZY_CREATE_DEFAULT_ACCOUNTS  | Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL. Make the email the same as one from the OAuth provider to be able to view and edit the provider settings |
+| METEOR_SETTINGS.public.AWS_BUZZY_FILES | public AWS details for files |
+| METEOR_SETTINGS.public.IBMConnectionsOnPrem.signInDomains | IBM Connections URLs you are connecting to this Buzzy instance |
+| METEOR_SETTINGS.public.BUZZY_CUSTOM.NAME | Company Name |
+| METEOR_SETTINGS.public.BUZZY_CUSTOM.LOGO_MAIN | URL of your main logo |
+| METEOR_SETTINGS.public.BUZZY_CUSTOM.LOGO_MAIL | URL of us in Email |
+| METEOR_SETTINGS.public.BUZZY_CUSTOM.EMAIL_FOOTER | Email Footer |
+| METEOR_SETTINGS.public.BUZZY_CUSTOM.PROMO_URL | Splash image |
+| METEOR_SETTINGS.public.BUZZY_CUSTOM.WELCOME_IMAGE | Welcome Image |
+| METEOR_SETTINGS.public.BUZZY_LOGGING_SERVER | URL of the Buzzy logging server |
+| Ingress.spec.rules.host | host name for the buzzy app |
 
 1. Create your services   
 `kubectl apply -f buzzy.yml`   
@@ -94,16 +93,15 @@ NOTE: Buzzy logging server srequires Websocket support and as such it will not w
 
 1. Edit [buzzy-logging.yml](/assets/config/buzzy-logging.yml) and enter details at the following lines:	 
 
-| Key | Line | Description |
-| --- | ---- | ----------- |
-| ROOT_URL | 41 | URL you are deploying Buzzy logging to, including https://  |
-| MONGO_URL | 45 | Enter your mongoDB credentials and URL  |
-| MONGO_OPLOG_URL | 47 | Enter your mongoDB credentials and URL   |
-| MAIL_URL | 49 | Enter your SMTP details |
-| METEOR_SETTINGS.BUZZY_LOGGING_TOKEN | 52 | Token used for access to the Buzzy logging server. Must be the same in the buzzy.yml |
-| METEOR_SETTINGS.public.BUZZY_LOGGING_SERVER | 54 | URL you are deploying Buzzy logging to, including https:// |
-| METEOR_SETTINGS.public.BUZZY_APP_SERVER | 55 | Buzzy URL |
-| Ingress.spec.rules.host | 95 | hostname for Buzzy logging, excluding https://  |
+| Key | Description |
+| --- | ----------- |
+| ROOT_URL | URL you are deploying Buzzy logging to, including https://  |
+| MONGO_URL | Enter your mongoDB credentials and URL  |
+| MONGO_OPLOG_URL | Enter your mongoDB credentials and URL   |
+| METEOR_SETTINGS.BUZZY_LOGGING_TOKEN | Token used for access to the Buzzy logging server. Must be the same in the buzzy.yml |
+| METEOR_SETTINGS.public.BUZZY_LOGGING_SERVER | URL you are deploying Buzzy logging to, including https:// |
+| METEOR_SETTINGS.public.BUZZY_APP_SERVER | Buzzy URL |
+| Ingress.spec.rules.host | hostname for Buzzy logging, excluding https://  |
 
 1. Create your services   
 `kubectl apply -f buzzy-logging.yml`   
