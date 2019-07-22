@@ -51,8 +51,8 @@ spec:
                 "REPORT_ABUSE_EMAILS": ["someadminemail@emails.email"],
                 "AWS_BUZZY_FILES": {
                   "enabled": true,
-                  "accessKeyId": "changetoyours3id",
-                  "secretAccessKey": "changetoyours3key",
+                  "accessKeyId": "ioueygr4t589",
+                  "secretAccessKey": "7a863d41-2d8f-4143-bc8a-02501edbea6f",
                   "endpoint": "https://minio.buzzy.net.au"
                 },
                 "MAIL_URL": "smtp://someuser:somepassword@smtp.sendgrid.net:587",
