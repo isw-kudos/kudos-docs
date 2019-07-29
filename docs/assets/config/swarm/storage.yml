@@ -14,7 +14,7 @@ networks:
 services:
   # Shared DB for business data
   mongo:
-    image: bitnami/mongodb:latest
+    image: bitnami/mongodb:4.0.10-r1
     environment:
       MONGODB_REPLICA_SET_MODE: primary
       MONGODB_ADVERTISED_HOSTNAME: mongo
