@@ -95,6 +95,11 @@ spec:
                   "IBMConnectionsOnPrem": {
                     "signInDomains": ["https://connections.example.net"]
                   },
+                  "IBMConnectionsCloud": {
+                    "defaultClientID": "The same as the provider name, the team name",
+                    "defaultSignInDomain": "https://connections.example.net",
+                    "alternateSignInDomains": []
+                  },
                   "LOGINS": {
                     "SELF_REGISTRATION": {
                       "enabled": true
