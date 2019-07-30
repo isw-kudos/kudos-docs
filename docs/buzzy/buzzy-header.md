@@ -25,9 +25,10 @@ This is usually accessible through a URL like:
 1. Set the following details and click `OK`
 
         EXTERNAL_APPS_CONFIG
-        {"buzzy":"https://[BUZZY_URL]/l?pagestyle=white"}
+        {"buzzy":"https://[BUZZY_URL]/l?team=[TEAM_NAME]&pagestyle=white"}
 
     Where `[BUZZY_URL]` is the URL of the Buzzy installation specified previously
+    And `[TEAM_NAME]` is the teamname configured in buzzy.yml
 
     ![example](/assets/config/buzzy-header-console.png)
 

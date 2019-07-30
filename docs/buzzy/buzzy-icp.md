@@ -67,6 +67,9 @@ NOTE: If using self-signed certificates you will need to uncomment NODE_TLS_REJE
 | METEOR_SETTINGS.BUZZY_CREATE_DEFAULT_ACCOUNTS  | Default accounts created. Set isAdmin for these accounts to be considered the same as BUZZY_ADMIN_EMAIL. Make the email the same as one from the OAuth provider to be able to view and edit the provider settings |
 | METEOR_SETTINGS.public.AWS_BUZZY_FILES | public AWS details for files |
 | METEOR_SETTINGS.public.IBMConnectionsOnPrem.signInDomains | IBM Connections URLs you are connecting to this Buzzy instance |
+| METEOR_SETTINGS.public.IBMConnectionsOnPrem.defaultClientID | The same as the provider `name` in DEFAULT_OAUTH_PROVIDERS.providers.name above |
+| METEOR_SETTINGS.public.IBMConnectionsCloud.defaultClientID | The same as the provider `name` in DEFAULT_OAUTH_PROVIDERS.providers.name above |
+| METEOR_SETTINGS.public.IBMConnectionsCloud.defaultSignInDomain | IBM Connections URLs you are connecting to this Buzzy instance |
 | METEOR_SETTINGS.public.BUZZY_CUSTOM.NAME | Company Name |
 | METEOR_SETTINGS.public.BUZZY_CUSTOM.LOGO_MAIN | URL of your main logo |
 | METEOR_SETTINGS.public.BUZZY_CUSTOM.LOGO_MAIL | URL of us in Email |

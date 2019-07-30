@@ -93,10 +93,11 @@ spec:
                     "URL_PATTERN": "https://minio.buzzy.net.au/buzzy-files"
                   },
                   "IBMConnectionsOnPrem": {
-                    "signInDomains": ["https://connections.example.net"]
+                    "signInDomains": ["https://connections.example.net"],
+                    "defaultClientID": "The same as the provider `name` in DEFAULT_OAUTH_PROVIDERS.providers.name above",
                   },
                   "IBMConnectionsCloud": {
-                    "defaultClientID": "The same as the provider name, the team name",
+                    "defaultClientID": "The same as the provider `name` in DEFAULT_OAUTH_PROVIDERS.providers.name above",
                     "defaultSignInDomain": "https://connections.example.net",
                     "alternateSignInDomains": []
                   },
