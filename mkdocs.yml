@@ -99,6 +99,8 @@ nav:
               - Connections Widgets: buzzy/buzzy-widgets.md
               - Mongo: buzzy/mongo.md
               - Minio: buzzy/minio.md
+          - Connections Cloud:
+              - Widgets: buzzy/cloud/bc-widgets.md
   - Docker Swarm:
       - Installation: swarm/index.md
       - Storage: swarm/storage.md

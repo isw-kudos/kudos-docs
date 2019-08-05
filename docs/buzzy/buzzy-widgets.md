@@ -1,5 +1,5 @@
 # IBM Connections Widget Setup
-Basic instructions for adding Kudos Boards Docker widgets into IBM Connections on-premise environments
+Basic instructions for adding Buzzy widgets into IBM Connections on-premise environments
 
 ---
 
