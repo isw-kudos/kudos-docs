@@ -1,5 +1,5 @@
 # IBM Connections Widget Setup
-Basic instructions for adding Kudos Boards Docker widgets into IBM Connections on-premise environments
+Basic instructions for adding Buzzy widgets into IBM Connections on-premise environments
 
 ---
 
@@ -13,29 +13,19 @@ Check out the widgets-config.xml file.
 Edit the widgets-config.xml file. Under the <resource type="community"> section, then under <widgets>, then within <definitions> add the following.
 
     <!-- BUZZY -->
-    <widgetDef defId="Buzzy" modes="view fullpage" url="https://<BUZZY_URL>/widget/widget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
-      <itemSet>
-        <item name="resourceId" value="{resourceId}"/>
-      </itemSet>
-    </widgetDef>
+    <widgetDef defId="BuzzyOnPremURLWidgetCS" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner">
+				  <itemSet>
+				  <item name="resourceId" value="{resourceId}"/>
+					<item name="width" value="100%"/>
+					<item name="height" value="500px"/>
+					<item name="url" value="https://<BUZZY_URL>/connectionsstart?pagestyle=white&amp;leannav=true"/>
+				  </itemSet>
+			</widgetDef>
     <!-- END BUZZY -->
 
 Check in the widgets-config.xml file.
 
     ProfilesConfigService.checkInWidgetConfig()
-
-### Register Widget
-
-Required for IBM Connections 6.0 CR1 onwards
-
-        execfile("newsAdmin.py")
-
-        NewsWidgetCatalogService.addWidget(title="Buzzy", url="http://<BUZZY_URL>/widget/widget.xml" ,secureUrl="https://<BUZZY_URL>/widget/widget.xml", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
-
-        NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
-
-        NewsWidgetCatalogService.clearWidgetCaches()
-
 
 ---
 

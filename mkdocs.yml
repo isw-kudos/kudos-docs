@@ -47,8 +47,8 @@ nav:
           - For Kubernetes: boards/kubernetes/index.md
           - For Swarm: boards/swarm.md
           - Common Config:
-            - Environment: boards/env/common.md
-            - Team Logins: boards/env/teams.md
+              - Environment: boards/env/common.md
+              - Team Logins: boards/env/teams.md
           - Integrations:
               - IBM Connections On-Prem:
                   - Authentication: boards/connections/auth-on-prem.md
@@ -66,6 +66,7 @@ nav:
       - How To Guide:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
           - Getting Started with Kudos Boards: boards/howto/getting-started-with-kudos-boards.md
+          - Starting a trial of Kudos Boards: boards/howto/start-a-trial.md
           - Import Activities: boards/howto/kudos-boards-import-activity.md
           - Adding Boards to Microsoft Teams: boards/howto/adding-boards-to-teams.md
           - Kudos Boards in Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
@@ -82,20 +83,24 @@ nav:
           - Creating Templates: boards/howto/creating-templates.md
           - Archiving and Restoring: boards/howto/archiving-and-restoring.md
           - Permissions in Kudos Boards: boards/howto/permissions.md
+          - Manage Organisation Config: boards/howto/org-config.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
       - Connections Cloud: ideas/cloud-setup.md
   - Buzzy:
       # - Overview: buzzy/index.md
-    - Installation:
-      - For Connections On-premise:
-        - Overview: buzzy/buzzy-icp.md
-        - Connections OAuth Config: buzzy/buzzy-oauth.md
-        - WAS Config: buzzy/buzzy-wasconfig.md
-        - Connections Widgets: buzzy/buzzy-widgets.md
-        - Mongo: buzzy/mongo.md
-        - Minio: buzzy/minio.md
+      - Installation:
+          - For Connections On-premise:
+              - Overview: buzzy/buzzy-icp.md
+              - Connections OAuth Config: buzzy/buzzy-oauth.md
+              - WAS Config: buzzy/buzzy-wasconfig.md
+              - Header Config: buzzy/buzzy-header.md
+              - Connections Widgets: buzzy/buzzy-widgets.md
+              - Mongo: buzzy/mongo.md
+              - Minio: buzzy/minio.md
+          - Connections Cloud:
+              - Widgets: buzzy/cloud/bc-widgets.md
   - Docker Swarm:
       - Installation: swarm/index.md
       - Storage: swarm/storage.md

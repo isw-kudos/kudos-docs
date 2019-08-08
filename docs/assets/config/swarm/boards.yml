@@ -100,8 +100,9 @@ services:
       << : *app-env
       << : *s3-env
       NOTIFIER_EMAIL_HOST: <SMTP.SERVER.COM>
-      NOTIFIER_EMAIL_USERNAME: <USERNAME>
-      NOTIFIER_EMAIL_PASSWORD: <PASSWORD>
+      # NOTIFIER_EMAIL_USERNAME: username
+      # NOTIFIER_EMAIL_PASSWORD: password
+      # NOTIFIER_EMAIL_PORT: 25
 
   # Boards business logic
   app:
