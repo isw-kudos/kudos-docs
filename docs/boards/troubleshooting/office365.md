@@ -34,4 +34,6 @@ Under the Org Administration section, click the `Approve Advanced Features` butt
 
 ![](/assets/boards/org-admin-approve-advanced.png)
 
-This will direct you to the same Microsoft Office 365 "Permissions requested - Accept for your organisation" screen as shown above, allowing you to force the consent of all permissions that Kudos Boards needs for your organisation.
+This will direct you to the Microsoft Office 365 **Permissions requested - Accept for your organisation** page, allowing you to force the consent of all permissions that Kudos Boards needs for your organisation:
+
+![Admin Approval View](../../assets/msgraph/administrator_approval_view.png)
