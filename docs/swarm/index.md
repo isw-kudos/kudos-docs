@@ -49,6 +49,7 @@ When configuring the servers, you will need to enable the following network rule
 - http(s) traffic should be allowed to the Gateway only
 - ssh traffic should be allowed to all servers
 - Where possible all servers should be on an additional (internal only) subnet, this allows us to further lock down access to NFS shares
+- If you have access to the servers from your local machine then you can run the scripts directly, however if this is not the case then you will need to use an ssh jump box as depicted below.
 
 ![Network Diagram](/assets/swarm-net.png)
 
@@ -58,7 +59,22 @@ When configuring the servers, you will need to enable the following network rule
 
 See [Ansible setup guide](/tools/ansible/).
 
-Download and extract [This zip file](/assets/docker-swarm-blank.zip)
+Download and extract [This zip file](/assets/docker-swarm-blank.zip) to a convenient location, you will run the ansible scripts below from this directory.
+
+---
+
+## SSL setup
+
+There are four domains in this guide that will require certificates, these can be covered by a single wildcard certificate or by individual certificates.
+
+- boards.example.com
+- boards-api.example.com
+- portainer.example.com
+- proxy.swarm.example.com (optional traefik proxy dashboard)
+
+You will need to obtain pem encoded certificates (including any required intermediate certificates) and keys for these domains. These should be named alike (e.g. boards.crt and boards.key).
+
+Place all the certificates and keys in the directory `ansible/roles/docker-swarm/files/ssl/`.
 
 ---
 
@@ -79,7 +95,7 @@ As mentioned in the linked article, we will need to add each of our servers to o
 
 ## Config
 
-Download [this hosts file](/assets/config/swarm/servers.yml) and update the values as follows:
+Download [this hosts file](/assets/config/swarm/servers.yml), save it in the hosts directory and update the values as follows:
 
 | Key                                   | Description                                                                                                                                                                                                                      |
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -91,7 +107,7 @@ Download [this hosts file](/assets/config/swarm/servers.yml) and update the valu
 | all.vars.ansible_user                 | Your username on all servers                                                                                                                                                                                                     |
 | all.vars.ansible_ssh_private_key_file | Full path to your keyfile (leave blank if using password auth)                                                                                                                                                                   |
 | all.vars.swarm_ip_mask                | ip mask that matches your internal subnet e.g. 10.10.10.10/24, or that matches all swarm nodes if you do not have an internal subnet                                                                                             |
-| all.vars.ssl_certs                    | For ssl to work on your environment, you need to have a pem encoded certificate and keyfile for each domain you plan to serve on. You should name these files name.crt and name.key and then add all of the names in this field  |
+| all.vars.ssl_certs                    | The names of all SSL certificates as defined above |
 | all.vars.dashboard_host               | The domain name for your portainer dashboard                                                                                                                                                                                     |
 | all.vars.proxy_dashboard_host         | The domain name for your traefik proxy dashboard                                                                                                                                                                                 |
 | all.vars.monitoring                   | This section will be covered in Advanced below, you should get the swarm up and running first before adding monitoring                                                                                                           |
