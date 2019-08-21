@@ -1,9 +1,8 @@
 # Deploy MongoDB & S3 Storage
 
-Kudos Boards requires an S3 object store, and a Mongo database.  This documentation will deploy a Minio S3 storage container & MongoDB replicaSet into the Swarm setup.
+Kudos Boards requires an S3 object store, and a Mongo database. This documentation will deploy a Minio S3 storage container & MongoDB replicaSet into the Swarm setup.
 
 If you already have externally hosted mongo database and/or S3 storage please contact us for assistance in utilising them. [support@kudosboards.com](mailto:support@kudosboards.com)
-
 
 ### Pre-Requisites
 
@@ -14,12 +13,12 @@ If you already have externally hosted mongo database and/or S3 storage please co
 
 ### Update config file
 
-| Key                                        | Description                                                                                                      |
-| ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
-| x-minio-access                             | Your minio ACCESS KEY as defined in your docker swarm config                                                     |
-| x-minio-secret                             | Your minio SECRET KEY as defined in your docker swarm config                                                     |
+| Key            | Description                                                                                                                                   |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| x-minio-access | Provide an access key to use (min 3 chars, alpha numeric and "-"), you will need to provide this to any services that require access to minio |
+| x-minio-secret | Provide a secret key to use (min 8 chars, alpha numeric and "-"), you will need to provide this to any services that require access to minio  |
 
-*Optional:* if you only want to deploy one of these services you can remove the other, ie under `services:`, delete either the `mongo:` or `minio:` sections.
+_Optional:_ if you only want to deploy one of these services you can remove the other, ie under `services:`, delete either the `mongo:` or `minio:` sections.
 
 ---
 
