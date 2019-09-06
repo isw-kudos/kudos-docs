@@ -25,3 +25,4 @@ Setting up the Hybrid Boards Cloud involves:
     - [Connections Header](/boards/connections/header-hybrid/)
     - [Customise Apps menu](/boards/connections/apps-menu-hybrid/)
     - [Customise Widgets](/boards/connections/widgets-hybrid/)
+    - [Add to Mobile App](/boards/connections/mobile-app-hybrid/)
