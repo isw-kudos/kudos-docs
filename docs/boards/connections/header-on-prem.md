@@ -1,3 +1,5 @@
+**NOTE: This step is no longer required if Boards is hosted on the same hostname as Connections, e.g. as a path on the existing domain like `/boards`**
+
 ![Outcome](/assets/connections/header.png)
 
 

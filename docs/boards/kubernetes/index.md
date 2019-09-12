@@ -19,13 +19,14 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Kudos Boards aims to match whatever you already have in place. Some examples of network routing:
 
-|                         | New domain                                                                                                                                                                                                  | Path on existing domain                                                            |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| Example of `BOARDS_URL` | `https://boards.example.com`                                                                                                                                                                                | `https://example.com/boards`                                                       |
-| Example of `API_URL`    | `https://api.example.com`                                                                                                                                                                                   | `https://example.com/api-boards`                                                   |
-| Requirement             | 1. Reverse proxy able to match any current domains as well as the new one for Kudos Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains | Ability to proxy the 2 paths                                                       |
-| Certificate Resolution  | a) in your proxy and forward the unencrypted traffic to kubernetes</br>**-OR-**</br>b) forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).      | All certificate resolution on the proxy server                                     |
-| Notes                   | IBM HTTP WebServer supports only one certificate. You must have a Wildcard certificate to cover all of your domains including the new Boards domains (ie \*.example.com).                                   | Additional config required to make Boards webfront handle redirects, details below |
+|                         | New domain                                                                                                                                                                                                   | Path on existing domain                                                             |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| Example of `BOARDS_URL` | `boards.example.com`                                                                                                                                                                                         | `example.com/boards`                                                                |
+| Example of `API_URL`    | `api.example.com`                                                                                                                                                                                            | `example.com/api-boards`                                                            |
+| Requirement             | 1. Reverse proxy able to match any current domains as well as the new one for Kudos Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains. | Ability to proxy the 2 paths                                                        |
+| Certificate Resolution  | a) in your proxy and forward the unencrypted traffic to kubernetes</br>**-OR-**</br>b) forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).       | All certificate resolution on the proxy server                                      |
+| Notes                   | IBM HTTP WebServer supports only one certificate. You must have a Wildcard certificate to cover all of your domains including the new Boards domains (ie \*.example.com).                                    | Additional config required to make Boards webfront handle redirects, details below. |
+| For Connections Header  | Additional [WebSphere application](/boards/connections/header-on-prem/) must be installed                                                                                                                    | -                                                                                   |
 
 Please decide on which configuration will suit your environment best and the corresponding `BOARDS_URL` & `API_URL`. These values will then be used in the following documentation.
 
@@ -41,11 +42,11 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 | Provider                        | Registration / Documentation                                                                                  | Callback URL                             |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| IBM Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `[BOARDS_URL]/auth/connections/callback` |
-| Microsoft Office 365            | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `[BOARDS_URL]/auth/msgraph/callback`     |
-| Google                          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `[BOARDS_URL]/auth/google/callback`      |
-| LinkedIn                        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `[BOARDS_URL]/auth/linkedin/callback`    |
-| Facebook                        | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | `[BOARDS_URL]/auth/facebook/callback`    |
+| IBM Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
+| Microsoft Office 365            | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
+| Google                          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
+| LinkedIn                        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |
+| Facebook                        | [Facebook developer centre](https://developers.facebook.com/apps/2087069981334024/fb-login/settings/)         | `https://[BOARDS_URL]/auth/facebook/callback`    |
 
 ---
 
@@ -97,7 +98,7 @@ Download our [config file](/assets/config/kubernetes/boards.yaml) and update the
 
 | Key                         | Description                                                                         |
 | --------------------------- | ----------------------------------------------------------------------------------- |
-| `global.env.APP_URI`        | Your `BOARDS_URL`                                                                   |
+| `global.env.APP_URI`        | `https://[BOARDS_URL]`                                                              |
 | `global.env.MONGO_USER`     | MongoDB user</br>If using our storage above you may leave this commented out        |
 | `global.env.MONGO_PASSWORD` | MongoDB password</br>If using our storage above you may leave this commented out    |
 | `global.env.MONGO_HOST`     | MongoDB host</br>If using our storage above you may leave the default               |
@@ -105,8 +106,8 @@ Download our [config file](/assets/config/kubernetes/boards.yaml) and update the
 | `global.env.S3_ENDPOINT`    | S3 URL</br>If using our storage above you may leave the default                     |
 | `global.env.S3_ACCESS_KEY`  | S3 Access Key</br>If using our storage above you may leave the default              |
 | `global.env.S3_SECRET_KEY`  | S3 Secret Key</br>If using our storage above you may leave the default              |
-| `webfront.ingress.hosts`    | Your `BOARDS_URL` url as above without http                                         |
-| `core.ingress.hosts`        | Your `API_URL` without the protocol e.g. api.kudosboards.com                        |
+| `webfront.ingress.hosts`    | `[BOARDS_URL]` (no protocol)                                                        |
+| `core.ingress.hosts`        | `[API_URL]` (no protocol, e.g. api.kudosboards.com)                                 |
 
 **Boards Variables**:
 
@@ -138,7 +139,7 @@ Add a reverse proxy entry in your network that resolves your certificates and fo
 
 ### IBM Connections integrations
 
-- [Header](/boards/connections/header-on-prem/)
+- [Header](/boards/connections/header-on-prem/) (_Note: only required if Boards is hosted on a different domain to Connections_)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
 

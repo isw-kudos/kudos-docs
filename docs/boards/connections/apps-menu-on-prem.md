@@ -12,28 +12,34 @@
 
             <installdir>\data\shared\customization\common\nav\templates\menu\apps.jsp
 
-- To add the Kudos Boards app links add the following lines towards the bottom of the apps.jsp file before the `</table>` element, replacing `<BOARDS_URL>` with your URL
+- To add the Kudos Boards app links add the following lines towards the bottom of the apps.jsp file before the `</table>` element
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
-            --%><img width="16" src="https://<BOARDS_URL>/img/logo-small.png" /><%--
-            --%><a href="https://[CONNECTIONS_URL]/boards/auth/connections"><%--
+            --%><img width="16" src="https://[BOARDS_URL]/img/logo-small.png" /><%--
+            --%><a href="https://[URL_TO_REPLACE]/auth/connections"><%--
               --%><strong><fmt:message key="connections.component.name.kudos.boards" /></strong><%--
             --%></a><%--
           --%></th><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://[CONNECTIONS_URL]/boards/auth/connections?redirect_to=/todos/assigned"><%--
+            --%><a href="https://[URL_TO_REPLACE]/auth/connections?redirect_to=/todos/assigned"><%--
               --%><fmt:message key="label.menu.kudos.boards.todos" /><%--
             --%></a><%--
           --%></td><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://[CONNECTIONS_URL]/boards/auth/connections?redirect_to=/boards/templates/public"><%--
+            --%><a href="https://[URL_TO_REPLACE]/auth/connections?redirect_to=/boards/templates/public"><%--
               --%><fmt:message key="label.menu.kudos.boards.templates" /><%--
             --%></a><%--
           --%></td><%--
         --%></tr><%--
 
-    NOTE: `https://[CONNECTIONS_URL]/boards` is the same as that configured in the [Connections Header setup](/boards/connections/header-on-prem/#open-boards).
+    **Note**: you must replace
+
+      - `[BOARDS_URL]`
+      - `[URL_TO_REPLACE]` with either:
+        - `[CONNECTIONS_URL]/boards` if the [Connections Header](/boards/connections/header-on-prem/#open-boards) is setup, **OR**
+        - `[BOARDS_URL]` if on same domain as Connections
+
 
 - Save and close the file
 

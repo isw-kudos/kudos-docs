@@ -27,7 +27,7 @@ core:
   image:
     tag: core
   env:
-    NOTIFIER_EMAIL_HOST: <SMTP.SERVER.COM>
+    NOTIFIER_EMAIL_HOST: [SMTP.SERVER.COM]
     # NOTIFIER_EMAIL_USERNAME: username
     # NOTIFIER_EMAIL_PASSWORD: password
     # NOTIFIER_EMAIL_PORT: 25
@@ -50,17 +50,17 @@ user:
     # NODE_TLS_REJECT_UNAUTHORIZED: "0"
     CONNECTIONS_NAME: Connections
     CONNECTIONS_CLIENT_ID: kudosboards
-    CONNECTIONS_CLIENT_SECRET: <CLIENT_SECRET>
-    CONNECTIONS_URL: https://<CONNECTIONS_URL>
+    CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
+    CONNECTIONS_URL: https://[CONNECTIONS_URL]
     ENSURE_TEAMS: >
       [{
-        "name" : "<COMPANY NAME>",
+        "name" : "[COMPANY NAME]",
         "teamName" : "connections",
         "provider" : "connections",
         "admins": ["person@company.com", "person2@company.com", "PROF_GUID_3"],
         "frameUrl": "https://[CONNECTIONS_URL]/boards",
         "oAuth" : {
-          "baseURL" : "https://<CONNECTIONS_URL>"
+          "baseURL" : "https://[CONNECTIONS_URL]"
         },
         "globalOAuth": true
       }]

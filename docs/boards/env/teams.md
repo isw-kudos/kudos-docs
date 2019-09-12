@@ -25,7 +25,7 @@ For example:
         "admins": ["person@company.com", "person2@company.com", "PROF_GUID_3"],
         "frameUrl": "https://[CONNECTIONS_URL]/boards",
         "oAuth" : {
-          "baseURL" : "https://<CONNECTIONS_URL>"
+          "baseURL" : "https://[CONNECTIONS_URL]"
         },
         "globalOAuth": true
       }]
