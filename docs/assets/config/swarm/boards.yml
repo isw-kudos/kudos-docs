@@ -133,6 +133,7 @@ services:
       CONNECTIONS_CLIENT_ID: kudosboards
       CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
       CONNECTIONS_URL: https://[CONNECTIONS_URL]
+      # NODE_TLS_REJECT_UNAUTHORIZED: "0"
       ENSURE_TEAMS: >
         [{
           "name" : "[COMPANY NAME]",
@@ -157,6 +158,7 @@ services:
     environment:
       << : *app-env
       << : *s3-env
+      # NODE_TLS_REJECT_UNAUTHORIZED: "0"
 
   notification:
     image: iswkudos/kudos-boards-docker:notification
