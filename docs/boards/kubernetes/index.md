@@ -119,7 +119,7 @@ Follow instructions on [this page](/boards/env/common/)
 
 Install the Boards services via our Helm chart
 
-    helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.1.tgz -i -f ./boards.yaml --namespace boards
+    helm upgrade -i -f ./boards.yaml --namespace boards --recreate-pods boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.1.tgz
 
 ---
 
