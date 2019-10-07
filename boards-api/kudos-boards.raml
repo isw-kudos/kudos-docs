@@ -1,0 +1,142 @@
+#%RAML 1.0
+---
+title: Kudos Boards
+baseUri: https://api.kudosboards.com
+version: 1
+securitySchemes:
+  Pass Through:
+    description: |
+      Kudos Board API is accessible only to authenticated users in Kudos Boards application.
+      
+      Users must obtain an API key from Kudos Boards application before being able to access this api.
+
+      The API key is required for all requests defined here and must be sent as a header in the following format.
+
+      ```Authorization: Bearer {key}```
+types:
+  User: !include types/user.raml
+  AuthUser: !include types/authuser.raml
+  Alias: !include types/alias.raml
+  Node: !include types/node.raml
+  NodePreview: !include types/nodepreview.raml
+  NodeWithChildren: !include types/board.raml
+  Member: !include types/member.raml
+  BoardNode:
+    description: Board node includes recursive children in a tree structure as laid out in Boards application
+    type: [ Node, NodeWithChildren ]
+/user:
+  get:
+    description: Search for users
+    queryParameters:
+      q:
+        description: name / email query
+        required: true
+        type: string
+    responses:
+      200:
+        body:
+          application/json:
+            type: User[]
+  /me:
+    get:
+      description: returns logged in User
+      responses:
+        200:
+          body:
+            application/json:
+              type: AuthUser
+/board:
+  get:
+    description: Search for boards
+    queryParameters:
+      q:
+        description: search text
+        required: true
+        type: string
+    responses:
+      200:
+        body:
+          application/json:
+            type: Node[]
+  post:
+    description: Create a board
+    body:
+      application/json:
+        properties:
+          name: string
+          description?: string
+  /my:
+    get:
+      description: get boards that I am a member of
+      responses:
+        200:
+          body:
+            application/json:
+              type: Node
+  /{boardId}:
+    get:
+      description: Get board by id (includes all nodes of the board)
+      responses:
+        200:
+          body:
+            application/json:
+              type: BoardNode
+    /members:
+      get:
+        queryParameters:
+          expanded:
+            description: Expand group members to users
+            required: false
+            type: boolean
+        description: Get members of board
+        responses:
+          200:
+            body:
+              application/json:
+                type: Member[]
+      post:
+        description: Add member to a board
+        body:
+          application/json:
+            properties:
+              kind:
+                type: string
+                enum: [ User, Group ]
+                description: The kind of member to add
+              id:
+                type: string
+                description: the id from the user or group as found from the search api `/user?q=value`
+/node:
+  post:
+    description: |
+      Create a node
+
+      This endpoint can also be used to create a board
+
+      If creating a list, task or entry boardId and parentId must be provided
+    body:
+      application/json:
+        properties:
+          name: string
+          boardId?: string
+          parentId?: string
+          type?:
+            type: string
+            enum: [ board, list, task, entry ]
+          description?: string
+  /{nodeId}:
+    get:
+      description: Get a single node
+  /{nodeId}/assign:
+    post:
+      description: Assign a member to a task (task nodes only)
+      body:
+        application/json:
+          properties:
+            kind:
+              type: string
+              enum: [ User, Group ]
+              description: The kind of member to add
+            id:
+              type: string
+              description: the id from the user or group as found from the search api `/user?q=value`
