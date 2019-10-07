@@ -34,6 +34,7 @@ nav:
                   - Connections Header: boards/connections/header-hybrid.md
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Connections Widgets: boards/connections/widgets-hybrid.md
+                  - Connections Mobile App: boards/connections/mobile-app-hybrid.md
               - IBM Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
@@ -55,6 +56,7 @@ nav:
                   - Connections Header: boards/connections/header-on-prem.md
                   - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
                   - Connections Widgets: boards/connections/widgets-on-prem.md
+                  - Connections Mobile App: boards/connections/mobile-app-on-prem.md
                   - Web Server Config: boards/connections/httpd.md
               - IBM Verse: boards/verse/addin-on-prem.md
       - Boards Hybrid: boards/hybrid.md
