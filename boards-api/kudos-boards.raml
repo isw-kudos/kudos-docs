@@ -13,6 +13,7 @@ securitySchemes:
       The API key is required for all requests defined here and must be sent as a header in the following format.
 
       ```Authorization: Bearer {key}```
+securedBy: Pass Through
 types:
   User: !include types/user.raml
   AuthUser: !include types/authuser.raml
@@ -37,6 +38,7 @@ types:
         body:
           application/json:
             type: User[]
+            example: !include examples/users.json
   /me:
     get:
       description: returns logged in User
@@ -65,6 +67,11 @@ types:
         properties:
           name: string
           description?: string
+        example: |
+          {
+            "name": "My Board",
+            "description": "A board made with the API"
+          }
   /my:
     get:
       description: get boards that I am a member of
@@ -106,6 +113,11 @@ types:
               id:
                 type: string
                 description: the id from the user or group as found from the search api `/user?q=value`
+            example: |
+              {
+                "kind": "User",
+                "id": "5b8dc66c2b4ec34eb31726a9"
+              }
 /node:
   post:
     description: Create a node
@@ -122,6 +134,14 @@ types:
           description?:
             type: string
             description: text, html or markdown supported
+        example: |
+          {
+            "name": "New Task",
+            "boardId": "5cae779ce9d01fb56c308270",
+            "parentId": "5d9abe61d51749a3caa982c9",
+            "type": "task",
+            "description": "Task created from the API"
+          }
   /{nodeId}:
     get:
       description: Get a single node
@@ -142,3 +162,8 @@ types:
             id:
               type: string
               description: The user id, from the members array this can be found at `member.entity.id`
+          example: |
+            {
+              "kind": "User",
+              "id": "5b8dc66c2b4ec34eb31726a9"
+            }
