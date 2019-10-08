@@ -81,19 +81,19 @@ types:
           body:
             application/json:
               type: BoardNode
-    /members:
-      get:
-        queryParameters:
-          expanded:
-            description: Expand group members to users
-            required: false
-            type: boolean
-        description: Get members of board
-        responses:
-          200:
-            body:
-              application/json:
-                type: Member[]
+  /{boardId}/members:
+    get:
+      queryParameters:
+        expanded:
+          description: Expand group members to users
+          required: false
+          type: boolean
+      description: Get members of board
+      responses:
+        200:
+          body:
+            application/json:
+              type: Member[]
       post:
         description: Add member to a board
         body:
