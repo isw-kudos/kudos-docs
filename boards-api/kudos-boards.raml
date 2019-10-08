@@ -115,10 +115,13 @@ types:
           name: string
           boardId: string
           parentId: string
-          type:
+          type?:
             type: string
             enum: [ list, task, entry ]
-          description?: string
+            description: Type will default to list or task if not provided, depending on the parent node type.
+          description?:
+            type: string
+            description: text, html or markdown supported
   /{nodeId}:
     get:
       description: Get a single node
@@ -135,8 +138,7 @@ types:
           properties:
             kind:
               type: string
-              enum: [ User, Group ]
-              description: The kind of member to add
+              description: must be set to `User`
             id:
               type: string
-              description: the id from the user or group as found from the search api `/user?q=value`
+              description: The user id, from the members array this can be found at `member.entity.id`
