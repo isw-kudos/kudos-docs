@@ -108,25 +108,25 @@ types:
                 description: the id from the user or group as found from the search api `/user?q=value`
 /node:
   post:
-    description: |
-      Create a node
-
-      This endpoint can also be used to create a board
-
-      If creating a list, task or entry boardId and parentId must be provided
+    description: Create a node
     body:
       application/json:
         properties:
           name: string
-          boardId?: string
-          parentId?: string
-          type?:
+          boardId: string
+          parentId: string
+          type:
             type: string
-            enum: [ board, list, task, entry ]
+            enum: [ list, task, entry ]
           description?: string
   /{nodeId}:
     get:
       description: Get a single node
+      responses:
+        200:
+          body:
+            application/json:
+              type: Node
   /{nodeId}/assign:
     post:
       description: Assign a member to a task (task nodes only)
