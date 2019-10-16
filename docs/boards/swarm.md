@@ -91,3 +91,26 @@ You can also run Kudos Boards with externally hosted mongo database and/or S3 st
 For assistance with this contact [support@kudosboards.com](mailto:support@kudosboards.com)
 
 ---
+
+### Updates
+
+The Boards services can be updated through the Portainer interface, or alternatively these commands should force latest images to run
+
+```
+docker service update --force --image redis:latest boards/redis
+docker service update --force --image iswkudos/kudos-boards-docker:webfront boards/webfront
+docker service update --force --image iswkudos/kudos-boards-docker:core boards/core
+docker service update --force --image iswkudos/kudos-boards-docker:boards boards/app
+docker service update --force --image iswkudos/kudos-boards-docker:user boards/user
+docker service update --force --image iswkudos/kudos-boards-docker:licence boards/licence
+docker service update --force --image iswkudos/kudos-boards-docker:provider boards/provider
+docker service update --force --image iswkudos/kudos-boards-docker:notification boards/notification
+```
+
+If you must update the Portainer/Traefik images, try these commands:
+
+```
+docker service update --force --image portainer/portainer:latest portainer/portainer
+docker service update --force --image portainer/agent:latest portainer/portainer
+docker service update --force --image traefik:alpine proxy/proxy
+---

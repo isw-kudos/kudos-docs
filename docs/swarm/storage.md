@@ -31,3 +31,16 @@ _Optional:_ if you only want to deploy one of these services you can remove the 
 1. Name your stack `Storage`
 1. Browse to your customised config file
 1. Click "Deploy the stack"
+
+---
+
+### Updates
+
+The Storage services can be updated through the Portainer interface, or alternatively these commands should force latest images to run
+
+```
+docker service update --force --image bitnami/mongodb:latest storage/mongo
+docker service update --force --image minio/minio:latest storage/minio
+```
+
+---
