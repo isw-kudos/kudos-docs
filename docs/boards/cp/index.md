@@ -35,7 +35,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 | Provider                        | Registration / Documentation                                                                                 | Callback URL                                                 |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| IBM Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                      | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
+| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                      | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
 | Microsoft Office 365            | [Azure app registration](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
@@ -75,15 +75,15 @@ Download our [config file](/assets/config/kubernetes/boards-cp.yaml) and update 
 
 **Boards variables**:
 
-Please configure variables [detailed here](/boards/env/common/)
+Are [detailed here](/boards/env/common/).
 
 **Activity migration variables**:
 
-Please configure variables [detailed here](/boards/cp/migration)
+The Activity migration chart will be deployed separately but use the same config file.  The variables are [described here](/boards/cp/migration).
 
 ---
 
-### Deploy Boards services
+### Deploy Boards Helm Chart
 
 Install the Boards services via our Helm chart
 
@@ -101,13 +101,13 @@ Please follow [these instructions](/boards/cp/httpd/)
 
 ---
 
-### IBM Connections integrations
+## HCL Connections integrations
 
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
 
 ---
 
-### Migrate Activities data
+## Migrate Activities data
 
 Please follow the [instructions here](/boards/cp/migration)

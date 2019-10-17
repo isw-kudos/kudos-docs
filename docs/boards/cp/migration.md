@@ -2,6 +2,8 @@
 
 As part of the installation process for Kudos Boards (Activities Plus) you must run the migration service to move the existing Activities into Kudos Boards.
 
+## Process Overview
+
 This service will:
 
 1. access Activities data in the existing Connections SQL database
@@ -10,7 +12,7 @@ This service will:
 1. write Boards data into the Component Pack mongo database
 1. write file attachments into S3 storage
 
-The following variables are required in order to perform this migration:
+Ensure you have updated the following variables as applicable in your `boards-cp.yaml` file downloaded previously
 
 |                                          | Example                                                 | Description                                                                                                                                                             |
 | ---------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,12 +33,38 @@ The following variables are required in order to perform this migration:
 | `COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                 | Mark the old Activity data as complete                                                                                                                                  |
 | `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                 | Create link to new Board in old Activity                                                                                                                                |
 
-## How to use
+---
+
+## Deploy Helm Chart
+
+Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the kudos-boards-cp chart
+
+    helm upgrade kudos-boards-cp-activity-migration https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+
+---
+
+## Migrate Activities
 
 The migration interface is accessible at `https://[CONNECTIONS_URL]/boards/app/admin/migration` to select which Activities to migrate (ie ignore completed/deleted).
 
 You can also set the `env.IMMEDIATELY_PROCESS_ALL` if you wish to migrate every Activity without the UI.
 
-## After migrate complete
+---
 
-Please turn off the Activities application in WebSphere ISC
+## Logs
+
+You can check the pod logs for the kudos-boards-cp-activity-migration to see progress of the running migration
+
+For example
+
+![Example](/assets/boards/cp/migration-logs.png)
+
+---
+
+## After Migration Complete
+
+1.  The Migration service can be removed. Please use the following command
+
+        helm delete kudos-boards-cp-activity-migration --purge
+
+1.  Turn off the Activities application in WebSphere ISC
