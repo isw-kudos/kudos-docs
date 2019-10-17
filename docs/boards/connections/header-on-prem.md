@@ -91,7 +91,7 @@ The app should now start. Congratulations, you have installed the app!
 
 ## Open Boards
 
-You should now be able to load the Boards app with IBM Connections header at this path:
+You should now be able to load the Boards app with HCL Connections header at this path:
 
     https://[CONNECTIONS_URL]/boards
 

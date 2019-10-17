@@ -36,7 +36,7 @@
 
     Where:
 
-      `[CONNECTIONS-URL]` is the URL of your IBM Connections deployment</br>
+      `[CONNECTIONS-URL]` is the URL of your HCL Connections deployment</br>
       `[KUBERNETES_NAME]` is the hostname/IP of the master in your cluster</br>
       `[KUBERNETES_PORT]` is the port of your Ingress Controller (ie 32080)</br>
 

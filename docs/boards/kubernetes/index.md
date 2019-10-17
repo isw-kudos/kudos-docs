@@ -36,13 +36,13 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 ### Setup OAuth
 
-Kudos Boards currently supports the following oauth providers for authentication and integration: IBM Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
+Kudos Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
 | Provider                        | Registration / Documentation                                                                                  | Callback URL                             |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| IBM Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
+| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
 | Microsoft Office 365            | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google                          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn                        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |
@@ -137,7 +137,7 @@ Add a reverse proxy entry in your network that resolves your certificates and fo
 
 ---
 
-### IBM Connections integrations
+### HCL Connections integrations
 
 - [Header](/boards/connections/header-on-prem/) (_Note: only required if Boards is hosted on a different domain to Connections_)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)

@@ -3,7 +3,7 @@
 Download Kudos Boards [applications.json file](https://kudosboards.com/widgets/verse/applications.json) and import as below.
 
 > The information below is an excerpt from
-> [IBM Connections Developers](https://www-10.lotus.com/ldd/appdevwiki.nsf/xpDocViewer.xsp?lookupName=Dev+Guide+topics#action=openDocument&res_title=Managing_applications_for_Verse_or_the_Top_Navigation_Bar&content=sdkcontent)
+> [HCL Connections Developers](https://www-10.lotus.com/ldd/appdevwiki.nsf/xpDocViewer.xsp?lookupName=Dev+Guide+topics#action=openDocument&res_title=Managing_applications_for_Verse_or_the_Top_Navigation_Bar&content=sdkcontent)
 
 To work with the Organization Extensions page, open a browser and sign in to your Connections Cloud organization as an administrator. Click Admin > Manage Organization, then click Organization Extensions in the navigation list.
 
@@ -18,7 +18,7 @@ __Import an application__: This is typically the simplest method for adding appl
 You may either download Kudos Boards [applications.json file](https://kudosboards.com/widgets/verse/applications.json) and use it as a localFileProvider or just copy the url for it and use it as a httpDataProvider ny following the instructions below.
 
 > The information below is an excerpt from
-> [IBM Verse Developers](https://ibmverse.github.io/verse-developer/developers/#registering-an-application-in-ibm-verse)
+> [HCL Verse Developers](https://ibmverse.github.io/verse-developer/developers/#registering-an-application-in-ibm-verse)
 
 #### Deploying extensions using the built-in endpoint
 Verse On-Premises implemented a built-in endpoint to serve the application’s JSON data from a local file or an HTTP hosted file. If storing the applications JSON data as a static file works for you, this is the way to go.

@@ -1,5 +1,5 @@
-# IBM Connections Widget Setup
-Basic instructions for adding Kudos Boards Docker widgets into IBM Connections on-premise environments
+# HCL Connections Widget Setup
+Basic instructions for adding Kudos Boards Docker widgets into HCL Connections on-premise environments
 
 ---
 
@@ -57,7 +57,7 @@ Enter the following, replacing `[BOARDS_URL]` with your URL:
 
 Select:
 
-  - Use IBM Connections specific tags
+  - Use HCL Connections specific tags
   - Opened by default
 
 Select the following Prerequisites:
@@ -74,7 +74,7 @@ Select the following Prerequisites:
 <!-- This is not needed for the iframe widget
 ### Register Widget
 
-Required for IBM Connections 6.0 CR1 onwards, replacing `[BOARDS_URL]` with your URL:
+Required for HCL Connections 6.0 CR1 onwards, replacing `[BOARDS_URL]` with your URL:
 
     execfile("newsAdmin.py")
     NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://[BOARDS_URL]/boards/community/connections" ,secureUrl="https://[BOARDS_URL]/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])

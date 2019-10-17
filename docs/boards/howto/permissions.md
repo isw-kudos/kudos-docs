@@ -22,6 +22,6 @@ The Owner of a board has the ability to invite members to the board,  and edit a
 
 ### Making Your Board Public
 
-When you activate `Public Access,` your board will be discoverable by anyone in your organisation. You'll be asked to select Reader, Author, or Editor to decide what level of access your organisation can have to the board. Additionally, updates that you make on your board may be included in linked activity streams such as IBM Connections, or Microsoft Teams.
+When you activate `Public Access,` your board will be discoverable by anyone in your organisation. You'll be asked to select Reader, Author, or Editor to decide what level of access your organisation can have to the board. Additionally, updates that you make on your board may be included in linked activity streams such as HCL Connections, or Microsoft Teams.
 
 To give your board public access, navigate to your desired board. Select `Members` and then select `Public Access.` Decide what level of access, Reader, Author or Editor, your organisation will have.  

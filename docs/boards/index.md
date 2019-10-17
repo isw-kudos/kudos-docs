@@ -35,7 +35,8 @@ Our Boards Cloud product, installed locally in your infrastructure
 
 __Advantages__
 
-- Can be installed in any existing Kubernetes environment (ie alongside IBM Connections Component Pack)
+- Can be installed in any existing Kubernetes environment (ie alongside HCL Connections Component Pack)
+- Can use the same Component Pack Mongo database
 - Control over your own data and backup strategies
 - Simple to update
 
@@ -52,8 +53,8 @@ __Advantages__
 
 ---
 
-### Boards Hybrid - Cloud integrated with IBM Connections On-Premise
-This version is the best of both worlds if you already have IBM  Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing IBM Connections on-premise installation.
+### Boards Hybrid - Cloud integrated with HCL Connections On-Premise
+This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 
 __Advantages__
 

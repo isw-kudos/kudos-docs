@@ -20,7 +20,7 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 
 ### Setup OAuth
 
-Kudos Boards currently supports the following oAuth providers for authentication and integration: IBM Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
+Kudos Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
@@ -75,7 +75,7 @@ For example:
 
 ---
 
-### IBM Connections integrations
+### HCL Connections integrations
 
 Please follow these instructions
 

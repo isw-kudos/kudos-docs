@@ -1,4 +1,4 @@
-# Boards for IBM Connections in WebSphere (Legacy)
+# Boards for HCL Connections in WebSphere (Legacy)
 
 | Issue | Resolution |
 | --- | --- |

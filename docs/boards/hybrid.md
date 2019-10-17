@@ -1,8 +1,8 @@
-Hybrid = Cloud integrated with IBM Connections On-Premise
+Hybrid = Cloud integrated with HCL Connections On-Premise
 
 ![Outcome](/assets/connections/header.png)
 
-This version is the best of both worlds if you already have IBM  Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing IBM Connections on-premise installation.
+This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 
 For a comparison of Boards versions please [see here](/boards/versions/)
 
@@ -20,7 +20,7 @@ Setting up the Hybrid Boards Cloud involves:
         CONNECTIONS_CLIENT_SECRET: [VALUE_PRINTED]
         CONNECTIONS_HOSTNAME_BASE64:
 
-1. Configure IBM Connections extensions
+1. Configure HCL Connections extensions
 
     - [Connections Header](/boards/connections/header-hybrid/)
     - [Customise Apps menu](/boards/connections/apps-menu-hybrid/)

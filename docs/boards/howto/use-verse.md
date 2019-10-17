@@ -1,6 +1,6 @@
-## Kudos Boards integration points for IBM Verse
+## Kudos Boards integration points for HCL Verse
 
-Kudos Boards provides 2 integration points with IBM Verse:
+Kudos Boards provides 2 integration points with HCL Verse:
 
 #### Save email as a card in Boards
 

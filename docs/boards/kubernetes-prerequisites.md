@@ -57,7 +57,7 @@ Kudos Boards is designed to be integrated into your current user management syst
 
 | Provider                     | Registration / Documentation                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| IBM Connections (on premise) | [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html) |
+| HCL Connections (on premise) | [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/r_admin_common_oauth_manage_list.html) |
 | IBM Connections Cloud        | [IBM Knowledge Center](https://www.ibm.com/support/knowledgecenter/en/SSL3JX/admin/bss/topics/manage_custom_apps.html)                |
 | Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)                         |
 | Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                                              |

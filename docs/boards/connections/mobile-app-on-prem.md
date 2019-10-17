@@ -1,4 +1,4 @@
-# IBM Connections Mobile App Setup
+# HCL Connections Mobile App Setup
 Basic instructions for adding Kudos Boards into the HCL Connections mobile application
 
 ---
