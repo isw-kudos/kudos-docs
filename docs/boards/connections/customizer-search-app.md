@@ -4,6 +4,8 @@ TODO: Link this document in the menus.
 
 _These instructions are for Connections on-premise._
 
+If you want to learn more about using Connections Customizer, have a read of the developer documentation on [GitHub](https://github.com/ibmcnxdev/customizer/blob/master/docs/HCLConnectionsCustomizer.md).
+
 ## Prerequisites
 
 [Complete Setup of Connections Customizer](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/install/cp_config_customizer_intro.html)
