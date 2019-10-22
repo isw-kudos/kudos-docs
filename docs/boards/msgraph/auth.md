@@ -1,10 +1,15 @@
 ## Authenticating Kudos Boards Docker with Office 365
 
-You must configure an OAuth Application in your Office 365 Tenant in order to use Kudos Boards with O365. To access this configuration you must be logged in as a tenant admin
+This document details the process to enable login to your private instance of Kudos Boards with your private Office 365 tenant.
+
+![outcome of guide](/assets/msgraph/boards-login.png)
 
 ---
 
 ## Register OAuth Application
+
+You must configure an OAuth Application in your Office 365 Tenant in order to use Kudos Boards with O365. To access this configuration you must be logged in as a Microsoft tenant admin
+
 
 ### Open the [Azure App Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
@@ -162,6 +167,6 @@ Click `Yes`
 
     ![permission popup](../../assets/msgraph/administrator_approval_view.png)
 
-    Congratulations! Your uses can now login via Office 365 and start using Kudos Boards!
+    Congratulations! All users in your tenant can now login to Kudos Boards via Office 365!
 
     ![login options](/assets/msgraph/boards-login.png)
