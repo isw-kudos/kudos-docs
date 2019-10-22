@@ -121,6 +121,9 @@ Install the Boards services via our Helm chart
 
     helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
+> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+
+
 ---
 
 ### Add Proxy Config

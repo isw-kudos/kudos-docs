@@ -139,17 +139,17 @@ Click `Yes`
             MSGRAPH_CLIENT_SECRET: "<your-application-secret>"
             MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
 
-1. Redeploy Boards Helm Chart
+1. Redeploy Boards Helm Chart as per command for Kudos Boards:
 
-    For Component Pack
+    [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
-        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz -i -f ./boards.yaml --namespace connections --recreate-pods
+        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
-    For Kubernetes
+    [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
 
         helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
-    Where `--recreate-pods` will ensure all images are updated to `latest`
+    > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 
 ## Approve Permissions
 
