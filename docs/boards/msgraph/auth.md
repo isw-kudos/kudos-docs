@@ -1,4 +1,4 @@
-### Authenticating Kudos Boards Docker with Office 365
+## Authenticating Kudos Boards Docker with Office 365
 
 You must configure an OAuth Application in your Office 365 Tenant in order to use Kudos Boards with O365. To access this configuration you must be logged in as a tenant admin
 
@@ -8,13 +8,15 @@ You must configure an OAuth Application in your Office 365 Tenant in order to us
 
 ### Open the [Azure App Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
 
-  ![example](/assets/msgraph/appreg.png)
+  Click `New Registration`
 
-### Configure Callback URL
+  ![click new registration](/assets/msgraph/appreg.png)
 
-![example](/assets/msgraph/appreg2.png)
+### Configure Redirect
 
-Fill out the details:
+Enter the values below and click `Register`
+
+![enter these values](/assets/msgraph/appreg2.png)
 
     Kudos Boards
     https://[BOARDS_URL]/auth/msgraph/callback
@@ -29,11 +31,11 @@ Fill out the details:
 
 ### Configure Required Scopes
 
-1. Open `Manifest` section
+1. Open the `Manifest` section
 
-1. Replace the `requiredResourceAccess` section with below then press `Save`
+1. Replace the `requiredResourceAccess` section as per below
 
-    ![example](/assets/msgraph/appreg-scopes.png)
+    ![scopes to add](/assets/msgraph/appreg-scopes.png)
 
         "requiredResourceAccess": [
           {
@@ -87,39 +89,42 @@ Fill out the details:
           }
         ],
 
-### Check/Grant permissions
+    Click `Save`
 
-Open `API permissions`. Notice that all the scopes are now pre-filled.
+
+### Check Permissions
+
+Open the `API permissions` section. Notice that all the scopes are now pre-filled.
 
 Click `Grant admin consent for kudosdev`
 
-![example](/assets/msgraph/appreg-scopes2.png)
+![grant consent](/assets/msgraph/appreg-scopes2.png)
 
 Click `Yes`
 
-![example](/assets/msgraph/appreg-consent.png)
+![click yes](/assets/msgraph/appreg-consent.png)
 
-### Config MSGraph OAuth in Boards
+## Configure OAuth in Boards
 
-1. Open `Overview` section
+1. Open the `Overview` section
 
       Copy `Application (client) ID` & `Directory (tenant) ID`
 
-      ![example](/assets/msgraph/appreg-client-id.png)
+      ![copy guids](/assets/msgraph/appreg-client-id.png)
 
-1. Open `Certificates & secrets` section
+1. Open the `Certificates & secrets` section
 
     Click `New client secret`
 
-    ![example](/assets/msgraph/appreg-client-secret.png)
+    ![create a secret](/assets/msgraph/appreg-client-secret.png)
 
     Select `Never` expire and click `Add`
 
-    ![example](/assets/msgraph/appreg-client-secret2.png)
+    ![add the secret](/assets/msgraph/appreg-client-secret2.png)
 
     Copy the secret value shown
 
-    ![example](/assets/msgraph/appreg-client-secret3.png)
+    ![copy the secret](/assets/msgraph/appreg-client-secret3.png)
 
 1. Add OAuth and Tenant values to YAML config (ie `boards.yaml` or `boards-cp.yaml`)
 
@@ -140,3 +145,23 @@ Click `Yes`
         helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
     Where `--recreate-pods` will ensure all images are updated to `latest`
+
+## Approve Permissions
+
+1. Open your Kudos Boards environment.
+
+    Click the `Office 365` option and login with a Tenant Administrator account
+
+    ![login with Office 365](/assets/msgraph/appreg-login.png)
+
+1. Once logged in, a prompt will appear in Kudos Boards. Click `Approve`
+
+    ![Admin Approval Toast](../../assets/msgraph/administrator_approval_toast.png)
+
+1. Click `Accept` on the following popup to grant the required permissions for Kudos Boards
+
+    ![permission popup](../../assets/msgraph/administrator_approval_view.png)
+
+    Congratulations! Your uses can now login via Office 365 and start using Kudos Boards!
+
+    ![login options](/assets/msgraph/boards-login.png)

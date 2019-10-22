@@ -1,6 +1,6 @@
 ## Kudos Boards and Auth0
 
-[Admin Guide](/boards/auth0/) to setting up Auth0 tenant. 
+[Admin Guide](/boards/auth0/) to setting up Auth0 tenant.
 
 ### Sign in to Kudos Boards with your Auth0 Tenant
 

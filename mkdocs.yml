@@ -64,29 +64,33 @@ nav:
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
           - Boards Docker: boards/troubleshooting/conn-on-prem.md
           - Boards WebSphere: boards/troubleshooting/websphere.md
-          - Office 365 for Business: boards/troubleshooting/office365.md
+          - Office 365: boards/troubleshooting/office365.md
       # - API Documentation: /assets/boards/api-documentation.html
       - How To Guide:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
-          - Getting Started with Kudos Boards: boards/howto/getting-started-with-kudos-boards.md
-          - Starting a trial of Kudos Boards: boards/howto/start-a-trial.md
-          - Import Activities: boards/howto/kudos-boards-import-activity.md
-          - Adding Boards to Microsoft Teams: boards/howto/adding-boards-to-teams.md
-          - Kudos Boards in Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
-          - Kudos Boards and Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
-          - Kudos Boards in Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
-          - Using IBM Verse with Kudos Boards: boards/howto/use-verse.md
-          - Using Auth0 with Kudos Boards: boards/howto/use-auth0.md
-          - Attaching Files to Cards: boards/howto/attaching-files.md
-          - Quick Tips for Boards: boards/howto/quick-tips-for-boards.md
-          - Accessing Global Templates: boards/howto/accessing-global-templates.md
-          - Adding Members to a Board: boards/howto/adding-members-to-a-board.md
-          - Timeline View in Boards: boards/howto/timeline-view-in-boards.md
-          - Mind Map View: boards/howto/mind-map-view.md
-          - Creating Templates: boards/howto/creating-templates.md
-          - Archiving and Restoring: boards/howto/archiving-and-restoring.md
-          - Permissions in Kudos Boards: boards/howto/permissions.md
-          - Manage Organisation Config: boards/howto/org-config.md
+          - Getting Started: boards/howto/getting-started-with-kudos-boards.md
+          - Quick Tips: boards/howto/quick-tips-for-boards.md
+          - Starting a trial: boards/howto/start-a-trial.md
+          - Creating Boards:
+            - Create a Template: boards/howto/creating-templates.md
+            - Use a Template: boards/howto/accessing-global-templates.md
+            - Import an Activity: boards/howto/kudos-boards-import-activity.md
+          - Working in a Board:
+            - Adding Members: boards/howto/adding-members-to-a-board.md
+            - Member Permissions: boards/howto/permissions.md
+            - Archiving and Restoring: boards/howto/archiving-and-restoring.md
+            - Attaching Files to Cards: boards/howto/attaching-files.md
+            - Mind Map: boards/howto/mind-map-view.md
+            - Timeline: boards/howto/timeline-view-in-boards.md
+          - Boards in other Apps:
+            - HCL Verse: boards/howto/use-verse.md
+            - Login with Auth0: boards/howto/use-auth0.md
+            - Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
+            - Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
+            - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
+            - Microsoft Teams: boards/howto/adding-boards-to-teams.md
+          - Administation:
+            - Manage Config: boards/howto/org-config.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
