@@ -5,40 +5,47 @@ Basic instructions for adding Kudos Boards into the HCL Connections mobile appli
 
 ### Mobile App Integration
 
-Check out the mobile-config.xml file.
+1. Check-out `mobile-config.xml`
 
-    execfile("mobileAdmin.py")
-    MobileConfigService.checkOutConfig("/LCCheckedOut", AdminControl.getCell())
+        execfile("mobileAdmin.py")
+        MobileConfigService.checkOutConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the mobile-config.xml file. Find the Applications element and add the following Application:
+1. Edit `mobile-config.xml`
 
-    <Application name="Boards" enabled="true">
-      <ApplicationIcon>
-        <Android>
-          <Hdpi>http://kudosboards.com/img/logo-small.png</Hdpi>
-          <Mdpi>http://kudosboards.com/img/logo-small.png</Mdpi>
-          <Ldpi>http://kudosboards.com/img/logo-small.png</Ldpi>
-        </Android>
-        <IOS>
-          <Reg>http://kudosboards.com/img/logo-small.png</Reg>
-          <Retina>http://kudosboards.com/img/logo-small.png</Retina>
-        </IOS>
-        <BB>
-          <HighDensity>http://kudosboards.com/img/logo-small.png</HighDensity>
-          <MedDensity>http://kudosboards.com/img/logo-small.png</MedDensity>
-          <LowDensity>http://kudosboards.com/img/logo-small.png</LowDensity>
-        </BB>
-        <DefaultLocation>http://kudosboards.com/img/logo-small.png</DefaultLocation>
-      </ApplicationIcon>
-      <ApplicationLabel>Kudos Boards</ApplicationLabel>
-      <ApplicationURL>https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]</ApplicationURL>
-    </Application>
+    - Find the `Applications` element and add the following `Application`:
 
-Where `[CONNECTIONS_HOSTNAME_BASE64]` is your Connections hostname base64 encoded.  E.g.</br>
-      `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
+            <Application name="Boards" enabled="true">
+              <ApplicationIcon>
+                <Android>
+                  <Hdpi>http://kudosboards.com/img/logo-small.png</Hdpi>
+                  <Mdpi>http://kudosboards.com/img/logo-small.png</Mdpi>
+                  <Ldpi>http://kudosboards.com/img/logo-small.png</Ldpi>
+                </Android>
+                <IOS>
+                  <Reg>http://kudosboards.com/img/logo-small.png</Reg>
+                  <Retina>http://kudosboards.com/img/logo-small.png</Retina>
+                </IOS>
+                <BB>
+                  <HighDensity>http://kudosboards.com/img/logo-small.png</HighDensity>
+                  <MedDensity>http://kudosboards.com/img/logo-small.png</MedDensity>
+                  <LowDensity>http://kudosboards.com/img/logo-small.png</LowDensity>
+                </BB>
+                <DefaultLocation>http://kudosboards.com/img/logo-small.png</DefaultLocation>
+              </ApplicationIcon>
+              <ApplicationLabel>Kudos Boards</ApplicationLabel>
+              <ApplicationURL>https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]</ApplicationURL>
+            </Application>
 
-For Kudos Boards to appear in the app menu, add 'Boards' to the ApplicationList
+    > where `[CONNECTIONS_HOSTNAME_BASE64]` is your Connections hostname base64 encoded.  E.g.</br>
+          `connections.example.com` => `Y29ubmVjdGlvbnMuZXhhbXBsZS5jb20=`</br>
 
-Check in the widgets-config.xml file.
+    - Find the `ApplicationsList` element and append `Boards`. For example:
 
-    MobileConfigService.checkInConfig("/LCCheckedOut", AdminControl.getCell())
+            <ApplicationsList>profiles,communities,files,filesync,wikis,activities,forums,blogs,bookmarks,Boards</ApplicationsList>
+
+
+1. Save and check-in `mobile-config.xml`
+
+        MobileConfigService.checkInConfig("/LCCheckedOut", AdminControl.getCell())
+
+1. Sync the `Nodes` as required

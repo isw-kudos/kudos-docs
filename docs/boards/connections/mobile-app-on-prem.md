@@ -5,39 +5,45 @@ Basic instructions for adding Kudos Boards into the HCL Connections mobile appli
 
 ### Mobile App Integration
 
-Check out the mobile-config.xml file.
+1. Check out `mobile-config.xml`
 
-    execfile("mobileAdmin.py")
-    MobileConfigService.checkOutConfig("/LCCheckedOut", AdminControl.getCell())
+        execfile("mobileAdmin.py")
+        MobileConfigService.checkOutConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the mobile-config.xml file. Find the Applications element and add the following Application:
+1. Edit `mobile-config.xml`
 
-    <Application name="Boards" enabled="true">
-      <ApplicationIcon>
-        <Android>
-          <Hdpi>http://<BOARDS_URL>.com/img/logo-small.png</Hdpi>
-          <Mdpi>http://<BOARDS_URL>.com/img/logo-small.png</Mdpi>
-          <Ldpi>http://<BOARDS_URL>.com/img/logo-small.png</Ldpi>
-        </Android>
-        <IOS>
-          <Reg>http://<BOARDS_URL>.com/img/logo-small.png</Reg>
-          <Retina>http://<BOARDS_URL>.com/img/logo-small.png</Retina>
-        </IOS>
-        <BB>
-          <HighDensity>http://<BOARDS_URL>.com/img/logo-small.png</HighDensity>
-          <MedDensity>http://<BOARDS_URL>.com/img/logo-small.png</MedDensity>
-          <LowDensity>http://<BOARDS_URL>.com/img/logo-small.png</LowDensity>
-        </BB>
-        <DefaultLocation>http://<BOARDS_URL>.com/img/logo-small.png</DefaultLocation>
-      </ApplicationIcon>
-      <ApplicationLabel>Kudos Boards</ApplicationLabel>
-      <ApplicationURL>https://<BOARDS_URL>.com/auth/connections/</ApplicationURL>
-    </Application>
+    - Find the `Applications` element and add the following `Application`:
 
-Where `<BOARDS_URL>` your configured URL for Boards.
+            <Application name="Boards" enabled="true">
+              <ApplicationIcon>
+                <Android>
+                  <Hdpi>http://[BOARDS_URL]/img/logo-small.png</Hdpi>
+                  <Mdpi>http://[BOARDS_URL]/img/logo-small.png</Mdpi>
+                  <Ldpi>http://[BOARDS_URL]/img/logo-small.png</Ldpi>
+                </Android>
+                <IOS>
+                  <Reg>http://[BOARDS_URL]/img/logo-small.png</Reg>
+                  <Retina>http://[BOARDS_URL]/img/logo-small.png</Retina>
+                </IOS>
+                <BB>
+                  <HighDensity>http://[BOARDS_URL]/img/logo-small.png</HighDensity>
+                  <MedDensity>http://[BOARDS_URL]/img/logo-small.png</MedDensity>
+                  <LowDensity>http://[BOARDS_URL]/img/logo-small.png</LowDensity>
+                </BB>
+                <DefaultLocation>http://[BOARDS_URL]/img/logo-small.png</DefaultLocation>
+              </ApplicationIcon>
+              <ApplicationLabel>Kudos Boards</ApplicationLabel>
+              <ApplicationURL>https://[BOARDS_URL]/auth/connections</ApplicationURL>
+            </Application>
 
-For Kudos Boards to appear in the app menu, add 'Boards' to the ApplicationList
+        > where `[BOARDS_URL]` is your configured URL for Boards.
 
-Check in the widgets-config.xml file.
+    - Find the `ApplicationsList` element and append `Boards`. For example:
 
-    MobileConfigService.checkInConfig("/LCCheckedOut", AdminControl.getCell())
+            <ApplicationsList>profiles,communities,files,filesync,wikis,activities,forums,blogs,bookmarks,Boards</ApplicationsList>
+
+1. Save and check-in `mobile-config.xml`
+
+        MobileConfigService.checkInConfig("/LCCheckedOut", AdminControl.getCell())
+
+1. Sync the `Nodes` as required
