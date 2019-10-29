@@ -57,3 +57,5 @@ In order for Kudos Boards to authenticate with your Connections environment, you
             ./wsadmin.sh -lang jython -conntype SOAP -c "print AdminTask.createOAuthProvider('[-providerName connectionsProvider -fileName  [PATH_TO_CONFIG_FILE]/oauth20/connectionsProvider.xml]')" -user connectionsadmin -password passw0rd
 
         > **Note:** update the wsadmin credentials and the `[PATH_TO_CONFIG_FILE]`
+
+    - Restart the WebSphere servers
