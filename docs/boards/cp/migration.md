@@ -45,7 +45,7 @@ Please deploy the following chart with the same configuration `boards-cp.yaml` f
 
 ## Migrate Activities
 
-The migration interface is accessible at `https://[CONNECTIONS_URL]/boards/app/admin/migration` to select which Activities to migrate (ie ignore completed/deleted).
+The migration interface is accessible at `https://[CONNECTIONS_URL]/boards/app/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explaination of the interface, see [Activity Migration User Interface](migration-interface).
 
 You can also set the `env.IMMEDIATELY_PROCESS_ALL` if you wish to migrate every Activity without the UI.
 
