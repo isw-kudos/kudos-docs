@@ -1,0 +1,42 @@
+# Activity Migration User Interface
+
+## Remaining Tab
+The REMAINING tab is where you can select from Activities that have not been migrated and initiate the process for migrating them into Kudos Boards.
+
+### Activities Table
+Select Activities to migrate by clicking the checkboxs next to each activity.
+
+The table can be sorted by clicking the headers for each column. 
+
+The number of rows per page can be increased using the `Rows` dropdown.
+
+### Filters
+There are multiple filters that can be applied that will remove activities from the table __and the activities included when choosing MIGRATE ALL__.<br>
+Notice that when filters are applied, the total number in the table and MIGRATE ALL button changes.
+
+### Options
+Near the MIGRATE buttons, there is an Options panel to for enabling features that will affect this migration.
+
+<span style="color:yellow;">WARNING: These options will irreversably modify your Activities.</span>
+
+|||
+|----------------------|-----|
+| Add Link to Activity | This will create an entry in each activity that provides a link to the new Board in Kudos Boards. This corrosponds to the `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` environment variable when running a headless migration. |
+|Mark Activity Complete| This will mark the Activity as complete after migrating it to Kudos Boards. This corrosponds to the `COMPLETE_ACTIVITY_AFTER_MIGRATED` environment variable when running a headless migration. |
+
+## Done Tab
+This tab shows all of the activities that have been migratied into Kudos Boards.
+The Activity Name column links back to the Activity. The Board column has links to each Board in Kudos Boards.
+
+## Boards User Data Tab
+If you're migrating from an environment that has previously been using Kudos Boards WebSphere, you can use this tab to start the process of migrating Boards User Data into Kudos Boards Docker.
+
+Each user who has used Kudos Boards Websphere is likely to have created some of this data. It includes:
+- The labels a user has assigned to colours which they apply to Board Tiles.
+- The Catagories a user has created which they apply to Board Tiles.
+
+If the user already exists in Kudos Boards Docker:
+- Their color labels will be deleted and replaced with the labels from Boards Websphere.
+- Imported Categories will be added to their existing list of categories.
+
+This process only needs to be run once. Subsequent runs will import any data for new Boards Websphere users and overwrite the previously imported data from the last run.
