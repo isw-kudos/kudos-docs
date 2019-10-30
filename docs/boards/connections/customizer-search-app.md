@@ -37,7 +37,7 @@ The script file that is injected by Customizer needs to be copied into a directo
 
 1. Go to the Connections Customizer App Registry, e.g `https://connections.example.com/appreg`
 
-   _To access App Registry, you need to have the `admin` Security Role for the Common application. This is configured in the WebSphere console_
+     _To access App Registry, you need to have the `admin` Security Role for the Common application. This is configured in the WebSphere console_
 
 1. Add a new app.
 
@@ -45,7 +45,7 @@ The script file that is injected by Customizer needs to be copied into a directo
 
 1. Import or copy the entire contents of `appreg-manifest.json` from `boards-search-customizer.zip` into the code editor and click `Save`.
 
-   _This saves you from completing all of the form fields for creating the app. You can edit the app now to customize names or directories if necessary._
+    _This saves you from completing all of the form fields for creating the app. You can edit the app now to customize names or directories if necessary._
 
 ## Testing
 
