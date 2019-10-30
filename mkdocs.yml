@@ -34,6 +34,7 @@ nav:
                   - Connections Header: boards/connections/header-hybrid.md
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Connections Widgets: boards/connections/widgets-hybrid.md
+                  - Connections Search Integration: boards/connections/customizer-search-app.md
                   - Connections Mobile App: boards/connections/mobile-app-hybrid.md
               - IBM Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
@@ -72,25 +73,25 @@ nav:
           - Quick Tips: boards/howto/quick-tips-for-boards.md
           - Starting a trial: boards/howto/start-a-trial.md
           - Creating Boards:
-            - Create a Template: boards/howto/creating-templates.md
-            - Use a Template: boards/howto/accessing-global-templates.md
-            - Import an Activity: boards/howto/kudos-boards-import-activity.md
+              - Create a Template: boards/howto/creating-templates.md
+              - Use a Template: boards/howto/accessing-global-templates.md
+              - Import an Activity: boards/howto/kudos-boards-import-activity.md
           - Working in a Board:
-            - Adding Members: boards/howto/adding-members-to-a-board.md
-            - Member Permissions: boards/howto/permissions.md
-            - Archiving and Restoring: boards/howto/archiving-and-restoring.md
-            - Attaching Files to Cards: boards/howto/attaching-files.md
-            - Mind Map: boards/howto/mind-map-view.md
-            - Timeline: boards/howto/timeline-view-in-boards.md
+              - Adding Members: boards/howto/adding-members-to-a-board.md
+              - Member Permissions: boards/howto/permissions.md
+              - Archiving and Restoring: boards/howto/archiving-and-restoring.md
+              - Attaching Files to Cards: boards/howto/attaching-files.md
+              - Mind Map: boards/howto/mind-map-view.md
+              - Timeline: boards/howto/timeline-view-in-boards.md
           - Boards in other Apps:
-            - HCL Verse: boards/howto/use-verse.md
-            - Login with Auth0: boards/howto/use-auth0.md
-            - Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
-            - Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
-            - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
-            - Microsoft Teams: boards/howto/adding-boards-to-teams.md
+              - HCL Verse: boards/howto/use-verse.md
+              - Login with Auth0: boards/howto/use-auth0.md
+              - Microsoft OneDrive: boards/howto/kudos-boards-and-microsoft-onedrive.md
+              - Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
+              - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
+              - Microsoft Teams: boards/howto/adding-boards-to-teams.md
           - Administation:
-            - Manage Config: boards/howto/org-config.md
+              - Manage Config: boards/howto/org-config.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md

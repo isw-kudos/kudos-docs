@@ -6,6 +6,8 @@ _These instructions are for Connections on-premise._
 
 If you want to learn more about using Connections Customizer, have a read of the developer documentation on [GitHub](https://github.com/ibmcnxdev/customizer/blob/master/docs/HCLConnectionsCustomizer.md).
 
+![Outcome](/assets/connections/search_main.png)
+
 ## Prerequisites
 
 - [Complete Setup of Connections Customizer](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/install/cp_config_customizer_intro.html)
@@ -39,6 +41,8 @@ The script file that is injected by Customizer needs to be copied into a directo
 
    _To access App Registry, you need to have the `admin` Security Role for the Common application. This is configured in the WebSphere console_
 
+![App Registration Page](/assets/connections/appreg.png)
+
 1. Add a new app.
 
 1. Open Code Editor.
@@ -47,10 +51,16 @@ The script file that is injected by Customizer needs to be copied into a directo
 
    _This saves you from completing all of the form fields for creating the app. You can edit the app now to customize names or directories if necessary._
 
+![App Editor](/assets/connections/appreg2.png)
+
 ## Testing
 
 1. Use the Search Sidebar to search for content in Boards from different paths in Connections (e.g. homepage, profiles, activities, forums)
 
+![Search Sidebar](/assets/connections/search_panel.png)
+
 1. Use advanced search (`/search/web/jsp/advancedSearch.jsp`) to see Boards results integrated in the full search results page.
+
+![Advanced Search Standalone Section](/assets/connections/search_main2.png)
 
 _You need to have content in Boards to see any results._
