@@ -66,6 +66,10 @@ The script file that is injected by Customizer needs to be copied into a directo
 
 1. Use advanced search (`/search/web/jsp/advancedSearch.jsp`) to see Boards results integrated in the full search results page.
 
+<<<<<<< HEAD
 ![Advanced Search Standalone Section](/assets/connections/search_main2.png)
 
+_You need to have content in Boards to see any results._
+=======
     > Note: you need to have content in Boards to see any results.
+>>>>>>> 623214340e0017e277c69e1afc9ca330f758fd41

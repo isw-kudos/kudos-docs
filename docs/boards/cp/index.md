@@ -113,6 +113,7 @@ Please follow [these instructions](/boards/cp/httpd/)
 
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
+- [Boards Search](/boards/connections/customizer-search-app/)
 
 ---
 
