@@ -29,7 +29,7 @@ The script file that is injected by Customizer needs to be copied into a directo
 
 1. Extract files from `boards-search-customizer.zip`
 
-1. In `plugin.js` replace `[YOUR_CONNECTIONS_HOST]` with your connections hostname.
+1. If you want to restrict messages between boards and your connections environment, replace `targetOrigin` with your connections host (e.g. `https://connections.example.com`)
 
 1. Copy `plugin.js` into `/pv-connections/customizations/boards-search-customizer`
 
