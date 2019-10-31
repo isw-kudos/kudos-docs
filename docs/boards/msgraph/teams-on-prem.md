@@ -4,9 +4,13 @@
 
 1. Microsoft Teams
 
-1. MSGraph OAuth client is configured as [per doc](/boards/msgraph/auth)
-
 1. Office 365 tenant admin account
+
+1. OAuth client is configured as [per doc](/boards/msgraph/auth/)
+
+1. Notification Bot configured as [per doc](/boards/msgraph/notification-bot/)
+
+    > **Optional** - not available to internal Kudos Boards deployments
 
 ---
 
