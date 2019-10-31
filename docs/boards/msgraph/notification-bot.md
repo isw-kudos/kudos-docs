@@ -1,6 +1,8 @@
 ## Microsoft Teams Notification Bot
 
-This bot will be used for notification in teams from actions taken in Kudos Boards.
+This bot will be used for notification in Teams from actions taken in Kudos Boards.
+
+![Bot notifications](/assets/msgraph/teams/bot_conversations.png)
 
 ---
 
@@ -8,19 +10,19 @@ This bot will be used for notification in teams from actions taken in Kudos Boar
 
 - **Boards deployment is accessible from the Web (no VPN)**
 
-    > Note: Microsoft Teams notifications requires 2-way web communication.
+  > Note: Microsoft Teams notifications requires 2-way web communication.
 
-    > For example, the following URL must be accessible by Microsoft's servers: `https://[BOARDS_URL]/webhook/teams`
+  > For example, the following URL must be accessible by Microsoft's servers: `https://[BOARDS_URL]/webhook/teams`
 
-    > i.e. `https://[CONNECTIONS_URL]/boards/webhook/teams`
+  > i.e. `https://[CONNECTIONS_URL]/boards/webhook/teams`
 
 ---
 
 ### Register Bot
 
-1. Open [Bot Registration](https://dev.botframework.com/bots/new) and sign-in with a Microsoft Tenant admin
+1.  Open [Bot Registration](https://dev.botframework.com/bots/new) and sign-in with a Microsoft Tenant admin
 
-1. Enter the following values
+1.  Enter the following values
 
         Kudos Boards
         kudosboards
@@ -29,8 +31,8 @@ This bot will be used for notification in teams from actions taken in Kudos Boar
 
     Where:
 
-      - `[BOARDS_URL]` is the URL to your Kudos Boards installation
-      - `[MSGRAPH_CLIENT_ID]` is the OAuth Client ID from [Auth setup](/boards/msgraph/auth/)
+    - `[BOARDS_URL]` is the URL to your Kudos Boards installation
+    - `[MSGRAPH_CLIENT_ID]` is the OAuth Client ID from [Auth setup](/boards/msgraph/auth/)
 
     For example:
 
@@ -45,7 +47,7 @@ This bot will be used for notification in teams from actions taken in Kudos Boar
 
 1. Scroll down, read/agree to the terms and click `Register`
 
-    ![register](/assets/msgraph/teams/bot2.png)
+   ![register](/assets/msgraph/teams/bot2.png)
 
 ---
 
