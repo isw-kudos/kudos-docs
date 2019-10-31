@@ -62,7 +62,7 @@ nav:
               - IBM Verse: boards/verse/addin-on-prem.md
               - Office 365:
                 - Authentication: boards/msgraph/auth.md
-                - Teams Notification: boards/msgraph/notification-bot.md
+                - Teams Notification Bot: boards/msgraph/notification-bot.md
                 - Teams App: boards/msgraph/teams-on-prem.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:

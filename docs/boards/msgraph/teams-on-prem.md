@@ -6,11 +6,11 @@
 
 ## Pre-Requisites
 
-1. Office 365 tenant admin account
+1. Office 365 Tenant admin account.
 
-1. OAuth client is configured as [per these instructions](/boards/msgraph/auth/)
+1. Office 365 OAuth client. [See instructions](/boards/msgraph/auth/)
 
-1. Notification bot is configured as [per these instructions](/boards/msgraph/notification-bot/) (optional)
+1. Notification bot (optional). [See instructions](/boards/msgraph/notification-bot/)
 
     > **Note:** notifications are **optional** as the bot cannot be configured for internal Kudos Boards deployments
 
@@ -24,19 +24,19 @@
 
 1. Click the `Configuration` icon and then `Manage Org`
 
-   ![example](/assets/boards/admin.png)
+    ![example](/assets/boards/admin.png)
 
 1. Click on your Organisation
 
-   ![example](/assets/msgraph/teams/admin-orgs.png)
+    ![example](/assets/msgraph/teams/admin-orgs.png)
 
 1. Click on your Microsoft client
 
-   ![example](/assets/msgraph/teams/admin-org.png)
+    ![example](/assets/msgraph/teams/admin-org.png)
 
 1. Click `Download Teams app package`
 
-   ![example](/assets/msgraph/teams/app-download.png)
+    ![example](/assets/msgraph/teams/app-download.png)
 
 ### Install in Teams
 
