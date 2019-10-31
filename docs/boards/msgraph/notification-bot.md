@@ -2,13 +2,13 @@
 
 This bot will be used to post notification to Microsoft Teams triggered by actions performed in Kudos Boards.
 
-> Note: this step is optional and cannot be achieved if you do not meet the pre-requisites.
+> Note: this step is optional and cannot be achieved if you do not meet the prerequisites.
 
 ![Bot notifications](/assets/msgraph/teams/bot_conversations.png)
 
 ---
 
-## Pre-Requisites
+## Prerequisites
 
 - **Boards deployment is accessible from the web (no VPN)**
 

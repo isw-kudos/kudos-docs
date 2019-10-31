@@ -5,7 +5,7 @@ Buzzy requires an S3 object store. This documentation will deploy a Minio S3 sto
 If you already have externally hosted AWS compatible S3 storage skip this step.
 
 
-### Pre-Requisites
+### Prerequisites
 
 1. [Config file](/assets/config/buzzy-minio.yaml) downloaded
 

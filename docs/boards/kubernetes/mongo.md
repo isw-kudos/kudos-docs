@@ -6,7 +6,7 @@ If you already have externally hosted Mongo database please skip to the [Outcome
 
 You can also email us for support at [support@kudosboards.com](mailto:support@kudosboards.com)
 
-### Pre-Requisites
+### Prerequisites
 
 1. [Config file](/assets/config/kubernetes/mongo.yaml) downloaded
 

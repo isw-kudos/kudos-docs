@@ -6,7 +6,7 @@ If you already have externally hosted S3 storage please skip to the [Outcomes se
 
 You can also email us for support at [support@kudosboards.com](mailto:support@kudosboards.com)
 
-### Pre-Requisites
+### Prerequisites
 
 1. [Config file](/assets/config/kubernetes/minio.yaml) downloaded
 

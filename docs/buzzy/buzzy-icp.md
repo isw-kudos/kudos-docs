@@ -1,7 +1,7 @@
 # Buzzy Installation Guide for Connections On-Premise 6.0 and above
 Basic instructions for deploying buzzy into Kubernetes -or- IBM Cloud Private for on-premise IBM Connections environments
 
-### Pre-Requisites
+### Prerequisites
 1. Kubernetes -or- IBM Cloud Private is installed and running
 1. WebSphere environment with Web Server
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed

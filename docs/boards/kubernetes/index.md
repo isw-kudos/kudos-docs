@@ -4,7 +4,7 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 ---
 
-### Pre-Requisites
+### Prerequisites
 
 1. Kubernetes or IBM Cloud Private is installed and running
 1. WebSphere environment with Web Server (or another reverse proxy)

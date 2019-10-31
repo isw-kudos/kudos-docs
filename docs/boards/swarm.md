@@ -4,7 +4,7 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 
 ---
 
-### Pre-Requisites
+### Prerequisites
 
 1. Docker Swarm with Portainer installed. [Guide here](/swarm/)
 1. Storage - an accessible MongoDB and S3 object store. [Guide here](/swarm/storage/)

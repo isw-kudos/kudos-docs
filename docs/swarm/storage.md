@@ -4,7 +4,7 @@ Kudos Boards requires an S3 object store, and a Mongo database. This documentati
 
 If you already have externally hosted mongo database and/or S3 storage please contact us for assistance in utilising them. [support@kudosboards.com](mailto:support@kudosboards.com)
 
-### Pre-Requisites
+### Prerequisites
 
 1. Docker swarm with Portainer up and running [Guide here](/swarm/)
 1. [Storage Config File](/assets/config/swarm/storage.yml) downloaded

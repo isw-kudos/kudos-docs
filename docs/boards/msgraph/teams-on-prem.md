@@ -4,7 +4,7 @@
 
 ---
 
-## Pre-Requisites
+## Prerequisites
 
 1. Office 365 Tenant admin account.
 

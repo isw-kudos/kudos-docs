@@ -5,7 +5,7 @@ Buzzy requires a Mongo database. This documentation will deploy a MongoDB replic
 If you already have an externally hosted or cross-namespace Mongo database  please skip this step.
 
 
-### Pre-Requisites
+### Prerequisites
 
 1. [Config file](/assets/config/buzzy-mongo.yaml) downloaded
 

@@ -4,7 +4,7 @@ Deploying Kudos Boards into HCL Connections Component Pack (Kubernetes)
 
 ---
 
-### Pre-Requisites
+### Prerequisites
 
 1. HCL Component Pack is installed and running
 1. WebSphere environment with Web Server (or another reverse proxy)
