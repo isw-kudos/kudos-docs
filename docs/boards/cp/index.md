@@ -52,11 +52,17 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 #### S3
 
-Kudos Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](/boards/cp/minio) to configure the NFS mount
+Kudos Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](/boards/cp/minio) to configure the NFS mount.
 
 #### Mongo
 
 Kudos Boards uses the Mongo database already deployed inside the Component Pack. There is no configuration required.
+
+---
+
+### Licence Key
+
+Kudos Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.kudosapps.com](https://store.kudosapps.com). For more details [see here](/boards/cp/store/).
 
 ---
 
