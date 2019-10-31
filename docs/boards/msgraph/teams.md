@@ -37,9 +37,8 @@ To add Kudos Boards as a personal app follow these steps:
 
 1.  Open Teams and click the Apps button. Type `kudos` to find the Kudos Boards app:
 
-
     ![example](/assets/msgraph/teams_find-app.png)
 
 1.  Click `Kudos Boards` then click `Add` to add it as a personal app:
 
-![example](/assets/msgraph/teams_add-personal-app.png)
+    ![example](/assets/msgraph/teams_add-personal-app.png)

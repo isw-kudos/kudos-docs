@@ -33,10 +33,10 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
-| Provider                        | Registration / Documentation                                                                                 | Callback URL                                                 |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                      | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft Office 365            | [Azure app registration](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+| Provider                        | Registration / Documentation                            | Callback URL                                                 |
+| ------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
+| Microsoft Office 365            | [Kudos instructions](/boards/msgraph/auth/)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
 
@@ -79,7 +79,7 @@ Are [detailed here](/boards/env/common/).
 
 **Activity migration variables**:
 
-The Activity migration chart will be deployed separately but use the same config file.  The variables are [described here](/boards/cp/migration).
+The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](/boards/cp/migration).
 
 ---
 
@@ -109,11 +109,17 @@ Please follow [these instructions](/boards/cp/httpd/)
 
 ---
 
-## HCL Connections integrations
+## Integrations
+
+### HCL Connections
 
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
 - [Boards Search](/boards/connections/customizer-search-app/)
+
+### Microsoft Teams
+
+- [Install On-Premise App](/boards/msgraph/teams-on-prem/)
 
 ---
 
