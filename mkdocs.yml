@@ -60,6 +60,10 @@ nav:
                   - Connections Mobile App: boards/connections/mobile-app-on-prem.md
                   - Web Server Config: boards/connections/httpd.md
               - IBM Verse: boards/verse/addin-on-prem.md
+              - Office 365:
+                - Authentication: boards/msgraph/auth.md
+                - Teams Notification: boards/msgraph/notification-bot.md
+                - Teams App: boards/msgraph/teams-on-prem.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md

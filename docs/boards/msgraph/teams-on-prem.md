@@ -1,40 +1,44 @@
-## Kudos Boards On-Premise with Microsoft Teams
+# Kudos Boards On-Premise in Microsoft Teams
 
-### Pre-requisites
-
-1. Microsoft Teams
-
-1. Office 365 tenant admin account
-
-1. OAuth client is configured as [per doc](/boards/msgraph/auth/)
-
-1. Notification Bot configured as [per doc](/boards/msgraph/notification-bot/)
-
-    > **Optional** - not available to internal Kudos Boards deployments
+![example](/assets/msgraph/teams/personal.png)
 
 ---
 
-### Install Application
+## Pre-Requisites
 
-1. Download Kudos Boards Application File
+1. Office 365 tenant admin account
 
-     - Login to Kudos Boards with your Microsoft Tenant Admin account
+1. OAuth client is configured as [per these instructions](/boards/msgraph/auth/)
 
-     - Click the `Configuration` icon and then `Manage Org`
+1. Notification bot is configured as [per these instructions](/boards/msgraph/notification-bot/) (optional)
 
-     ![example](/assets/boards/admin.png)
+    > **Note:** notifications are **optional** as the bot cannot be configured for internal Kudos Boards deployments
 
-     - Click on your Organisation
+---
 
-     ![example](/assets/msgraph/teams/admin-orgs.png)
+## Configure Application
 
-     - Click on your Microsoft client
+### Download from Boards
 
-     ![example](/assets/msgraph/teams/admin-org.png)
+1. Login to Kudos Boards with your Microsoft Tenant Admin account
 
-     - Click `Download Teams app package`
+1. Click the `Configuration` icon and then `Manage Org`
 
-     ![example](/assets/msgraph/teams/app-download.png)
+   ![example](/assets/boards/admin.png)
+
+1. Click on your Organisation
+
+   ![example](/assets/msgraph/teams/admin-orgs.png)
+
+1. Click on your Microsoft client
+
+   ![example](/assets/msgraph/teams/admin-org.png)
+
+1. Click `Download Teams app package`
+
+   ![example](/assets/msgraph/teams/app-download.png)
+
+### Install in Teams
 
 1. Open the [Teams App](https://teams.microsoft.com)
 
@@ -47,16 +51,20 @@
 
     ![example](/assets/msgraph/teams/teams2.png)
 
-1. The Kudos Boards app will now appear under the section `[COMPANY_NAME]`
+1. The Kudos Boards app will now appear under the section `Built for [COMPANY_NAME]`
 
     ![example](/assets/msgraph/teams/teams3.png)
 
 
 ---
 
-### Verification
+### Configure App ID
 
-1. Click on `Kudos Boards`
+1. Open [Team Apps](https://teams.microsoft.com/_#/apps?intent=0&category=16&autoNavigationOnDone=true&filterByPersonal=false&storeLaunchFromChat=false&addAppDialogEntryPoint=7) in your web browser
+
+    Click on `Built for [COMPANY_NAME]` => `Kudos Boards`
+
+    ![example](/assets/msgraph/teams/tenant-apps.png)
 
 1. Click `Add`
 
@@ -64,10 +72,32 @@
 
 1. Kudos Boards personal will now open
 
-    ![example](/assets/msgraph/teams/personal.png)
+    Copy the App ID from the URL. We will use this shortly.
+
+    ![example](/assets/msgraph/teams/appid.png)
+
+1. Open the Boards Helm Chart config used for deployment
+
+    Add the following environment variable to `provider` (uncomment or add the section as required):
+
+        provider:
+          env:
+            MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
+
+1. Redeploy Boards helm chart as per command for Kudos Boards:
+
+    [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
+
+        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml -n connections
+
+    [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
+
+        helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml -n boards
+
+    > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
 
 ---
 
-### How To
+## How To Use
 
-For a full how-to guide on using Kudos Boards in Microsoft Teams, please see [our documentation](/boards/msgraph/teams/).
+For a full guide on using Kudos Boards in Microsoft Teams, please see [our documentation](/boards/msgraph/teams/).

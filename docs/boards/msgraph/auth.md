@@ -1,4 +1,4 @@
-## Authenticating Kudos Boards Docker with Office 365
+# Authenticating Kudos Boards with Office 365
 
 This document details the process to enable login to your private instance of Kudos Boards with your private Office 365 tenant.
 
@@ -143,13 +143,13 @@ Click `Yes`
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
-        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml -n connections
 
     [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
 
-        helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+        helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml -n boards
 
-    > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+    > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
 
 ## Approve Permissions
 

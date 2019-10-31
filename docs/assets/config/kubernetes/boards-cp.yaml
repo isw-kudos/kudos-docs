@@ -38,8 +38,14 @@ core:
 
 licence:
   env:
-    # Register and download your key from store.kudosapps.com
+    # Register your Organisation and download your Free 'Activities Plus' licence key from store.kudosapps.com
     LICENCE: secret-string-you-download
+
+# https://docs.kudosapps.com/boards/msgraph/teams-on-prem/
+# Uncomment/configure the following 3 lines if you are using this Kudos Boards deployment from Microsoft Teams
+# provider:
+#   env:
+#     MSGRAPH_TEAMS_APP_ID: app-id-shown-in-teams-url
 
 user:
   env:

@@ -1,3 +1,5 @@
+# Authenticating Kudos Boards with HCL Connections
+
 ![Outcome](/assets/connections/auth.png)
 
 
@@ -38,24 +40,24 @@ In order for Kudos Boards to authenticate with your Connections environment, you
         CONNECTIONS_CLIENT_ID=kudosboards
         CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
 
-1. Auto Authorize
+## Configure Auto Auth
 
-    > **Note:** this step is optional but recommended and can be done at any time.
+Steps to configure the Kudos Boards application for auto-authorize (also [documented here](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/t_admin_registeroauthclientwprovider.html))
 
-    Steps to configure the Kudos Boards application for auto-authorize (also [documented here](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/t_admin_registeroauthclientwprovider.html))
+> **Note:** this step is optional but recommended and can be done at any time.
 
-    - Add the new line to the following section in `[cellname]/oauth20/connectionsProvider.xml`
+1. Add the new line to the following section in `[cellname]/oauth20/connectionsProvider.xml`
 
-            <parameter name="oauth20.autoauthorize.clients" type="ws" customizable="true">
-              <value>kudosboards</value>
-            </parameter>
+        <parameter name="oauth20.autoauthorize.clients" type="ws" customizable="true">
+          <value>kudosboards</value>
+        </parameter>
 
-        > ** Note:** keep any existing values and add the new line for `kudosboards`
+    > ** Note:** keep any existing values and add the new line for `kudosboards`
 
-    - Recreate the provider via this command:
+1. Recreate the provider via this command:
 
-            ./wsadmin.sh -lang jython -conntype SOAP -c "print AdminTask.createOAuthProvider('[-providerName connectionsProvider -fileName  [PATH_TO_CONFIG_FILE]/oauth20/connectionsProvider.xml]')" -user connectionsadmin -password passw0rd
+        ./wsadmin.sh -lang jython -conntype SOAP -c "print AdminTask.createOAuthProvider('[-providerName connectionsProvider -fileName  [PATH_TO_CONFIG_FILE]/oauth20/connectionsProvider.xml]')" -user connectionsadmin -password passw0rd
 
-        > **Note:** update the wsadmin credentials and the `[PATH_TO_CONFIG_FILE]`
+    > **Note:** update the wsadmin credentials and the `[PATH_TO_CONFIG_FILE]`
 
-    - Restart the WebSphere servers
+1. Restart the WebSphere servers
