@@ -34,7 +34,11 @@
 
     ![example](/assets/msgraph/teams/admin-org.png)
 
-1. Click `Download Teams app package`
+1. Click the download button for your configuration
+
+    - `App with Notifications` (if you can and have enabled the [notification bot](/boards/msgraph/notification-bot/))
+
+    - `App for Internal Boards Deployment` (if you do not want notifications)
 
     ![example](/assets/msgraph/teams/app-download.png)
 
