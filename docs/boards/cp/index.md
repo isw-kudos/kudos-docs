@@ -33,10 +33,10 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
 
-| Provider                        | Registration / Documentation                                                                                 | Callback URL                                                 |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ |
-| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                      | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft Office 365            | [Azure app registration](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+| Provider                        | Registration / Documentation                            | Callback URL                                                 |
+| ------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
+| Microsoft Office 365            | [Kudos instructions](/boards/msgraph/auth/)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
 
@@ -85,7 +85,7 @@ Are [detailed here](/boards/env/common/).
 
 **Activity migration variables**:
 
-The Activity migration chart will be deployed separately but use the same config file.  The variables are [described here](/boards/cp/migration).
+The Activity migration chart will be deployed separately but use the same config file. The variables are [described here](/boards/cp/migration).
 
 ---
 
@@ -93,9 +93,15 @@ The Activity migration chart will be deployed separately but use the same config
 
 Install the Boards services via our Helm chart
 
-    helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
-
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+
+    helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+
+> Where [PATH_TO_HELM_CHARTS] is the file path to the helm charts, ie `[extractedFolder]/microservices_connections/hybridcloud/helmbuilds/`
+
+For example:
+
+    helm upgrade kudos-boards-cp ./microservices_connections/hybridcloud/helmbuilds/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 ---
 
@@ -109,10 +115,17 @@ Please follow [these instructions](/boards/cp/httpd/)
 
 ---
 
-## HCL Connections integrations
+## Integrations
+
+### HCL Connections
 
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
+- [Boards Search](/boards/connections/customizer-search-app/)
+
+### Microsoft Teams
+
+- [Install On-Premise App](/boards/msgraph/teams-on-prem/)
 
 ---
 

@@ -37,3 +37,25 @@ In order for Kudos Boards to authenticate with your Connections environment, you
         CONNECTIONS_URL=https://connections.example.com
         CONNECTIONS_CLIENT_ID=kudosboards
         CONNECTIONS_CLIENT_SECRET=[VALUE_PRINTED]
+
+1. Auto Authorize
+
+    > **Note:** this step is optional but recommended and can be done at any time.
+
+    Steps to configure the Kudos Boards application for auto-authorize (also [documented here](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/t_admin_registeroauthclientwprovider.html))
+
+    - Add the new line to the following section in `[cellname]/oauth20/connectionsProvider.xml`
+
+            <parameter name="oauth20.autoauthorize.clients" type="ws" customizable="true">
+              <value>kudosboards</value>
+            </parameter>
+
+        > ** Note:** keep any existing values and add the new line for `kudosboards`
+
+    - Recreate the provider via this command:
+
+            ./wsadmin.sh -lang jython -conntype SOAP -c "print AdminTask.createOAuthProvider('[-providerName connectionsProvider -fileName  [PATH_TO_CONFIG_FILE]/oauth20/connectionsProvider.xml]')" -user connectionsadmin -password passw0rd
+
+        > **Note:** update the wsadmin credentials and the `[PATH_TO_CONFIG_FILE]`
+
+    - Restart the WebSphere servers
