@@ -27,6 +27,7 @@ core:
   image:
     tag: core
   env:
+    API_URI_PATH: /api-boards
     NOTIFIER_EMAIL_HOST: [SMTP.SERVER.COM]
     # NOTIFIER_EMAIL_USERNAME: username
     # NOTIFIER_EMAIL_PASSWORD: password

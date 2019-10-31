@@ -27,7 +27,7 @@
             --%></a><%--
           --%></td><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/boards/templates/public"><%--
+            --%><a href="https://kudosboards.com/auth/connections/[CONNECTIONS_HOSTNAME_BASE64]?redirect_to=/templates/public"><%--
               --%><fmt:message key="label.menu.kudos.boards.templates" /><%--
             --%></a><%--
           --%></td><%--

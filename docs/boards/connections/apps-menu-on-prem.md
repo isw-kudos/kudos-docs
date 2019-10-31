@@ -16,29 +16,24 @@
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
-            --%><img width="16" src="https://[BOARDS_URL]/img/logo-small.png" /><%--
-            --%><a href="https://[URL_TO_REPLACE]/auth/connections"><%--
-              --%><strong><fmt:message key="connections.component.name.kudos.boards" /></strong><%--
+            --%><img width="16" src="https://[CONNECTIONS_URL]/boards/img/logo-small.png" /><%--
+            --%><a href="https://[CONNECTIONS_URL]/boards/auth/connections"><%--
+              --%><strong><fmt:message key="connections.component.name.kudos.boards"/></strong><%--
             --%></a><%--
           --%></th><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://[URL_TO_REPLACE]/auth/connections?redirect_to=/todos/assigned"><%--
-              --%><fmt:message key="label.menu.kudos.boards.todos" /><%--
+            --%><a href="https://[CONNECTIONS_URL]/boards/auth/connections?redirect_to=/todos/assigned"><%--
+              --%><fmt:message key="label.menu.kudos.boards.todos"/><%--
             --%></a><%--
           --%></td><%--
           --%><td class="lotusNowrap lotusLastCell"><%--
-            --%><a href="https://[URL_TO_REPLACE]/auth/connections?redirect_to=/boards/templates/public"><%--
-              --%><fmt:message key="label.menu.kudos.boards.templates" /><%--
+            --%><a href="https://[CONNECTIONS_URL]/boards/auth/connections?redirect_to=/templates/public"><%--
+              --%><fmt:message key="label.menu.kudos.boards.templates"/><%--
             --%></a><%--
           --%></td><%--
         --%></tr><%--
 
-    **Note**: you must replace
-
-      - `[BOARDS_URL]`
-      - `[URL_TO_REPLACE]` with either:
-        - `[CONNECTIONS_URL]/boards` if the [Connections Header](/boards/connections/header-on-prem/#open-boards) is setup, **OR**
-        - `[BOARDS_URL]` if on same domain as Connections
+    > **Note**: you must replace `[CONNECTIONS_URL]`
 
 
 - Save and close the file
