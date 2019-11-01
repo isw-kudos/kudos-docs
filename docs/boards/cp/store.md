@@ -10,13 +10,13 @@ All customers are eligible for a free licence to use our Activity view.
 
 Obtaining your licence key:
 
-1. Register for oue store with your Name and email address.
+1. Register for our store with your Name and email address.
 
 1. Click the link in the email we sent to verify your account.
 
 1. Create Your Organisation and Login client, details below.
 
-1. Click `Create Free Licence`
+1. Click `Create Activities+ Licence`
 
 1. Click `Download Licences`
 
@@ -30,7 +30,7 @@ You will need to provide the following information to setup you Organisation in 
 
 When creating your Login client(s) refer to the table below for details:
 
-| Provider        | URL                  | External ID               |
-| --------------- | -------------------- | ------------------------- |
-| HCL Connections | Your connections url | Not required              |
-| Microsoft 365   | Not required         | Your Office 365 tenant id |
+| Provider        | Text Field                |
+| --------------- | ------------------------- |
+| HCL Connections | Your Connections URL      |
+| Microsoft 365   | Your Office 365 tenant ID |
