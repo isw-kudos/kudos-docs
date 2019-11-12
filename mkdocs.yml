@@ -61,9 +61,9 @@ nav:
                   - Web Server Config: boards/connections/httpd.md
               - IBM Verse: boards/verse/addin-on-prem.md
               - Office 365:
-                - Authentication: boards/msgraph/auth.md
-                - Teams Notification Bot: boards/msgraph/notification-bot.md
-                - Teams App: boards/msgraph/teams-on-prem.md
+                  - Authentication: boards/msgraph/auth.md
+                  - Teams Notification Bot: boards/msgraph/notification-bot.md
+                  - Teams App: boards/msgraph/teams-on-prem.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
@@ -94,6 +94,7 @@ nav:
               - Microsoft Outlook: boards/howto/kudos-boards-in-microsoft-outlook.md
               - Microsoft SharePoint: boards/howto/kudos-boards-in-microsoft-sharepoint.md
               - Microsoft Teams: boards/howto/adding-boards-to-teams.md
+              - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
           - Administation:
               - Manage Config: boards/howto/org-config.md
 
