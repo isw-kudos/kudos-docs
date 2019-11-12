@@ -26,6 +26,7 @@ core:
     NOTIFIER_EMAIL_HOST: smtp.example.com
     NOTIFIER_EMAIL_USERNAME: user123
     NOTIFIER_EMAIL_PASSWORD: passw0rd
+    # APP_NAME: Kudos Boards # Used for all notifications, e.g. Orient Me
     # NOTIFIER_EMAIL_FROM_NAME: Kudos Boards
     # NOTIFIER_EMAIL_FROM_EMAIL: boards@connections.example.com
   ingress:
