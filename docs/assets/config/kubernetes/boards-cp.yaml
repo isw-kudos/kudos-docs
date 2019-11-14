@@ -2,7 +2,8 @@
 # For details of variable meanings, please see https://docs.kudosapps.com/boards/cp/
 
 global:
-  repository: your-private-docker-repo
+  repository: your-private-docker-repo/connections
+  imageTag: connections-date-tag
   env:
     APP_URI: https://connections.example.com/boards
 
