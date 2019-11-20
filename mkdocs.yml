@@ -124,6 +124,10 @@ nav:
   # - Advanced: kubernetes/advanced.md
   # - Troubleshooting: kubernetes/troubleshooting.md
 
+  - CCM Migrator: 
+    - Installation: ccm-migrator/install.md
+    - Usage: ccm-migrator/usage.md
+
 markdown_extensions:
   - toc:
       permalink: true
