@@ -4,6 +4,7 @@
 global:
   repository: your-private-docker-repo/connections
   imageTag: connections-date-tag
+  imagePullSecret: myregkey
   env:
     APP_URI: https://connections.example.com/boards
 
