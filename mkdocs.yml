@@ -146,6 +146,9 @@ theme:
 extra_css:
   - "/assets/css/custom.css"
 
+extra_javascript:
+  - "//js.hs-scripts.com/6268180.js"
+
 google_analytics:
   - "UA-1747668-5"
   - "auto"
