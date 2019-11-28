@@ -32,6 +32,15 @@ mkdocs serve
 mkdocs gh-deploy
 ```
 
+## Updating API doco
+
+update raml files in /boards-api.
+
+```
+npm i
+npm run build-api
+```
+
 ## More info
 
 1. See the file `mkdocs.yml` for site config
