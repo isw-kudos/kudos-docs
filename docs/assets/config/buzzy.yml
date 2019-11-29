@@ -58,6 +58,7 @@ spec:
                 "MAIL_URL": "smtp://someuser:somepassword@smtp.sendgrid.net:587",
                 "BUZZY_ADMIN_EMAIL": "someadminemail",
                 "DEFAULT_OAUTH_PROVIDERS": {
+                  "enabled": true,
                   "defaultOrganizationName": "Organisation name",
                   "providers": [
                     {
@@ -84,6 +85,7 @@ spec:
                   ]
                 },
                 "public": {
+                  "BUZZY_DONOTREPLY_EMAIL": "donotreply2@buzzy.buzz",
                   "AWS_BUZZY_FILES": {
                     "enabled": true,
                     "S3FileExpiry": 604800,
