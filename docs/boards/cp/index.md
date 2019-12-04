@@ -135,6 +135,6 @@ Please follow the [instructions here](/boards/cp/migration)
 
 ---
 
-### Subscribing to latest updates from Kudos Team
+## Subscribing to latest updates from Kudos Team
 
 [Guide here](/boards/cp/dockerhub)

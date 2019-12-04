@@ -7,9 +7,9 @@ You can get the latest versions of Kudos Boards Docker by subscribing to our own
 1. Once confirmed by reply email update your config file as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
 1. Create kubernetes secret with your dockerhub account credentials
 
-    kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=[user] --docker-password=[password] --docker-email=[email] --namespace=connections
+      kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=[user] --docker-password=[password] --docker-email=[email] --namespace=connections
 
 1. Run helm to apply the changes.
 
-    helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+      helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-1.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
