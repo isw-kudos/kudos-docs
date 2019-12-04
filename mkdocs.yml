@@ -28,15 +28,15 @@ nav:
       - Boards Cloud:
           - Overview: boards/cloud.md
           - Integrations:
-              - IBM Connections Cloud: boards/connections/cloud.md
-              - IBM Connections On-Prem:
+              - HCL Connections Cloud: boards/connections/cloud.md
+              - HCL Connections On-Prem:
                   - Authentication: boards/connections/auth-hybrid.md
                   - Connections Header: boards/connections/header-hybrid.md
                   - Connections Apps Menu: boards/connections/apps-menu-hybrid.md
                   - Connections Widgets: boards/connections/widgets-hybrid.md
                   - Connections Search Integration: boards/connections/customizer-search-app.md
                   - Connections Mobile App: boards/connections/mobile-app-hybrid.md
-              - IBM Verse: boards/verse/addin-hybrid.md
+              - HCL Verse: boards/verse/addin-hybrid.md
               - Office 365 for Business:
                   - Overview: boards/msgraph/overview.md
                   - Getting Started: boards/msgraph/getting-started.md
@@ -52,14 +52,14 @@ nav:
               - Environment: boards/env/common.md
               - Team Logins: boards/env/teams.md
           - Integrations:
-              - IBM Connections On-Prem:
+              - HCL Connections On-Prem:
                   - Authentication: boards/connections/auth-on-prem.md
                   - Connections Header: boards/connections/header-on-prem.md
                   - Connections Apps Menu: boards/connections/apps-menu-on-prem.md
                   - Connections Widgets: boards/connections/widgets-on-prem.md
                   - Connections Mobile App: boards/connections/mobile-app-on-prem.md
                   - Web Server Config: boards/connections/httpd.md
-              - IBM Verse: boards/verse/addin-on-prem.md
+              - HCL Verse: boards/verse/addin-on-prem.md
               - Office 365:
                   - Authentication: boards/msgraph/auth.md
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
