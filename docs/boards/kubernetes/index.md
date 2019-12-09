@@ -6,7 +6,7 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 
 ### Prerequisites
 
-1. Kubernetes or IBM Cloud Private is installed and running
+1. Kubernetes is installed and running
 1. WebSphere environment with Web Server (or another reverse proxy)
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
@@ -92,7 +92,7 @@ Kudos Boards requires a Mongo database and an S3 file storage. If you already ha
 
 ### Update Config file
 
-Download our [config file](/assets/config/kubernetes/boards.yaml) and update the values as below.
+Download our [config file](/assets/config/kubernetes/boards.yaml) and update all example values as required. Details as below.
 
 **Kubernetes Variables**:
 
@@ -119,10 +119,9 @@ Follow instructions on [this page](/boards/env/common/)
 
 Install the Boards services via our Helm chart
 
-    helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-3.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
-
 
 ---
 
@@ -145,5 +144,4 @@ Add a reverse proxy entry in your network that resolves your certificates and fo
 - [Header](/boards/connections/header-on-prem/) (_Note: only required if Boards is hosted on a different domain to Connections_)
 - [Apps Menu](/boards/connections/apps-menu-on-prem/)
 - [Widgets](/boards/connections/widgets-on-prem/)
-
----
+- [Migrate your Activities to Boards](/boards/connections/migration)

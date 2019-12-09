@@ -11,7 +11,6 @@ Deploying Kudos Boards into HCL Connections Component Pack (Kubernetes)
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
-1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository.<br>Please send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
 
 ---
 

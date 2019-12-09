@@ -1,5 +1,8 @@
 global:
-  repository: iswkudos/kudos-boards-docker
+  # repository: iswkudos/kudos-boards-docker DEPRECRATED AS OF 2019-10-16 RELEASE
+  repository: iswkudos/kudos-boards
+  # Uncomment the next line to lock your deployment to a specific release date (YYYY-MM-DD)
+  # imageTagSuffix: '2019-11-07'
   env:
     APP_URI: https://example.com/boards
     APP_URI_PATH: /boards
@@ -12,11 +15,19 @@ global:
     S3_SECRET_KEY: 7a863d41-2d8f-4143-bc8a-02501edbea6f
     S3_BUCKET: kudos-boards
 
+licence:
+  env:
+    # Register your Organisation and download your Free 'Activities Plus' licence key from store.kudosapps.com
+    LICENCE: secret-string-you-download
+
 webfront:
   image:
     tag: webfront
   env:
     API_GATEWAY: https://example.com/api-boards
+    # DOCUMENTATION_URL: https://docs.kudosapps.com/boards/howto/knowledgebase/
+    # PRODUCT_INFO_URL: https://kudosapps.com/boards
+    # SUPPORT_EMAIL: support@example.com
   ingress:
     hosts:
       - example.com
@@ -28,7 +39,7 @@ core:
     tag: core
   env:
     API_URI_PATH: /api-boards
-    NOTIFIER_EMAIL_HOST: [SMTP.SERVER.COM]
+    NOTIFIER_EMAIL_HOST: smtp.example.com
     # NOTIFIER_EMAIL_USERNAME: username
     # NOTIFIER_EMAIL_PASSWORD: password
     # NOTIFIER_EMAIL_PORT: 25
@@ -45,8 +56,8 @@ app:
 
 provider:
   env:
-    WIDGET_ID: Kudos Community Boards
     # NODE_TLS_REJECT_UNAUTHORIZED: "0"
+    WIDGET_ID: Kudos Community Boards
     # https://docs.kudosapps.com/boards/msgraph/teams-on-prem/
     # Uncomment/configure the following line if you are using this Kudos Boards deployment from Microsoft Teams
     # MSGRAPH_TEAMS_APP_ID: app-id-shown-in-teams-url
@@ -56,17 +67,44 @@ user:
     # NODE_TLS_REJECT_UNAUTHORIZED: "0"
     CONNECTIONS_NAME: Connections
     CONNECTIONS_CLIENT_ID: kudosboards
-    CONNECTIONS_CLIENT_SECRET: [CLIENT_SECRET]
-    CONNECTIONS_URL: https://[CONNECTIONS_URL]
-    ENSURE_TEAMS: >
-      [{
-        "name" : "[COMPANY NAME]",
-        "teamName" : "connections",
-        "provider" : "connections",
-        "admins": ["person@company.com", "person2@company.com", "PROF_GUID_3"],
-        "frameUrl": "https://[CONNECTIONS_URL]/boards",
-        "oAuth" : {
-          "baseURL" : "https://[CONNECTIONS_URL]"
-        },
-        "globalOAuth": true
-      }]
+    CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register
+    CONNECTIONS_ADMINS: "[\"admin1@company.example.com\", \"boss2@company.example.com\", \"PROF_GUID_3\"]"
+    CONNECTIONS_URL: https://connections.example.com
+
+
+# This section is for deploying the optional Activity Migration chart
+# Please see doc at https://docs.kudosapps.com/boards/cp/migration/
+migration:
+  env:
+    API_GATEWAY: https://example.com/api-boards
+    CONNECTIONS_URL: httsp://connections.example.com
+    CONNECTIONS_ACTIVITIES_ADMIN_USERNAME: connectionsadmin
+    CONNECTIONS_ACTIVITIES_ADMIN_PASSWORD: adminpassword
+    CONNECTIONS_DB_HOST: dbserver.company.com
+    CONNECTIONS_DB_USER: db2inst1
+    CONNECTIONS_DB_PASSWORD: dbpassword
+
+    # -------- DB2 variables ------------
+    CONNECTIONS_DB_TYPE: db2
+    CONNECTIONS_DB_PORT: 50000
+    # Connection string is built from other variables:
+    # CONNECTIONS_DB_CONNECT_STRING: HOSTNAME=${host};PORT=${port};PROTOCOL=TCPIP;UID=${user};PWD=${password};CHARSET=UTF8;
+
+    # -------- Microsoft variables -------
+    # CONNECTIONS_DB_TYPE: mssql
+    # CONNECTIONS_DB_PORT: 1433
+    # CONNECTIONS_DB_DOMAIN: domain
+
+    # -------- Oracle variables ----------
+    # CONNECTIONS_DB_TYPE: oracle
+    # CONNECTIONS_DB_PORT: 1531
+    # CONNECTIONS_DB_SID: DATABASE
+    # Connection string is built from other variables:
+    # CONNECTIONS_DB_CONNECT_STRING: ${host}:${port}/${sid}
+
+    # -------- Other options -------------
+    # PROCESSING_PAGE_SIZE: 10
+    # PROCESSING_LOG_EVERY: 50
+    # IMMEDIATELY_PROCESS_ALL: false
+    # COMPLETE_ACTIVITY_AFTER_MIGRATED: false
+    # CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED: false

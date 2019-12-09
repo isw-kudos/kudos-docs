@@ -1,23 +1,18 @@
 # Kudos Boards Versions
 We are proud to say that Kudos Boards is able to run in many configurations to suit your individual requirements.
 
-1. Boards Cloud
-1. Boards Docker (On-Premise) in Kubernetes
-1. Boards Docker (On-Premise) in Docker Swarm
-1. Boards Hybrid - Cloud integrated with IBM Connections On-Premise
+1. [Boards Cloud](/boards/cloud/)
+1. Boards Docker (On-Premise)
+    - [HCL Connections Component Pack](/boards/cp/)
+    - [Standalone Kubernetes](/boards/kubernetes/)
+    <!-- - [in Docker Swarm](/boards/swarm/) -->
+1. [Boards Hybrid](/boards/hybrid/) (Cloud integrated with HCL Connections On-Premise)
 
-__Browser Support__
-
-We support the most recent two versions of the following browsers:
-
-- Chrome
-- Safari
-- Firefox
-- Microsoft Edge
+---
 
 ## How To Decide Which Version?
 
----
+
 ### Boards Cloud
 This version is hosted by the ISW Kudos team at [https://kudosboards.com](https://kudosboards.com).</br>
 Free trials are available!
@@ -28,21 +23,27 @@ __Advantages__
 - Always up to date with the latest functionality
 - Backup strategies already in place
 
+See [here](/boards/cloud/) for more information.
+
+
 ---
 
-### Boards Docker (On-Premise) in Kubernetes
-Our Boards Cloud product, installed locally in your infrastructure
+### Boards Docker (On-Premise)
+> Our Boards Cloud product, installed locally in your infrastructure
 
 __Advantages__
 
-- Can be installed in any existing Kubernetes environment (ie alongside HCL Connections Component Pack)
+- Can be installed in any existing Kubernetes environment (ie HCL Connections Component Pack)
 - Can use the same Component Pack Mongo database
 - Control over your own data and backup strategies
 - Simple to update
 
+See install details for [Kubernetes](/boards/hybrid/) or [HCL Connections Component Pack](/boards/cp/).
+
+
 ---
 
-### Boards Docker (On-Premise) in Docker Swarm
+<!-- ### Boards Docker (On-Premise) in Docker Swarm
 Our Boards Cloud product, installed locally in your infrastructure. This is designed for those without existing Kubernetes environments.
 
 __Advantages__
@@ -51,15 +52,16 @@ __Advantages__
 - Control over your own data and backup strategies
 - Simple to update
 
----
+--- -->
 
-### Boards Hybrid - Cloud integrated with HCL Connections On-Premise
-This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing HCL Connections on-premise installation.
+### Boards Hybrid
+(Cloud integrated with HCL Connections On-Premise.)
+> This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 
 __Advantages__
 
 - All of the benefits of the Cloud above (hosted, managed, backed up)!!
-- Integrates into your existing IBM Connections On-Premise (WebSphere)
+- Integrates into your existing HCL Connections On-Premise (WebSphere)
 - Looks and feels like another application similar to Communities/Blogs etc with:
 
     - Connections Apps menu link to 'Kudos Boards'
@@ -71,6 +73,18 @@ __Advantages__
 
 __Requirements__
 
-- Your IBM Connections URL must be accessible from the web (no VPN)
+- Your HCL Connections URL must be accessible from the web (no VPN)
 
 See [installation details](/boards/hybrid/) for more information.
+
+
+---
+
+__Browser Support__
+
+We support the most recent two versions of the following browsers:
+
+- Chrome
+- Safari
+- Firefox
+- Microsoft Edge
