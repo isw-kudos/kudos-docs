@@ -1,4 +1,5 @@
 # HCL Connections Widget Setup
+
 Basic instructions for adding Kudos Boards Docker widgets into HCL Connections on-premise environments
 
 ---
@@ -31,43 +32,61 @@ Check in the widgets-config.xml file.
 
 ### Activity Stream widget
 
-Access `Homepage`->`Administrator`
+1. Open `Homepage` => `Administration`
 
-Select the following:
+    Click `Add another app`
 
-  - Open Social Gadget
-  - Trusted and Use SSO
-  - Show for Activity Stream events
-  - All servers
+    ![Example](/assets/connections/homepage-admin.png)
 
-  Click the `Add Mapping` button.
+1. Select the following:
 
-Add a Mapping for the Kudos Boards service to the Kudos client. Ensure OAuth Client is set to conn-ee and the Service name is Kudos Boards.
-Click the Ok button
+    - `OpenSocial Gadget`
+    - `Trusted` and `Use SSO`
+    - `Show for Activity Stream events`
+    - `All servers`
 
-Enter the following, replacing `[BOARDS_URL]` with your URL:
+    Click the `Add Mapping` button.
 
-  | Field | Value |
-  | ----- | ----- |
-  | Title| Kudos Boards Activity Stream |
-  | URL Address| `http://[BOARDS_URL]/stream/connections`|
-  | Secure URL Address| `https://[BOARDS_URL]/stream/connections`|
-  | ICON URL| `http://[BOARDS_URL]/favicon.ico`|
-  | ICON SECURE URL| `https://[BOARDS_URL]/favicon.ico`|
+    ![Example](/assets/connections/homepage-admin2.png)
 
-Select:
+1. Enter values:
 
-  - Use HCL Connections specific tags
-  - Opened by default
+    - OAuth Client: `conn-ee`
+    - Service name: `Kudos Boards`
 
-Select the following Prerequisites:
+    Click `Ok`
 
-  - oauthprovider
-  - webresources
-  - oauth
-  - opensocial
+    ![Example](/assets/connections/homepage-admin3.png)
 
-  Scroll down and Click Save
+
+1. Enter the following, replacing `[BOARDS_URL]` with your URL:
+
+    | Field              | Value                                     |
+    | ------------------ | ----------------------------------------- |
+    | App Title              | Kudos Boards Stream                       |
+    | URL Address        | `https://[BOARDS_URL]/stream/connections`  |
+    | Icon URL           | `https://[BOARDS_URL]/favicon.ico`         |
+    | Icon Secure URL    | `https://[BOARDS_URL]/favicon.ico`        |
+
+    Select:
+
+    - `Use HCL Connections specific tags`
+    - `Opened by default`
+
+    For example:
+
+    ![Example](/assets/connections/homepage-admin4.png)
+
+
+1. Select the following Prerequisites:
+
+    - `oauthprovider`
+    - `oauth`
+    - `opensocial`
+    - `webresources`
+
+    Scroll down and click `Save`
+    ![Example](/assets/connections/homepage-admin5.png)
 
 ---
 

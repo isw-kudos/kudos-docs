@@ -1,4 +1,5 @@
 # HCL Connections Widget Setup
+
 Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections on-premise environments
 
 ---
@@ -31,49 +32,65 @@ Check in the widgets-config.xml file.
 
 ### Activity Stream widget
 
-Access `Homepage`->`Administrator` or https://connections.example.com/homepage/admin/openAdminPage.action
 
-Click `Add another app`
+1. Open `Homepage` => `Administration`
 
-Select the following:
-- App Type: <br>
-    🔘Open Social Gadget
-  - Gadget settings with Activity stream or Share dialog
-    - Security: <br>
-      🔘Trusted <br>
-      &emsp;✅Use SSO
-    - UI Integration Points:<br>
-      ✅Show for Activity Stream events
-    - Server access via Proxy: <br>
-      🔘All servers
+    Click `Add another app`
 
-Click the `Add Mapping` button.
+    ![Example](/assets/connections/homepage-admin.png)
 
-Add a Mapping for the Kudos Boards service to the Kudos client. Ensure OAuth Client is set to conn-ee and the Service name is Kudos Boards.
-Click the `Ok` button. You should see `Kudos Boards->conn-ee` listed in `Service Mappings`
+1. Select the following:
 
-Enter the following:
+    - `OpenSocial Gadget`
+    - `Trusted` and `Use SSO`
+    - `Show for Activity Stream events`
+    - `All servers`
 
-  | Field | Value |
-  | ----- | ----- |
-  | Title| Kudos Boards Activity Stream |
-  | URL Address| `http://kudosboards.com/stream/connections`|
-  | Secure URL Address| `https://kudosboards.com/stream/connections`|
-  | ICON URL| `http://kudosboards.com/favicon.ico`|
-  | ICON SECURE URL| `https://kudosboards.com/favicon.ico`|
+    Click the `Add Mapping` button.
 
-Select:
-  - ✅Use HCL Connections specific tags
-  - ✅Opened by default
+    ![Example](/assets/connections/homepage-admin2.png)
 
-Select the following Prerequisites:
+1. Enter values:
 
-  - ✅oauthprovider
-  - ✅webresources
-  - ✅oauth
-  - ✅opensocial
+    - OAuth Client: `conn-ee`
+    - Service name: `Kudos Boards`
 
-  Scroll down and Click `Save`
+    Click `Ok`
+
+    ![Example](/assets/connections/homepage-admin3.png)
+
+
+1. Enter the following:
+
+
+    | Field              | Value                                        |
+    | ------------------ | -------------------------------------------- |
+    | App Title              | Kudos Boards Stream                 |
+    | URL Address        | `https://kudosboards.com/stream/connections`  |
+    | Icon URL           | `http://kudosboards.com/favicon.ico`         |
+    | Icon Secure URL    | `https://kudosboards.com/favicon.ico`        |
+
+
+    Select:
+
+    - `Use HCL Connections specific tags`
+    - `Opened by default`
+
+    For example:
+
+    ![Example](/assets/connections/homepage-admin4.png)
+
+
+1. Select the following Prerequisites:
+
+    - `oauthprovider`
+    - `oauth`
+    - `opensocial`
+    - `webresources`
+
+    Scroll down and click `Save`
+    ![Example](/assets/connections/homepage-admin5.png)
+
 
 ---
 
