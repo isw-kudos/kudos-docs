@@ -73,7 +73,7 @@ user:
 
 
 # This section is for deploying the optional Activity Migration chart
-# Please see doc at https://docs.kudosapps.com/boards/cp/migration/
+# Please see doc at https://docs.kudosapps.com/boards/connections/migration/
 migration:
   env:
     API_GATEWAY: https://example.com/api-boards
