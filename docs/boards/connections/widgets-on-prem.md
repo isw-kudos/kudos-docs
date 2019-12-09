@@ -86,7 +86,13 @@ Check in the widgets-config.xml file.
     - `webresources`
 
     Scroll down and click `Save`
+
     ![Example](/assets/connections/homepage-admin5.png)
+
+
+1. Select the newly defined app and click `Enable`
+
+    ![Example](/assets/connections/homepage-admin6.png)
 
 ---
 
