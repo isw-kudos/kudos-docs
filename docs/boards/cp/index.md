@@ -16,14 +16,13 @@ Deploying Kudos Boards into HCL Connections Component Pack (Kubernetes)
 
 ### SSL / Network setup
 
-Kudos Boards in Connections Component Pack (CP) uses the existing CP infrastructure. The following is the default network configuration:
+Kudos Boards in Connections Component Pack (CP) uses the existing CP infrastructure.
 
-|              | URL                            | Example                              |
-| ------------ | ------------------------------ | ------------------------------------ |
-| `BOARDS_URL` | `[CONNECTIONS_URL]/boards`     | `connections.example.com/boards`     |
-| `API_URL`    | `[CONNECTIONS_URL]/api-boards` | `connections.example.com/api-boards` |
+The UI and API each require a unique route:
 
-These values will then be used in the following documentation.
+- UI for Boards: `[CONNECTIONS_URL]/boards`. We will refer to this as `BOARDS_URL`
+- API Gateway: `[CONNECTIONS_URL]/api-boards`. We will refer to this as `API_URL`
+
 For more details on configuring an IBM HTTP WebServer as reverse proxy, [please see here](/boards/cp/httpd/)
 
 ---
@@ -71,12 +70,12 @@ Download our [config file](/assets/config/kubernetes/boards-cp.yaml) and update 
 
 **Kubernetes variables**:
 
-| Key                      | Description                                                          |
-| ------------------------ | -------------------------------------------------------------------- |
-| `global.env.APP_URI`     | `https://[BOARDS_URL]` (e.g. `connections.example.com/boards`)       |
-| `webfront.ingress.hosts` | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)    |
-| `core.ingress.hosts`     | `[API_URL]` (no protocol, e.g. `connections.example.com/api-boards`) |
-| `minio.nfs.server`       | IP address of the NFS Server file mount (e.g. `192.168.10.20`)       |
+| Key                      | Description                                                            |
+| ------------------------ | ---------------------------------------------------------------------- |
+| `global.env.APP_URI`     | `https://[BOARDS_URL]` (e.g. `https://connections.example.com/boards`) |
+| `webfront.ingress.hosts` | `[CONNECTIONS_URL]` (no protocol, e.g. `connections.example.com`)      |
+| `core.ingress.hosts`     | `[API_URL]` (no protocol, e.g. `connections.example.com/api-boards`)   |
+| `minio.nfs.server`       | IP address of the NFS Server file mount (e.g. `192.168.10.20`)         |
 
 **Boards variables**:
 
