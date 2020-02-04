@@ -9,3 +9,5 @@ Navigate to Servers → Clusters → WebSphere Application Server Clusters
 Select all of the Connections Clusters
 
 Click Ripplestart.
+
+![console](/assets/badges/install/apply-changes/console.png)
