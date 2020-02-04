@@ -1,26 +1,14 @@
-#### Step 8: Load the Default Kudos Badges and Metrics
+Kudos Badges is supplied with a set of default metrics and badges to kickstart performance measurement and reward within your organisation. This step loads the supplied metrics and badge definitions into your IBM Connections database, where the widgets and gamification engine can access the definitions to measure and reward.
 
-```
-The Kudos Badges is supplied with a set of default metrics and badges to kickstart performance measurement and reward within your organisation.
-This step loads the supplied metrics and badge definitions into your IBM Connections database, where the widgets and gamification engine can access
-the definitions to measure and reward.
-```
-##### Task 8.1 – Load Defaults
+### Load Defaults
 
-```
 Login to IBM Connections
-```
-```
-Navigate to the Badges Configurator
-Community
-```
-```
-Select the Settings tab in the
-BadgesConfigurator widget
-```
-```
+
+Navigate to the Badges Configurator Community
+
+Select the Settings tab in the BadgesConfigurator widget
+
 Click the Load Defaults button
-```
 
 Select:
 
@@ -35,18 +23,10 @@ Select:
 - Filters
 - Metrics
 - Structure
-- any other Badge Categories you
-    wish to install (most
-    installations would select all)
+- any other Badge Categories you wish to install (most installations would select all)
 
-Note: You will need to have the
-corresponding Connections Applications
-installed. As well as have a Standard or
-Enterprise Licence for Kudos.
+**Note:** You will need to have the corresponding Connections Applications installed. As well as have a Standard or Enterprise Licence for Kudos.
 
 Click Save
 
-There is a lot of data that needs to be
-copied to the database at this point.
-Therefore this operation may take a couple
-of minutes, please be patient.
+There is a lot of data that needs to be copied to the database at this point. Therefore this operation may take a couple of minutes, please be patient.
