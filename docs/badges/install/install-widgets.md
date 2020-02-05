@@ -205,7 +205,7 @@ Checking In the Widgets-Config.xml File:
 
 [Connections 6.5](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_profiles_changing_admin.html)
 
-### Register Widgets (IBM Connections 6.0 CR1 onwards)
+### Register Widgets (Connections 6.0 CR1 onwards)
 
 Since Connections 6.0 CR1 it is now required to register third-party widgets in the widget-container for increased security. We have scripts
 and instructions for [this here](https://github.com/isw-kudos/kudos-widgetcontainer-registration).

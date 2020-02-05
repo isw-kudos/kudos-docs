@@ -2,112 +2,44 @@ So far, you have configured the location of the Kudos widgets. You will now add 
 
 ### Add the Configurators Widgets to their Communities
 
-Login to IBM Connections
+Login to Connections and navigate to the previously created Badges Configurator Community
 
-Navigate to the Badges Configurator Community
+1. Click Community Actions then 'Add Apps' from the drop down menu
+   
+    ![add apps](/assets/badges/install/add-widgets/community_add_apps.png)
 
-Click Community Actions
+1. Select the Configurator(s) to add to the Community
 
-Select Customize from the drop down menu
+    ![add apps menu](/assets/badges/install/add-widgets/add_apps_menu.png)
 
-Select BadgesConfigurator
+1. Click X
 
-Click X
+The Configurators will now be added to the main view.
 
-The BadgesConfigurator will now be added to the main view.
+Repeat the above steps for each configurator community you created.
 
 We recommend removing all the default widgets from the main page (i.e. Forums, Bookmarks, Files and Feeds) to conserve screen real-estate, and
 making use of the Configurator widget easier. The default widgets may be removed or added back at any stage.
 
 ### Remove the Default Widgets (Optional)
 
-Click the Actions drop-down
+Click the Actions drop-down and select Delete
+    ![delete apps](/assets/badges/install/add-widgets/delete_widget.png)
 
-Select Remove from the menu
-
-Click the Remove button on the Remove Widget prompt
-
-You will now have the BadgesConfigurator Widget showing on the main page within the Community, and can also open it to the full page by clicking BadgesConfigurator
-
-The full-page view removes the header and sidebar, and expands the table to allow easier browsing of Badges.
-
-### Add the Metrics Configurator Widget to the Community
-
-Login to IBM Connections
-
-Navigate to the Metrics Configurator Community
-
-Click Community Actions
-
-```
-Select Customize
-from the drop down
-menu
-```
-```
-Select
-MetricsConfigurator
-```
-```
-Click X
-```
-
-```
-We recommend removing all the default widgets from the main page (i.e. Forums, Bookmarks, Files and Feeds) to conserve
-screen real-estate, and making use of the Configurator widget easier. The default widgets may be removed or added back at any stage.
-```
-The MetricsConfigurator will now be added to the main view.
-
-If you see an error message saying you are not authorised to use this Widget, then double check you copied the entire CommunityUuid into the
-correct widget-config.xml definition
-
-
-### Task 5.4 – Add the Filters Configurator Widget to the Community
-
-```
-Login to IBM Connections
-```
-```
-Navigate to the Filters
-Configurator Community
-```
-```
-Click Community
-Actions
-```
-```
-Select Customize from
-the drop down menu
-```
-```
-Select
-FiltersConfigurator
-```
-```
-Click X
-```
-
-```
-We recommend removing all the default widgets from the main page (i.e. Forums, Bookmarks, Files and Feeds) to conserve screen
-real-estate, and making use of the Configurator widget easier. The default widgets may be removed or added back at any stage.
-```
-The FiltersConfigurator will now be added to the main view.
-
-If you see an error message saying you are not authorised to use this Widget, then double check you copied the entire CommunityUuid into the
-correct widget-config.xml definition
-
+Fill in the required data then click Ok on the Delete prompt
+    ![delete apps prompt](/assets/badges/install/add-widgets/delete_widget_prompt.png)
 
 ### Add the Kudos Analytics Widget to Communities
 
-Login to IBM Connections
+Login to Connections and navigate to the Kudos Analytics Community
 
-Navigate to the Kudos Analytics Community
+Click Community Actions then 'Add Apps' from the drop down menu
 
-Click Community Actions
-
-Select Customize from the drop down menu
+![add apps](/assets/badges/install/add-widgets/community_add_apps.png)
 
 Select KudosAnalytics
+
+![add apps menu](/assets/badges/install/add-widgets/add_apps_menu.png)
 
 Click X
 
@@ -136,54 +68,45 @@ Adding widgets to the Home page of Connections is done through the Connections W
 
 Login to Connections as a user assigned to the admin security role of the Homepage application and navigate to the Administration tab.
 
-Click the Add another widget button and enter the following details. Once you have defined each widget, click Save and then click the 'Add another widget' button to add the next.
+Click the 'Add another app' button and enter the following details. Once you have defined each widget, click Save and then click the 'Add another widget' button to add the next.
 
-|                | Widget Type        | Widget Title         | URL Address                                                     | Display on Updates Page | Display on My Page | Opened by Default | Multiple Widgets | Prerequisites                                  |
-|----------------|--------------------|----------------------|-----------------------------------------------------------------|-------------------------|--------------------|-------------------|------------------|------------------------------------------------|
-| Leaderboard    | iWidget            | Kudos Leaderboard    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/RankingDisplay.xml     | True                    | False              | True              | False            | profiles                                       |
-| News Gadget    | Open Social Gadget | Kudos News Gadget    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosNewsGadget.xml    | False                   | True               | True              | False            | oauthprovider, webresources, oauth, opensocial |
-| Awarder        | iWidget            | Kudos Awarder        | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosAwarder.xml       | False                   | True               | False             | False            | -                                              |
-| User Analytics | iWidget            | Kudos User Analytics | https://`<CONNECTIONS_SERVER_URL>`/Kudos/AnalyticsDashboard.xml | False                   | True               | False             | True             | -                                              |
+![add apps menu](/assets/badges/install/add-widgets/add_another_app.png)
 
-Highlight each Kudos widget in the Disabled widgets section and click Enable
+|                | Widget Type        | Widget Title         | URL Address                                                     | Use HCL Connections specific tags | Display on My Page | Display on Updates Pages | Opened by Default | Multiple apps | Prerequisites                                  |
+|----------------|--------------------|----------------------|-----------------------------------------------------------------|-----------------------------------|--------------------|--------------------------|-------------------|---------------|------------------------------------------------|
+| Leaderboard    | iWidget            | Kudos Leaderboard    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/RankingDisplay.xml     | False                             | False              | True                     | True              | False         | profiles                                       |
+| News Gadget    | Open Social Gadget | Kudos News Gadget    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosNewsGadget.xml    | True                              | False              | False                    | True              | False         | oauthprovider, oauth, opensocial, webresources |
+| Awarder        | iWidget            | Kudos Awarder        | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosAwarder.xml       | False                             | True               | False                    | False             | False         | -                                              |
+| User Analytics | iWidget            | Kudos User Analytics | https://`<CONNECTIONS_SERVER_URL>`/Kudos/AnalyticsDashboard.xml | False                             | True               | False                    | False             | True          | -                                              |
+
+For the Open Social Gadget, select the following:
+
+- Open Social Gadget
+- Trusted and Use SSO
+- Show for Activity Stream events
+- All servers
+
+Click the Add Mapping button.
+
+- Add a Mapping for the Kudos service to the Kudos client. Ensure OAuth Client is set to Kudos and the Service name is Kudos.
+
+Highlight each Kudos widget individually in the Disabled widgets section and click Enable
 
 The Kudos widgets will now show in the Enabled widgets list.
 
 It will also show on the Updates and Widgets tabs, if these options were selected.
 
-### Task Configure the Kudos News Gadget
-
-Click Add another widget
-
-Select the following:
-
-- Open Social Gadget
-- Trusted and Use SSO
-- Show for Activity Stream
-    events
-- All servers
-
-Click the Add Mapping button.
-
-Add a Mapping for the Kudos service to
-the Kudos client. Ensure OAuth Client is
-set to Kudos and the Service name is
-Kudos.
-
-Select:
-
-- Use IBM Connections
-    specific tags
-
 ### Add the Kudos Awarder Widget to My Page
 
 **Please Note:** A default widget provided by Connections is required on ‘My Page’ for the Kudos widgets to function.
 
-Open My Page through the Sidebar link or Home button
+Open My Page through the Sidebar link or Home button and select Customize
 
-Select Customize
+![my page customise](/assets/badges/install/add-widgets/my_page_customise.png)
 
-Select Kudos Awarder
+Select Kudos Awarder. If you cannot find it, look under the 'Other' category.
+
+![my page add apps](/assets/badges/install/add-widgets/my_page_add_apps.png)
 
 Click X
 
@@ -197,11 +120,13 @@ This step will ensure the User Analytics widget was defined successfully in the 
 
 **Please Note:** A default widget provided by Connections is required on ‘My Page’ for the Kudos widgets to function.
 
-Open My Page through the Sidebar link or Home button
+Open My Page through the Sidebar link or Home button and select Customize
 
-Select Customize
+![my page customise](/assets/badges/install/add-widgets/my_page_customise.png)
 
-Select Kudos User Analytics
+Select Kudos User Analytics. If you cannot find it, look under the 'Other' category.
+
+![my page add apps](/assets/badges/install/add-widgets/my_page_add_apps.png)
 
 Click X
 
