@@ -138,12 +138,12 @@ Login to Connections as a user assigned to the admin security role of the Homepa
 
 Click the Add another widget button and enter the following details. Once you have defined each widget, click Save and then click the 'Add another widget' button to add the next.
 
-|                | Widget Type        | Widget Title         | URL Address                                                     | Display on Updates Page | Display on My Page | Opened by Default | Multiple Widgets | Prerequisites |
-|----------------|--------------------|----------------------|-----------------------------------------------------------------|-------------------------|--------------------|------------------|--------------------|---------------|
-| Leaderboard    | iWidget            | Kudos Leaderboard    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/RankingDisplay.xml     | True                    | False                   | True            | False            | profiles                                       |
-| News Gadget    | Open Social Gadget | Kudos News Gadget    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosNewsGadget.xml    | False                   | True                    | True            | False            | oauthprovider, webresources, oauth, opensocial |
-| Awarder        | iWidget            | Kudos Awarder        | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosAwarder.xml       | False                   | True                    | False           | False            | -                                              |
-| User Analytics | iWidget            | Kudos User Analytics | https://`<CONNECTIONS_SERVER_URL>`/Kudos/AnalyticsDashboard.xml | False                   | True                    | False           | True             | -                                              |
+|                | Widget Type        | Widget Title         | URL Address                                                     | Display on Updates Page | Display on My Page | Opened by Default | Multiple Widgets | Prerequisites                                  |
+|----------------|--------------------|----------------------|-----------------------------------------------------------------|-------------------------|--------------------|-------------------|------------------|------------------------------------------------|
+| Leaderboard    | iWidget            | Kudos Leaderboard    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/RankingDisplay.xml     | True                    | False              | True              | False            | profiles                                       |
+| News Gadget    | Open Social Gadget | Kudos News Gadget    | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosNewsGadget.xml    | False                   | True               | True              | False            | oauthprovider, webresources, oauth, opensocial |
+| Awarder        | iWidget            | Kudos Awarder        | https://`<CONNECTIONS_SERVER_URL>`/Kudos/KudosAwarder.xml       | False                   | True               | False             | False            | -                                              |
+| User Analytics | iWidget            | Kudos User Analytics | https://`<CONNECTIONS_SERVER_URL>`/Kudos/AnalyticsDashboard.xml | False                   | True               | False             | True             | -                                              |
 
 Highlight each Kudos widget in the Disabled widgets section and click Enable
 

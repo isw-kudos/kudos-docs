@@ -8,25 +8,29 @@ The Kudos Metrics Configurator widget allows users to define and configure Kudos
 
 The Kudos Filters Configurator widget allows users to define and configure Kudos Filters. These filters are then applied to Base Metrics to monitor Connections usage (as well as external systems) and determine how Kudos are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
 
-As such, the Configurators habe been designed such that it is available to a specific Connections community where membership can be maintained, and hence the configurators can be secured. The Analytics Interface has been designed with the same concept, which is why the following steps will ask you to create four new communities. For smaller environments, you may wish to have a single community for the Badges, Metrics and Filters configurators.
+As such, the Configurators have been designed such that it is available to a specific Connections community where membership can be maintained, and hence the configurators can be secured. The Analytics Interface has been designed with the same concept, which is why the following steps will ask you to create four new communities. For smaller environments, you may wish to have a single community for the Badges, Metrics and Filters configurators.
 
-1. Login to Connections, navigate to Communities and click Start a Community
+1. Login to Connections, navigate to Communities and click Create a Community
+
+    ![create community](/assets/badges/install/install-widgets/create-community.png)
 
 1. Enter a name, such as Badges Configurator
 
 1. Set Access to Restricted
 
-1. Specify Members as those people you wish to be able to edit Badge definitions. **_In Connections 5+,_** _users can be specified after clicking the_ **_Access Advanced Features_** _link._
+1. Specify Members as those people you wish to be able to edit Badge definitions. Users can be specified after clicking the **_Access Advanced Features_** link.
 
 1. Enter any tags, web address and description you wish then click Save.
 
-Note: Configurators requires a large column community layout to function properly. Either ‘3 Columns with side menu and banner’, ‘3 Columns with side menu’ or ‘2 Columns with side menu’.
+    ![community details](/assets/badges/install/install-widgets/community_details.png)
 
-You have now created the Badges Configurator Community.
+**Note:** Configurators requires a large column community layout to function properly. Either ‘3 Columns with side menu and banner’, ‘3 Columns with side menu’ or ‘2 Columns with side menu’.
+
+You have now created the first Kudos Configurator Community.
 
 Take note of the CommunityUUID in the URL address, as we will need this later.
 
-Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are, please move to [Create the Kudos Analytics Administrator Community](/badges/install/install-widgets/#create-the-kudos-analytics-administrator-community)
+Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Kudos Analytics Administrator Community](/badges/install/install-widgets/#create-the-kudos-analytics-administrator-community)
 
 ### Create the Kudos Analytics Administrator Community
 
@@ -34,13 +38,17 @@ The Kudos Analytics widget allows users to review Connections Usage data over sp
 
 1. Login to Connections, navigate to Communities and click Start a Community.
 
+    ![create community](/assets/badges/install/install-widgets/create-community.png)
+
 1. Enter a name, such as Kudos Analytics.
 
 1. Set Access to Restricted.
 
 1. Specify Members as those people you wish to be able to access Connections Administrator level reports and graphs. **_In Connections 5+,_** _users can be specified after clicking the_ **_Access Advanced Features_** _link._
 
-Enter any tags, web address and description you wish and click Save.
+1. Enter any tags, web address and description you wish and click Save.
+
+    ![analytics community details](/assets/badges/install/install-widgets/analytics_community_details.png)
 
 You have now created the Kudos Analytics Administrator Community.
 
