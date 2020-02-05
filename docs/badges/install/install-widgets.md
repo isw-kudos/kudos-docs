@@ -112,12 +112,12 @@ Edit the widgets-config.xml file. Find the resource element with the type of com
             <item name="AwardViewAllWidgetId" value="KudosAwards"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosAwards" url="https://CONNECTIONS_SERVER_NAME/Kudos/AwardViewAll.xml" modes="view"themes="wpthemeWide">
+    <widgetDef defId="KudosAwards" url="https://CONNECTIONS_SERVER_NAME/Kudos/AwardViewAll.xml" modes="view" themes="wpthemeWide">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosThanks" url="https://CONNECTIONS_SERVER_NAME/Kudos/ThanksViewAll.xml" modes="view"themes="wpthemeWide">
+    <widgetDef defId="KudosThanks" url="https://CONNECTIONS_SERVER_NAME/Kudos/ThanksViewAll.xml" modes="view" themes="wpthemeWide">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
         </itemSet>
