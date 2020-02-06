@@ -16,7 +16,6 @@ The install process for Kudos involves the following steps:
 - [Set Award Permissions](/badges/install/awards)
 - [Run the Badge Engine to Award the Badges](/badges/install/engine)
 - [Customising](/badges/install/customising)
-- [Embedded Experience](/badges/install/embedded-exp)
 
-Please Note **–** These steps are only applicable to a new install of Kudos. For information about upgrading, please see the Kudos Update
+**Please Note:** These steps are only applicable to a new install of Kudos. For information about upgrading, please see the Kudos Update
 Guide.
