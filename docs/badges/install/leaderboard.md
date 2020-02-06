@@ -2,9 +2,7 @@ In the [Install Widgets step](/badges/install/install-widgets) you made the Kudo
 
 ### Add Leaderboard to Homepage
 
-Login to IBM Connections
-
-Navigate to the Badges Configurator Community
+Login to Connections and navigate to the Badges Configurator Community
 
 Select the Settings tab in the BdagesConfigurator widget
 
@@ -13,9 +11,8 @@ Click the Add Leaderboard to Users Homepage button
 For the proceeding prompt boxes:
 
 - Enter position for Leaderboard:
-Specify the Leaderboard’s position
-    numerically or leave as default,
-    click OK.
+    Specify the Leaderboard’s position numerically or leave as default, click OK.
 - Enter name of Leaderboard:
-    Specify the Leaderboard’s name or
-    leave as default, click OK.
+    Specify the Leaderboard’s name or leave as default, click OK.
+
+![add leaderboard](/assets/badges/install/leaderboard/add_leaderboard.png)

@@ -2,9 +2,7 @@ Now that you have loaded the default metrics and badges you are ready to start a
 
 ### Award Badges Now
 
-Login to IBM Connections
-
-Navigate to the Badges Configurator Community
+Login to Connections and navigate to the Badges Configurator Community
 
 Select the Settings tab in the BadgesConfigurator widget
 
@@ -12,6 +10,7 @@ Click the Award Badges Now button.
 
 **Note:** If you are installing Kudos Badges to a Connections environment for testing purposes, it is recommended that the following settings are disabled:
 
-- _Enable Email Notifications for_
-    _Badges/Awards_
+- _Enable Email Notifications for Badges/Awards_
 - _Enable Email Notifications for Thanks_
+
+![run engine](/assets/badges/install/engine/run_engine.png)

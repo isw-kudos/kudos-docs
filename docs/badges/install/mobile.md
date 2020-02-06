@@ -1,10 +1,10 @@
-Kudos integrates into the IBM Connections Mobile native application and allows users to utilise Kudos features from their mobile device. The integration is performed by modifying the mobile-config.xml configuration. This feature is optional.
+Kudos integrates into the Connections Mobile native application and allows users to utilise Kudos features from their mobile device. The integration is performed by modifying the mobile-config.xml configuration. This feature is optional.
 
 ### Check out the mobile-config.xml file
 
 To add ‘Kudos Badges’ to the Connections mobile native app menu you must edit the mobile-config.xml file. To update this file, you must check the file out and, after making changes, you must check the file back in, [as documented here](https://help.hcltechsw.com/connectionsmobile/admin/overview/t_mobile_change_config_properties.html).
 
-The mobile-config.xml file is a standard IBM Connections file that is used to define the configuration settings for the Connections Mobile native application. To update this file, you must check the file out and, after making changes, check the file back in during the same wsadmin session as the checkout for the changes to take effect.
+The mobile-config.xml file is a standard Connections file that is used to define the configuration settings for the Connections Mobile native application. To update this file, you must check the file out and, after making changes, check the file back in during the same wsadmin session as the checkout for the changes to take effect.
 
 ### Edit the mobile-config.xml
 
@@ -42,7 +42,7 @@ You can customise the name/images shown in the Mobile application by changing th
 
 ### Check in the mobile-config.xml file
 
-Now that you have modified the mobile-config.xml, it must be checked back in to IBM Connections. Please refer to the IBM Connections product
+Now that you have modified the mobile-config.xml, it must be checked back in to Connections. Please refer to the Connections product
 documentation for instructions on how to check in the mobile-config.xml file, located here.
 
 **Note:** the configuration file must be checked in during the same wsadmin session in which it was checked out.

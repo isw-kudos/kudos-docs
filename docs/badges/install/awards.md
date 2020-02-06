@@ -8,34 +8,24 @@ Groups can now be created by selecting people, Communities, other groups, import
 
 Examples:
 
-- Create a _Management_ Group to
-award the _Employee of the year
-Award_ ;
-- A _Sales_ Group to add as the
-Awardees to the _Salesman of the
-Year_ Award; etc.
+- Create a _Management_ Group to award the _Employee of the year Award_
+- A _Sales_ Group to add as the Awardees to the _Salesman of the Year_ Award; etc.
 
+![user groups](/assets/badges/install/awards/user_groups.png)
 
 ### Set the access groups for each of the Awards
 
 Open the Awards Tab in the Badges Configurator widget and for each of the Award definitions listed in the table perform the following steps:
 
 1. Click on the Award definition to open it for editing.
-2. Set the **Groups with Access** field: Select the groups
-    who you wish to grant permissions to Award this
-    badge; i.e. Who can award this badge?
+2. Set the **Groups with Access** field: Select the groups who you wish to grant permissions to Award this badge; i.e. Who can award this badge?
     
-    **_Note_** _: Users selected in this step will need to add the_
-    _Kudos Awarder widget to their widgets page as per_
-    **_Task 5.8 B_** _to access the Awards._
-3. Set the **Awardees** field: Select the groups who you
-    wish this Award to be made applicable to, i.e. Who
-    can be awarded this badge. The people selected in
-    this step will see this Award under the
-    **KudosAwards** tab in their Profiles as an achievable
-    award.
+    **_Note_** _: Users selected in this step will need to add the Kudos Awarder widget to their widgets page as per_
 
-    **_Note_** _: If you wish to disable a badge, so that it_
-    _doesn’t appear in anyone’s profile, simply remove_
-    _all groups from the Awardees field._
+3. Set the **Awardees** field: Select the groups who you wish this Award to be made applicable to, i.e. Who can be awarded this badge. The people selected in this step will see this Award under the **KudosAwards** tab in their Profiles as an achievable award.
+
+    **_Note_** _: If you wish to disable a badge, so that it doesn’t appear in anyone’s profile, simply remove all groups from the Awardees field._
+
 4. Click **Save** to save your changes.
+
+![award config](/assets/badges/install/awards/award_config.png)

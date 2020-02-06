@@ -20,9 +20,24 @@ nav:
   # - Kudos Analytics:
   #   - Installation:
   #     - FAQ: analytics/websphere-faq.md
-  # - Kudos Badges:
-  #   - Installation:
-  #     - FAQ: badges/websphere-faq.md
+  - Kudos Badges:
+     - Details: badges/index.md
+     - Installation:
+        - Overview: badges/install/overview.md
+        - Install Application: badges/install/app.md
+        - Widgets: badges/install/install-widgets.md
+        - Mobile: badges/install/mobile.md
+        - Apply Changes: badges/install/apply-changes.md
+        - Add Widgets: badges/install/add-widgets.md
+        - Community Properties: badges/install/comm-properties.md
+        - Licence: badges/install/licence.md
+        - Defaults: badges/install/load-defaults.md
+        - Leaderboard: badges/install/leaderboard.md
+        - Awards: badges/install/awards.md
+        - Engine: badges/install/engine.md
+        - Customising: badges/install/customising.md
+        #- Embedded Experience: badges/install/embedded-exp.md
+        - FAQ: badges/websphere-faq.md
   - Kudos Boards:
       - Versions: boards/index.md
       - Boards Cloud:

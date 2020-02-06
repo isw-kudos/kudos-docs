@@ -194,7 +194,7 @@ Edit the widgets-config.xml file. Find the resource element with the type of com
 
 ### Check in the widgets-config.xml file
 
-Now that you have modified the widgets-config.xml, it must be checked back in to IBM Connections. Please refer to the IBM Connections product
+Now that you have modified the widgets-config.xml, it must be checked back in to Connections. Please refer to the Connections product
 documentation for instructions on how to check in the widgets-config.xml file, located below.
 
 Checking In the Widgets-Config.xml File:

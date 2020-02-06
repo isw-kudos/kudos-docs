@@ -2,13 +2,14 @@ All versions of Kudos Badges and Analytics require a licence to function. If you
 
 ### Upload your licence file in the Badges Configurator
 
-Login to IBM Connections
+Login to Connections Navigate to the Badges Configurator Community.
 
-Navigate to the Badges Configurator Community
-
-Select the Settings tab in the BadgesConfigurator widget
+Select the Settings tab in the BadgesConfigurator widget. If there are no tabs, this is the default view.
 
 Click the Update Licence button.
 
+![update licence](/assets/badges/install/licence/update_licence.png)
+
 Click Choose File and browse to your Kudos.licence file and click Upload.
 
+![update licence prompt](/assets/badges/install/licence/update_licence_prompt.png)
