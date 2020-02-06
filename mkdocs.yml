@@ -38,6 +38,10 @@ nav:
         - Customising: badges/install/customising.md
         #- Embedded Experience: badges/install/embedded-exp.md
         - FAQ: badges/websphere-faq.md
+     - Update:
+        - Overview: badges/update/overview.md
+        - Update the Application: badges/update/update_app.md
+        - Refresh Widget Cache: badges/update/refresh_cache.md
   - Kudos Boards:
       - Versions: boards/index.md
       - Boards Cloud:
