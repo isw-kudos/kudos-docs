@@ -67,7 +67,6 @@ nav:
       - Boards Docker:
           - For HCL Connections: boards/cp/index.md
           - For Kubernetes: boards/kubernetes/index.md
-          - For Swarm: boards/swarm.md
           - Common Config:
               - Environment: boards/env/common.md
               - Team Logins: boards/env/teams.md
