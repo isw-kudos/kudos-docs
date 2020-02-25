@@ -134,11 +134,11 @@ nav:
               - Minio: buzzy/minio.md
           - Connections Cloud:
               - Widgets: buzzy/cloud/bc-widgets.md
-  - Docker Swarm:
-      - Installation: swarm/index.md
-      - Storage: swarm/storage.md
+  # - Docker Swarm:
+      # - Installation: swarm/index.md
+      # - Storage: swarm/storage.md
       # - Advanced: swarm/advanced.md
-      - Troubleshooting: swarm/troubleshooting.md
+      # - Troubleshooting: swarm/troubleshooting.md
   # - Kubernetes:
   # - Installation: kubernetes/index.md
   # - Advanced: kubernetes/advanced.md
