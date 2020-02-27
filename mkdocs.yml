@@ -86,6 +86,7 @@ nav:
                   - Teams App: boards/msgraph/teams-on-prem.md
       - Boards Hybrid: boards/hybrid.md
       - Troubleshooting:
+          - Activities Plus: boards/troubleshooting/activities-plus-install.md
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
           - Boards Docker: boards/troubleshooting/conn-on-prem.md
           - Boards WebSphere: boards/troubleshooting/websphere.md
