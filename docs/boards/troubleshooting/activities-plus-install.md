@@ -6,6 +6,8 @@ If you are following the HCL install documentation, these notes need to be appli
 
 - There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed
 
+- We recommend following the [Configuring the S3 storage mount](https://help.hcltechsw.com/connections/v65/admin/install/cp_3p_config_ap_s3_storage_mount.html) steps before running the helm upgrade command
+
 - The helm upgrade command needs to be run from the directory containing boards-cp.yaml and the correct command is:
 
         helm upgrade kudos-boards-cp path_to_helm_charts/kudos-boards-cp-1.0.0-20191120-214007.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
