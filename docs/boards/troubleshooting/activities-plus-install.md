@@ -2,6 +2,8 @@
 
 If you are following the HCL install documentation, these notes need to be applied during the relevant sections. We recommend using our [install documentation](https://docs.kudosapps.com/boards/cp/) instead.
 
+There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hcl-connections-65-actity-plus-tips-setup.html) from one of our partners which is a great read.
+
 ## Installing Activities Plus services
 
 - There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed
