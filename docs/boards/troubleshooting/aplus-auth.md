@@ -34,6 +34,8 @@ This will test a Kudos Boards / Activities Plus oauth setup
 
 #### Click approve
 
+The loaded page should error, that is expected.
+
 #### Copy code from redirected url
 
 #### Paste the code into postman and hit Send, you should get a response as below:
