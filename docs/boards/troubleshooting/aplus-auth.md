@@ -15,7 +15,7 @@ This will test a Kudos Boards / Activities Plus oauth setup
 
   Request URL: https://(connections url)/oauth2/endpoint/connectionsProvider/token
 
-  On the Body tab fill in the following:
+  On the Body tab, select `x-www-form-urlencoded` and fill in the following:
 
 
   | KEY           | VALUE                                                      |
