@@ -56,12 +56,12 @@ The loaded page should error, that is expected.
 
 Open a new tab in postman and update:
 
-    Method: GET
-    Request URL: https://(connections url)/connections/opensocial/oauth/rest/people/@me/@self
+  Method: GET
+  Request URL: https://(connections url)/connections/opensocial/oauth/rest/people/@me/@self
 
-    Authorization Tab
-    TYPE: Bearer Token
-    Token: (Paste in the access_token from the previous request)
+  Authorization Tab
+  TYPE: Bearer Token
+  Token: (Paste in the access_token from the previous request)
 
 Hit Send, You should get a json response describing your profile.
 
