@@ -8,7 +8,7 @@ The steps below will test a Kudos Boards / Activities Plus oauth setup.
 
   Update WAS httpd.conf
 
-  change ProxyPass and ProxyPassReverse entries to use a different (invalid) port number.
+  change ProxyPass and ProxyPassReverse entries for `/boards` to use a different (invalid) port number.
 
 #### Install and open postman or another api testing tool
 
