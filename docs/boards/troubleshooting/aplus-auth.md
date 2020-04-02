@@ -1,8 +1,12 @@
 ### Testing an oauth2 connections configuration
 
-This will test a Kudos Boards / Activities Plus oauth setup
+The steps below will test a Kudos Boards / Activities Plus oauth setup.
 
-#### Update WAS httpd.conf
+> We will prepare a request in an api testing tool, then get a response code from connections and finally use that code in the prepared response to get an auth token. It is important to do in this order as the code is only valid for a minute.
+
+#### Block requests to boards
+
+  Update WAS httpd.conf
 
   change ProxyPass and ProxyPassReverse entries to use a different (invalid) port number.
 
@@ -47,3 +51,8 @@ The loaded page should error, that is expected.
       "scope": "",
       "refresh_token": "EcO9hDYdU3tL2BE0xRSPNlYIGvZhYV9yezb14YKNglkFPwq4St"
     }
+
+#### Reset WAS httpd.conf
+
+Make sure to put the port numbers back to their original values.
+
