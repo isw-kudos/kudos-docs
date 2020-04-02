@@ -34,7 +34,7 @@ The steps below will test a Kudos Boards / Activities Plus oauth setup.
 
   replace connections url in both places below
 
-    https://(connections url)/oauth2/endpoint/connectionsProvider/authorize?client_id=kudosboards&redirect_uri=https%3A%2F%2F(connections url)%2Fapi-boards%2Fauth%2Fconnections%2Fcallback&response_type=code
+    https://(connections url)/oauth2/endpoint/connectionsProvider/authorize?client_id=kudosboards&redirect_uri=https%3A%2F%2F(connections url)%2Fapi-boards%2Fauth%2Fconnections%2Fcallback&response_type=code&state=1234
 
 #### Click approve
 
@@ -51,6 +51,20 @@ The loaded page should error, that is expected.
       "scope": "",
       "refresh_token": "EcO9hDYdU3tL2BE0xRSPNlYIGvZhYV9yezb14YKNglkFPwq4St"
     }
+
+#### Use the token to request your profile
+
+Open a new tab in postman and update:
+
+    Method: GET
+    Request URL: https://(connections url)/connections/opensocial/oauth/rest/people/@me/@self
+
+    Authorization Tab
+    TYPE: Bearer Token
+    Token: (Paste in the access_token from the previous request)
+
+Hit Send, You should get a json response describing your profile.
+
 
 #### Reset WAS httpd.conf
 
