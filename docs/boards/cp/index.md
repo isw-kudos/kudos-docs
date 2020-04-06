@@ -4,6 +4,10 @@ Deploying Kudos Boards into HCL Connections Component Pack (Kubernetes)
 
 ---
 
+[Release Information](/boards/cp/releases)
+
+---
+
 ### Prerequisites
 
 1. HCL Component Pack is installed and running

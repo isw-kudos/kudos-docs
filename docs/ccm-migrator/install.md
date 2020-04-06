@@ -48,6 +48,7 @@ When the above step completes, select the web server again, and click "Propagate
 Without a licence applied, the application can only be used in test mode, where files and folders are reported but not actually migrated.
 
 When requesting a licence you will need to supply:
+
 - The domain name used to access the application in the browser. 
 - For limited (demo) licences: The community UUIDs that will be allowed to migrate their files.
 
