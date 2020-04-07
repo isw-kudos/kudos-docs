@@ -43,7 +43,7 @@ __Recipients__ Anyone @Mentioned, Groups that are members<br>
 __Methods__ Email, Teams bot, Community stream<br>
 
 ### Group Notifications
-For boards that have groups as members, these notifications are sent to each Group.
+For boards that have groups as members, these notifications are sent to each group.
 
 __Trigger__ Creating a new card, Changing properties of a board/card, Completing a board/card<br>
 __Recipients__ Group<br>
