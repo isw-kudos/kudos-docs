@@ -42,24 +42,10 @@ __Trigger__ @Mentioning another member in a board description<br>
 __Recipients__ Anyone @Mentioned, Group (if in a board that is owned by a group)<br>
 __Methods__ Email, Teams bot, Community stream<br>
 
-### Created Card
-For boards owned by an external group, this notifies the group of new content
+### Group Notifications
+For boards owned by an external group
 
-__Trigger__ Creating a new card<br>
-__Recipients__ Owning Group<br>
-__Methods__ Teams bot, Community stream<br>
-
-### Updated Card/Board
-For boards owned by an external group, this notifies the group of changes
-
-__Trigger__ Changing properties of a board/card<br>
-__Recipients__ Owning Group<br>
-__Methods__ Teams bot, Community stream<br>
-
-### Completed Card/Board
-For boards owned by an external group, this notifies the group of completion
-
-__Trigger__ Completing a board/card<br>
+__Trigger__ Creating a new card, Changing properties of a board/card, Completing a board/card<br>
 __Recipients__ Owning Group<br>
 __Methods__ Teams bot, Community stream<br>
 
