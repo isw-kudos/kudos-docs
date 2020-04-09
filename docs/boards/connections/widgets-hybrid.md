@@ -19,7 +19,7 @@ Edit the widgets-config.xml file. Find the resource element with the type of com
       <item name="resourceId" value="{resourceId}"/>
         <item name="width" value="100%"/>
         <item name="height" value="500px"/>
-        <item name="url" value="https://kudosboards.com/boards/community/connections"/>
+        <item name="url" value="https://kudosboards.com/community/connections"/>
       </itemSet>
     </widgetDef>
     <!-- END Kudos Boards -->
