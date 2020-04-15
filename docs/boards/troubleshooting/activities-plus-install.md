@@ -6,7 +6,10 @@ There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hc
 
 ## Installing Activities Plus services
 
-- There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed
+<!-- - There is an [HCL Technote](https://support.hcltechsw.com/csm?id=kb_article&sysparm_article=KB0074334) (KB0074334) that needs to be followed -->
+
+- Please use our [helm chart](/assets/config/kubernetes/kudos-boards-cp-1.1.1.tgz)
+        <br>Note: if you are using Kubernetes below 1.13 use [this chart](/assets/config/kubernetes/kudos-boards-cp-1.0.0.tgz) instead.
 
 - We recommend following the [Configuring the S3 storage mount](https://help.hcltechsw.com/connections/v65/admin/install/cp_3p_config_ap_s3_storage_mount.html) steps before running the helm upgrade command
 
