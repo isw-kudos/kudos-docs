@@ -119,6 +119,7 @@ nav:
               - Teams - Disable Notifications: boards/howto/disable-notifications-teams.md
           - Administation:
               - Manage Config: boards/howto/org-config.md
+              - Manage Licences: boards/howto/manage-licences.md
 
   - Kudos Ideas:
       - How To Guide: ideas/howto.md
