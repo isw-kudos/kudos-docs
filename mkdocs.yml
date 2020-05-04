@@ -163,8 +163,8 @@ theme:
     primary: orange
     accent: light blue
   favicon: assets/images/favicon.ico
-  logo:
-    icon: local_library
+  icon:
+    logo: material/local_library
 
 extra_css:
   - "/assets/css/custom.css"
