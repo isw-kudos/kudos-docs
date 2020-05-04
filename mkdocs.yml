@@ -164,7 +164,7 @@ theme:
     accent: light blue
   favicon: assets/images/favicon.ico
   icon:
-    logo: material/local_library
+    logo: material/library
 
 extra_css:
   - "/assets/css/custom.css"

@@ -20,6 +20,7 @@ pipeline {
     stage('Init') {
       steps {
         script {
+          slack.start()
           deploy = GIT_BRANCH=='origin/master'
         }
       }
@@ -34,7 +35,6 @@ pipeline {
         expression { return deploy }
       }
       steps {
-        script { slack.start() }
         withCredentials([
           usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
         ]) {
