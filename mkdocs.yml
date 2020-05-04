@@ -7,13 +7,13 @@ repo_name: kudosapps.com
 
 extra:
   social:
-    - type: "github"
+    - icon: fontawesome/brands/github
       link: "https://github.com/isw-kudos"
-    - type: "twitter"
+    - icon: fontawesome/brands/twitter
       link: "https://twitter.com/kudosbadges"
-    - type: "linkedin"
+    - icon: fontawesome/brands/linkedin
       link: "https://www.linkedin.com/company/isw_2/about/"
-    - type: "youtube"
+    - icon: fontawesome/brands/youtube
       link: "https://www.youtube.com/channel/UC_9nMUcp6jcweQZML2qIy8A"
 nav:
   - Welcome: index.md
