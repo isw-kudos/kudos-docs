@@ -157,8 +157,8 @@ markdown_extensions:
 
 theme:
   name: material
-  feature:
-    tabs: true
+  features:
+    - tabs
   palette:
     primary: orange
     accent: light blue

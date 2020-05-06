@@ -14,11 +14,14 @@ Directly commit any changes to the master branch to publish a new version of the
 
 1. Clone this repo
 2. Install mkdocs & mkdocs-material as per [these instructions](https://squidfunk.github.io/mkdocs-material/getting-started/#installation) (Please make sure use pip3 to install both of mkdocs & mkdocs-material instead of pip)
+
+        sudo apt update
+        sudo apt-get install python3-pip
+        pip3 install mkdocs-material
+
 3. Run this command in project dir
 
-```
-mkdocs serve
-```
+        mkdocs serve
 
 4. http://127.0.0.1:8000
 
