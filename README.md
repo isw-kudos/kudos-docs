@@ -12,18 +12,13 @@ Directly commit any changes to the master branch to publish a new version of the
 
 ## Setting Up Local Dev For Previews
 
-1. Clone this repo
-2. Install mkdocs & mkdocs-material as per [these instructions](https://squidfunk.github.io/mkdocs-material/getting-started/#installation) (Please make sure use pip3 to install both of mkdocs & mkdocs-material instead of pip)
+1. Run as Docker image
 
-        sudo apt update
-        sudo apt-get install python3-pip
-        pip3 install mkdocs-material
+       docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 
-3. Run this command in project dir
+4. Open Preview
 
-        mkdocs serve
-
-4. http://127.0.0.1:8000
+       http://127.0.0.1:8000
 
 ## Deploying Changes Manually
 
