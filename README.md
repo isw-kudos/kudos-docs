@@ -26,9 +26,8 @@ Directly commit any changes to the master branch to publish a new version of the
 2. Make sure your local repo is up to date
 3. Run this command
 
-```
-mkdocs gh-deploy
-```
+
+    mkdocs gh-deploy
 
 ## Updating API doco
 
