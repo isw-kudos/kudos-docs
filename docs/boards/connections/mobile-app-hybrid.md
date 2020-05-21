@@ -25,11 +25,6 @@ Basic instructions for adding Kudos Boards into the HCL Connections mobile appli
                   <Reg>http://kudosboards.com/img/logo-small.png</Reg>
                   <Retina>http://kudosboards.com/img/logo-small.png</Retina>
                 </IOS>
-                <BB>
-                  <HighDensity>http://kudosboards.com/img/logo-small.png</HighDensity>
-                  <MedDensity>http://kudosboards.com/img/logo-small.png</MedDensity>
-                  <LowDensity>http://kudosboards.com/img/logo-small.png</LowDensity>
-                </BB>
                 <DefaultLocation>http://kudosboards.com/img/logo-small.png</DefaultLocation>
               </ApplicationIcon>
               <ApplicationLabel>Kudos Boards</ApplicationLabel>

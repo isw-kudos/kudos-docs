@@ -21,11 +21,6 @@ Then proceed to add the following Application definition under the `<Application
                 <Reg> **../../** Kudos/images/mobile_iOS.png</Reg>
                 <Retina> **../../** Kudos/images/mobile_iOS.png</Retina>
             </IOS>
-            <BB>
-                <HighDensity>http://<YOUR_CONNECTIONS_SERVER>/Kudos/images/mobile_BB.png</HighDensity>
-                <MedDensity>http://<YOUR_CONNECTIONS_SERVER>/Kudos/images/mobile_BB.png</MedDensity>
-                <LowDensity>http://<YOUR_CONNECTIONS_SERVER>/Kudos/images/mobile_BB.png</LowDensity>
-            </BB>
             <DefaultLocation> **../../** Kudos/images/mobile_default.png</DefaultLocation>
         </ApplicationIcon>
         <ApplicationLabel>Kudos Badges</ApplicationLabel>
