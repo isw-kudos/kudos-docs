@@ -29,17 +29,15 @@
 | LDAP_PASSWORD          | And his password                                              |                               |
 | LDAP_URL               | LDAP Server                                                   |                               |
 | API_URI                | Api url                                                       | admin-api.testna.collab.cloud |
-| DOWNLOADS_URI          | Downloads app uri                                             | downloads.testna.collab.cloud |
-| DOWNLOADS_LOCATION     | Location on disk to server downloads from                     | ~/Downloads                   |
 
 ## Run / Build / Update
 
 1. This project runs the following services in docker using compose:
-  - redis: local cache
-  - ldap: handles all ldap queries
-  - core: api gateway, makes calls to keycloak and connections apis
-  - webfront: serves static javascript (react) application files
+        - redis: local cache
+        - ldap: handles all ldap queries
+        - core: api gateway, makes calls to keycloak and connections apis
+        - webfront: serves static javascript (react) application files
 
-  You can check the logs of any of these with `docker-compose logs [service-name]`
+        You can check the logs of any of these with `docker-compose logs [service-name]`
 
 1. To update, build and run all of these services, run `devops/update.sh`
