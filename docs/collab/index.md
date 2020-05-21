@@ -3,7 +3,7 @@
 1. Kudos Boards / Activities Plus
     - [Widgets](/collab/widgets/)
     - [Migration](/collab/migration/)
-    - [Header](/collab/header/)
+    <!-- - [Header](/collab/header/) -->
 
 1. [Admin App](/collab/admin/)
 

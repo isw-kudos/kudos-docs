@@ -31,7 +31,6 @@ The following variables must be set near the end in the `docker-compose.yml` fil
 | --------------------------------------- | ----------------------------------------------- | -------------------------------- |
 | `IMMEDIATELY_PROCESS_ALL`               | When set to "true" this initiates the migration | "false"                          |
 | `CONNECTIONS_DB_HOST`                   | Source DB2 IP/hostname                          | 208.85.191.12                    |
-| `CONNECTIONS_DB_HOST`                   | Source DB2 IP/hostname                          | 208.85.191.12                    |
 | `CONNECTIONS_DB_PORT`                   | Source DB2 Port                                 | 50000                            |
 | `CONNECTIONS_DB_USER`                   | Source DB2 Username                             | LCUSER                           |
 | `CONNECTIONS_DB_PASSWORD`               | Source DB2 Password                             |                                  |
