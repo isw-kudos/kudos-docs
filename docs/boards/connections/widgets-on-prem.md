@@ -6,27 +6,31 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
 ### Community Widget
 
-Check out the widgets-config.xml file.
+1. Check out the widgets-config.xml file.
 
-    execfile("profilesAdmin.py")
-    ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
+        execfile("profilesAdmin.py")
+        ProfilesConfigService.checkOutWidgetConfig("/LCCheckedOut", AdminControl.getCell())
 
-Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following, replacing `[BOARDS_URL]` with your URL:
+1. Edit the widgets-config.xml file.
 
-    <!-- Kudos Boards -->
-    <widgetDef defId="Kudos Boards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
-      <itemSet>
-      <item name="resourceId" value="{resourceId}"/>
-        <item name="width" value="100%"/>
-        <item name="height" value="500px"/>
-        <item name="url" value="https://[BOARDS_URL]/boards/community/connections"/>
-      </itemSet>
-    </widgetDef>
-    <!-- END Kudos Boards -->
+    Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following, replacing `[BOARDS_URL]` with your URL:
 
-Check in the widgets-config.xml file.
+        <!-- Kudos Boards -->
+        <widgetDef defId="Kudos Boards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+            <itemSet>
+                <item name="resourceId" value="{resourceId}"/>
+                <item name="width" value="100%"/>
+                <item name="height" value="500px"/>
+                <item name="url" value="https://[BOARDS_URL]/boards/community/connections"/>
+            </itemSet>
+        </widgetDef>
+        <!-- END Kudos Boards -->
 
-    ProfilesConfigService.checkInWidgetConfig()
+1. Check in the widgets-config.xml file.
+
+        ProfilesConfigService.checkInWidgetConfig()
+
+1. Restart the `Communities` application via the ISC
 
 ---
 

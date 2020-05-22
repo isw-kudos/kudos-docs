@@ -17,12 +17,12 @@ Adding Activities Plus widgets into HCL Connections Multi-Tenant environments
 
         <!-- Activities Plus -->
         <widgetDef defId="Activities Plus" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
-        <itemSet>
-        <item name="resourceId" value="{resourceId}"/>
-            <item name="width" value="100%"/>
-            <item name="height" value="500px"/>
-            <item name="url" value="https://kudosboards.com/community/collab"/>
-        </itemSet>
+            <itemSet>
+                <item name="resourceId" value="{resourceId}"/>
+                <item name="width" value="100%"/>
+                <item name="height" value="500px"/>
+                <item name="url" value="https://kudosboards.com/community/collab"/>
+            </itemSet>
         </widgetDef>
         <!-- END Activities Plus -->
 
