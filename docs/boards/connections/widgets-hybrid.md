@@ -44,10 +44,10 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 
 1. Select the following:
 
-   - `OpenSocial Gadget`
-   - `Trusted` and `Use SSO`
-   - `Show for Activity Stream events`
-   - `All servers`
+    - `OpenSocial Gadget`
+    - `Trusted` and `Use SSO`
+    - `Show for Activity Stream events`
+    - `All servers`
 
    Click the `Add Mapping` button.
 
@@ -55,10 +55,10 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 
 1. Enter values:
 
-   - OAuth Client: `conn-ee`
-   - Service name: `connections_service`
+    - OAuth Client: `conn-ee`
+    - Service name: `connections_service`
 
-   Click `Ok`
+    Click `Ok`
 
 1. Enter the following:
 
