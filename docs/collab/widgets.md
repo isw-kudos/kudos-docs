@@ -41,6 +41,7 @@ Open wsadmin
     cd /opt/WebSphere/AppServer/profiles/Dmgr01/bin/
     wsadmin -lang jython
 
+Register the Gadget
 
     execfile("newsAdmin.py")
 
