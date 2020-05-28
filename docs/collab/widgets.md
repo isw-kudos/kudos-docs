@@ -34,63 +34,19 @@ Adding Activities Plus widgets into HCL Connections Multi-Tenant environments
 
 ---
 
-### Activity Stream widget
+### Homepage Activity Stream Embeded Experience
+
+Open wsadmin
+
+    cd /opt/WebSphere/AppServer/profiles/Dmgr01/bin/
+    wsadmin -lang jython
 
 
-1. Open `Homepage` => `Administration`
+    execfile("newsAdmin.py")
 
-    Click `Add another app`
+    NewsWidgetCatalogService.addWidget(isGadget=1, policyFlags=["GADGET_BASE", "GADGET_TRUSTED", "GADGET_SSO"], proxyPolicy=ProxyPolicy.INTRANET_ACCESS, appContexts=[WidgetContexts.EMBEDXP], title="Activities Plus", url="https://kudosboards.com/widgets/connections/url-gadget.xml", enabled=1, isDefaultOpened=0, prereqs=[])
 
-    ![Example](/assets/connections/homepage-admin.png)
+This will output a Widget ID, for example `'3562a039-0d03-43cd-8a1b-3eb3cbc9ab14'`. Use this id in the next command to bind the OAuth provider.
 
-1. Select the following:
-
-    - `OpenSocial Gadget`
-    - `Trusted` and `Use SSO`
-    - `Show for Activity Stream events`
-    - `All servers`
-
-    Click the `Add Mapping` button.
-
-    ![Example](/assets/connections/homepage-admin2.png)
-
-1. Enter values:
-
-    - OAuth Client: `conn-ee`
-    - Service name: `Activities Plus`
-
-    Click `Ok`
-
-
-1. Enter the following:
-
-
-    | Field              | Value                                        |
-    | ------------------ | -------------------------------------------- |
-    | App Title              | Activities Plus Stream                 |
-    | URL Address        | `https://kudosboards.com/stream/collab`  |
-    | Icon URL           | `http://kudosboards.com/favicon.ico`         |
-    | Icon Secure URL    | `https://kudosboards.com/favicon.ico`        |
-
-
-    Select:
-
-    - `Use HCL Connections specific tags`
-    - `Opened by default`
-
-
-1. Select the following Prerequisites:
-
-    - `oauthprovider`
-    - `oauth`
-    - `opensocial`
-    - `webresources`
-
-    Scroll down and click `Save`
-
-    ![Example](/assets/connections/homepage-admin5.png)
-
-
-1. Select the newly defined app and click `Enable`
-
-    ![Example](/assets/connections/homepage-admin6.png)
+    NewsOAuth2ConsumerService.bindGadget(<WIDGET_ID>, "connections_service", "conn-ee", "false")
+    NewsWidgetCatalogService.clearWidgetCaches()
