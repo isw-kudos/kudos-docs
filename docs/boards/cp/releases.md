@@ -2,7 +2,7 @@
 
 [Guide to upgrade from CP to Dockerhub images](https://docs.kudosapps.com/boards/cp/dockerhub/)
 
----
+<!-- ---
 
 #### 2020-06-04
 
@@ -40,7 +40,7 @@ New Features:
 
 Fixes:
 
-- Email notifications for invited collaborators
+- Email notifications for invited collaborators -->
 
 ---
 
