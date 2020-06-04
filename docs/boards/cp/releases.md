@@ -4,6 +4,46 @@
 
 ---
 
+#### 2020-06-04
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-04)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-06-04
+iswkudos/kudos-boards:provider-2020-06-04
+iswkudos/kudos-boards:licence-2020-06-04
+iswkudos/kudos-boards:notification-2020-06-04
+iswkudos/kudos-boards:webfront-2020-06-04
+iswkudos/kudos-boards:core-2020-06-04
+iswkudos/kudos-boards:boards-2020-06-04
+```
+
+Please see our [Cloud blog](https://blog.kudosapps.com/weve-got-some-kudos-boards-changes-for-you)
+
+Improvements:
+
+- Loading performance
+- Rendering performance
+- Reduce size of application
+- Node view UI refresh
+
+New Features:
+
+- Card theme from uploaded images
+- Preview uploaded files (images, docx, pdf, html etc)
+- Todos Overview - [filtering to selected Boards](https://blog.kudosapps.com/part-3-weve-got-some-kudos-boards-changes-for-you)
+- Drag and drop Email into Cards (ie from HCL Notes)
+- Activity Stream Gadget for Boards - [config updates required](/boards/connections/widgets-on-prem/)
+- Multiple Assignment options for Cards
+
+Fixes:
+
+- Email notifications for invited collaborators
+
+---
+
 #### 2020-04-09
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-04-09)
@@ -88,40 +128,3 @@ Language support:
   },
     "default": "en"
 ```
-
----
-
-#### 2020-06-04
-
-[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-04)
-
-Images:
-
-```
-iswkudos/kudos-boards:user-2020-06-04
-iswkudos/kudos-boards:provider-2020-06-04
-iswkudos/kudos-boards:licence-2020-06-04
-iswkudos/kudos-boards:notification-2020-06-04
-iswkudos/kudos-boards:webfront-2020-06-04
-iswkudos/kudos-boards:core-2020-06-04
-iswkudos/kudos-boards:boards-2020-06-04
-```
-
-Please see our [Cloud blog](https://blog.kudosapps.com/weve-got-some-kudos-boards-changes-for-you)
-
-Improvements:
-- Loading performance
-- Rendering performance
-- Reduce size of application
-- Node view UI refresh
-
-New Features:
-- Card theme from uploaded images
-- Preview uploaded files (images, docx, pdf, html etc)
-- Todos Overview - [filtering to selected Boards](https://blog.kudosapps.com/part-3-weve-got-some-kudos-boards-changes-for-you)
-- Drag and drop Email into Cards (ie from HCL Notes)
-- Activity Stream Gadget for Boards - [config updates required](/boards/connections/widgets-on-prem/)
-- Multiple Assignment options for Cards
-
-Fixes:
-- Email notifications for invited collaborators
