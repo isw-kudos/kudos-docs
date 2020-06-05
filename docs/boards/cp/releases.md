@@ -2,22 +2,22 @@
 
 [Guide to upgrade from CP to Dockerhub images](https://docs.kudosapps.com/boards/cp/dockerhub/)
 
-<!-- ---
+---
 
-#### 2020-06-04
+#### 2020-06-05
 
-[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-04)
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-05)
 
 Images:
 
 ```
-iswkudos/kudos-boards:user-2020-06-04
-iswkudos/kudos-boards:provider-2020-06-04
-iswkudos/kudos-boards:licence-2020-06-04
-iswkudos/kudos-boards:notification-2020-06-04
-iswkudos/kudos-boards:webfront-2020-06-04
-iswkudos/kudos-boards:core-2020-06-04
-iswkudos/kudos-boards:boards-2020-06-04
+iswkudos/kudos-boards:user-2020-06-05
+iswkudos/kudos-boards:provider-2020-06-05
+iswkudos/kudos-boards:licence-2020-06-05
+iswkudos/kudos-boards:notification-2020-06-05
+iswkudos/kudos-boards:webfront-2020-06-05
+iswkudos/kudos-boards:core-2020-06-05
+iswkudos/kudos-boards:boards-2020-06-05
 ```
 
 Please see our [Cloud blog](https://blog.kudosapps.com/weve-got-some-kudos-boards-changes-for-you)
@@ -40,7 +40,7 @@ New Features:
 
 Fixes:
 
-- Email notifications for invited collaborators -->
+- Email notifications for invited collaborators
 
 ---
 
