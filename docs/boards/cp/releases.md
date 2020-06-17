@@ -4,6 +4,39 @@
 
 ---
 
+#### 2020-06-17
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-17)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-06-17
+iswkudos/kudos-boards:provider-2020-06-17
+iswkudos/kudos-boards:licence-2020-06-17
+iswkudos/kudos-boards:notification-2020-06-17
+iswkudos/kudos-boards:webfront-2020-06-17
+iswkudos/kudos-boards:core-2020-06-17
+iswkudos/kudos-boards:boards-2020-06-17
+iswkudos/kudos-boards:activity-migration-2020-06-17
+```
+
+Fixes:
+
+- Show newly created comments in Todo view
+- Support Activity URL redirects
+- Community Boards loading issue
+
+Activity Migration:
+
+- UI control options fix
+- Support migration of Activity files with special characters in name
+- Support for Activity links
+- Protect against system tenant IDs '-Ignore-Organization-ID-' etc
+- DB2 support for PEOPLEDB on secondary host
+
+---
+
 #### 2020-06-05
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-05)
