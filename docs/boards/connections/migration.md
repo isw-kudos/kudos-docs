@@ -2,6 +2,12 @@
 
 As part of the installation process for Kudos Boards you can run the migration service to move the existing Activities into Kudos Boards.
 
+## Difference between the individual import
+
+There is an individual import, when you hover over the orange _Create_ button and click _Import from Activities_. It can be accessed by end-users, but only usess the Activities API. While this works for basic Activitiy functionality, it **doesn't include** any extra features from Kudos Boards for WebSphere. Card colors are one example of those features.
+
+Sou you'll need to use the migration service described here to import **all** data in the new Boards.
+
 ## Process Overview
 
 This service will:
@@ -12,7 +18,7 @@ This service will:
 1. write Boards data into the Component Pack mongo database
 1. write file attachments into S3 storage
 
-Ensure you have updated the following variables as applicable in your `boards.yaml` file downloaded previously
+Ensure you have updated the following variables as applicable in the `global.env` section of your `boards.yaml` file downloaded previously
 
 |                                          | Example                                                 | Description                                                                                                                                                             |
 | ---------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,7 +54,7 @@ Please deploy the following chart with the same configuration `boards.yaml` file
 
 The migration interface is accessible at `https://[BOARDS_URL]/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](/boards/cp/migration-interface).
 
-You can also set the `env.IMMEDIATELY_PROCESS_ALL` if you wish to migrate every Activity without the UI.
+You can also set the `global.env.IMMEDIATELY_PROCESS_ALL` variable if you wish to migrate every Activity without the UI.
 
 ---
 
