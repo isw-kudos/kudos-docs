@@ -40,6 +40,18 @@ Ensure you have updated the following variables as applicable in the `global.env
 | `COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                 | Mark the old Activity data as complete                                                                                                                                  |
 | `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                 | Create link to new Board in old Activity                                                                                                                                |
 
+Example:
+
+```yaml
+global:
+  env:
+    CONNECTIONS_DB_TYPE: db2
+    CONNECTIONS_DB_HOST: cnx-db.internal
+    CONNECTIONS_DB_PORT: 50000
+    CONNECTIONS_DB_USER: lcuser
+    CONNECTIONS_DB_PASSWORD: xxx
+    # ...
+```
 ---
 
 ## Deploy Helm Chart
