@@ -72,7 +72,13 @@ You can also set the `global.env.IMMEDIATELY_PROCESS_ALL` variable if you wish t
 
 ## Logs
 
-You can check the pod logs for the kudos-boards-activity-migration to see progress of the running migration
+You can check the pod logs for the kudos-boards-activity-migration to see progress of the running migration:
+
+```bash
+kubectl logs -n boards -f $(kubectl get po -n boards | grep activity-migration | awk '{print $1}')
+```
+
+When the helm chart was installed in another namespace (`helm upgrade ... --namespace my-boards`), change `-n boards` to your modified namespace like `-n my-boards`. To stop following the logs, press `[Ctrl] + [C]`.
 
 For example
 
