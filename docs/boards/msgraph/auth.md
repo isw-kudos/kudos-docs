@@ -147,7 +147,7 @@ Click `Yes`
 
     [for Docker - Kubernetes](/boards/kubernetes/#deploy-boards-chart)
 
-        helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-2.0.2.tgz -i -f ./boards.yaml --namespace boards
+        helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-3.1.1.tgz -i -f ./boards.yaml --namespace boards
 
     > **Note:** `--recreate-pods` is not required this time as this is only an env variable change
 
