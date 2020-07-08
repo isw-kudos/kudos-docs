@@ -6,7 +6,7 @@ As part of the installation process for Kudos Boards you can run the migration s
 
 There is an individual import, when you hover over the orange _Create_ button and click _Import from Activities_. It can be accessed by end-users, but only usess the Activities API. While this works for basic Activitiy functionality, it **doesn't include** any extra features from Kudos Boards for WebSphere. Card colors are one example of those features.
 
-Sou you'll need to use the migration service described here to import **all** data in the new Boards.
+So you'll need to use the migration service described here to import **all** data in the new Boards.
 
 ## Process Overview
 
@@ -43,7 +43,7 @@ Ensure you have updated the following variables as applicable in the `global.env
 Example:
 
 ```yaml
-global:
+migration:
   env:
     CONNECTIONS_DB_TYPE: db2
     CONNECTIONS_DB_HOST: cnx-db.internal
