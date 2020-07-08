@@ -2,6 +2,12 @@
 
 As part of the installation process for Kudos Boards you can run the migration service to move the existing Activities into Kudos Boards.
 
+## Difference between the individual import
+
+There is an individual import, when you hover over the orange _Create_ button and click _Import from Activities_. It can be accessed by end-users, but only usess the Activities API. While this works for basic Activitiy functionality, it **doesn't include** any extra features from Kudos Boards for WebSphere. Card colors are one example of those features.
+
+Sou you'll need to use the migration service described here to import **all** data in the new Boards.
+
 ## Process Overview
 
 This service will:
@@ -12,7 +18,7 @@ This service will:
 1. write Boards data into the Component Pack mongo database
 1. write file attachments into S3 storage
 
-Ensure you have updated the following variables as applicable in your `boards.yaml` file downloaded previously
+Ensure you have updated the following variables as applicable in the `global.env` section of your `boards.yaml` file downloaded previously
 
 |                                          | Example                                                 | Description                                                                                                                                                             |
 | ---------------------------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,6 +40,18 @@ Ensure you have updated the following variables as applicable in your `boards.ya
 | `COMPLETE_ACTIVITY_AFTER_MIGRATED`       | `false`                                                 | Mark the old Activity data as complete                                                                                                                                  |
 | `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` | `false`                                                 | Create link to new Board in old Activity                                                                                                                                |
 
+Example:
+
+```yaml
+global:
+  env:
+    CONNECTIONS_DB_TYPE: db2
+    CONNECTIONS_DB_HOST: cnx-db.internal
+    CONNECTIONS_DB_PORT: 50000
+    CONNECTIONS_DB_USER: lcuser
+    CONNECTIONS_DB_PASSWORD: xxx
+    # ...
+```
 ---
 
 ## Deploy Helm Chart
@@ -46,15 +64,21 @@ Please deploy the following chart with the same configuration `boards.yaml` file
 
 ## Migrate Activities
 
-The migration interface is accessible at `https://[BOARDS_URL]/app/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](/boards/cp/migration-interface).
+The migration interface is accessible at `https://[BOARDS_URL]/admin/migration` to select which Activities to migrate (ie ignore completed/deleted). For some explanation of the interface, see [Activity Migration User Interface](/boards/cp/migration-interface).
 
-You can also set the `env.IMMEDIATELY_PROCESS_ALL` if you wish to migrate every Activity without the UI.
+You can also set the `global.env.IMMEDIATELY_PROCESS_ALL` variable if you wish to migrate every Activity without the UI.
 
 ---
 
 ## Logs
 
-You can check the pod logs for the kudos-boards-activity-migration to see progress of the running migration
+You can check the pod logs for the kudos-boards-activity-migration to see progress of the running migration:
+
+```bash
+kubectl logs -n boards -f $(kubectl get po -n boards | grep activity-migration | awk '{print $1}')
+```
+
+When the helm chart was installed in another namespace (`helm upgrade ... --namespace my-boards`), change `-n boards` to your modified namespace like `-n my-boards`. To stop following the logs, press `[Ctrl] + [C]`.
 
 For example
 
