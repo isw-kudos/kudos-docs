@@ -4,6 +4,38 @@
 
 ---
 
+#### 2020-07-10
+
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-07-10)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-07-10
+iswkudos/kudos-boards:provider-2020-07-10
+iswkudos/kudos-boards:licence-2020-07-10
+iswkudos/kudos-boards:notification-2020-07-10
+iswkudos/kudos-boards:webfront-2020-07-10
+iswkudos/kudos-boards:core-2020-07-10
+iswkudos/kudos-boards:boards-2020-07-10
+iswkudos/kudos-boards:activity-migration-2020-07-10
+```
+
+Improvements:
+
+- Activity Stream deep-linking to Community Boards
+- Community Boards - open board links in fullpage
+- Fix searching individual Activity imports
+- Update individual Activity import grouping of top level entries
+- Fix loading of some imported Activities
+
+Activity Migration:
+
+- Support migration of Activity files with unicode & whitespace characters in name
+- Performance & stability improvements (large activities & filesets, rollback files on failure, extra logging, retry logic)
+
+---
+
 #### 2020-06-17
 
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-06-17)
