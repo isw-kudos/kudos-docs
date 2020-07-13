@@ -26,11 +26,9 @@ Once these permissions have been accepted on behalf of the organisation, all use
 
 Administrative users for your Office 365 organisation can also force an approval of all permissions for the organisation from within the Org Administration screen by following these steps:
 
-Click `Configuration` and then `Manage Org`:
+Access the [Configuration Page](/boards/howto/org-config/) and click through your Office 365 client under 'Authentication Clients'.
 
-![](/assets/boards/config-manage_org.png)
-
-Under the Org Administration section, click the `Approve Advanced Features` button:
+Click the `Approve Advanced Features` button:
 
 ![](/assets/boards/org-admin-approve-advanced.png)
 
