@@ -85,6 +85,8 @@ nav:
                   - Teams Notification Bot: boards/msgraph/notification-bot.md
                   - Teams App: boards/msgraph/teams-on-prem.md
       - Boards Hybrid: boards/hybrid.md
+      - FAQ:
+          - Languages: boards/faq/languages.md
       - Troubleshooting:
           - Activities Plus: boards/troubleshooting/activities-plus-install.md
           - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
