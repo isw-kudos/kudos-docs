@@ -38,7 +38,7 @@ In order for Kudos Boards to authenticate with your Connections environment, you
 
     > **Note:** this step is optional but recommended and can be done at any time.
 
-    Steps to configure the Kudos Boards application for auto-authorize (also [documented here](https://www.ibm.com/support/knowledgecenter/en/SSYGQH_6.0.0/admin/admin/t_admin_registeroauthclientwprovider.html))
+    Steps to configure the Kudos Boards application for auto-authorize (also [documented here](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_registeroauthclientwprovider.html))
 
     - Add the new line to the following section in `[cellname]/oauth20/connectionsProvider.xml`
 
