@@ -35,3 +35,19 @@ Click the `Approve Advanced Features` button:
 This will direct you to the Microsoft Office 365 **Permissions requested - Accept for your organisation** page, allowing you to force the consent of all permissions that Kudos Boards needs for your organisation:
 
 ![Admin Approval View](../../assets/msgraph/administrator_approval_view.png)
+
+### Kudos Boards App not showing in Teams store
+
+If you search for Kudos Boards but you cannot see it in the Teams Store, it is likely that third-party apps are blocked in your tenant.
+
+![Teams App](../../assets/msgraph/o365-teamsapp.png)
+
+#### Resolution
+
+You will need to go to the [Admin Dashboard](https://admin.teams.microsoft.com/policies/app-permission) to view the settings.
+
+![Teams Permissions](../../assets/msgraph/o365-permissions.png)
+
+Under 'Third-party apps' you can see the settings for your tenant. Here you can set your users to be able to access Kudos Boards through the Teams Store.
+
+![Teams Third Party Apps](../../assets/msgraph/o365-thirdpartyapps.png)
