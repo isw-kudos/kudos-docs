@@ -101,6 +101,7 @@ nav:
           - Quick Tips: boards/howto/quick-tips-for-boards.md
           - Starting a trial: boards/howto/start-a-trial.md
           - Mobile App: boards/howto/mobile-app.md
+          - Home Page: boards/howto/home-page.md
           - Creating Boards:
               - Create a Template: boards/howto/creating-templates.md
               - Use a Template: boards/howto/accessing-global-templates.md
