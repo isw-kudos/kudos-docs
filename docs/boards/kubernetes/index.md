@@ -119,11 +119,11 @@ Follow instructions on [this page](/boards/env/common/)
 
 Install the Boards services via our Helm chart
 
-    helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-3.1.1.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 
-> **Note:** if you Kubernetes version is pre 1.13, you must use the compatible Helm chart kudos-boards-3.0.0.tgz instead of 3.1.x above
+> **Note:** if you Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
 ---
 

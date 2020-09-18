@@ -39,7 +39,7 @@ Ensure you have updated the following variables as applicable in your `boards-cp
 
 Please deploy the following chart with the same configuration `boards-cp.yaml` file used to deploy the kudos-boards-cp chart
 
-    helm upgrade kudos-boards-cp-activity-migration https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-1.1.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+    helm upgrade kudos-boards-cp-activity-migration https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-activity-migration-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 ---
 

@@ -16,5 +16,5 @@ You can get the latest versions of Kudos Boards Docker by subscribing to our own
 
 1. Run helm to apply the changes.
 
-        helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-1.1.1.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 

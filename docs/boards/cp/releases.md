@@ -2,6 +2,68 @@
 
 [Guide to upgrade from CP to Dockerhub images](https://docs.kudosapps.com/boards/cp/dockerhub/)
 
+
+### Update Notes:
+**Note: As of 2020-09-18 all updates must use the new Helm chart**
+
+Please use the appropriate update command. For example:
+
+Kudos Boards in Kubernetes
+```
+helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+```
+
+Component Pack (Activities Plus)
+```
+helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+```
+
+---
+
+#### 2020-09-18
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-09-18)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-09-18
+iswkudos/kudos-boards:provider-2020-09-18
+iswkudos/kudos-boards:licence-2020-09-18
+iswkudos/kudos-boards:notification-2020-09-18
+iswkudos/kudos-boards:webfront-2020-09-18
+iswkudos/kudos-boards:core-2020-09-18
+iswkudos/kudos-boards:boards-2020-09-18
+iswkudos/kudos-boards:activity-migration-2020-09-18
+```
+
+Features:
+
+- New rich text editor (CKEditor) with improved handling for
+    - tables
+    - whitepace
+    - paste from office
+    - font, font size, font color
+    - file upload feedback
+- Search Board by Custom Fields (Text & People)
+- Search improvements - show sub-tasks when parent match filter
+
+Improvements:
+
+- UI feedback for Chrome Incognito third-party security exception
+- Microsoft Teams file preview
+- Microsoft Teams file links
+- Internal microservice communication (**Note**: this requires a new Helm Chart V2)
+- Updated HCL Connections icon
+
+Fixes:
+
+- Issue where page reloads constantly in Connections frame
+- Outlook integration issue
+- File Preview in Safari
+- Board Properties toolbar 'more' menu
+- API update for completing a task already completed
+
+
 ---
 
 #### 2020-08-24
@@ -60,7 +122,6 @@ Fixes:
 - Dragging color onto tiles
 - Allow unassigning users who are no longer members
 - Ordering issue on cards created using past
-
 ---
 
 #### 2020-07-10
