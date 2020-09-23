@@ -38,9 +38,9 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 
 1. Open `Homepage` => `Administration`
 
-   Click `Add another app`
+    Click `Add another app`
 
-   ![Example](/assets/connections/homepage-admin.png)
+    ![Example](/assets/connections/homepage-admin.png)
 
 1. Select the following:
 
@@ -49,9 +49,9 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
     - `Show for Activity Stream events`
     - `All servers`
 
-   Click the `Add Mapping` button.
+    Click the `Add Mapping` button.
 
-   ![Example](/assets/connections/homepage-admin2.png)
+    ![Example](/assets/connections/homepage-admin2.png)
 
 1. Enter values:
 
@@ -62,19 +62,17 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 
 1. Enter the following:
 
-   | Field       | Value                                                        |
-   | ----------- | ------------------------------------------------------------ |
-   | App Title   | Kudos Boards Stream                                          |
-   | URL Address | `https://kudosboards.com/widgets/connections/url-gadget.xml` |
-   | Icon URL    | `https://kudosboards.com/favicon.ico`                        |
+    | Field       | Value                                                        |
+    | ----------- | ------------------------------------------------------------ |
+    | App Title   | Kudos Boards Stream                                          |
+    | URL Address | `https://kudosboards.com/widgets/connections/url-gadget.xml` |
+    | Icon URL    | `https://kudosboards.com/favicon.ico`                        |
 
 1. Scroll down and click `Save`
 
 1. Select the newly defined app and click `Enable`
 
-   ![Example](/assets/connections/homepage-admin6.png)
-
----
+    ![Example](/assets/connections/homepage-admin6.png)
 
 <!-- This is not needed for the iframe widget
 ### Register Widget
@@ -86,3 +84,40 @@ Required for HCL Connections 6.0 CR1 onwards:
     NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
     NewsWidgetCatalogService.clearWidgetCaches()
 -->
+
+---
+
+### ICEC (Community Highlights)
+
+![Example](/assets/connections/highlights-communityboards.png)
+
+1. Download the Boards [Hybrid widget definition file](/assets/boards/hybrid/custom.js)
+
+1. Open the ICEC (XCC) main admin page
+
+      i.e. `https://connections.company.com/xcc/main`
+
+1. Click `Customize`, `Settings`, expand `Customization Files` & click `Upload File`
+
+     ![Example](/assets/connections/highlights-fileupload.png)
+
+     > Note: you must have the admin role for the `Customize` button to appear
+
+1. Select the `custom.js` downloaded previously
+
+     > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents of the `init` function
+
+1. To validate:
+
+      1. Open the `Highlights` application in a Community
+      1. Click `Customize` & then `Create Widget`
+
+         ![Example](/assets/connections/highlights-create.png)
+      
+      1. Select `Kudos Boards` from the menu and enter the ID: `CommunityBoards`
+
+         ![Example](/assets/connections/highlights-def-community.png)
+
+      1. Click `Create`. The Boards app should now appear
+
+         ![Example](/assets/connections/highlights-communityboards.png)

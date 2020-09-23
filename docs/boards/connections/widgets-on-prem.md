@@ -38,40 +38,76 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
 1. Open `Homepage` => `Administration`
 
-   Click `Add another app`
+      Click `Add another app`
 
-   ![Example](/assets/connections/homepage-admin.png)
+      ![Example](/assets/connections/homepage-admin.png)
 
 1. Select the following:
 
-   - `OpenSocial Gadget`
-   - `Trusted` and `Use SSO`
-   - `Show for Activity Stream events`
-   - `All servers`
+      - `OpenSocial Gadget`
+      - `Trusted` and `Use SSO`
+      - `Show for Activity Stream events`
+      - `All servers`
 
-   Click the `Add Mapping` button.
+      Click the `Add Mapping` button.
 
-   ![Example](/assets/connections/homepage-admin2.png)
+      ![Example](/assets/connections/homepage-admin2.png)
 
 1. Enter values:
 
-   - OAuth Client: `conn-ee`
-   - Service name: `connections_service`
+      - OAuth Client: `conn-ee`
+      - Service name: `connections_service`
 
-   Click `Ok`
+      Click `Ok`
 
 1. Enter the following, replacing `[BOARDS_URL]` with your URL:
 
-   | Field           | Value                                                     |
-   | --------------- | --------------------------------------------------------- |
-   | App Title       | Kudos Boards Stream                                       |
-   | URL Address     | `https://[BOARDS_URL]/widgets/connections/url-gadget.xml` |
-   | Icon URL        | `https://[BOARDS_URL]/favicon.ico`                        |
-   | Icon Secure URL | `https://[BOARDS_URL]/favicon.ico`                        |
+      | Field           | Value                                                     |
+      | --------------- | --------------------------------------------------------- |
+      | App Title       | Kudos Boards Stream                                       |
+      | URL Address     | `https://[BOARDS_URL]/widgets/connections/url-gadget.xml` |
+      | Icon URL        | `https://[BOARDS_URL]/favicon.ico`                        |
+      | Icon Secure URL | `https://[BOARDS_URL]/favicon.ico`                        |
 
-   Scroll down and click `Save`
+      Scroll down and click `Save`
 
 1. Select the newly defined app and click `Enable`
 
-   ![Example](/assets/connections/homepage-admin6.png)
+    ![Example](/assets/connections/homepage-admin6.png)
 
+---
+
+### ICEC (Community Highlights)
+
+![Example](/assets/connections/highlights-communityboards.png)
+
+1. Download the Boards [CP widget definition file](/assets/boards/cp/custom.js)
+
+1. Open the ICEC (XCC) main admin page
+
+      i.e. https://connections.company.com/xcc/main
+
+1. Click `Customize`, `Settings` tab, expand `Customization Files` & click `Upload File`
+
+     ![Example](/assets/connections/highlights-fileupload.png)
+
+     > Note: you must have the admin role for the Customize button to appear
+
+1. Select the `custom.js` downloaded previously
+
+     > Note: the file must have this name. If you already have a `custom.js` file you must manually merge the contents of the `init` function
+
+1. To validate:
+
+      1. Open the `Highlights` application in a Community
+      1. Click `Customize` & then `Create Widget`
+
+         ![Example](/assets/connections/highlights-create.png)
+      
+      1. Select `Kudos Boards` from the menu and enter the ID: `CommunityBoards`
+
+         ![Example](/assets/connections/highlights-def-community.png)
+
+      1. Click `Create`. The Boards app should now appear
+
+         ![Example](/assets/connections/highlights-communityboards.png)
