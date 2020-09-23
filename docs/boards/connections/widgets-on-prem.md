@@ -85,13 +85,13 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
 1. Open the ICEC (XCC) main admin page
 
-      i.e. https://connections.company.com/xcc/main
+      i.e. `https://connections.company.com/xcc/main`
 
-1. Click `Customize`, `Settings` tab, expand `Customization Files` & click `Upload File`
+1. Click `Customize`, `Settings`, expand `Customization Files` & click `Upload File`
 
      ![Example](/assets/connections/highlights-fileupload.png)
 
-     > Note: you must have the admin role for the Customize button to appear
+     > Note: you must have the admin role for the `Customize` button to appear
 
 1. Select the `custom.js` downloaded previously
 
