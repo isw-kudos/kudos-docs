@@ -8,11 +8,12 @@ You can get the latest versions of Kudos Boards Docker by subscribing to our own
 
         kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=[user] --docker-password=[password] --docker-email=[email] --namespace=connections
 
-1. Once confirmed by reply email, update your boards-cp.yaml file as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
-  - Change the imagePullSecret to `dockerhub`
-  - Remove your customised global.repository
-  - Check our [releases](https://docs.kudosapps.com/boards/cp/releases/) page to get the latest release date tag. Add this date tag as imageTagSuffix and uncomment the line as per the example.
-  - Add (blank) image name and tag for each service as per the example. Note some of the services (app, provider, notification) will not be in your boards-cp.yaml file, you should ADD THEM.
+1. Once confirmed by reply email, update your `boards-cp.yaml` file as per [this example](/assets/config/kubernetes/boards-cp-dockerhub.yaml).
+
+    - Change the `global.imagePullSecret` to `dockerhub`
+    - Remove your customised `global.repository`
+    - Check our [releases](https://docs.kudosapps.com/boards/cp/releases/) page to get the latest release date tag. Add this date tag as `global.imageTagSuffix` and uncomment the line as per the example.
+    - Add (blank) image name and tag for each service as per the example. *Note:* some of the services (app, provider, notification) will not be in your boards-cp.yaml file, you should ADD THEM.
 
 1. Run helm to apply the changes.
 
