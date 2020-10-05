@@ -20,6 +20,44 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2020-10-05
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-10-05)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-10-05
+iswkudos/kudos-boards:provider-2020-10-05
+iswkudos/kudos-boards:licence-2020-10-05
+iswkudos/kudos-boards:notification-2020-10-05
+iswkudos/kudos-boards:webfront-2020-10-05
+iswkudos/kudos-boards:core-2020-10-05
+iswkudos/kudos-boards:boards-2020-10-05
+iswkudos/kudos-boards:activity-migration-2020-10-05
+```
+
+Features:
+- Board Search
+    - Increase visibility of filters
+    - Maintain filters after page reload
+    - Hide Completed Todos
+    - Hide Empty Lists
+- Preview Files, support for
+    - Excel (xlsx, xls)
+    - PDF
+
+Improvements:
+- Rich Text Editor - allow indenting paragraphs
+- Logging updates
+- Activity Migration - add default link type
+
+Fixes:
+- Default handling of links from migrated Activities
+- User Avatar initials fallback
+- Include current user as option in user licence search & custom field person
+
+---
+
 #### 2020-09-18
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-09-18)
 
