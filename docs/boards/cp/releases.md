@@ -37,6 +37,7 @@ iswkudos/kudos-boards:activity-migration-2020-10-05
 ```
 
 Features:
+
 - Board Search
     - Increase visibility of filters
     - Maintain filters after page reload
@@ -47,11 +48,13 @@ Features:
     - PDF
 
 Improvements:
+
 - Rich Text Editor - allow indenting paragraphs
 - Logging updates
 - Activity Migration - add default link type
 
 Fixes:
+
 - Default handling of links from migrated Activities
 - User Avatar initials fallback
 - Include current user as option in user licence search & custom field person
