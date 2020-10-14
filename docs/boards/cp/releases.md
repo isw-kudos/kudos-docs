@@ -45,6 +45,7 @@ Fixes:
 - Re-open last board view
 - User trial reminder
 - Extension of user trials
+- Download linked files with .odt extension
 
 ---
 
