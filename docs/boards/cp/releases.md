@@ -20,6 +20,34 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2020-10-14
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-10-14)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-10-14
+iswkudos/kudos-boards:provider-2020-10-14
+iswkudos/kudos-boards:licence-2020-10-14
+iswkudos/kudos-boards:notification-2020-10-14
+iswkudos/kudos-boards:webfront-2020-10-14
+iswkudos/kudos-boards:core-2020-10-14
+iswkudos/kudos-boards:boards-2020-10-14
+iswkudos/kudos-boards:activity-migration-2020-10-14
+```
+
+Improvements:
+
+- Updated Rich Text Editor
+
+Fixes:
+
+- Re-open last board view
+- User trial reminder
+- Extension of user trials
+
+---
+
 #### 2020-10-05
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-10-05)
 
@@ -79,7 +107,7 @@ iswkudos/kudos-boards:activity-migration-2020-09-18
 
 Features:
 
-- New rich text editor (CKEditor) with improved handling for
+- New rich text editor with improved handling for
     - tables
     - whitepace
     - paste from office
