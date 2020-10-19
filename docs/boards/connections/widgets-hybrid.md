@@ -16,7 +16,7 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
     Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 
         <!-- Kudos Boards -->
-        <widgetDef defId="Kudos Boards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+        <widgetDef defId="KudosBoards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
             <itemSet>
                 <item name="resourceId" value="{resourceId}"/>
                 <item name="width" value="100%"/>
