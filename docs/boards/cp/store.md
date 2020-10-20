@@ -1,10 +1,10 @@
-# Kudos Apps Store
+# Huddo Apps Store
 
 ![Create Organiation](/assets/boards/cp/store.png)
 
 ---
 
-To obtain licences for Kudos Boards, you need to register your organisation at [https://store.kudosapps.com](https://store.kudosapps.com).
+To obtain licences for Huddo Boards, you need to register your organisation at [https://store.huddo.com](https://store.huddo.com).
 
 All customers are eligible for a free licence to use our Activity view.
 

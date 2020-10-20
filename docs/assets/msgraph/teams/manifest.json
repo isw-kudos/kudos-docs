@@ -3,23 +3,23 @@
     "manifestVersion": "1.5",
     "version": "1.0.5",
     "id": "1c69a9da-d385-43e3-93c8-297f88c4a5a9",
-    "packageName": "com.kudos.boards",
+    "packageName": "com.huddo.boards",
     "developer": {
-        "name": "KudosApps.com by ISW Development",
-        "websiteUrl": "https://kudosapps.com",
-        "privacyUrl": "https://www.kudosapps.com/privacy-policy",
-        "termsOfUseUrl": "https://kudosapps.com/terms-conditions"
+        "name": "HuddoApps.com by ISW Development",
+        "websiteUrl": "https://huddo.com",
+        "privacyUrl": "https://www.huddo.com/privacy-policy",
+        "termsOfUseUrl": "https://huddo.com/terms-conditions"
     },
     "icons": {
         "color": "color.png",
         "outline": "outline.png"
     },
     "name": {
-        "short": "Kudos Boards"
+        "short": "Huddo Boards"
     },
     "description": {
-        "short": "Kudos Boards makes task management more productive for Teams and Individuals",
-        "full": "Kudos Boards is a collaborative task management solution for Teams, Individuals, and invited External parties. With Kanban, Mind Map and Timeline views, Kudos Boards is fully integrated with Office 365 Teams, OneDrive, Sharepoint, and Outlook. Featuring real-time drag-and-drop, the ability to colour-code assignments, and prioritise tasks, Kudos Boards gives any project a visual and intuitive interface that enables more efficient and effective teamwork."
+        "short": "Huddo Boards makes task management more productive for Teams and Individuals",
+        "full": "Huddo Boards is a collaborative task management solution for Teams, Individuals, and invited External parties. With Kanban, Mind Map and Timeline views, Huddo Boards is fully integrated with Office 365 Teams, OneDrive, Sharepoint, and Outlook. Featuring real-time drag-and-drop, the ability to colour-code assignments, and prioritise tasks, Huddo Boards gives any project a visual and intuitive interface that enables more efficient and effective teamwork."
     },
     "accentColor": "#F57C00",
     "configurableTabs": [

@@ -1,8 +1,8 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-### Kudos Boards and Microsoft OneDrive
+### Huddo Boards and Microsoft OneDrive
 
-The Kudos Boards integration with Microsoft OneDrive allows you to find files that you have added to boards, conveniently located in your OneDrive.
+The Huddo Boards integration with Microsoft OneDrive allows you to find files that you have added to boards, conveniently located in your OneDrive.
 
 In the example below, a file titled "Best Melbourne Restaurants" has been added to the board, Food Objectives 2019.
 

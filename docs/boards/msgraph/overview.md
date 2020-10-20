@@ -1,4 +1,4 @@
-Kudos Boards is tailored for working with Office 365 in the following ways:
+Huddo Boards is tailored for working with Office 365 in the following ways:
 
 ### Login
 
@@ -46,7 +46,7 @@ Share boards with your Team
 
 ![Teams Board Tabs](/assets/msgraph/teams_tab-board.png)
 
-Access Kudos Boards directly from Teams as a personal app
+Access Huddo Boards directly from Teams as a personal app
 
 ![Teams Tabs](/assets/msgraph/teams_tabs_personal.png)
 

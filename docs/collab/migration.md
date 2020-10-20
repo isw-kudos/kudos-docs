@@ -1,6 +1,6 @@
-# Collab Cloud to Kudos Boards Migration
+# Collab Cloud to Huddo Boards Migration
 
-This document details how to import data from the private Connections (Multi-tenant) install. This process connects to the DB2 servers and Connections APIs (Activities), processes the data, and uploads into temporary tables in the Kudos Boards database & s3 file store. Once the upload has been validated, this data can then be imported into the Kudos production stores.
+This document details how to import data from the private Connections (Multi-tenant) install. This process connects to the DB2 servers and Connections APIs (Activities), processes the data, and uploads into temporary tables in the Huddo Boards database & s3 file store. Once the upload has been validated, this data can then be imported into the Huddo production stores.
 
 **Note: this process is designed to migrate one tenant at a time**
 
@@ -13,7 +13,7 @@ This document details how to import data from the private Connections (Multi-ten
 
 1. Valid Dockerhub credentials for the `iswkudos/kudos-microservices` repository
 
-1. Server IP is whitelisted in Kudos Boards Mongo database
+1. Server IP is whitelisted in Huddo Boards Mongo database
 
 ## Installation Instructions
 
@@ -34,7 +34,7 @@ The following variables must be set near the end in the `docker-compose.yml` fil
 | `CONNECTIONS_DB_PORT`                   | Source DB2 Port                                 | 50000                            |
 | `CONNECTIONS_DB_USER`                   | Source DB2 Username                             | LCUSER                           |
 | `CONNECTIONS_DB_PASSWORD`               | Source DB2 Password                             |                                  |
-| `CONNECTIONS_REGION`                    | Region as per Kudos naming (ams, us, test)      | test                             |
+| `CONNECTIONS_REGION`                    | Region as per Huddo naming (ams, us, test)      | test                             |
 | `CONNECTIONS_DB_TENANT`                 | Tenant ID to process                            | 5000000001                       |
 | `CONNECTIONS_URL`                       | URL for the tenant                              | https://orga.testna.collab.cloud |
 | `CONNECTIONS_ACTIVITIES_ADMIN_USERNAME` | Tenant Admin username - used for API access     | user1@orga.com.au                |
@@ -52,10 +52,10 @@ Once you are satisfied that the migration variables are valid and ready to run, 
 
 > Note: Please check all log outputs before commencing the next step.
 
-## Inform Kudos Team
+## Inform Huddo Team
 
-In order to complete the migration, the Kudos Teams needs to import the data from the temporary mongo databases and s3 buckets into production. Please inform the Kudos team and we can run a migration script.
+In order to complete the migration, the Huddo Teams needs to import the data from the temporary mongo databases and s3 buckets into production. Please inform the Huddo team and we can run a migration script.
 
 ## Questions / Issues
 
-Please contact the Kudos Team on [Slack](https://iswkudos.slack.com/messages/kudos-dev/) or <a href="mailto:support@kudosboards.com?subject=Migration: plz send help">via email</a>
+Please contact the Huddo Team at <a href="mailto:support@huddo.com?subject=Migration: plz send help">via email</a>

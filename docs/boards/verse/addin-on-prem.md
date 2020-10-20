@@ -1,6 +1,6 @@
 ## Installation in Verse On Premise
 
-Download Kudos Boards [applications.json file](https://kudosboards.com/widgets/verse/applications-onprem.json) and use it as a localFileProvider, replacing all instances of `kudosboards.com` with your Boards URL.
+Download Huddo Boards [applications.json file](https://boards.huddo.com/widgets/verse/applications-onprem.json) and use it as a localFileProvider, replacing all instances of `boards.huddo.com` with your Boards URL.
 
 > The information below is an excerpt from
 > [HCL Verse Developers](https://ibmverse.github.io/verse-developer/developers/#registering-an-application-in-ibm-verse)

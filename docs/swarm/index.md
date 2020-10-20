@@ -145,11 +145,11 @@ Ensure that DNS records for your portainer dashbaord and traefik dashboard as de
 ---
 
 ## Storage (Mongo & S3)
-Kudos Boards requires a Mongo database and an S3 object store.  If you do not already have your own externally hosted services for this, please follow [this documentation](/swarm/storage/) to deploy MongoDB and Minio (S3) containers into your Swarm setup.
+Huddo Boards requires a Mongo database and an S3 object store.  If you do not already have your own externally hosted services for this, please follow [this documentation](/swarm/storage/) to deploy MongoDB and Minio (S3) containers into your Swarm setup.
 
 ---
 
 
-## Run Kudos Boards (and other apps) with Portainer
+## Run Huddo Boards (and other apps) with Portainer
 
-See [Kudos Boards for Docker Swarm](/boards/swarm/) for a step by step guide to running Kudos Boards on your new environment.
+See [Huddo Boards for Docker Swarm](/boards/swarm/) for a step by step guide to running Huddo Boards on your new environment.

@@ -1,4 +1,4 @@
-All versions of Kudos Badges and Analytics require a licence to function. If you do not have a licence file, please contact us at support@kudosapps.com 
+All versions of Huddo Badges and Analytics require a licence to function. If you do not have a licence file, please contact us at support@huddo.com 
 
 ### Upload your licence file in the Badges Configurator
 
@@ -10,6 +10,7 @@ Click the Update Licence button.
 
 ![update licence](/assets/badges/install/licence/update_licence.png)
 
-Click Choose File and browse to your Kudos.licence file and click Upload.
+Click Choose File and browse to your Huddo.licence file and click Upload.
 
 ![update licence prompt](/assets/badges/install/licence/update_licence_prompt.png)
+

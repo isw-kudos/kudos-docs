@@ -1,6 +1,6 @@
 # HCL Connections Widget Setup
 
-Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections on-premise environments
+Basic instructions for adding Huddo Boards Hybrid widgets into HCL Connections on-premise environments
 
 ---
 
@@ -15,16 +15,16 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 
     Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 
-        <!-- Kudos Boards -->
-        <widgetDef defId="KudosBoards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+        <!-- Huddo Boards -->
+        <widgetDef defId="HuddoBoards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
             <itemSet>
                 <item name="resourceId" value="{resourceId}"/>
                 <item name="width" value="100%"/>
                 <item name="height" value="500px"/>
-                <item name="url" value="https://kudosboards.com/community/connections"/>
+                <item name="url" value="https://boards.huddo.com/community/connections"/>
             </itemSet>
         </widgetDef>
-        <!-- END Kudos Boards -->
+        <!-- END Huddo Boards -->
 
 1.  Check in the widgets-config.xml file.
 
@@ -64,9 +64,9 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 
     | Field       | Value                                                        |
     | ----------- | ------------------------------------------------------------ |
-    | App Title   | Kudos Boards Stream                                          |
-    | URL Address | `https://kudosboards.com/widgets/connections/url-gadget.xml` |
-    | Icon URL    | `https://kudosboards.com/favicon.ico`                        |
+    | App Title   | Huddo Boards Stream                                          |
+    | URL Address | `https://boards.huddo.com/widgets/connections/url-gadget.xml` |
+    | Icon URL    | `https://boards.huddo.com/favicon.ico`                        |
 
 1. Scroll down and click `Save`
 
@@ -80,7 +80,7 @@ Basic instructions for adding Kudos Boards Hybrid widgets into HCL Connections o
 Required for HCL Connections 6.0 CR1 onwards:
 
     execfile("newsAdmin.py")
-    NewsWidgetCatalogService.addWidget(title="Kudos Boards", url="http://kudosboards.com/boards/community/connections" ,secureUrl="https://kudosboards.com/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
+    NewsWidgetCatalogService.addWidget(title="Huddo Boards", url="http://boards.huddo.com/boards/community/connections" ,secureUrl="https://boards.huddo.com/boards/community/connections", categoryName=WidgetCategories.NONE, isHomepageSpecific=0, isDefaultOpened=0, multipleInstanceAllowed=0, isGadget=0, policyFlags=[GadgetPolicyFlags.TRUSTED], prereqs=['communities'], appContexts=["IWIDGETS"])
     NewsWidgetCatalogService.enableWidget("<ID_RETURNED>")
     NewsWidgetCatalogService.clearWidgetCaches()
 -->
@@ -114,7 +114,7 @@ Required for HCL Connections 6.0 CR1 onwards:
 
          ![Example](/assets/connections/highlights-create.png)
       
-      1. Select `Kudos Boards` from the menu and enter the ID: `CommunityBoards`
+      1. Select `Huddo Boards` from the menu and enter the ID: `CommunityBoards`
 
          ![Example](/assets/connections/highlights-def-community.png)
 

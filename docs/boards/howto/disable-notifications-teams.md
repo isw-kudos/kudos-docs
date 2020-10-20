@@ -1,6 +1,6 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-If you find that your Microsoft Teams team `Conversations` tab is getting a bit crowded with all the updates your team are making in Kudos Boards, it is possible to control whether or not team notifications are posted in `Conversations` for each board in your team.
+If you find that your Microsoft Teams team `Conversations` tab is getting a bit crowded with all the updates your team are making in Huddo Boards, it is possible to control whether or not team notifications are posted in `Conversations` for each board in your team.
 ![Conversations](/assets/msgraph/teams/bot_conversations.png)
 
 To do this, firstly open a board within a Teams tab.

@@ -1,6 +1,6 @@
 # Microsoft Teams Notification Bot
 
-This bot will be used to post notification to Microsoft Teams triggered by actions performed in Kudos Boards.
+This bot will be used to post notification to Microsoft Teams triggered by actions performed in Huddo Boards.
 
 > Note: this step is optional and cannot be achieved if you do not meet the prerequisites.
 
@@ -26,14 +26,14 @@ This bot will be used to post notification to Microsoft Teams triggered by actio
 
 1.  Enter the following values
 
-        Kudos Boards
-        kudosboards
+        Huddo Boards
+        huddoboards
         https://[BOARDS_URL]/webhook/teams
         [MSGRAPH_CLIENT_ID]
 
     Where:
 
-    - `[BOARDS_URL]` is the URL to your Kudos Boards installation
+    - `[BOARDS_URL]` is the URL to your Huddo Boards installation
 
         > i.e. `https://connections.example.com/boards/webhook/teams` or `https://boards.company.example.com/webhook/teams`
 
@@ -41,8 +41,8 @@ This bot will be used to post notification to Microsoft Teams triggered by actio
 
     For example:
 
-        Kudos Boards
-        kudosboards
+        Huddo Boards
+        huddoboards
         https://connections.example.com/boards/webhook/teams
         b0e1e4a3-3df0-4c0a-8a2a-c1d630bb52b8
 
@@ -72,4 +72,4 @@ This bot will be used to post notification to Microsoft Teams triggered by actio
 
 ## Next Steps
 
-See [Installing the Kudos Boards Teams App](/boards/msgraph/teams-on-prem/)
+See [Installing the Huddo Boards Teams App](/boards/msgraph/teams-on-prem/)

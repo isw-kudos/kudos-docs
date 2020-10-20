@@ -1,8 +1,8 @@
 # Deploy MongoDB & S3 Storage
 
-Kudos Boards requires an S3 object store, and a Mongo database. This documentation will deploy a Minio S3 storage container & MongoDB replicaSet into the Swarm setup.
+Huddo Boards requires an S3 object store, and a Mongo database. This documentation will deploy a Minio S3 storage container & MongoDB replicaSet into the Swarm setup.
 
-If you already have externally hosted mongo database and/or S3 storage please contact us for assistance in utilising them. [support@kudosboards.com](mailto:support@kudosboards.com)
+If you already have externally hosted mongo database and/or S3 storage please contact us for assistance in utilising them. [support@huddo.com](mailto:support@huddo.com)
 
 ### Prerequisites
 

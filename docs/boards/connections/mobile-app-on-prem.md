@@ -1,5 +1,5 @@
 # HCL Connections Mobile App Setup
-Basic instructions for adding Kudos Boards into the HCL Connections mobile application
+Basic instructions for adding Huddo Boards into the HCL Connections mobile application
 
 ---
 
@@ -27,7 +27,7 @@ Basic instructions for adding Kudos Boards into the HCL Connections mobile appli
                 </IOS>
                 <DefaultLocation>http://[BOARDS_URL]/img/logo-small.png</DefaultLocation>
               </ApplicationIcon>
-              <ApplicationLabel>Kudos Boards</ApplicationLabel>
+              <ApplicationLabel>Huddo Boards</ApplicationLabel>
               <ApplicationURL>https://[BOARDS_URL]/auth/connections</ApplicationURL>
             </Application>
 

@@ -1,8 +1,8 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-## Embedding Kudos Boards in a SharePoint Site Page
+## Embedding Huddo Boards in a SharePoint Site Page
 
-Kudos Boards' integration with Microsoft Office 365 allows you to add Kudos Boards to a SharePoint site page and work directly on the board from the page.
+Huddo Boards' integration with Microsoft Office 365 allows you to add Huddo Boards to a SharePoint site page and work directly on the board from the page.
 
 In the example below, we've created a site page called "Where to Eat in Melbourne" and added our Food Objectives 2019 board to it. When added, you and your colleagues can work directly from a site page on a board.
 
@@ -25,7 +25,7 @@ Before proceeding, you will need a site admin to enable security settings as des
 
       ![example](/assets/msgraph/sharepoint3.png)
 
-1. Open [Kudos Boards](https://kudosboards.com/auth/signin) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
+1. Open [Huddo Boards](https://boards.huddo.com/auth/signin) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
 
       ![example](/assets/msgraph/sharepoint4.png)
 

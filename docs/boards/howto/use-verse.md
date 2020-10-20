@@ -1,6 +1,6 @@
-## Kudos Boards integration points for HCL Verse
+## Huddo Boards integration points for HCL Verse
 
-Kudos Boards provides 2 integration points with HCL Verse:
+Huddo Boards provides 2 integration points with HCL Verse:
 
 #### Save email as a card in Boards
 

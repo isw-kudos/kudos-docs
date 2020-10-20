@@ -1,8 +1,8 @@
-## Run latest Kudos Boards for Component Pack
+## Run latest Huddo Boards for Component Pack
 
 ### Setup Dockerhub Credentials
 
-Please register your Dockerhub credentials with the ISW Kudos team and then run the following command
+Please register your Dockerhub credentials with the ISW Huddo team and then run the following command
 
     kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=<username> --docker-password=<password> --docker-email=<email> --namespace=connections
 

@@ -1,6 +1,6 @@
-# Kudos Boards for Docker Swarm
+# Huddo Boards for Docker Swarm
 
-Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise IBM Connections environments
+Basic instructions for deploying Huddo Boards into Docker Swarm for on-premise IBM Connections environments
 
 ---
 
@@ -10,23 +10,23 @@ Basic instructions for deploying Kudos Boards into Docker Swarm for on-premise I
 1. Storage - an accessible MongoDB and S3 object store. [Guide here](/swarm/storage/)
 1. SMTP gateway setup for email notifications
 1. [Config File](/assets/config/swarm/boards.yml) downloaded
-1. Dockerhub account with access to Kudos Boards repository.
+1. Dockerhub account with access to Huddo Boards repository.
 
-   Send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
+   Send your account details to [support@huddo.com](mailto:support@huddo.com) if you don't already have this.
 
-1. SSL certificate - You will need to use a certificate that covers at least the 2 domains you plan to use, for example Kudos Boards cloud uses the domains `https://kudosboards.com` and `https://api.kudosboards.com`. The certificate should be pem encoded with a separate key file.
+1. SSL certificate - You will need to use a certificate that covers at least the 2 domains you plan to use, for example Huddo Boards cloud uses the domains `https://boards.huddo.com` and `https://api.boards.huddo.com`. The certificate should be pem encoded with a separate key file.
 
 ---
 
 ### Setup OAuth
 
-Kudos Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
+Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
-You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
+You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
 | Provider                     | Registration / Documentation                                                                                  | Callback URL                                     |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| IBM Connections (on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
+| IBM Connections (on premise) | [Huddo instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
 | Microsoft Office 365         | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google                       | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn                     | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |
@@ -87,8 +87,8 @@ Please follow these instructions
 
 ### Advanced
 
-You can also run Kudos Boards with externally hosted mongo database and/or S3 storage.
-For assistance with this contact [support@kudosboards.com](mailto:support@kudosboards.com)
+You can also run Huddo Boards with externally hosted mongo database and/or S3 storage.
+For assistance with this contact [support@huddo.com](mailto:support@huddo.com)
 
 ---
 

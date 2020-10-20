@@ -2,7 +2,7 @@ Hybrid = Cloud integrated with HCL Connections On-Premise
 
 ![Outcome](/assets/connections/header.png)
 
-This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing HCL Connections on-premise installation.
+This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Huddo Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 
 For a comparison of Boards versions please [see here](/boards/versions/)
 
@@ -10,7 +10,7 @@ Setting up the Hybrid Boards Cloud involves:
 
 1. [Configure Authentication](/boards/connections/auth-hybrid/)
 
-1. [Contact the Kudos Team](mailto:support@kudosboards.com?subject=Boards%20Hybrid%20Setup) with these details
+1. [Contact the Huddo Team](mailto:support@huddo.com?subject=Boards%20Hybrid%20Setup) with these details
 
         Company name:
         Contact name:

@@ -1,6 +1,6 @@
 ###Options for ENSURE_TEAMS
 
-This array of teams defines which organisations/providers are pre-configured when Kudos Boards starts. This is required in order to login.
+This array of teams defines which organisations/providers are pre-configured when Huddo Boards starts. This is required in order to login.
 
 
 | Key           | Description                                                                                                                                                                                                                                                                      |

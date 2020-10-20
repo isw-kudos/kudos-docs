@@ -1,6 +1,6 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-Kudos Boards allows files under `20mb` to be attached to cards directly.
+Huddo Boards allows files under `20mb` to be attached to cards directly.
 
 Anyone who has access to view the card will be able to view and download the attachment.
 
@@ -8,7 +8,7 @@ Anyone who has access to view the card will be able to view and download the att
 
 ### Office 365 (OneDrive) & HCL Connections (Files)
 
-If you use Office 365 or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Kudos Boards will only save a link to open these.
+If you use Office 365 or HCL Connections as your authentication method, you may also upload files to those services directly, in this case the files and security will be managed by your respective provider. Huddo Boards will only save a link to open these.
 
 ### Attaching a File to a Card
 
@@ -19,7 +19,7 @@ In the menu that appears, choose Upload.
 
 ![](/assets/boards/attaching2.png)
 
-Locate the file(s) you wish to attach and click open, Kudos Boards will examine the selected files and prompt you where to upload them as below. choose `Upload to Kudos Boards` and click `Upload`.
+Locate the file(s) you wish to attach and click open, Huddo Boards will examine the selected files and prompt you where to upload them as below. choose `Upload to Huddo Boards` and click `Upload`.
 
 ![](/assets/boards/attaching3.png)
 
@@ -37,9 +37,9 @@ Anyone who can edit the card can also remove the attached files.
 
 ### Where are Files Stored?
 
-Files attached to cards in Kudos Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in <a target="_blank" href="https://cloud.google.com/storage/">Google Cloud Storage</a>
+Files attached to cards in Huddo Boards Cloud with Auth0, Google, Facebook, LinkedIn authentication providers are stored in <a target="_blank" href="https://cloud.google.com/storage/">Google Cloud Storage</a>
 
-If you are hosting Kudos Boards yourself then files are stored in the default file storage as defined in your environment.
+If you are hosting Huddo Boards yourself then files are stored in the default file storage as defined in your environment.
 
 If you are using Office 365 or HCL Connections, your files are stored within these environments.
 

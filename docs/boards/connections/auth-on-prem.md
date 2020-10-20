@@ -2,7 +2,7 @@
 
 
 ## Register OAuth
-In order for Kudos Boards to authenticate with your Connections environment, you must define a new OAuth widget.
+In order for Huddo Boards to authenticate with your Connections environment, you must define a new OAuth widget.
 
 ---
 
@@ -18,7 +18,7 @@ In order for Kudos Boards to authenticate with your Connections environment, you
 1. Register the new application definition
 
         execfile('oauthAdmin.py')
-        OAuthApplicationRegistrationService.addApplication('kudosboards', 'Kudos Boards', 'https://[BOARDS_URL]/auth/connections/callback')
+        OAuthApplicationRegistrationService.addApplication('huddoboards', 'Huddo Boards', 'https://[BOARDS_URL]/auth/connections/callback')
 
     Where `[BOARDS_URL]` is the URL of the Boards installation specified previously
 
@@ -38,7 +38,7 @@ In order for Kudos Boards to authenticate with your Connections environment, you
 
     > **Note:** this step is optional but recommended and can be done at any time.
 
-    Steps to configure the Kudos Boards application for auto-authorize (also [documented here](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_registeroauthclientwprovider.html))
+    Steps to configure the Huddo Boards application for auto-authorize (also [documented here](https://help.hcltechsw.com/connections/v65/admin/admin/t_admin_registeroauthclientwprovider.html))
 
     - Add the new line to the following section in `[cellname]/oauth20/connectionsProvider.xml`
 

@@ -1,4 +1,4 @@
-Kudos Boards offers extensions for integrating with your Microsoft product
+Huddo Boards offers extensions for integrating with your Microsoft product
 
 ## [Custom Tile](/boards/msgraph/custom-tiles/)
 

@@ -42,7 +42,7 @@ Select the following:
 
   Click the Add Mapping button.
 
-Add a Mapping for the Kudos Boards service to the Kudos client. Ensure OAuth Client is set to conn-ee and the Service name is Kudos Boards.
+Add a Mapping for the Huddo Boards service to the Huddo client. Ensure OAuth Client is set to conn-ee and the Service name is Huddo Boards.
 Click the Ok button
 
 Enter The following:

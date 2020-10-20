@@ -1,6 +1,6 @@
-# Kudos Boards Notifications
+# Huddo Boards Notifications
 
-Below are the notifications that Kudos Boards sends it's users to keep them up to date with their content, we try not to send too many of these and keep them short and relevant.
+Below are the notifications that Huddo Boards sends it's users to keep them up to date with their content, we try not to send too many of these and keep them short and relevant.
 
 ### New User
 

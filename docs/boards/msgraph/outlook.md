@@ -1,4 +1,4 @@
-## Add Kudos Boards plugin
+## Add Huddo Boards plugin
 
 1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/Settings/ServicesAndAddIns)
 
@@ -33,6 +33,6 @@
 
 1. Open [Outlook](https://outlook.office365.com/mail/)
 
-      You should now see the `Kudos Boards` option in the menu of an email
+      You should now see the `Huddo Boards` option in the menu of an email
 
       ![example](/assets/msgraph/outlook7.png)

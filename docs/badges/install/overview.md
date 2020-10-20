@@ -2,11 +2,11 @@ The following section provides an overview of the installation process and the p
 For an experienced Connections administrator or IBM WebSphere Application Server administrator, we expect that this installation process should
 take no longer than a few hours.
 
-The install process for Kudos involves the following steps:
+The install process for Huddo involves the following steps:
 
-- [Install the Kudos Application](/badges/install/app)
+- [Install the Huddo Application](/badges/install/app)
 - [Define widgets](/badges/install/install-widgets)
-- [Install Kudos Mobile (Optional)](/badges/install/mobile)
+- [Install Huddo Mobile (Optional)](/badges/install/mobile)
 - [Apply changes](/badges/install/apply-changes)
 - [Add Widgets to Connections interface](/badges/install/add-widgets)
 - [Community Widget Properties](/badges/install/comm-properties)
@@ -17,5 +17,6 @@ The install process for Kudos involves the following steps:
 - [Run the Badge Engine to Award the Badges](/badges/install/engine)
 - [Customising](/badges/install/customising)
 
-**Please Note:** These steps are only applicable to a new install of Kudos. For information about upgrading, please see the Kudos Update
+**Please Note:** These steps are only applicable to a new install of Huddo. For information about upgrading, please see the Huddo Update
 Guide.
+

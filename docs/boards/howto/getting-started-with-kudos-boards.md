@@ -1,12 +1,12 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-#Getting Started with Kudos boards
+#Getting Started with Huddo boards
 
-Kudos Boards is a intutive to learn and easy to master. It is a powerful addition to any business, whether you're looking to increase your personal productivity, super charge your teams', or collaborate with external parties. Learn quick tips and tricks from our help guides to get the most out of boards. Let's get started!
+Huddo Boards is a intutive to learn and easy to master. It is a powerful addition to any business, whether you're looking to increase your personal productivity, super charge your teams', or collaborate with external parties. Learn quick tips and tricks from our help guides to get the most out of boards. Let's get started!
 
-If you have signed in to Kudos Boards for the very first time as an individual user without a licence, see [Starting a trial of Kudos Boards](/boards/howto/start-a-trial/)
+If you have signed in to Huddo Boards for the very first time as an individual user without a licence, see [Starting a trial of Huddo Boards](/boards/howto/start-a-trial/)
 
-Here are some quick instructions to help you get started with Kudos Boards.
+Here are some quick instructions to help you get started with Huddo Boards.
 
 ---
 
@@ -89,10 +89,10 @@ Click on _Members_ in the right sidebar to open the Board Members view. You can 
 
 ### Colour Code Your Cards
 
-Kudos Boards allows you to colour code your tasks by simply dragging and dropping the colours from the right sidebar onto cards. You can also assign custom text labels to each of the colours by simply clicking the edit icon in the _Colour Labels_ section in the right sidebar. These labels are set at the board level and everyone in the board will see the same labels.
+Huddo Boards allows you to colour code your tasks by simply dragging and dropping the colours from the right sidebar onto cards. You can also assign custom text labels to each of the colours by simply clicking the edit icon in the _Colour Labels_ section in the right sidebar. These labels are set at the board level and everyone in the board will see the same labels.
 
 ---
 
 ### Colour Code Your Boards
 
-Kudos Boards let's you colour code all your boards to help you personally manage and categorise your work. To colour code a board tile in the _My Boards_ view, simply drag a colour from the left sidebar and drop it on a board. Much like card colour labels, you can also add custom text labels to these colours, however, this is for your personal organisation and as such will only be visible to you. To edit the board colour labels, click the edit icon in the _Tile Colours_ section in the left sidebar.
+Huddo Boards let's you colour code all your boards to help you personally manage and categorise your work. To colour code a board tile in the _My Boards_ view, simply drag a colour from the left sidebar and drop it on a board. Much like card colour labels, you can also add custom text labels to these colours, however, this is for your personal organisation and as such will only be visible to you. To edit the board colour labels, click the edit icon in the _Tile Colours_ section in the left sidebar.

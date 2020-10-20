@@ -1,6 +1,6 @@
 # HCL Connections Widget Setup
 
-Basic instructions for adding Kudos Boards Docker widgets into HCL Connections on-premise environments
+Basic instructions for adding Huddo Boards Docker widgets into HCL Connections on-premise environments
 
 ---
 
@@ -15,8 +15,8 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
     Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<widgets>`, then within `<definitions>` add the following, replacing `[BOARDS_URL]` with your URL:
 
-        <!-- Kudos Boards -->
-        <widgetDef defId="KudosBoards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
+        <!-- Huddo Boards -->
+        <widgetDef defId="HuddoBoards" modes="view fullpage" url="{webresourcesSvcRef}/web/com.ibm.social.urliWidget.web.resources/widget/urlWidget.xml" themes="wpthemeNarrow wpthemeWide wpthemeBanner" uniqueInstance="true">
             <itemSet>
                 <item name="resourceId" value="{resourceId}"/>
                 <item name="width" value="100%"/>
@@ -24,7 +24,7 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
                 <item name="url" value="https://[BOARDS_URL]/boards/community/connections"/>
             </itemSet>
         </widgetDef>
-        <!-- END Kudos Boards -->
+        <!-- END Huddo Boards -->
 
 1.  Check in the widgets-config.xml file.
 
@@ -64,7 +64,7 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
       | Field           | Value                                                     |
       | --------------- | --------------------------------------------------------- |
-      | App Title       | Kudos Boards Stream                                       |
+      | App Title       | Huddo Boards Stream                                       |
       | URL Address     | `https://[BOARDS_URL]/widgets/connections/url-gadget.xml` |
       | Icon URL        | `https://[BOARDS_URL]/favicon.ico`                        |
       | Icon Secure URL | `https://[BOARDS_URL]/favicon.ico`                        |
@@ -104,7 +104,7 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
          ![Example](/assets/connections/highlights-create.png)
       
-      1. Select `Kudos Boards` from the menu and enter the ID: `CommunityBoards`
+      1. Select `Huddo Boards` from the menu and enter the ID: `CommunityBoards`
 
          ![Example](/assets/connections/highlights-def-community.png)
 

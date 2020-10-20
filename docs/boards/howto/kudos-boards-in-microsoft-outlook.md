@@ -1,8 +1,8 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-# Kudos Boards in Microsoft Outlook
+# Huddo Boards in Microsoft Outlook
 
-Kudos Boards' integration with Microsoft Office 365 allows you to create cards on a board directly from an email in your inbox, and share cards, lists, or an entire board, within an email.
+Huddo Boards' integration with Microsoft Office 365 allows you to create cards on a board directly from an email in your inbox, and share cards, lists, or an entire board, within an email.
 
 ## Create a Card From an Email
 
@@ -24,7 +24,7 @@ In the next window, click the `Open in Boards` button to be taken to the board a
 
 ### Web Outlook
 
-Navigate to the email you would like to attach as a card to a board. Click the `...` for more actions and scroll down to select `Kudos Boards`.
+Navigate to the email you would like to attach as a card to a board. Click the `...` for more actions and scroll down to select `Huddo Boards`.
 
 ![](/assets/boards/outlook-web1.png)
 
@@ -51,7 +51,7 @@ In the side panel that appears, you'll have the option to select your desired bo
 
 To include a card, list, board, in an email, create a new email, or select reply or forward of an existing email already in your inbox.
 
-Click the `...` at the bottom of the email and select `Kudos Boards`.
+Click the `...` at the bottom of the email and select `Huddo Boards`.
 
 ![](/assets/boards/Outlook1.png)
 

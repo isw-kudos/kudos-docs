@@ -20,7 +20,7 @@ We will need the following servers setup:
 ### Prerequisites
 
 1. ssh access to all servers (please connect and confirm ssh signature for each)
-1. Kudos [Ansible Roles](/assets/ansible.zip) downloaded and extracted
+1. Huddo [Ansible Roles](/assets/ansible.zip) downloaded and extracted
 1. Ansible setup, see [setting up ansible](/tools/ansible/)
 1. Servers have internet access
 
@@ -95,6 +95,6 @@ Kubernetes will assign a port for your http and https traffic ( Listed in the ou
 
 ---
 
-## Install Kudos Boards
+## Install Huddo Boards
 
-Please see [Kudos Boards for Kubernetes](/boards/kubernetes/).
+Please see [Huddo Boards for Kubernetes](/boards/kubernetes/).

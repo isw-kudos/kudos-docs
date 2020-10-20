@@ -1,34 +1,34 @@
-Kudos Badges can transform and accelerate organisations user adoption of Connections by encouraging users to leverage the full range of
+Huddo Badges can transform and accelerate organisations user adoption of Connections by encouraging users to leverage the full range of
 social services and drive user adoption and behaviour.
 
-Kudos Badges for Connections is a flexible gamification engine for Connections. By providing achievements and rewards (Kudos
-Badges), rank and leaderboards (Kudos Rank), and missions (Kudos Missions), organisations can dramatically improve their user engagement
+Huddo Badges for Connections is a flexible gamification engine for Connections. By providing achievements and rewards (Huddo
+Badges), rank and leaderboards (Huddo Rank), and missions (Huddo Missions), organisations can dramatically improve their user engagement
 and adoption of Connections.
 
-In addition, Kudos Badges is an extensible platform that can leverage game theory to provide performance management mechanics and
+In addition, Huddo Badges is an extensible platform that can leverage game theory to provide performance management mechanics and
 reward systems for applications outside of Connections such as HR, Sales Force Management, Help Desks, and many more.
 
-Kudos also now includes a peer to peer and team recognition feature; Kudos Thanks.
+Huddo also now includes a peer to peer and team recognition feature; Huddo Thanks.
 
-### Kudos Points
+### Huddo Points
 
-Kudos Points are awarded to people for performing certain actions. For example you get a Kudos Point for posting a status update or making a
-comment. You get 5 Kudos Points for creating a blog, or 3 Kudos Points for having one of your files recommended by another person. You can
-even be awarded Kudos Points for achieving a particular badge or for completing a Kudos Mission or category of badges. The value of any
-particular action or reward can be configured so the points system can be tweaked to meet your needs. You can also be awarded Kudos Points
+Huddo Points are awarded to people for performing certain actions. For example you get a Huddo Point for posting a status update or making a
+comment. You get 5 Huddo Points for creating a blog, or 3 Huddo Points for having one of your files recommended by another person. You can
+even be awarded Huddo Points for achieving a particular badge or for completing a Huddo Mission or category of badges. The value of any
+particular action or reward can be configured so the points system can be tweaked to meet your needs. You can also be awarded Huddo Points
 for your actions outside of Connections helping to drive your organisations’ performance management.
 
 
-### Kudos Metrics
+### Huddo Metrics
 
-Metrics are at the heart of Kudos Badges. Metrics are basically a way of awarding and tracking Kudos that determine if a particular badge, mission,
-or achievement has been awarded. Metrics also award Kudos that add to the person’s Kudos Rank and their leaderboard position.
+Metrics are at the heart of Huddo Badges. Metrics are basically a way of awarding and tracking Huddo that determine if a particular badge, mission,
+or achievement has been awarded. Metrics also award Huddo that add to the person’s Huddo Rank and their leaderboard position.
 
 Metrics are SQL statements that analyse information in your database. You can even define Metrics that count other Metrics! We provide many
 out of the box metrics for Connections that you can add to or modify. In addition you can also build your own custom metrics that capture
 actions and performance from external applications. You can then reward users based on their actions and behaviour outside of Connections.
 
-### Kudos Filters
+### Huddo Filters
 
 Filters work alongside Metrics. Filters are also SQL statements, and they are applied to Metrics to, as the name suggests, filter the selected users
 using contextual parameters such as Time, Community, Name etc. For example, to select a user with the display name Joe Bloggs, we can use
@@ -37,35 +37,35 @@ the Profile Like Metric with the filter Display Name Like with its parameter set
 Like Metrics, we also provide many out of the box filters for Connections that you can modify or add to, and you can build your own custom
 filters for use with external applications.
 
-### Kudos Badges
+### Huddo Badges
 
-Kudos Badges are rewards that users receive for performing certain actions. There are simple badges that are fairly easy to achieve and more
-complex badges that require significant effort. The Kudos Badges are designed to not only reward users but to also encourage progression and
+Huddo Badges are rewards that users receive for performing certain actions. There are simple badges that are fairly easy to achieve and more
+complex badges that require significant effort. The Huddo Badges are designed to not only reward users but to also encourage progression and
 exploration of other features. Badges are grouped into categories and missions and are achieved by meeting the required metrics for each badge.
 
-Badges are defined by selecting pre-configured Metrics, and specifying the upper and lower limits of the Kudos points returned by these Metrics,
+Badges are defined by selecting pre-configured Metrics, and specifying the upper and lower limits of the Huddo points returned by these Metrics,
 required to achieve that Badge. You can make Badges as simple or as complex as you wish by varying the amount of Metrics you are counting.
 
 
-### Kudos Awards
+### Huddo Awards
 
-Kudos Awards is a reward and recognition system which provides the capability of directly awarding Badges to one or more users. Kudos provides
+Huddo Awards is a reward and recognition system which provides the capability of directly awarding Badges to one or more users. Huddo provides
 a set of default Awards to reward loyalty, efficiency, expertise, etc. The default Awards have been designed to be generic and universally
 applicable, however they can be customised and/or replaced with ones more applicable to your environment.
 
 
-### Kudos Leaderboard
+### Huddo Leaderboard
 
-The Kudos Badges Leaderboard enables users to view the top 10 contributors throughout Connections.
-You can filter the leaders to just people from your network, everyone, or even Community members (when viewing the Kudos Leaderboard in a
+The Huddo Badges Leaderboard enables users to view the top 10 contributors throughout Connections.
+You can filter the leaders to just people from your network, everyone, or even Community members (when viewing the Huddo Leaderboard in a
 Community).
 
 You can also view a break-down of which categories the Points/Badges came from by simply selecting the user in the Leaderboard.
 
 
-### Kudos Configurators
+### Huddo Configurators
 
-The Kudos Badges, Metrics & Filters Configurators allow the user to control and customise Badges, Metrics & Filters.
+The Huddo Badges, Metrics & Filters Configurators allow the user to control and customise Badges, Metrics & Filters.
 
 These Configurators are designed for use by Administrators, and not general users. As such controlling access to them is very important. Therefore
 we have built them to only operate in one specific Connections Community, which you can control. This means that the Community Administrators
@@ -75,15 +75,15 @@ We will be creating three Communities; one for each Configurator. These Communit
 existing Communities if you wish.
 
 
-### Kudos Badges Summary
+### Huddo Badges Summary
 
-The Kudos Summary Widget is added to everyone's profile so that others can see what achievements and rewards the person has received. When
+The Huddo Summary Widget is added to everyone's profile so that others can see what achievements and rewards the person has received. When
 you mouse over each badge it provides you with details on why the badge was awarded and tasks that you can consider to try and win another
 badge! The idea is to not only reward people for their behaviour but to also provide them with guidance and education on what else they can do in
-Connections. When users click on the View All link it takes them to their Kudos Badges Progress and Detail Page.
+Connections. When users click on the View All link it takes them to their Huddo Badges Progress and Detail Page.
 
 
-### Kudos Profile Progress Widget
+### Huddo Profile Progress Widget
 
 Encourage the users to get started in Connections!
 
@@ -92,28 +92,28 @@ Profile is lacking. This widget uses existing metrics to measure in real-time th
 powerful is that it is completely configurable allowing you to fine tune it to your environment!
 
 
-### Kudos Thanks
+### Huddo Thanks
 
 There is nothing quite as simple as saying "Thank You" to provide some recognition of great work. Think about it for a moment...when somebody
 thanks you for your great idea, or for putting in that extra work to meet a deadline, or maybe for just being a good team mate, it makes you feel
 great and more motivated to stay engaged.
 
-That is why ISW has developed Kudos Thanks, the peer to peer and team recognition tool for Connections.
+That is why ISW has developed Huddo Thanks, the peer to peer and team recognition tool for Connections.
 
 Motivate your team
 We all do performance reviews (or we all should!), however often the problem is that the various achievements or small goals we meet throughout
-the year can be easily forgotten. Why wait for the next big meeting to provide some feedback to your team. Kudos Thanks enables you to provide
+the year can be easily forgotten. Why wait for the next big meeting to provide some feedback to your team. Huddo Thanks enables you to provide
 real time feedback and to publically acknowledge great work quickly and easily. The recognition then stays visible on the person's profile so that
 peers and colleagues can see and recognise the value that is placed on a person’s work.
 
 Peer to Peer recognition
 Thanks don’t always come from your boss either! Often having your direct peers’ thank you for some great work can be a great motivator. With
-Kudos Thanks users of Connections can select from a range of Thanks related badges, choose who to award the thanks to, add a message
+Huddo Thanks users of Connections can select from a range of Thanks related badges, choose who to award the thanks to, add a message
 and send it off! The thanks will appear on the users profile as well as integrate within their Activity Steam so that others can see as well.
 
 Management or Team recognition
-Kudos also allows for Manager or Team Leader Thanks Badges. You can create your own special badges that only certain people can award such
-as employee of the month. And because Kudos Thanks is built to be social, within Connections peers and colleagues are able to see and add
+Huddo also allows for Manager or Team Leader Thanks Badges. You can create your own special badges that only certain people can award such
+as employee of the month. And because Huddo Thanks is built to be social, within Connections peers and colleagues are able to see and add
 value to the recognition and thanks as well!
 
 
@@ -140,39 +140,39 @@ to see. An email notification is sent to the user as well to make sure they
 receive your thanks.
 ```
 
-### Kudos Groups
+### Huddo Groups
 
-Kudos Groups allows administrators to group users.
+Huddo Groups allows administrators to group users.
 
-These groups can then be used to control access to various parts of Kudos. For example in Thanks Badges, allowing you to define Thanks which
+These groups can then be used to control access to various parts of Huddo. For example in Thanks Badges, allowing you to define Thanks which
 can only be awarded by selected users. This allows you to define exclusive Management badges such as “Employee of the Month” which can
 only be awarded by those you choose! You can also use Groups to exclude users from appearing in the Leaderboards!
 
 
 ### Connections Activity Stream Integration
 
-Kudos now includes Embedded Experiences in the Activity Stream through use of the new Open Social Gadget standards.
-Now you can enjoy a richer Kudos experience, through the ability to Comment & Like on Awarded Badges and Thanks.
+Huddo now includes Embedded Experiences in the Activity Stream through use of the new Open Social Gadget standards.
+Now you can enjoy a richer Huddo experience, through the ability to Comment & Like on Awarded Badges and Thanks.
 
 ```
 Awarded Badges
 ```
 ```
 All awarded badges will now appear on the Discovery tab in the Activity Stream. Further details about the Badge can be viewed by opening
-the Embedded Kudos Gadget.
+the Embedded Huddo Gadget.
 ```
 
-Kudos News Gadget
+Huddo News Gadget
 
-From the Kudos News Gadget users can now Like and Comment on Kudos Activity Stream Entries.
+From the Huddo News Gadget users can now Like and Comment on Huddo Activity Stream Entries.
 
-Liking Kudos Entries
+Liking Huddo Entries
 
 When a User Likes the item, a new entry describing the Liking of the Content, is created in the Activity Stream and the original entry is rolled up
 into the new entry. If the user chooses to Undo this Like, then this new Stream Entry is removed and the previous Entry takes its place again.
 
 
-Commenting on Kudos Entries
+Commenting on Huddo Entries
 
 When a User Comments on the item, a new entry describing the Comment on the Content, is created in the Activity Stream and any previous
 entries are rolled up into the new entry. If the user chooses to remove this Comment, then the new Stream Entry is removed and the previous
@@ -181,7 +181,7 @@ Entry takes its place again. Users can also edit their own comments after postin
 
 Recent Updates
 
-All activity performed on the Stream Entries can be viewed on the Recent Updates tab of the Kudos News Gadget. This includes the creation
+All activity performed on the Stream Entries can be viewed on the Recent Updates tab of the Huddo News Gadget. This includes the creation
 of the original entry as well as all comments and likes on the entry. This allows you to see who responded and when. To make things even
 simpler, all timestamps are updated in real time, so you are never misinformed!
 
@@ -189,7 +189,7 @@ simpler, all timestamps are updated in real time, so you are never misinformed!
 Thanks Given
 
 All Thanks given by users will now appear in the Discovery tab in the Activity Stream. Further details about the Thanks, including the personal
-message of recognition, can be seen by opening the Embedded Kudos News Gadget.
+message of recognition, can be seen by opening the Embedded Huddo News Gadget.
 
 
 Thanks Email Notifications

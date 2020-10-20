@@ -1,4 +1,4 @@
-## Add Kudos Boards to tiles
+## Add Huddo Boards to tiles
 
 1. Open [365 Admin Centre](https://admin.microsoft.com/AdminPortal/Home#/companyprofile)
 
@@ -18,15 +18,15 @@
 
 1. Enter the following details & click `Save`
 
-        Kudos Boards
-        https://kudosboards.com/auth/msgraph
+        Huddo Boards
+        https://boards.huddo.com/auth/msgraph
         Social collaboration
-        https://kudosboards.com/img/logo-small.png
+        https://boards.huddo.com/img/logo-small.png
 
       ![example](/assets/msgraph/custom-tiles3.png)
 
 
-1. Kudos Boards will now appear in the list. Click `Close`
+1. Huddo Boards will now appear in the list. Click `Close`
 
       ![example](/assets/msgraph/custom-tiles4.png)
 
@@ -36,7 +36,7 @@
 
       ![example](/assets/msgraph/custom-tiles5.png)
 
-1. Kudos Boards should be shown in the list.
+1. Huddo Boards should be shown in the list.
 
       Users can now pin this to their menu. This may take 10 minutes to appear
 

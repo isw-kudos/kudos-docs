@@ -2,9 +2,9 @@
 
 # Manage Organisation Config
 
-Configuration options are available at an organisation level for Kudos Boards. Changing these settings will affect all Kudos Boards users in your organisation.
+Configuration options are available at an organisation level for Huddo Boards. Changing these settings will affect all Huddo Boards users in your organisation.
 
-To access these settings, sign in to Kudos Boards as an administrator of your organisation.
+To access these settings, sign in to Huddo Boards as an administrator of your organisation.
 Click your profile image and then `Admin Settings`:
 
 ![](/assets/boards/config-manage_org_new.png)

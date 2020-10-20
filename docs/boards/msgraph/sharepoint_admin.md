@@ -1,6 +1,6 @@
-## Enable embedding Kudos Boards pages in Sharepoint.
+## Enable embedding Huddo Boards pages in Sharepoint.
 
-Embedding Kudos Boards in sharepoint requires iframe permissions for users, it is common (default) for the permitted domains to be limited, if this is the case, you can add Kudos Boards to the restricted list as below.
+Embedding Huddo Boards in sharepoint requires iframe permissions for users, it is common (default) for the permitted domains to be limited, if this is the case, you can add Huddo Boards to the restricted list as below.
 
 > Admin access is required for these steps
 
@@ -25,4 +25,4 @@ Embedding Kudos Boards in sharepoint requires iframe permissions for users, it i
 
   ![example](/assets/msgraph/sharepointadmin4.png)
 
-1. To add Site Pages for sharing Kudos Boards, follow the instructions [here](/boards/msgraph/sharepoint/)
+1. To add Site Pages for sharing Huddo Boards, follow the instructions [here](/boards/msgraph/sharepoint/)

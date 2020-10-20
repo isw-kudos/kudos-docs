@@ -1,6 +1,6 @@
-## Kudos Boards for HCL Connections CP
+## Huddo Boards for HCL Connections CP
 
-[Guide to upgrade from CP to Dockerhub images](https://docs.kudosapps.com/boards/cp/dockerhub/)
+[Guide to upgrade from CP to Dockerhub images](https://docs.huddo.com/boards/cp/dockerhub/)
 
 
 ### Update Notes:
@@ -8,9 +8,9 @@
 
 Please use the appropriate update command. For example:
 
-Kudos Boards in Kubernetes
+Huddo Boards in Kubernetes
 ```
-helm upgrade boards https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 ```
 
 Component Pack (Activities Plus)
@@ -345,7 +345,7 @@ Fixes:
 - individual import of Activity with emails
 - member issue when moving card into new board
 - Archived cards appear twice
-- Powered by Kudos image
+- Powered by Huddo image
  
 Language support:
 ```

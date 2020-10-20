@@ -12,7 +12,7 @@ When you open Microsoft Teams, click the `…` icon in the left-hand side menu a
 
 ![](/assets/boards/boards_to_teams1.png)
 
-In the Store search bar, type in Kudos Boards. Click the Kudos Boards icon. The following window will appear:
+In the Store search bar, type in Huddo Boards. Click the Huddo Boards icon. The following window will appear:
 
 ![](/assets/boards/boards_to_teams2.png)
 
@@ -20,7 +20,7 @@ You can choose if you wish to add to a specific team, but for the moment, we wan
 
 Press the `X` in the next window as installation has now been completed.
 
-You can now access all your Boards in one place, by navigating to the `…` on the left-hand side, and selecting `Kudos Boards`.
+You can now access all your Boards in one place, by navigating to the `…` on the left-hand side, and selecting `Huddo Boards`.
 
 ![](/assets/boards/boards_to_teams3.png)
 
@@ -34,7 +34,7 @@ You can work on Boards from within Channels. To add a Board to a channel, click 
 
  ![](/assets/boards/boards_to_teams5.png)
 
- You can select the Kudos Boards icon or search it if it doesn’t appear directly.
+ You can select the Huddo Boards icon or search it if it doesn’t appear directly.
 
  In the next window, select your preferences, to either
 

@@ -1,6 +1,6 @@
-# Authenticating Kudos Boards with Office 365
+# Authenticating Huddo Boards with Office 365
 
-This document details the process to enable login to your private instance of Kudos Boards with your private Office 365 tenant.
+This document details the process to enable login to your private instance of Huddo Boards with your private Office 365 tenant.
 
 ![outcome of guide](/assets/msgraph/boards-login.png)
 
@@ -8,7 +8,7 @@ This document details the process to enable login to your private instance of Ku
 
 ## Register OAuth Application
 
-You must configure an OAuth Application in your Office 365 Tenant in order to use Kudos Boards with O365. To access this configuration you must be logged in as a Microsoft tenant admin
+You must configure an OAuth Application in your Office 365 Tenant in order to use Huddo Boards with O365. To access this configuration you must be logged in as a Microsoft tenant admin
 
 
 ### Open the [Azure App Portal](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade)
@@ -23,10 +23,10 @@ Enter the values below and click `Register`
 
 ![enter these values](/assets/msgraph/appreg2.png)
 
-    Kudos Boards
+    Huddo Boards
     https://[BOARDS_URL]/auth/msgraph/callback
 
-  Where BOARDS_URL is the URL to access your main Kudos Boards page. For example:
+  Where BOARDS_URL is the URL to access your main Huddo Boards page. For example:
 
   - `https://connections.example.com/boards/auth/msgraph/callback` OR
   - `https://boards.example.com/auth/msgraph/callback`
@@ -139,7 +139,7 @@ Click `Yes`
             MSGRAPH_CLIENT_SECRET: "<your-application-secret>"
             MSGRAPH_LOGIN_TENANT: "<your-tenant-id>"
 
-1. Redeploy Boards Helm Chart as per command for Kudos Boards:
+1. Redeploy Boards Helm Chart as per command for Huddo Boards:
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
@@ -153,20 +153,20 @@ Click `Yes`
 
 ## Approve Permissions
 
-1. Open your Kudos Boards environment.
+1. Open your Huddo Boards environment.
 
     Click the `Office 365` option and login with a Tenant Administrator account
 
     ![login with Office 365](/assets/msgraph/appreg-login.png)
 
-1. Once logged in, a prompt will appear in Kudos Boards. Click `Approve`
+1. Once logged in, a prompt will appear in Huddo Boards. Click `Approve`
 
     ![Admin Approval Toast](../../assets/msgraph/administrator_approval_toast.png)
 
-1. Click `Accept` on the following popup to grant the required permissions for Kudos Boards
+1. Click `Accept` on the following popup to grant the required permissions for Huddo Boards
 
     ![permission popup](../../assets/msgraph/administrator_approval_view.png)
 
-    Congratulations! All users in your tenant can now login to Kudos Boards via Office 365!
+    Congratulations! All users in your tenant can now login to Huddo Boards via Office 365!
 
     ![login options](/assets/msgraph/boards-login.png)

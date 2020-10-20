@@ -1,6 +1,6 @@
-# Kudos Boards in Collab Cloud
+# Huddo Boards in Collab Cloud
 
-1. Kudos Boards / Activities Plus
+1. Huddo Boards / Activities Plus
     - [Widgets](/collab/widgets/)
     - [Migration](/collab/migration/)
     <!-- - [Header](/collab/header/) -->

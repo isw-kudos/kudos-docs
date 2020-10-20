@@ -6,7 +6,7 @@
 
 ## Remaining Tab
 
-The REMAINING tab is where you can select from Activities that have not been migrated and initiate the process for migrating them into Kudos Boards.
+The REMAINING tab is where you can select from Activities that have not been migrated and initiate the process for migrating them into Huddo Boards.
 
 ### Activities Table
 
@@ -30,8 +30,8 @@ Near the MIGRATE buttons, there is an Options panel to for enabling features tha
 
 | Option                 | Description                                                                                                                                                                                                      |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Add Link to Activity   | This will create an entry in each activity that provides a link to the new Kudos Board. This corresponds to the `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` environment variable when running a headless migration. |
-| Mark Activity Complete | This will mark the Activity as complete after migrating it to Kudos Boards. This corresponds to the `COMPLETE_ACTIVITY_AFTER_MIGRATED` environment variable when running a headless migration.                   |
+| Add Link to Activity   | This will create an entry in each activity that provides a link to the new Huddo Board. This corresponds to the `CREATE_LINK_IN_ACTIVITY_AFTER_MIGRATED` environment variable when running a headless migration. |
+| Mark Activity Complete | This will mark the Activity as complete after migrating it to Huddo Boards. This corresponds to the `COMPLETE_ACTIVITY_AFTER_MIGRATED` environment variable when running a headless migration.                   |
 
 ### Control Buttons
 
@@ -44,21 +44,21 @@ Near the MIGRATE buttons, there is an Options panel to for enabling features tha
 
 ## Done Tab
 
-This tab shows all of the activities that have been migrated into Kudos Boards.
-The `Activity Name` is a link to the Activity. The `Board` column has links to each Board in Kudos Boards.
+This tab shows all of the activities that have been migrated into Huddo Boards.
+The `Activity Name` is a link to the Activity. The `Board` column has links to each Board in Huddo Boards.
 
 ---
 
 ## Boards User Data Tab
 
-If you're migrating from an environment that has previously been using Kudos Boards WebSphere, you can use this tab to start the process of migrating Boards User Data into Kudos Boards Docker.
+If you're migrating from an environment that has previously been using Huddo Boards WebSphere, you can use this tab to start the process of migrating Boards User Data into Huddo Boards Docker.
 
-Each user who has used Kudos Boards WebSphere is likely to have created some of this data. It includes:
+Each user who has used Huddo Boards WebSphere is likely to have created some of this data. It includes:
 
 - The labels a user has assigned to colors which they apply to Board Tiles.
 - The Categories a user has created which they apply to Board Tiles.
 
-If the user already exists in Kudos Boards Docker:
+If the user already exists in Huddo Boards Docker:
 
 - Their color labels will be deleted and replaced with the labels from Boards WebSphere.
 - Imported Categories will be added to their existing list of categories.

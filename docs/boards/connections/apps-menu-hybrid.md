@@ -12,7 +12,7 @@
 
             <installdir>\data\shared\customization\common\nav\templates\menu\apps.jsp
 
-- To add the Kudos Boards App Link add the following lines towards the bottom of the apps.jsp file before the `</table>` element
+- To add the Huddo Boards App Link add the following lines towards the bottom of the apps.jsp file before the `</table>` element
 
         --%><tr><%--
           --%><th scope="row" class="lotusNowrap"><%--
@@ -42,7 +42,7 @@
 
 - Save and close the file
 
-- Add the Kudos Boards Strings for the Apps Menu
+- Add the Huddo Boards Strings for the Apps Menu
     - Download the [strings files](/assets/strings.zip) and extract the files to the Connections strings customisation directory:
 
             <CONNECTIONS_CUSTOMIZATION_PATH>/strings

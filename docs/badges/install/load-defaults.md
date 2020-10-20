@@ -1,4 +1,4 @@
-Kudos Badges is supplied with a set of default metrics and badges to kickstart performance measurement and reward within your organisation. This step loads the supplied metrics and badge definitions into your Connections database, where the widgets and gamification engine can access the definitions to measure and reward.
+Huddo Badges is supplied with a set of default metrics and badges to kickstart performance measurement and reward within your organisation. This step loads the supplied metrics and badge definitions into your Connections database, where the widgets and gamification engine can access the definitions to measure and reward.
 
 ### Load Defaults
 
@@ -23,7 +23,7 @@ Select:
 - Structure
 - any other Badge Categories you wish to install (most installations would select all)
 
-**Note:** You will need to have the corresponding Connections Applications installed. As well as have a Standard or Enterprise Licence for Kudos.
+**Note:** You will need to have the corresponding Connections Applications installed. As well as have a Standard or Enterprise Licence for Huddo.
 
 ![load defaults prompts](/assets/badges/install/load-defaults/load_defaults_prompts.png)
 

@@ -1,6 +1,6 @@
-# Migration of Activities to Kudos Boards
+# Migration of Activities to Huddo Boards
 
-As part of the installation process for Kudos Boards (Activities Plus) you must run the migration service to move the existing Activities into Kudos Boards.
+As part of the installation process for Huddo Boards (Activities Plus) you must run the migration service to move the existing Activities into Huddo Boards.
 
 ## Process Overview
 

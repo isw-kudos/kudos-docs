@@ -1,23 +1,23 @@
-# Kudos Ideas for IBM Connections Cloud
+# Huddo Ideas for IBM Connections Cloud
 
 ### Oauth configuration
-Please setup oAuth access for Kudos Ideas as follow
+Please setup oAuth access for Huddo Ideas as follow
 
 1. Login to connections cloud
 1. Click your profile (top right) and select Account settings
 1. On the left side of the page, click Internal Apps
 1. Click Register App
-1. Enter App Name and Description as Kudos Ideas
+1. Enter App Name and Description as Huddo Ideas
 1. Choose OAuth 2.0 as the Auth Type
 1. Enter `https://ideas.isw.net.au/auth/smartcloud` as the Callback URL
 1. Click Register
-1. Find Kudos Ideas in the list of Internal Apps, click the menu button next to it and select Edit Properties
+1. Find Huddo Ideas in the list of Internal Apps, click the menu button next to it and select Edit Properties
 1. Look at the App ID assigned, it should be in the form `app_(your org id)_(unique id)`
 1. Copy the org id part of this App ID (the first set of numbers)
 1. update the callback URL to `https://ideas.isw.net.au/auth/smartcloud/(your org id)/callback`
 1. Click Ok
-1. Click the menu button next to Kudos Ideas again and select Show Credentials
-1. Copy the ClientID and Client Secret and send them, along with your business and contact information to <support@kudosbadges.com>
+1. Click the menu button next to Huddo Ideas again and select Show Credentials
+1. Copy the ClientID and Client Secret and send them, along with your business and contact information to <support@huddo.com>
 
 ### NavBar Extension
 
@@ -34,14 +34,14 @@ Please setup oAuth access for Kudos Ideas as follow
   	"application": "Ideas",
   	"payload": {
     	"link": "https://ideas.isw.net.au/login?team=(your team name here)",
-    	"icon": "https://ideas.isw.net.au/kudos_icon.png",
-    	"tooltip": "Kudos Ideas"
+    	"icon": "https://ideas.isw.net.au/icon.png",
+    	"tooltip": "Huddo Ideas"
   	},
-  	"name": "Kudos Ideas",
+  	"name": "Huddo Ideas",
   	"description": "Ideation done right",
   	"id": "576eccbe-c6ec-43b3-9053-a3e83e2f0875",
   	"type": "com.ibm.action.link",
-  	"title": "Kudos Ideas"
+  	"title": "Huddo Ideas"
 	}
   ],
   "payload": {
@@ -56,7 +56,7 @@ Please setup oAuth access for Kudos Ideas as follow
   "services": [
 	"TopNavigationBar"
   ],
-  "title": "Kudos Ideas"
+  "title": "Huddo Ideas"
 }
 ```
 
@@ -68,8 +68,8 @@ Please setup oAuth access for Kudos Ideas as follow
 
     - Service: Communities
     - Extension Point: Community App
-    - Name: Kudos Ideas
-    - Icon URL: https://ideas.isw.net.au/kudos_icon.png
+    - Name: Huddo Ideas
+    - Icon URL: https://ideas.isw.net.au/icon.png
     - URL: https://ideas.isw.net.au/widget/smartcloud
     - Properties:
 ```

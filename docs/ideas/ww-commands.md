@@ -11,10 +11,10 @@
 
 
 # Watson Workspace Slash Commands
-All Kudos Ideas commands in Watson Workspace start with the prefix `/ideas`.
+All Huddo Ideas commands in Watson Workspace start with the prefix `/ideas`.
    
 To run a command:
-1. Make sure you have added the Kudos Ideas app to the Workspace
+1. Make sure you have added the Huddo Ideas app to the Workspace
 2. Type `/ideas` in the chat and select the command from the popup window, by either clicking on it or pressing `Tab`.
 3. Add a sub-command and any applicable parameters as below.
 4. Press Enter
@@ -54,12 +54,12 @@ Click on the *Share* button on the idea you wish to share. This will post a mess
 ### View Idea Details
 List all Ideas using the above `list` command.  
 Click on the *View Idea* button on the idea you wish to view.  
-This will show you more details about the idea and also give you a link to the full Idea page in Kudos Ideas .
+This will show you more details about the idea and also give you a link to the full Idea page in Huddo Ideas .
 
 ---
 
 ### Help with Slash Commands
-Run the `help` command as per below to get a more detailed summary of the Kudos Ideas commands.
+Run the `help` command as per below to get a more detailed summary of the Huddo Ideas commands.
 ```
 /ideas help
 ```

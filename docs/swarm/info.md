@@ -29,7 +29,7 @@ Open Dashboard as defined in `{{dashboard_host}}` e.g. `https://swarm.isw.net.au
     - Add Stack
     - Give it a name
     - Add the yml
-    - For all the details to deploy Kudos Boards [see here](/boards/swarm/)
+    - For all the details to deploy Huddo Boards [see here](/boards/swarm/)
 
 8. Update DNS records with a cname entry pointing to `{{dashboard_host}}`
 

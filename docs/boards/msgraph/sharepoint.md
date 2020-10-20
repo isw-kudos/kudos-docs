@@ -1,4 +1,4 @@
-## Embedding Kudos Boards pages in Sharepoint.
+## Embedding Huddo Boards pages in Sharepoint.
 
 Before proceeding, you will need a site admin to enable security settings as described [here](/boards/msgraph/sharepoint_admin/)
 
@@ -17,7 +17,7 @@ Before proceeding, you will need a site admin to enable security settings as des
 
       ![example](/assets/msgraph/sharepoint3.png)
 
-1. Open [Kudos Boards](https://kudosboards.com/auth/signin) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
+1. Open [Huddo Boards](https://boards.huddo.com/auth/signin) and select the board you wish to embed in the sharepoint page.  Click the `Board Options` button
 
       ![example](/assets/msgraph/sharepoint4.png)
 

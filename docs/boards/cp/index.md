@@ -1,6 +1,6 @@
-# Kudos Boards for HCL Connections CP
+# Huddo Boards for HCL Connections CP
 
-Deploying Kudos Boards into HCL Connections Component Pack (Kubernetes)
+Deploying Huddo Boards into HCL Connections Component Pack (Kubernetes)
 
 ---
 
@@ -20,7 +20,7 @@ Deploying Kudos Boards into HCL Connections Component Pack (Kubernetes)
 
 ### SSL / Network setup
 
-Kudos Boards in Connections Component Pack (CP) uses the existing CP infrastructure.
+Huddo Boards in Connections Component Pack (CP) uses the existing CP infrastructure.
 
 The UI and API each require a unique route:
 
@@ -33,12 +33,12 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 ### Setup OAuth
 
-You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
+You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
 | Provider                        | Registration / Documentation                            | Callback URL                                                 |
 | ------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
-| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
-| Microsoft Office 365            | [Kudos instructions](/boards/msgraph/auth/)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
+| HCL Connections<br>(on premise) | [Huddo instructions](/boards/connections/auth-on-prem/) | `https://[CONNECTIONS_URL]/boards/auth/connections/callback` |
+| Microsoft Office 365            | [Huddo instructions](/boards/msgraph/auth/)             | `https://[CONNECTIONS_URL]/boards/auth/msgraph/callback`     |
 
 ---
 
@@ -54,17 +54,17 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 #### S3
 
-Kudos Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](/boards/cp/minio) to configure the NFS mount.
+Huddo Boards for Component Pack deploys a Minio service. Please follow [S3 storage details here](/boards/cp/minio) to configure the NFS mount.
 
 #### Mongo
 
-Kudos Boards uses the Mongo database already deployed inside the Component Pack. There is no configuration required.
+Huddo Boards uses the Mongo database already deployed inside the Component Pack. There is no configuration required.
 
 ---
 
 ### Licence Key
 
-Kudos Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.kudosapps.com](https://store.kudosapps.com). For more details [see here](/boards/cp/store/).
+Huddo Boards / Activities Plus is a free entitlement however it requires a licence key from [https://store.huddo.com](https://store.huddo.com). For more details [see here](/boards/cp/store/).
 
 ---
 
@@ -141,6 +141,6 @@ Please follow the [instructions here](/boards/cp/migration)
 
 ---
 
-## Subscribing to latest updates from Kudos Team
+## Subscribing to latest updates from Huddo Team
 
 [Guide here](/boards/cp/dockerhub)

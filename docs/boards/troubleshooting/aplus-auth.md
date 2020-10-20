@@ -1,6 +1,6 @@
 ### Testing an oauth2 connections configuration
 
-The steps below will test a Kudos Boards / Activities Plus oauth setup.
+The steps below will test a Huddo Boards / Activities Plus oauth setup.
 
 > We will prepare a request in an api testing tool, then get a response code from connections and finally use that code in the prepared response to get an auth token. It is important to do in this order as the code is only valid for a minute.
 

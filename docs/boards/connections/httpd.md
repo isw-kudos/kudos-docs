@@ -46,12 +46,12 @@
         <VirtualHost *:443>
           ServerName [CONNECTIONS_URL]
 
-          #Kudos Boards
+          #Huddo Boards
           ProxyPass "/boards" "http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/boards"
           ProxyPassReverse "/boards" "http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/boards"
           ProxyPass "/api-boards" "http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/api-boards"
           ProxyPassReverse "/api-boards" "http://[KUBERNETES_NAME]:[KUBERNETES_PORT]/api-boards"
-          #End Kudos Boards
+          #End Huddo Boards
         </VirtualHost>
 
     Where:

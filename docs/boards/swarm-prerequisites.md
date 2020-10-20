@@ -1,4 +1,4 @@
-Requirements and considerations before installation of Docker Swarm and Kudos Boards
+Requirements and considerations before installation of Docker Swarm and Huddo Boards
 
 ## Servers
 
@@ -8,7 +8,7 @@ This solution is designed to be a lightweight, cloud-like setup running locally 
 
 ## Existing Infrastructure
 
-Kudos Boards for Docker Swarm is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
+Huddo Boards for Docker Swarm is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
 
 | Service                   | Requirements                                                               |
 | ------------------------- | -------------------------------------------------------------------------- |
@@ -21,7 +21,7 @@ Kudos Boards for Docker Swarm is able to take advantage of existing services in 
 
 ## STMP for email notifications
 
-If you would like to send emails, Kudos Boards docker requires details of a forwarding SMTP server in your environment (or other email provider sich as sendgrid)
+If you would like to send emails, Huddo Boards docker requires details of a forwarding SMTP server in your environment (or other email provider sich as sendgrid)
 
 ---
 
@@ -47,7 +47,7 @@ To perform the installation, you need to setup some config files on a local mach
 
 ## Authentication
 
-Kudos Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](/boards/swarm/#setup-oauth)):
+Huddo Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](/boards/swarm/#setup-oauth)):
 
 | Provider                     | Registration / Documentation                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |

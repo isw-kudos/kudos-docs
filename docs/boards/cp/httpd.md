@@ -45,10 +45,10 @@
         <VirtualHost *:443>
           ServerName connections.example.com
 
-          #Kudos Boards
+          #Huddo Boards
           ProxyPass "/boards" "http://kube-master.company.com:32080/boards"
           ProxyPassReverse "/boards" "http://kube-master.company.com:32080/boards"
           ProxyPass "/api-boards" "http://kube-master.company.com:32080/api-boards"
           ProxyPassReverse "/api-boards" "http://kube-master.company.com:32080/api-boards"
-          #End Kudos Boards
+          #End Huddo Boards
         </VirtualHost>

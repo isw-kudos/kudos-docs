@@ -1,6 +1,6 @@
 ## Step 6: Additional properties for Communities Widgets (OPTIONAL)
 
-At this stage, the Kudos Configuration Widgets show in the Communities Customization Palette for all Communities. This means they can be added to any community. However, they are restriced to function only in their respective Community created during this installation process. This message will be shown if theyare added to any other community.
+At this stage, the Huddo Configuration Widgets show in the Communities Customization Palette for all Communities. This means they can be added to any community. However, they are restriced to function only in their respective Community created during this installation process. This message will be shown if theyare added to any other community.
 
 ![Metrics Unauthorised](/assets/badges/install/comm-properties/configurator_unauthorised.png)
 
@@ -22,25 +22,25 @@ Add the attribute loginRequired="true" to each Community widget if you wish to h
 
 Your configuration should now look like this:
 
-    <widgetDef defId="BadgesConfigurator" description="badgesConfigurator" modes="view fullpage" url="https://<CONNECTIONS_SERVER_URL>/Kudos/BadgesConfigurator.xml" themes="wpthemeWide" showInPalette="false" loginRequired="true">
+    <widgetDef defId="BadgesConfigurator" description="badgesConfigurator" modes="view fullpage" url="https://<CONNECTIONS_SERVER_URL>/Huddo/BadgesConfigurator.xml" themes="wpthemeWide" showInPalette="false" loginRequired="true">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="communityId" value="YOUR_BADGES_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="MetricsConfigurator" description="metricsConfigurator" modes="view fullpage" url="https://<CONNECTIONS_SERVER_URL>/Kudos/MetricsConfigurator.xml" themes="wpthemeWide" showInPalette="false" loginRequired="true">
+    <widgetDef defId="MetricsConfigurator" description="metricsConfigurator" modes="view fullpage" url="https://<CONNECTIONS_SERVER_URL>/Huddo/MetricsConfigurator.xml" themes="wpthemeWide" showInPalette="false" loginRequired="true">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="communityId" value="YOUR_METRICS_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="FiltersConfigurator" description="filtersConfigurator" modes="view fullpage" url="https://<CONNECTIONS_SERVER_URL>/Kudos/FiltersConfigurator.xml" themes="wpthemeWide" showInPalette="false" loginRequired="true">
+    <widgetDef defId="FiltersConfigurator" description="filtersConfigurator" modes="view fullpage" url="https://<CONNECTIONS_SERVER_URL>/Huddo/FiltersConfigurator.xml" themes="wpthemeWide" showInPalette="false" loginRequired="true">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="communityId" value="YOUR_FILTERS_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosCommunity" modes="view" url="https://<CONNECTIONS_SERVER_URL>/Kudos/CommunityRankingDisplay.xml" themes="wpthemeNarrow wpthemeWide" showInPalette="false" loginRequired="true">
+    <widgetDef defId="HuddoCommunity" modes="view" url="https://<CONNECTIONS_SERVER_URL>/Huddo/CommunityRankingDisplay.xml" themes="wpthemeNarrow wpthemeWide" showInPalette="false" loginRequired="true">
         <itemSet>
             <item name="communityId" value="{resourceId}"/>
         </itemSet>

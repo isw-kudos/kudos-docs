@@ -4,7 +4,7 @@
 
 1.  Prerequisites: docker, docker-compose, git.
 
-1.  Installation requires a deployment key in the msp-admin project managed by Kudos Team, you can run `ssh git@github.com` to check if you are authenticated.
+1.  Installation requires a deployment key in the msp-admin project managed by Huddo Team, you can run `ssh git@github.com` to check if you are authenticated.
 
 1.  clone the project
 

@@ -1,12 +1,12 @@
-The Kudos Widgets provide the interface for user interaction within Connections. During this step, we will be configuring communities for secure access to the configuration interfaces for Badges and Metrics, as well as provisioning the Analytics widget, Badges/Thanks/Awards Summaries and Leaderboard widgets for end users as well as the Kudos News Gadget.
+The Huddo Widgets provide the interface for user interaction within Connections. During this step, we will be configuring communities for secure access to the configuration interfaces for Badges and Metrics, as well as provisioning the Analytics widget, Badges/Thanks/Awards Summaries and Leaderboard widgets for end users as well as the Huddo News Gadget.
 
 ### Create the Configurator Communities
 
-The Kudos Badges Configurator Widget is the widget that allows users to define and configure what badges are available for award, and how they are awarded. 
+The Huddo Badges Configurator Widget is the widget that allows users to define and configure what badges are available for award, and how they are awarded. 
 
-The Kudos Metrics Configurator widget allows users to define and configure Kudos Metrics. These metrics monitor Connections usage (as well as external systems) and determine how Kudos are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
+The Huddo Metrics Configurator widget allows users to define and configure Huddo Metrics. These metrics monitor Connections usage (as well as external systems) and determine how Huddo are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
 
-The Kudos Filters Configurator widget allows users to define and configure Kudos Filters. These filters are then applied to Base Metrics to monitor Connections usage (as well as external systems) and determine how Kudos are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
+The Huddo Filters Configurator widget allows users to define and configure Huddo Filters. These filters are then applied to Base Metrics to monitor Connections usage (as well as external systems) and determine how Huddo are awarded. This involves the use of technical concepts such as JDBC connections and SQL queries.
 
 As such, the Configurators have been designed such that it is available to a specific Connections community where membership can be maintained, and hence the configurators can be secured. The Analytics Interface has been designed with the same concept, which is why the following steps will ask you to create four new communities. For smaller environments, you may wish to have a single community for the Badges, Metrics and Filters configurators.
 
@@ -26,21 +26,21 @@ As such, the Configurators have been designed such that it is available to a spe
 
 **Note:** Configurators requires a large column community layout to function properly. Either ‘3 Columns with side menu and banner’, ‘3 Columns with side menu’ or ‘2 Columns with side menu’.
 
-You have now created the first Kudos Configurator Community.
+You have now created the first Huddo Configurator Community.
 
 Take note of the CommunityUUID in the URL address, as we will need this later.
 
-Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Kudos Analytics Administrator Community](/badges/install/install-widgets/#create-the-kudos-analytics-administrator-community)
+Please repeat the above steps for the Metrics & Filters communities if you are not using the same Community for these. If you are using the same Community, please move to [Create the Huddo Analytics Administrator Community](/badges/install/install-widgets/#create-the-kudos-analytics-administrator-community)
 
-### Create the Kudos Analytics Administrator Community
+### Create the Huddo Analytics Administrator Community
 
-The Kudos Analytics widget allows users to review Connections Usage data over specified time periods. Users have access to both reporting and graph functionalities. The following community will be used to host the Connections Administrator level reports and graphs.
+The Huddo Analytics widget allows users to review Connections Usage data over specified time periods. Users have access to both reporting and graph functionalities. The following community will be used to host the Connections Administrator level reports and graphs.
 
 1. Login to Connections, navigate to Communities and click Start a Community.
 
     ![create community](/assets/badges/install/install-widgets/create-community.png)
 
-1. Enter a name, such as Kudos Analytics.
+1. Enter a name, such as Huddo Analytics.
 
 1. Set Access to Restricted.
 
@@ -50,7 +50,7 @@ The Kudos Analytics widget allows users to review Connections Usage data over sp
 
     ![analytics community details](/assets/badges/install/install-widgets/analytics_community_details.png)
 
-You have now created the Kudos Analytics Administrator Community.
+You have now created the Huddo Analytics Administrator Community.
 
 Take note of the CommunityUUID in the URL address, as we will need this later.
 
@@ -72,52 +72,52 @@ Checking Out the Widgets-Config.xml File:
 
 ### Configure the Profile Widgets
 
-By updating the widgets-config.xml with the code supplied below, the Kudos Badges, Kudos Summary, Profile Progress, Kudos Awards, Award
-Summary, Kudos Thanks and Thanks Summary widgets will be made available to the end users. The following diagram shows where the widgets
+By updating the widgets-config.xml with the code supplied below, the Huddo Badges, Huddo Summary, Profile Progress, Huddo Awards, Award
+Summary, Huddo Thanks and Thanks Summary widgets will be made available to the end users. The following diagram shows where the widgets
 will be placed.
 
 Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="profiles" ... >`, then under `<widgets>`, then within `<definitions>` add the following:
 
 **IMPORTANT**: Don’t forget to substitute the following placeholders with the corresponding values! CONNECTIONS_SERVER_NAME
 
-    <widgetDef defId="KudosSummary" url="https://CONNECTIONS_SERVER_NAME/Kudos/BadgeSummaryDisplay.xml" modes="view" themes="wpthemeNarrow">
+    <widgetDef defId="HuddoSummary" url="https://CONNECTIONS_SERVER_NAME/Huddo/BadgeSummaryDisplay.xml" modes="view" themes="wpthemeNarrow">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
         <item name="NumberBadges" value="12"/>
-        <item name="BadgeViewAllWidgetId" value="KudosBadges"/>
+        <item name="BadgeViewAllWidgetId" value="HuddoBadges"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosBadges" url="https://CONNECTIONS_SERVER_NAME/Kudos/BadgeViewAll.xml" modes="view" themes="wpthemeWide">
+    <widgetDef defId="HuddoBadges" url="https://CONNECTIONS_SERVER_NAME/Huddo/BadgeViewAll.xml" modes="view" themes="wpthemeWide">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
             <item name="NumberBadges" value="0"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="ProfileProgress" url="https://CONNECTIONS_SERVER_NAME/Kudos/ProfileProgress.xml" modes="view" themes="wpthemeNarrow">
+    <widgetDef defId="ProfileProgress" url="https://CONNECTIONS_SERVER_NAME/Huddo/ProfileProgress.xml" modes="view" themes="wpthemeNarrow">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="ThanksSummary" url="https://CONNECTIONS_SERVER_NAME/Kudos/ThanksSummaryDisplay.xml" modes="view" themes="wpthemeNarrow">
+    <widgetDef defId="ThanksSummary" url="https://CONNECTIONS_SERVER_NAME/Huddo/ThanksSummaryDisplay.xml" modes="view" themes="wpthemeNarrow">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
             <item name="NumberThanks" value="12"/>
-            <item name="ThanksWidgetId" value="KudosThanks"/>
+            <item name="ThanksWidgetId" value="HuddoThanks"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="AwardSummary" url="https://CONNECTIONS_SERVER_NAME/Kudos/AwardSummaryDisplay.xml" modes="view" themes="wpthemeNarrow">
+    <widgetDef defId="AwardSummary" url="https://CONNECTIONS_SERVER_NAME/Huddo/AwardSummaryDisplay.xml" modes="view" themes="wpthemeNarrow">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
             <item name="NumberBadges" value="12"/>
-            <item name="AwardViewAllWidgetId" value="KudosAwards"/>
+            <item name="AwardViewAllWidgetId" value="HuddoAwards"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosAwards" url="https://CONNECTIONS_SERVER_NAME/Kudos/AwardViewAll.xml" modes="view" themes="wpthemeWide">
+    <widgetDef defId="HuddoAwards" url="https://CONNECTIONS_SERVER_NAME/Huddo/AwardViewAll.xml" modes="view" themes="wpthemeWide">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosThanks" url="https://CONNECTIONS_SERVER_NAME/Kudos/ThanksViewAll.xml" modes="view" themes="wpthemeWide">
+    <widgetDef defId="HuddoThanks" url="https://CONNECTIONS_SERVER_NAME/Huddo/ThanksViewAll.xml" modes="view" themes="wpthemeWide">
         <itemSet>
             <item name="ProfilesId" value="{resourceId}"/>
         </itemSet>
@@ -129,22 +129,22 @@ Next you must define where to put the instances of the Widgets on the page. This
 
 Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="profiles" ... >`, then under `<layout ...  resourceSubType="default" ... >`, then within `<page ... pageId="profilesView" ... >` add the following:
 
-    <widgetInstance uiLocation="tabsWidget1" defIdRef="KudosBadges"/>
-    <widgetInstance uiLocation="tabsWidget1" defIdRef="KudosThanks"/>
-    <widgetInstance uiLocation="tabsWidget1" defIdRef="KudosAwards"/>
+    <widgetInstance uiLocation="tabsWidget1" defIdRef="HuddoBadges"/>
+    <widgetInstance uiLocation="tabsWidget1" defIdRef="HuddoThanks"/>
+    <widgetInstance uiLocation="tabsWidget1" defIdRef="HuddoAwards"/>
     <widgetInstance uiLocation="col1" defIdRef="ProfileProgress"/>
-    <widgetInstance uiLocation="col3" defIdRef="KudosSummary"/>
+    <widgetInstance uiLocation="col3" defIdRef="HuddoSummary"/>
     <widgetInstance uiLocation="col3" defIdRef="ThanksSummary"/>
     <widgetInstance uiLocation="col3" defIdRef="AwardSummary"/>
 
-The order in which you insert these two instance declarations is the order in which they show on the page. For example, you might wish to show the Summary Tab before the Links widget, and the Kudos Badges, Thanks & Awards Widgets as the last tabs, which would be configured as per the image below. Also make sure that the uiLocation’s match the other ids. If not, then modify to suit your environment.
+The order in which you insert these two instance declarations is the order in which they show on the page. For example, you might wish to show the Summary Tab before the Links widget, and the Huddo Badges, Thanks & Awards Widgets as the last tabs, which would be configured as per the image below. Also make sure that the uiLocation’s match the other ids. If not, then modify to suit your environment.
 
 ![profile widget def](/assets/badges/install/install-widgets/profile_widget_def.png)
 
 ### Configure Configurators and Community Leaderboard Widgets
 
-By updating the widgets-config.xml with the code supplied below, the Badges Configurator, Metrics Configurator, Filters Configurator, Kudos
-Community Analytics and Kudos Community Leaderboard widgets will be made available. This will allow them to be placed into Connections
+By updating the widgets-config.xml with the code supplied below, the Badges Configurator, Metrics Configurator, Filters Configurator, Huddo
+Community Analytics and Huddo Community Leaderboard widgets will be made available. This will allow them to be placed into Connections
 Communities, as shown in the following image.
 
 You must define the Widgets and where to find their associated .xml files. You will need the CommunityUuids you took note of earlier. 
@@ -154,31 +154,31 @@ Edit the widgets-config.xml file. Find the resource element with the type of com
 **IMPORTANT**: Don’t forget to substitute the following placeholders with the corresponding values!
 YOUR_METRICS_COMMUNITY_UUID, YOUR_BADGES_COMMUNITY_UUID, YOUR_FILTERS_COMMUNITY_UUID , YOUR_ANALYTICS_COMMUNITY_UUID, CONNECTIONS_SERVER_NAME
 
-    <widgetDef defId="BadgesConfigurator" description="badgesConfigurator" modes="view fullpage" url="https://CONNECTIONS_SERVER_NAME/Kudos/BadgesConfigurator.xml" themes="wpthemeWide" uniqueInstance="true">
+    <widgetDef defId="BadgesConfigurator" description="badgesConfigurator" modes="view fullpage" url="https://CONNECTIONS_SERVER_NAME/Huddo/BadgesConfigurator.xml" themes="wpthemeWide" uniqueInstance="true">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="communityId" value="YOUR_BADGES_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="MetricsConfigurator" description="metricsConfigurator" modes="view fullpage" url="https://CONNECTIONS_SERVER_NAME/Kudos/MetricsConfigurator.xml" themes="wpthemeWide" uniqueInstance="true">
+    <widgetDef defId="MetricsConfigurator" description="metricsConfigurator" modes="view fullpage" url="https://CONNECTIONS_SERVER_NAME/Huddo/MetricsConfigurator.xml" themes="wpthemeWide" uniqueInstance="true">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="communityId" value="YOUR_METRICS_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="FiltersConfigurator" description="filtersConfigurator" modes="view fullpage" url="https://CONNECTIONS_SERVER_NAME/Kudos/FiltersConfigurator.xml" themes="wpthemeWide" uniqueInstance="true">
+    <widgetDef defId="FiltersConfigurator" description="filtersConfigurator" modes="view fullpage" url="https://CONNECTIONS_SERVER_NAME/Huddo/FiltersConfigurator.xml" themes="wpthemeWide" uniqueInstance="true">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="communityId" value="YOUR_FILTERS_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosAnalytics" description="KudosAnalytics" modes="view edit" url="https://CONNECTIONS_SERVER_NAME/Kudos/AnalyticsDashboard.xml" uniqueInstance="false" themes="wpthemeNarrow wpthemeWide wpthemeBanner">
+    <widgetDef defId="HuddoAnalytics" description="HuddoAnalytics" modes="view edit" url="https://CONNECTIONS_SERVER_NAME/Huddo/AnalyticsDashboard.xml" uniqueInstance="false" themes="wpthemeNarrow wpthemeWide wpthemeBanner">
         <itemSet>
             <item name="resourceId" value="{resourceId}"/>
             <item name="adminCommunityId" value="YOUR_ANALYTICS_COMMUNITY_UUID"/>
         </itemSet>
     </widgetDef>
-    <widgetDef defId="KudosCommunity" modes="view" url="https://CONNECTIONS_SERVER_NAME/Kudos/CommunityRankingDisplay.xml" showInPalette="false" themes="wpthemeNarrow wpthemeWide" uniqueInstance="true">
+    <widgetDef defId="HuddoCommunity" modes="view" url="https://CONNECTIONS_SERVER_NAME/Huddo/CommunityRankingDisplay.xml" showInPalette="false" themes="wpthemeNarrow wpthemeWide" uniqueInstance="true">
         <itemSet>
             <item name="communityId" value="{resourceId}"/>
         </itemSet>
@@ -190,7 +190,7 @@ Next you must define where to put the instance of the Community Leaderboard Widg
 
 Edit the widgets-config.xml file. Find the resource element with the type of community, e.g. `<resource ... type="community" ... >`, then under `<layout ... resourceSubType="default" ... >`, then within `<page ... pageId="communityOverview" ... >` add the following:
 
-    <widgetInstance uiLocation="col3" defIdRef="KudosCommunity"/>
+    <widgetInstance uiLocation="col3" defIdRef="HuddoCommunity"/>
 
 ### Check in the widgets-config.xml file
 
@@ -210,13 +210,13 @@ Checking In the Widgets-Config.xml File:
 Since Connections 6.0 CR1 it is now required to register third-party widgets in the widget-container for increased security. We have scripts
 and instructions for [this here](https://github.com/isw-kudos/kudos-widgetcontainer-registration).
 
-### Add Kudos configuration JSP to the header
+### Add Huddo configuration JSP to the header
 
 (And add **‘Give Thanks’** Link in the navigation bar - Optional)
 
-Perform this task to add Kudos Configuration information to Connections pages and to add a link to the Thanks Awarder widget in the Header Menu as shown
+Perform this task to add Huddo Configuration information to Connections pages and to add a link to the Thanks Awarder widget in the Header Menu as shown
 
-below. You need to perform this step even if you do not wish to add the ‘Give Thanks’ link in order to attach the Kudos Config JSP to the header:
+below. You need to perform this step even if you do not wish to add the ‘Give Thanks’ link in order to attach the Huddo Config JSP to the header:
 
 This is achieved by customising the _header.jsp_ file, used for customizing the Connections Navigation bar.
 
@@ -230,7 +230,7 @@ Edit the _header.jsp_ file in the customisations directory add the following lin
 
 ![header customisation](/assets/badges/install/install-widgets/header_customisation.png)
 
-To add the Kudos Config JSP
+To add the Huddo Config JSP
 
     --%><c:if test="${'communities' == appName || 'homepage' == appName || 'profiles' == appName}"><%--
         --%><c:catch var="e"><c:import var="kudosConfig" url="http://${pageContext.request.serverName}/Kudos/kudosConfig.jsp"/></c:catch><%--
@@ -239,21 +239,21 @@ To add the Kudos Config JSP
 
 To add the Give Thanks link – This step is OPTIONAL
 
-    --%><script type="text/javascript" src="/Kudos/scripts/widgets/ThanksAwarderHeader.js" charset="utf-8"></script><%--
+    --%><script type="text/javascript" src="/Huddo/scripts/widgets/ThanksAwarderHeader.js" charset="utf-8"></script><%--
     --%><li id="lotusBannerThankSomeone"><a href="javascript:giveThanks('${urlProfiles}');"><fmt:message key="label.header.kudos.givethanks"/></a></li><%--
 
 Save and close the file, the changes will take effect when the clusters are restarted. (See next task)
 
-### Specify Kudos Analytics Admin Community for Security
+### Specify Huddo Analytics Admin Community for Security
 
-This change will not be picked up by Connections until the Kudos Application is restarted. This will be performed at the end of the configuration.
+This change will not be picked up by Connections until the Huddo Application is restarted. This will be performed at the end of the configuration.
 
 Create the resource.properties file in the Profiles Statistics customisation directory:
-`<PROFILES_STATS_DIR>`/KudosProperties
+`<PROFILES_STATS_DIR>`/HuddoProperties
 Where **PROFILES_STATS_DIR** is defined by the WebSphere variable:
-e.g. /opt/IBM/Connections/data/shared/profiles/statistics/KudosProperties
+e.g. /opt/IBM/Connections/data/shared/profiles/statistics/HuddoProperties
 
-Put the following line in the file, replacing `<KUDOS_ANALYTICS_ADMIN_COMMUNITY_ID>` with the ID of the Kudos Analytics Community created in Task 2.4:
+Put the following line in the file, replacing `<KUDOS_ANALYTICS_ADMIN_COMMUNITY_ID>` with the ID of the Huddo Analytics Community created in Task 2.4:
 
     analyticsAdminCommunityID=<KUDOS_ANALYTICS_ADMIN_COMMUNITY_ID>
 

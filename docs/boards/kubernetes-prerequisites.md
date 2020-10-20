@@ -1,16 +1,16 @@
-Requirements and considerations before installation of Kubernetes and Kudos Boards
+Requirements and considerations before installation of Kubernetes and Huddo Boards
 
 ## Servers
 
 This solution is designed to run a cloud-like environment locally in your data centre. You should expect to configure a minimum of 3 servers.
 
-This solution is ideal if you already have kubernetes (or IBM Component Pack for connections) as it can run in your existing environment. If this is the case, please reach out to Team Kudos for support.
+This solution is ideal if you already have kubernetes (or IBM Component Pack for connections) as it can run in your existing environment. If this is the case, please reach out to Team Huddo for support.
 
 ---
 
 ## Existing Infrastructure
 
-In addition to the above, Kudos Boards for Kubernetes is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
+In addition to the above, Huddo Boards for Kubernetes is able to take advantage of existing services in your network, if you have any of the following and would like to take advantage of them, please ensure you have all relevant access documented.
 
 | Service    | Requirements                                                    |
 | ---------- | --------------------------------------------------------------- |
@@ -22,7 +22,7 @@ In addition to the above, Kudos Boards for Kubernetes is able to take advantage 
 
 ## STMP for email notifications
 
-If you would like to send emails, Kudos Boards docker requires details of a forwarding SMTP server in your environment (or other email provider sich as sendgrid)
+If you would like to send emails, Huddo Boards docker requires details of a forwarding SMTP server in your environment (or other email provider sich as sendgrid)
 
 ---
 
@@ -30,7 +30,7 @@ If you would like to send emails, Kudos Boards docker requires details of a forw
 
 > In the examples below, replace `example.com` with your actual company domain
 
-Kudos boards requires 2 domains (or redirects) in your network, one for the web application and one for the api. You can use a new domain or subdomain for this or you can use a path on an existing service.
+Huddo boards requires 2 domains (or redirects) in your network, one for the web application and one for the api. You can use a new domain or subdomain for this or you can use a path on an existing service.
 
 For example:
 
@@ -53,7 +53,7 @@ To perform the installation, you need to setup some config files on a local mach
 
 ## Authentication
 
-Kudos Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](/boards/swarm/#setup-oauth)):
+Huddo Boards is designed to be integrated into your current user management system. Before you are able to login you will need to configure OAuth for one (or more) of the following providers (detailed instructions [here](/boards/swarm/#setup-oauth)):
 
 | Provider                     | Registration / Documentation                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |

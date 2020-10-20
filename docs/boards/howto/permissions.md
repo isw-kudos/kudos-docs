@@ -1,6 +1,6 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-# Permissions in Kudos Boards
+# Permissions in Huddo Boards
 
 When you invite colleagues, teams, or external parties to collaborate in your board, you can decide what level of permission to allocate to them. Below, permissions are listed from the lowest access to the highest.
 

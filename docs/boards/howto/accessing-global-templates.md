@@ -1,6 +1,6 @@
 <img style="float: right" src="/assets/images/boards-logo.jpg" height="100" alt="My Boards" />
 
-You can access a library of global templates already available from Kudos Boards to use as inspiration for your own work.
+You can access a library of global templates already available from Huddo Boards to use as inspiration for your own work.
 
 When you start a New Board, click `Explore the Template Library`.
 

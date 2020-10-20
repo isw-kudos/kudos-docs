@@ -19,7 +19,7 @@
         else
           frame.src = boardsURL;
         
-        frame.title = 'Kudos Boards';
+        frame.title = 'Huddo Boards';
         container$.append(frame);
 
         frame.style.border = "0 none";
@@ -44,7 +44,7 @@
       }
 
       XCC.W.registerCustomWidget(
-        'Kudos Boards',
+        'Huddo Boards',
         'th-large',
         render,
         editConfig,

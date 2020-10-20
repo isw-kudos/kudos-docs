@@ -32,7 +32,7 @@ There are also some more [notes and insights](https://blog.msbiro.net/2020/02/hc
 
         LoadModule rewrite_module modules/mod_rewrite.so
 
-- If you have not specified earlier (such as during other component-pack app installs), please set `ProxyPreserveHost On` before the Kudos Boards section in the VirtualHost
+- If you have not specified earlier (such as during other component-pack app installs), please set `ProxyPreserveHost On` before the Huddo Boards section in the VirtualHost
 
 ## Updating the Activities Plus configuration file
 

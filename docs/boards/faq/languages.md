@@ -1,4 +1,4 @@
-Kudos Boards supports many languages so our clients all around the world can easily use our product with minimal understanding issues.
+Huddo Boards supports many languages so our clients all around the world can easily use our product with minimal understanding issues.
 
 Our default language is English. While we endeavour to keep all languages up to date we frequently update and release new features so some sections may display in the default language for a time.
 

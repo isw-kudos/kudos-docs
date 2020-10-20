@@ -2,7 +2,7 @@
 
 #Mind Map View
 
-The Mind Map layout in Kudos Boards is a unique view that allows you to have a visual overview of all your tasks from one board. Mind Map is ideal for strategic planning, brainstorming, inventing, R&D, marketing, and more.
+The Mind Map layout in Huddo Boards is a unique view that allows you to have a visual overview of all your tasks from one board. Mind Map is ideal for strategic planning, brainstorming, inventing, R&D, marketing, and more.
 
 ### Accessing the Mind Map View
 

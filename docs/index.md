@@ -1,5 +1,7 @@
-# <img src="/assets/images/kudos-suite.png" alt="Kudos Suite" width="60" /> Welcome to Kudos Docs
+<img src="/assets/images/huddo-logo-72.png" style="float:left;margin-right:8px;margin-top:2px;" alt="Huddo Suite" width="200" />
+# Docs
 
-This site contains technical and user documentation for Kudos Apps. For purchase and product information visit [kudosapps.com](https://www.kudosapps.com).
+This site contains technical and user documentation for Huddo Apps. For purchase and product information visit [huddo.com](https://www.huddo.com).
 
-For the status of Kudos Boards Cloud, please see our [status](status) page.
+For the status of Huddo Boards Cloud, please see our [status](status) page.
+

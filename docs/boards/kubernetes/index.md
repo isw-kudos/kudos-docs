@@ -1,6 +1,6 @@
-# Kudos Boards for Kubernetes and IBM Cloud Private
+# Huddo Boards for Kubernetes and IBM Cloud Private
 
-Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise environments
+Deploying Huddo Boards into Kubernetes -or- IBM Cloud Private for on-premise environments
 
 ---
 
@@ -11,19 +11,19 @@ Deploying Kudos Boards into Kubernetes -or- IBM Cloud Private for on-premise env
 1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) is installed
 1. [helm](https://docs.helm.sh/using_helm/#installing-helm) is installed
 1. SMTP gateway setup for email notifications if required
-1. [Dockerhub](https://hub.docker.com) account setup with access to Kudos Boards repository.<br>Please send your account details to [support@kudosboards.com](mailto:support@kudosboards.com) if you don't already have this.
+1. [Dockerhub](https://hub.docker.com) account setup with access to Huddo Boards repository.<br>Please send your account details to [support@huddo.com](mailto:support@huddo.com) if you don't already have this.
 
 ---
 
 ### SSL / Network setup
 
-Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Kudos Boards aims to match whatever you already have in place. Some examples of network routing:
+Kubernetes for on-premise environments requires a reverse proxy to route traffic. There are a number of different ways this reverse proxy can be configured and Huddo Boards aims to match whatever you already have in place. Some examples of network routing:
 
 |                         | New domain                                                                                                                                                                                                   | Path on existing domain                                                             |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
 | Example of `BOARDS_URL` | `boards.example.com`                                                                                                                                                                                         | `example.com/boards`                                                                |
 | Example of `API_URL`    | `api.example.com`                                                                                                                                                                                            | `example.com/api-boards`                                                            |
-| Requirement             | 1. Reverse proxy able to match any current domains as well as the new one for Kudos Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains. | Ability to proxy the 2 paths                                                        |
+| Requirement             | 1. Reverse proxy able to match any current domains as well as the new one for Huddo Boards (either by using SNI or a compatible certificate for all domains).</br>2. Certificate coverage for the 2 domains. | Ability to proxy the 2 paths                                                        |
 | Certificate Resolution  | a) in your proxy and forward the unencrypted traffic to kubernetes</br>**-OR-**</br>b) forward the encrypted traffic and perform the certificate resolution in kubernetes (described in config below).       | All certificate resolution on the proxy server                                      |
 | Notes                   | IBM HTTP WebServer supports only one certificate. You must have a Wildcard certificate to cover all of your domains including the new Boards domains (ie \*.example.com).                                    | Additional config required to make Boards webfront handle redirects, details below. |
 | For Connections Header  | Additional [WebSphere application](/boards/connections/header-on-prem/) must be installed                                                                                                                    | -                                                                                   |
@@ -36,13 +36,13 @@ For more details on configuring an IBM HTTP WebServer as reverse proxy, [please 
 
 ### Setup OAuth
 
-Kudos Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
+Huddo Boards currently supports the following oAuth providers for authentication and integration: HCL Connections (on premise), IBM Connections Cloud and Microsoft Office 365.
 
-You will need to setup an OAuth application with one (or more) of these providers for Kudos Boards to function. please refer to the following documentation:
+You will need to setup an OAuth application with one (or more) of these providers for Huddo Boards to function. please refer to the following documentation:
 
 | Provider                        | Registration / Documentation                                                                                  | Callback URL                             |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| HCL Connections<br>(on premise) | [Kudos instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
+| HCL Connections<br>(on premise) | [Huddo instructions](/boards/connections/auth-on-prem/)                                                       | `https://[BOARDS_URL]/auth/connections/callback` |
 | Microsoft Office 365            | [Azure app registrations](https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade) | `https://[BOARDS_URL]/auth/msgraph/callback`     |
 | Google                          | [Google Console](https://console.developers.google.com/apis/credentials)                                      | `https://[BOARDS_URL]/auth/google/callback`      |
 | LinkedIn                        | [LinkedIn](https://www.linkedin.com/developers/apps)                                                          | `https://[BOARDS_URL]/auth/linkedin/callback`    |
@@ -59,7 +59,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ---
 
-### Create Kudos Boards namespace
+### Create Huddo Boards namespace
 
     kubectl create namespace boards
 
@@ -67,7 +67,7 @@ You will need to setup an OAuth application with one (or more) of these provider
 
 ### Setup Storage
 
-Kudos Boards requires a Mongo database and an S3 file storage. If you already have equivalent services already then you can use your existing details in the config below, otherwise you may follow our instructions to deploy one or both of these services as follows:
+Huddo Boards requires a Mongo database and an S3 file storage. If you already have equivalent services already then you can use your existing details in the config below, otherwise you may follow our instructions to deploy one or both of these services as follows:
 
 1. [Mongo database](/boards/kubernetes/mongo)
 1. [S3 storage](/boards/kubernetes/minio)

@@ -1,8 +1,8 @@
-This integration enables you to _manage users in Auth0_ for login to Kudos Boards. Auth0 will maintain a directory of your users for Kudos Boards. This enables standalone use of Kudos Boards if you do not have any of the other supported authentication providers in your business.
+This integration enables you to _manage users in Auth0_ for login to Huddo Boards. Auth0 will maintain a directory of your users for Huddo Boards. This enables standalone use of Huddo Boards if you do not have any of the other supported authentication providers in your business.
 
 You may switch to using one of our other supported authentication providers at a later stage should you wish.
 
-### Setting up a new Auth0 tenant for use with Kudos Boards
+### Setting up a new Auth0 tenant for use with Huddo Boards
 
 - Sign up at [Auth0](https://auth0.com/) by providing your email and a suitable password.
 
@@ -16,7 +16,7 @@ You may switch to using one of our other supported authentication providers at a
 
 ![Company Details](/assets/auth0/account.png)
 
-- Create a new application, providing `Kudos Boards` for the name and choose `Regular Web Applications` as the type.
+- Create a new application, providing `Huddo Boards` for the name and choose `Regular Web Applications` as the type.
 
 ![Application Wizard 1](/assets/auth0/application1.png)
 
@@ -38,7 +38,7 @@ You may switch to using one of our other supported authentication providers at a
 
 - Click Show Advanced Settings -> Grant Types and tick `Implicit`, `Authorization Code`, `Refresh Token` and `Client Credentials`
 - Click Save Changes
-- Send An email to [support@kudosboards.com](mailto:support@kudosboards.com?subject=Kudos Boards Auth0 activation) with your domain, Client ID and Client Secret.
+- Send An email to [support@huddo.com](mailto:support@huddo.com?subject=Huddo Boards Auth0 activation) with your domain, Client ID and Client Secret.
 
 ---
 
@@ -50,7 +50,7 @@ In order to allow your users to find each other, we need to enable one of Auth0'
 
 ![Auth0](/assets/auth0/apis.png)
 
-- Click `Machine to Machine Applications` and next to Kudos Boards click the `AUTHORIZED` slider so it is enabled as below.
+- Click `Machine to Machine Applications` and next to Huddo Boards click the `AUTHORIZED` slider so it is enabled as below.
 
 ![Auth0](/assets/auth0/machine.png)
 
@@ -79,11 +79,11 @@ In order to allow your users to find each other, we need to enable one of Auth0'
 
 ![Save User](/assets/auth0/save-name.png)
 
-### Sign in to Kudos Boards with your Auth0 Tenant
+### Sign in to Huddo Boards with your Auth0 Tenant
 
-Once your Auth0 tenant has been activated you will get an email from our support team with confirmation, you may then go to [Kudos Boards](https://kudosboards.com) and use your Auth0 domain as the team name to login.
+Once your Auth0 tenant has been activated you will get an email from our support team with confirmation, you may then go to [Huddo Boards](https://boards.huddo.com) and use your Auth0 domain as the team name to login.
 
-![Kudos Boards Login](/assets/auth0/boards-login.png)
+![Huddo Boards Login](/assets/auth0/boards-login.png)
 
 After submitting your Team Name, you'll be asked for the email address and password associated with your Auth0 user account, to finalise your login.
 ***

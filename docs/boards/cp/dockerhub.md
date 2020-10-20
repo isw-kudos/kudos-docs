@@ -1,9 +1,9 @@
-## Moving from your local HCL Connections repository to Kudos Boards latest releases.
+## Moving from your local HCL Connections repository to Huddo Boards latest releases.
 
-You can get the latest versions of Kudos Boards Docker by subscribing to our own repository in dockerhub as follows:
+You can get the latest versions of Huddo Boards Docker by subscribing to our own repository in dockerhub as follows:
 
 1. Create a [dockerhub](https://hub.docker.com) account if you do not already have one.
-1. Email [support@kudosapps.com](mailto:support@kudosapps.com) requesting access to Kudos Boards Docker repository, include your dockerhub account name in the email.
+1. Email [support@huddo.com](mailto:support@huddo.com) requesting access to Huddo Boards Docker repository, include your dockerhub account name in the email.
 1. Create kubernetes secret with your dockerhub account credentials
 
         kubectl create secret docker-registry dockerhub --docker-server=docker.io --docker-username=[user] --docker-password=[password] --docker-email=[email] --namespace=connections

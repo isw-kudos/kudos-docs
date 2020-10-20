@@ -2,7 +2,7 @@
 
 ### Import a single activity
 
-Activities that already exist in HCL Connections can be individually imported into Kudos Boards.
+Activities that already exist in HCL Connections can be individually imported into Huddo Boards.
 
 First, hover over the 'Create Board' button in the bottom right and select the 'Import from Activities' option that appears
 

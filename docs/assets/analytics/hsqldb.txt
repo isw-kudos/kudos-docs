@@ -1,5 +1,5 @@
 There are configuration parameters that allow you to allocate more resources and tune the underlying database for performance in the analytics component.
-You can customise these properties by adding a file named resource.propertiesin the directory <ConnectionsShare>/profiles/statistics/KudosProperties. These properties will be applied after restarting the Kudos application.
+You can customise these properties by adding a file named resource.propertiesin the directory <ConnectionsShare>/profiles/statistics/HuddoProperties. These properties will be applied after restarting the Huddo application.
 
 The properties are as follows:
 

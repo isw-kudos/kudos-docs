@@ -1,4 +1,4 @@
-site_name: Kudos Docs
+site_name: Huddo Docs
 site_description: Enterprise productivity solutions
 site_author: Andrew Reynolds
 site_url: https://docs.kudosapps.com/
@@ -17,10 +17,10 @@ extra:
       link: "https://www.youtube.com/channel/UC_9nMUcp6jcweQZML2qIy8A"
 nav:
   - Welcome: index.md
-  # - Kudos Analytics:
+  # - Huddo Analytics:
   #   - Installation:
   #     - FAQ: analytics/websphere-faq.md
-  - Kudos Badges:
+  - Huddo Badges:
      - Details: badges/index.md
      - Installation:
         - Overview: badges/install/overview.md
@@ -42,12 +42,11 @@ nav:
         - Overview: badges/update/overview.md
         - Update the Application: badges/update/update_app.md
         - Refresh Widget Cache: badges/update/refresh_cache.md
-  - Kudos Boards:
+  - Huddo Boards:
       - Versions: boards/index.md
       - Boards Cloud:
           - Overview: boards/cloud.md
           - Integrations:
-              - HCL Connections Cloud: boards/connections/cloud.md
               - HCL Connections On-Prem:
                   - Authentication: boards/connections/auth-hybrid.md
                   - Connections Header: boards/connections/header-hybrid.md
@@ -127,7 +126,7 @@ nav:
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
 
-  - Kudos Ideas:
+  - Huddo Ideas:
       - How To Guide: ideas/howto.md
       - Connections Cloud: ideas/cloud-setup.md
   - Buzzy:
@@ -166,8 +165,8 @@ theme:
   features:
     - tabs
   palette:
-    primary: orange
-    accent: light blue
+    primary: light blue
+    accent: amber
   favicon: assets/images/favicon.ico
 
 extra_css:

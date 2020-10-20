@@ -1,6 +1,6 @@
 # Deploy MongoDB
 
-Kudos Boards requires a Mongo database. This documentation will deploy a MongoDB replicaSet into your Kubernetes setup.
+Huddo Boards requires a Mongo database. This documentation will deploy a MongoDB replicaSet into your Kubernetes setup.
 
 If you already have externally hosted Mongo database please skip to the [Outcomes section](/boards/kubernetes/mongo/#outcomes) to determine your equivalent connection parameters.
 

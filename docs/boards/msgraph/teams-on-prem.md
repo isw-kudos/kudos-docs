@@ -1,4 +1,4 @@
-# Kudos Boards On-Premise in Microsoft Teams
+# Huddo Boards On-Premise in Microsoft Teams
 
 ![example](/assets/msgraph/teams/personal.png)
 
@@ -12,7 +12,7 @@
 
 1. Notification bot (optional). [See instructions](/boards/msgraph/notification-bot/)
 
-    > **Note:** notifications are **optional** as the bot cannot be configured for internal Kudos Boards deployments
+    > **Note:** notifications are **optional** as the bot cannot be configured for internal Huddo Boards deployments
 
 ---
 
@@ -20,7 +20,7 @@
 
 ### Download from Boards
 
-1. Login to Kudos Boards with your Microsoft Tenant Admin account
+1. Login to Huddo Boards with your Microsoft Tenant Admin account
 
 1. Click the `Configuration` icon and then `Manage Org`
 
@@ -55,7 +55,7 @@
 
     ![example](/assets/msgraph/teams/teams2.png)
 
-1. The Kudos Boards app will now appear under the section `Built for [COMPANY_NAME]`
+1. The Huddo Boards app will now appear under the section `Built for [COMPANY_NAME]`
 
     ![example](/assets/msgraph/teams/teams3.png)
 
@@ -66,7 +66,7 @@
 
 1. Open [Team Apps](https://teams.microsoft.com/_#/apps?intent=0&category=16&autoNavigationOnDone=true&filterByPersonal=false&storeLaunchFromChat=false&addAppDialogEntryPoint=7) in your web browser
 
-    Click on `Built for [COMPANY_NAME]` => `Kudos Boards`
+    Click on `Built for [COMPANY_NAME]` => `Huddo Boards`
 
     ![example](/assets/msgraph/teams/tenant-apps.png)
 
@@ -74,7 +74,7 @@
 
     ![example](/assets/msgraph/teams/add-app.png)
 
-1. Kudos Boards personal will now open
+1. Huddo Boards personal will now open
 
     Copy the App ID from the URL. We will use this shortly.
 
@@ -88,7 +88,7 @@
           env:
             MSGRAPH_TEAMS_APP_ID: "<your_app_id>"
 
-1. Redeploy Boards helm chart as per command for Kudos Boards:
+1. Redeploy Boards helm chart as per command for Huddo Boards:
 
     [HCL Component Pack](/boards/cp/#deploy-boards-helm-chart)
 
@@ -104,4 +104,4 @@
 
 ## How To Use
 
-For a full guide on using Kudos Boards in Microsoft Teams, please see [our documentation](/boards/msgraph/teams/).
+For a full guide on using Huddo Boards in Microsoft Teams, please see [our documentation](/boards/msgraph/teams/).

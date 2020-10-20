@@ -1,4 +1,4 @@
-## Kudos Boards plugin (for single users)
+## Huddo Boards plugin (for single users)
 
 > The instructions on this page use 'The new Outlook' however you can also add and use this plugin from 'classic Outlook' or Outlook desktop.
 

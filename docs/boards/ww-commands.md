@@ -14,10 +14,10 @@
 
 
 # Watson Workspace Commands
-Kudos Boards adds 4 different commands to Watson Workspace - `/boards`, `/lists`, `/cards`, `/templates`.
+Huddo Boards adds 4 different commands to Watson Workspace - `/boards`, `/lists`, `/cards`, `/templates`.
    
 To run a command:
-1. Make sure you have added the Kudos Boards app to the Workspace
+1. Make sure you have added the Huddo Boards app to the Workspace
 2. Type any of the above prefixes in the chat and select the command from the popup window, by either clicking on it or pressing `Tab`.
 3. Add a sub-command and any parameters if applicable as below.
 4. Voilà!
@@ -71,7 +71,7 @@ This will search the cards in the current board for the keyword 'documentation'
 ---
 
 ### View the Current Board, Lists and Cards
-To help you be more efficient, Kudos Boards remembers the card, list and board you last interacted with in each space. Use `current` with the `/boards`, `/lists` or `/cards` commands to view the current selection.  
+To help you be more efficient, Huddo Boards remembers the card, list and board you last interacted with in each space. Use `current` with the `/boards`, `/lists` or `/cards` commands to view the current selection.  
   
 Examples:
 ```
@@ -122,7 +122,7 @@ The command `/cards` has some special sub-commands that allow you to interact wi
 ---
 
 ### Help with Slash Commands
-Run the `help` command as per below to get a more detailed summary of Kudos Boards' commands.
+Run the `help` command as per below to get a more detailed summary of Huddo Boards' commands.
 ```
 /boards help
 ```

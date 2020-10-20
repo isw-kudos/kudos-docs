@@ -2,9 +2,9 @@
 
 # Manage Licences
 
-Licence management is available at an organisation level for Kudos Boards.
+Licence management is available at an organisation level for Huddo Boards.
 
-To access these settings, sign in to Kudos Boards as an administrator of your organisation.
+To access these settings, sign in to Huddo Boards as an administrator of your organisation.
 Click your profile image and then `Admin Settings`:
 
 ![](/assets/boards/config-manage_org_new.png)
@@ -22,9 +22,9 @@ Here you can see all the users who have been assigned a licence.
 
 Note that Org Configs are created automatically for all orgs with default settings.
 
-## Buy Kudos Boards via Admin Settings
+## Buy Huddo Boards via Admin Settings
 
-For users accessing Kudos Boards via O365, HCL Connections (hybrid and collab.cloud), Apple ID, Google, LinkedIn and Facebook, subscriptions can be purchased via the Kudos Boards Admin Settings in your web browser.
+For users accessing Huddo Boards via O365, HCL Connections (hybrid and collab.cloud), Apple ID, Google, LinkedIn and Facebook, subscriptions can be purchased via the Huddo Boards Admin Settings in your web browser.
 
 Navigate to `Admin Settings` and then select to 'Buy Online'.
 
@@ -37,11 +37,11 @@ Navigate to `Admin Settings` and then select to 'Buy Online'.
 
 Your subscription will be updated automatically.
 
-## Buy Kudos Boards via MS teams
+## Buy Huddo Boards via MS teams
 
-As an O365 administrator, you can buy Kudos Boards for your organisation via MS Teams.
+As an O365 administrator, you can buy Huddo Boards for your organisation via MS Teams.
 
-Navigate to Kudos Boards MyBoards Dashboard via More Added Apps in MS Teams and under your profile image locate `Admin Settings.`
+Navigate to Huddo Boards MyBoards Dashboard via More Added Apps in MS Teams and under your profile image locate `Admin Settings.`
 
 ![](/assets/boards/buy-kudosboards-msteams1.png)
 
@@ -63,9 +63,9 @@ Under 'Licences' select to 'Buy Online.'
 
 ## Request a Quote or Invoice for Payment
 
-On-premise Kudos Boards installs can contact us for quote requests and licence activation keys at `sales@kudosapps.com`
+On-premise Huddo Boards installs can contact us for quote requests and licence activation keys at `sales@huddo.com`
 
-Kudos Boards cloud users can request a quote via Kudos Boards Admin Settings in web or MS Teams, or via email at `sales@kudosapps.com`. Please do not hesitate to ask questions or request a call to discuss your subscription requirements further.
+Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in web or MS Teams, or via email at `sales@huddo.com`. Please do not hesitate to ask questions or request a call to discuss your subscription requirements further.
 
 In addition to online check out, we can receive purchase orders and provide invoices for payment.
 

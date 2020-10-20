@@ -1,5 +1,5 @@
-# Kudos Boards Versions
-We are proud to say that Kudos Boards is able to run in many configurations to suit your individual requirements.
+# Huddo Boards Versions
+We are proud to say that Huddo Boards is able to run in many configurations to suit your individual requirements.
 
 1. [Boards Cloud](/boards/cloud/)
 1. Boards Docker (On-Premise)
@@ -14,12 +14,12 @@ We are proud to say that Kudos Boards is able to run in many configurations to s
 
 
 ### Boards Cloud
-This version is hosted by the ISW Kudos team at [https://kudosboards.com](https://kudosboards.com).</br>
+This version is hosted by the ISW Huddo team at [https://boards.huddo.com](https://boards.huddo.com).</br>
 Free trials are available!
 
 __Advantages__
 
-- Hosted and managed by Team Kudos
+- Hosted and managed by Team Huddo
 - Always up to date with the latest functionality
 - Backup strategies already in place
 
@@ -56,7 +56,7 @@ __Advantages__
 
 ### Boards Hybrid
 (Cloud integrated with HCL Connections On-Premise.)
-> This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Kudos Boards Cloud can integrate with your existing HCL Connections on-premise installation.
+> This version is the best of both worlds if you already have HCL Connections but want the latest and greatest Boards functionality without managing more servers!  Huddo Boards Cloud can integrate with your existing HCL Connections on-premise installation.
 
 __Advantages__
 
@@ -64,7 +64,7 @@ __Advantages__
 - Integrates into your existing HCL Connections On-Premise (WebSphere)
 - Looks and feels like another application similar to Communities/Blogs etc with:
 
-    - Connections Apps menu link to 'Kudos Boards'
+    - Connections Apps menu link to 'Huddo Boards'
     - Connections header
     - Search and collaborate with your existing users
     - Search and utilise your existing Communities
