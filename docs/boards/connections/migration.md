@@ -58,7 +58,7 @@ migration:
 
 Please deploy the following chart with the same configuration `boards.yaml` file used to deploy the kudos-boards chart
 
-    helm upgrade kudos-boards-activity-migration https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-activity-migration-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
+    helm upgrade kudos-boards-activity-migration https://docs.huddo.com/assets/config/kubernetes/kudos-boards-activity-migration-4.0.0.tgz -i -f ./boards.yaml --namespace boards --recreate-pods
 
 ---
 

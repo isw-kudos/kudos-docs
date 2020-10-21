@@ -12,10 +12,10 @@ You can get the latest versions of Huddo Boards Docker by subscribing to our own
 
     - Change the `global.imagePullSecret` to `dockerhub`
     - Remove your customised `global.repository`
-    - Check our [releases](https://docs.kudosapps.com/boards/cp/releases/) page to get the latest release date tag. Add this date tag as `global.imageTagSuffix` and uncomment the line as per the example.
+    - Check our [releases](https://docs.huddo.com/boards/cp/releases/) page to get the latest release date tag. Add this date tag as `global.imageTagSuffix` and uncomment the line as per the example.
     - Add (blank) image name and tag for each service as per the example. *Note:* some of the services (app, provider, notification) will not be in your boards-cp.yaml file, you should ADD THEM.
 
 1. Run helm to apply the changes.
 
-        helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+        helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 

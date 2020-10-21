@@ -15,7 +15,7 @@ helm upgrade boards https://docs.huddo.com/assets/config/kubernetes/kudos-boards
 
 Component Pack (Activities Plus)
 ```
-helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
+helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 ```
 
 ---
@@ -275,7 +275,7 @@ iswkudos/kudos-boards:core-2020-06-05
 iswkudos/kudos-boards:boards-2020-06-05
 ```
 
-Please see our [Cloud blog](https://blog.kudosapps.com/weve-got-some-kudos-boards-changes-for-you)
+Please see our [Cloud blog](https://blog.huddo.com/weve-got-some-kudos-boards-changes-for-you)
 
 Improvements:
 
@@ -288,7 +288,7 @@ New Features:
 
 - Card theme from uploaded images
 - Preview uploaded files (images, docx, pdf, html etc)
-- Todos Overview - [filtering to selected Boards](https://blog.kudosapps.com/part-3-weve-got-some-kudos-boards-changes-for-you)
+- Todos Overview - [filtering to selected Boards](https://blog.huddo.com/part-3-weve-got-some-kudos-boards-changes-for-you)
 - Drag and drop Email into Cards (ie from HCL Notes)
 - Activity Stream Gadget for Boards - [config updates required](/boards/connections/widgets-on-prem/)
 - Multiple Assignment options for Cards

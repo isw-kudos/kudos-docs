@@ -1,5 +1,5 @@
 # Please read every variable and replace with appropriate value
-# For details of variable meanings, please see https://docs.kudosapps.com/boards/cp/
+# For details of variable meanings, please see https://docs.huddo.com/boards/cp/
 
 global:
   imagePullSecret: dockerhub
@@ -61,7 +61,7 @@ licence:
     name: ""
     tag: licence
   env:
-    # Register your Organisation and download your Free 'Activities Plus' licence key from store.kudosapps.com
+    # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
     LICENCE: secret-string-you-download
 
 # https://docs.huddo.com/boards/msgraph/teams-on-prem/

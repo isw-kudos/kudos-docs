@@ -1,9 +1,9 @@
 site_name: Huddo Docs
 site_description: Enterprise productivity solutions
 site_author: Andrew Reynolds
-site_url: https://docs.kudosapps.com/
-repo_url: https://www.kudosapps.com
-repo_name: kudosapps.com
+site_url: https://docs.huddo.com/
+repo_url: https://www.huddo.com
+repo_name: huddo.com
 
 extra:
   social:
@@ -126,22 +126,16 @@ nav:
               - Manage Config: boards/howto/org-config.md
               - Manage Licences: boards/howto/manage-licences.md
 
-  - Huddo Ideas:
-      - How To Guide: ideas/howto.md
-      - Connections Cloud: ideas/cloud-setup.md
+  - Huddo Ideas: ideas/howto.md
   - Buzzy:
       # - Overview: buzzy/index.md
-      - Installation:
-          - For Connections On-premise:
-              - Overview: buzzy/buzzy-icp.md
-              - Connections OAuth Config: buzzy/buzzy-oauth.md
-              - WAS Config: buzzy/buzzy-wasconfig.md
-              - Header Config: buzzy/buzzy-header.md
-              - Connections Widgets: buzzy/buzzy-widgets.md
-              - Mongo: buzzy/mongo.md
-              - Minio: buzzy/minio.md
-          - Connections Cloud:
-              - Widgets: buzzy/cloud/bc-widgets.md
+    - Overview: buzzy/buzzy-icp.md
+    - Connections OAuth Config: buzzy/buzzy-oauth.md
+    - WAS Config: buzzy/buzzy-wasconfig.md
+    - Header Config: buzzy/buzzy-header.md
+    - Connections Widgets: buzzy/buzzy-widgets.md
+    - Mongo: buzzy/mongo.md
+    - Minio: buzzy/minio.md
   # - Docker Swarm:
       # - Installation: swarm/index.md
       # - Storage: swarm/storage.md

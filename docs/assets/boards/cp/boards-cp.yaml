@@ -1,5 +1,5 @@
 # Please read every variable and replace with appropriate value
-# For details of variable meanings, please see https://docs.kudosapps.com/boards/cp/
+# For details of variable meanings, please see https://docs.huddo.com/boards/cp/
 
 global:
   repository: <name_of_your_Docker_Registry:port>/connections
@@ -40,7 +40,7 @@ core:
 
 licence:
   env:
-    # Register your Organisation and download your Free 'Activities Plus' licence key from store.kudosapps.com
+    # Register your Organisation and download your Free 'Activities Plus' licence key from store.huddo.com
     LICENCE: [LICENCE_STRING_FROM_HUDDO_STORE]
 
 # https://docs.huddo.com/boards/msgraph/teams-on-prem/

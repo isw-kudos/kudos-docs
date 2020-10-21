@@ -69,7 +69,7 @@ Huddo Boards cloud users can request a quote via Huddo Boards Admin Settings in 
 
 In addition to online check out, we can receive purchase orders and provide invoices for payment.
 
-Pricing can be found here https://www.kudosapps.com/pricing
+Pricing can be found here https://www.huddo.com/pricing
 
 
 
