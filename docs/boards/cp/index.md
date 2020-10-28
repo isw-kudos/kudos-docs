@@ -95,13 +95,15 @@ The Activity migration chart will be deployed separately but use the same config
 
 Install the Boards services via our Helm chart
 
-> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
-
     helm upgrade kudos-boards-cp [PATH_TO_HELM_CHARTS]/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 
 > Where [PATH_TO_HELM_CHARTS] is the file path to the helm charts,
 > ie `[extractedFolder]/microservices_connections/hybridcloud/helmbuilds/`
 > or `https://docs.kudosapps.com/assets/config/kubernetes/`
+
+> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+
+> **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
 For example:
 

@@ -123,7 +123,7 @@ Install the Boards services via our Helm chart
 
 > **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
 
-> **Note:** if you Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
+> **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
 
 ---
 
