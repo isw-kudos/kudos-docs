@@ -18,6 +18,10 @@ Component Pack (Activities Plus)
 helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 ```
 
+> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+
+> **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
+
 ---
 
 #### 2020-10-14
