@@ -24,6 +24,34 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2020-11-02
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-11-02)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-11-02
+iswkudos/kudos-boards:provider-2020-11-02
+iswkudos/kudos-boards:licence-2020-11-02
+iswkudos/kudos-boards:notification-2020-11-02
+iswkudos/kudos-boards:webfront-2020-11-02
+iswkudos/kudos-boards:core-2020-11-02
+iswkudos/kudos-boards:boards-2020-11-02
+iswkudos/kudos-boards:activity-migration-2020-11-02
+```
+
+Improvements:
+
+- Increase multi-lingual coverage
+- Creating Board from template includes members/description
+- Option to disable Welcome emails (user.env.DISABLE_WELCOME_EMAIL)
+
+Fixes:
+
+- Uploading file in iOS Safari
+
+---
+
 #### 2020-10-14
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-10-14)
 
@@ -50,7 +78,6 @@ Fixes:
 - User trial reminder
 - Extension of user trials
 - Download linked files with .odt extension
-
 ---
 
 #### 2020-10-05

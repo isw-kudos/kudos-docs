@@ -35,11 +35,11 @@ Here are some quick instructions to help you get started with Kudos Boards.
 ### Kanban View - Add Lists and Cards
 
 Add lists to a board to categorise todos and entries.
-Click on _Add a List_ to add a new list to your board.
+Click on _Add a list_ to add a new list to your board.
 
 ![Create List Example](/assets/boards/create_list.png)
 
-Click on _Add a Card_ in any list to add a card to that list.
+Click on _Add a card_ in any list to add a card to that list.
 
 ![Create Card Example](/assets/boards/create_card.png)
 

@@ -45,6 +45,6 @@ The default view of Timeline is to group by Lists. But you have the option to vi
 * Cards can run parallel and overlap other cards on the timeline
 *	Due dates will appear with a little clock icon on the card, and will show the date when hovered over with the mouse
 *	You can allocate members and colour labels to cards on a timeline as normal, using drag and drop
-*	You can create new lists on the left-hand side of the screen, using the Add a List button
+*	You can create new lists on the left-hand side of the screen, using the Add a list button
 *	You can create new cards directly on the timeline by clicking on your preferred start date
 *	Not every card has to be appear on the timeline. Its normal to have cards that are unallocated, as they might not have specific start or finish dates. Use timelines in a way that works best   for you and your project.
