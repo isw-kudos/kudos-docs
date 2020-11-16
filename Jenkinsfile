@@ -34,7 +34,11 @@ pipeline {
         expression { return deploy }
       }
       steps {
-        sh 'mkdocs gh-deploy'
+        withCredentials([
+          string(credentialsId: 'github-devops-token', variable: 'GH_TOKEN')
+        ]) {
+          sh 'mkdocs gh-deploy'
+        }
       }
       post {
         failure {
