@@ -1,5 +1,7 @@
 ##Boards Tours
 
+> Tours are currently disable by default, to enable them open dev tools with `Cmd-Shift-I` or `Ctrl-Shift-I` then got to the console tab and type `boards.enableTours()` then press Enter.
+
 ###Tour Definition
 | Field | Description | required |
 | --- | --- | --- |
@@ -32,7 +34,7 @@
 ###Full example
 
 ```javascript
-{
+boards.setTours([{
   id: 'create-first-board-mobile',
   routes: ['/', '/my', '/public'],
   sizes: ['isMobile'],
@@ -62,6 +64,6 @@
       body: 'Invite other members to collaborate with you in this Board.',
     },
   ],
-}
+}])
 ```
 
