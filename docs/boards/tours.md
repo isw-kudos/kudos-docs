@@ -1,6 +1,11 @@
 ##Boards Tours
 
-> Tours are currently disable by default, to enable them open dev tools with `Cmd-Shift-I` or `Ctrl-Shift-I` then got to the console tab and type `boards.enableTours()` then press Enter.
+
+You can create your own tours by calling the `boards.setTours()` function in console.
+
+> Open dev tools with `Cmd-Shift-I` or `Ctrl-Shift-I` then got to the console tab
+
+> Tours are currently disabled by default, to enable them type `boards.enableTours()` then press Enter, now reload your page and the tours will be available.
 
 ###Tour Definition
 | Field | Description | required |
