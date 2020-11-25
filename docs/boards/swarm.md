@@ -111,7 +111,7 @@ If you must update the Portainer/Traefik images, try these commands:
 
 ```
 docker service update --force --image portainer/portainer:latest portainer/portainer
-docker service update --force --image portainer/agent:latest portainer/portainer
+docker service update --force --image portainer/agent:latest portainer/agent
 docker service update --force --image traefik:alpine proxy/proxy
 ```
 
