@@ -18,23 +18,23 @@ You may switch to using one of our other supported authentication providers at a
 
 - Create a new application, providing `Huddo Boards` for the name and choose `Regular Web Applications` as the type.
 
-![Application Wizard 1](/assets/auth0/application1.png)
+![Application Wizard 1](/assets/auth0/huddo-create-application.png)
 
 - Open your application and go to the settings tab.
 
-![Application Wizard 2](/assets/auth0/application2.png)
+![Application Wizard 2](/assets/auth0/huddo-application.png)
 
 - Provide the rest of the details as below:
 
   > In the table below, copy your auth0 domain (listed at the top of the page) into the relevant fields, replacing &lt;domain&gt; with 'your-domain.au.auth0.com' where applicable
 
-  | Field                                | Value                                                |
-  | ------------------------------------ | ---------------------------------------------------- |
-  | Application Logo                     | https://kudosboards.com/img/logo-large.png           |
-  | Token Endpoint Authentication Method | Post                                                 |
-  | Allowed Callback URLs                | https://kudosboards.com/auth/auth0/&lt;domain&gt;/callback |
-  | Allowed Web Origins                  | https://kudosboards.com                              |
-  | Allowed Origins (CORS)               | https://*.kudosboards.com                            |
+  | Field                                | Value                                                       |
+  | ------------------------------------ | ----------------------------------------------------------- |
+  | Application Logo                     | https://boards.huddo.com/img/logo-small.png                 |
+  | Token Endpoint Authentication Method | Post                                                        |
+  | Allowed Callback URLs                | https://boards.huddo.com/auth/auth0/&lt;domain&gt;/callback |
+  | Allowed Web Origins                  | https://boards.huddo.com                                    |
+  | Allowed Origins (CORS)               | https://\*.huddo.com                                        |
 
 - Click Show Advanced Settings -> Grant Types and tick `Implicit`, `Authorization Code`, `Refresh Token` and `Client Credentials`
 - Click Save Changes
@@ -52,7 +52,7 @@ In order to allow your users to find each other, we need to enable one of Auth0'
 
 - Click `Machine to Machine Applications` and next to Huddo Boards click the `AUTHORIZED` slider so it is enabled as below.
 
-![Auth0](/assets/auth0/machine.png)
+![Auth0](/assets/auth0/huddo-m2m.png)
 
 - The Scopes should automatically open as below, if they do not click the `>` next to the slider above
 - Find and tick the `read:users` scope then click `UPDATE`
@@ -86,5 +86,7 @@ Once your Auth0 tenant has been activated you will get an email from our support
 ![Huddo Boards Login](/assets/auth0/boards-login.png)
 
 After submitting your Team Name, you'll be asked for the email address and password associated with your Auth0 user account, to finalise your login.
-***
-![Company Details](/assets/auth0/boards-login2.PNG)
+
+---
+
+![Company Details](/assets/auth0/huddo-login.png)
