@@ -24,6 +24,26 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2020-12-12
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-12)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-12-12
+iswkudos/kudos-boards:provider-2020-12-12
+iswkudos/kudos-boards:licence-2020-12-12
+iswkudos/kudos-boards:notification-2020-12-12
+iswkudos/kudos-boards:webfront-2020-12-12
+iswkudos/kudos-boards:core-2020-12-12
+iswkudos/kudos-boards:boards-2020-12-12
+iswkudos/kudos-boards:activity-migration-2020-12-12
+```
+
+Features:
+
+- Added group membership option "Community Owners Only" which makes the community owners have owner rights in a board but does not allow any other community members access. This option is available for boards created in a community widget only.
+
 #### 2020-11-13
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-11-02)
 
