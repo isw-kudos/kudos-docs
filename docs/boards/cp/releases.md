@@ -44,16 +44,17 @@ Features:
 
 - Updated migration service to support the new "Community Owners only" option
 - Added fix for Activities that had already been imported and used the equivalent permission set in Activities
-      // boards.yaml
 
-      migration:
-        env:
+        // boards.yaml
 
-          // report activities and board membership that can be updated
-          FIX_COMMUNITY_OWNERS_ONLY=test
+        migration:
+          env:
 
-          // run the fix and report results
-          FIX_COMMUNITY_OWNERS_ONLY=true
+            // report activities and board membership that can be updated
+            FIX_COMMUNITY_OWNERS_ONLY=test
+
+            // run the fix and report results
+            FIX_COMMUNITY_OWNERS_ONLY=true
 
 ---
 
