@@ -2,6 +2,8 @@
 
 As part of the installation process for Huddo Boards (Activities Plus) you must run the migration service to move the existing Activities into Huddo Boards.
 
+> Note: please review the [Roles page](/boards/cp/roles/) for details on how Community Activity membership is interpreted & presented by Boards
+
 ## Process Overview
 
 This service will:
@@ -11,6 +13,7 @@ This service will:
 1. get file attachments and long descriptions not in SQL database via the Activities API
 1. write Boards data into the Component Pack mongo database
 1. write file attachments into S3 storage
+
 
 Ensure you have updated the following variables as applicable in your `boards-cp.yaml` file downloaded previously
 

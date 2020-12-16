@@ -32,11 +32,11 @@ Here are some quick instructions to help you get started with Huddo Boards. 
 
 ### Kanban View - Add Lists and Cards
 Add lists to a board to categorise todos and entries.
-Click on *Add a List* to add a new list to your board.
+Click on *Add a list* to add a new list to your board.
 
 ![Create List Example](../assets/boards/create_list.png)
 
-Click on *Add a Card* in any list to add a card to that list.
+Click on *Add a card* in any list to add a card to that list.
 
 ![Create Card Example](../assets/boards/create_card.png)
 

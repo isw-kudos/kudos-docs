@@ -103,6 +103,8 @@ Install the Boards services via our Helm chart
 > ie `[extractedFolder]/microservices_connections/hybridcloud/helmbuilds/`
 > or `https://docs.huddo.com/assets/config/kubernetes/`
 
+> **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
+
 For example:
 
     helm upgrade kudos-boards-cp ./microservices_connections/hybridcloud/helmbuilds/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods

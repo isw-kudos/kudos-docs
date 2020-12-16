@@ -55,6 +55,7 @@ licence:
 
 user:
   env:
+    # DISABLE_WELCOME_EMAIL: false
     # CONNECTIONS_NAME: HCL Connections
     # CONNECTIONS_CLIENT_ID: kudosboards
     CONNECTIONS_CLIENT_SECRET: long-secret-as-output-by-wsadmin-register

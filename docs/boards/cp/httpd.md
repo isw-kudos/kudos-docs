@@ -1,5 +1,9 @@
 ## Configure Reverse Proxy
 
+This document describes how to setup the proxy for serving the Boards application hosted in the Component pack by your Connections IHS
+
+It also includes a proxy rewrite rule, to serve the migrated Board when the legacy Activity URL is requested.
+
 1. Open WebSphere ISC
 
     This is usually accessible through a URL like:

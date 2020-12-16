@@ -4,15 +4,14 @@ pipeline {
   
   agent {
     docker {
-        image 'squidfunk/mkdocs-material'
-        args '--entrypoint=""'
+      image 'squidfunk/mkdocs-material'
+      args '--entrypoint=""'
     }
   }
   
   environment {
     SLACK_CHANNEL_NAME = '#kudos-devops-alerts'
     FAILURE_STAGE = 'Unknown'
-    GIT_CREDENTIALS_ID= 'kudos-devops-git'
   }
   
   stages {
@@ -36,13 +35,9 @@ pipeline {
       }
       steps {
         withCredentials([
-          usernamePassword(credentialsId: GIT_CREDENTIALS_ID, passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')
+          string(credentialsId: 'github-devops-token', variable: 'GH_TOKEN')
         ]) {
-          sh '''
-          echo "https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com" > gitcred
-          git config credential.helper "store --file=gitcred"
-          mkdocs gh-deploy
-          '''
+          sh 'mkdocs gh-deploy'
         }
       }
       post {

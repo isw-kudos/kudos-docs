@@ -18,6 +18,116 @@ Component Pack (Activities Plus)
 helm upgrade kudos-boards-cp https://docs.huddo.com/assets/config/kubernetes/kudos-boards-cp-2.0.0.tgz -i -f ./boards-cp.yaml --namespace connections --recreate-pods
 ```
 
+> **Note:** `--recreate-pods` ensures all images are up to date. This will cause downtime.
+
+> **Note:** if your Kubernetes version is pre 1.13, you must uncomment "global.legacyKube: true" in the yaml config file
+
+---
+
+#### 2020-12-14
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-14)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-12-14
+iswkudos/kudos-boards:provider-2020-12-14
+iswkudos/kudos-boards:licence-2020-12-14
+iswkudos/kudos-boards:notification-2020-12-14
+iswkudos/kudos-boards:webfront-2020-12-14
+iswkudos/kudos-boards:core-2020-12-14
+iswkudos/kudos-boards:boards-2020-12-14
+iswkudos/kudos-boards:activity-migration-2020-12-14
+```
+
+Features:
+
+- Updated migration service to support the new "Community Owners only" option
+- Added fix for Activities that had already been imported and used the equivalent permission set in Activities
+
+        // boards.yaml
+
+        migration:
+          env:
+
+            // report activities and board membership that can be updated
+            FIX_COMMUNITY_OWNERS_ONLY=test
+
+            // run the fix and report results
+            FIX_COMMUNITY_OWNERS_ONLY=true
+
+---
+
+#### 2020-12-12
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-12)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-12-12
+iswkudos/kudos-boards:provider-2020-12-12
+iswkudos/kudos-boards:licence-2020-12-12
+iswkudos/kudos-boards:notification-2020-12-12
+iswkudos/kudos-boards:webfront-2020-12-12
+iswkudos/kudos-boards:core-2020-12-12
+iswkudos/kudos-boards:boards-2020-12-12
+iswkudos/kudos-boards:activity-migration-2020-12-12
+```
+
+Features:
+
+- Added group membership option "Community Owners Only" which makes the community owners have owner rights in a board but does not allow any other community members access. This option is available for boards created in a community widget only.
+
+---
+
+#### 2020-11-13
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-11-02)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-11-13
+iswkudos/kudos-boards:provider-2020-11-13
+iswkudos/kudos-boards:licence-2020-11-13
+iswkudos/kudos-boards:notification-2020-11-13
+iswkudos/kudos-boards:webfront-2020-11-13
+iswkudos/kudos-boards:core-2020-11-13
+iswkudos/kudos-boards:boards-2020-11-13
+iswkudos/kudos-boards:activity-migration-2020-11-13
+```
+
+Improvements:
+
+- Increase multi-lingual coverage
+
+---
+
+#### 2020-11-02
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-11-02)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2020-11-02
+iswkudos/kudos-boards:provider-2020-11-02
+iswkudos/kudos-boards:licence-2020-11-02
+iswkudos/kudos-boards:notification-2020-11-02
+iswkudos/kudos-boards:webfront-2020-11-02
+iswkudos/kudos-boards:core-2020-11-02
+iswkudos/kudos-boards:boards-2020-11-02
+iswkudos/kudos-boards:activity-migration-2020-11-02
+```
+
+Improvements:
+
+- Increase multi-lingual coverage
+- Creating Board from template includes members/description
+- Option to disable Welcome emails (user.env.DISABLE_WELCOME_EMAIL)
+
+Fixes:
+
+- Uploading file in iOS Safari
+
 ---
 
 #### 2020-10-14
@@ -46,7 +156,6 @@ Fixes:
 - User trial reminder
 - Extension of user trials
 - Download linked files with .odt extension
-
 ---
 
 #### 2020-10-05

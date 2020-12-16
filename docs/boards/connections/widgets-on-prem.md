@@ -26,6 +26,21 @@ Basic instructions for adding Huddo Boards Docker widgets into HCL Connections o
         </widgetDef>
         <!-- END Huddo Boards -->
 
+1. Disable Community Activity widget
+
+      > Note: this is optional but highly recommended for CP installations of Activities Plus
+
+      Once Activities are migrated into Boards, it is recommended that the Community Activity widget is disabled to prevent confusion around the old data.
+
+      Find and comment out the Activity widget with `defId="Activities"`
+
+        <!-- Deprecated Activities widget, replaced by Activities Plus / Boards
+        ...
+        End of Deprecated Activities widget -->
+
+      ![Disabled Activity Widget in widgets-config.xml](/assets/connections/widget-disable-activities.png)
+     
+
 1.  Check in the widgets-config.xml file.
 
         ProfilesConfigService.checkInWidgetConfig()
