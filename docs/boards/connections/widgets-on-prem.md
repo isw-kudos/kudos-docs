@@ -28,7 +28,7 @@ Basic instructions for adding Kudos Boards Docker widgets into HCL Connections o
 
 1. Disable Community Activity widget
 
-      **Note: this is optional but highly recommended for CP installations of Activities Plus**
+      > Note: this is optional but highly recommended for CP installations of Activities Plus
 
       Once Activities are migrated into Boards, it is recommended that the Community Activity widget is disabled to prevent confusion around the old data.
 
