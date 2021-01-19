@@ -58,6 +58,37 @@ Features:
 
 ---
 
+#### 2021-01-19
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-01-19)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-01-19
+iswkudos/kudos-boards:provider-2021-01-19
+iswkudos/kudos-boards:licence-2021-01-19
+iswkudos/kudos-boards:notification-2021-01-19
+iswkudos/kudos-boards:webfront-2021-01-19
+iswkudos/kudos-boards:core-2021-01-19
+iswkudos/kudos-boards:boards-2021-01-19
+iswkudos/kudos-boards:activity-migration-2021-01-19
+```
+
+Improvements:
+
+- Show login page on file download when unauthorized
+- Login options for Verse/Outlook integration
+
+Fixes:
+
+- Tile color popup positioning and scrolling for small screens
+- Protect against null assignment value after import
+- PDF downloads inside the community widget
+- Show new cards added in assignments view
+- Show assigned cards in Timeline view (only affects some users with multiple linked accounts)
+
+---
+
 #### 2020-12-12
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2020-12-12)
 
