@@ -24,6 +24,39 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2021-02-19
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-02-19)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-02-19
+iswkudos/kudos-boards:provider-2021-02-19
+iswkudos/kudos-boards:licence-2021-02-19
+iswkudos/kudos-boards:notification-2021-02-19
+iswkudos/kudos-boards:webfront-2021-02-19
+iswkudos/kudos-boards:core-2021-02-19
+iswkudos/kudos-boards:boards-2021-02-19
+iswkudos/kudos-boards:activity-migration-2021-02-19
+```
+
+Improvements:
+
+- Todos view
+    - hide sub-cards which are not applicable
+    - hide multi-assigned tasks I have completed (assigned view)
+
+Fixes:
+
+- Disable notification for Communities with 'owner-only' membership
+- Notifications when creating a Board & members at the same time
+- Protect against imported data for assignments without users & nodes without creator
+- Mindmap - expand/collapse icons
+- Redirect from Activity URL to Board URL in the Connections header frame
+- Show all public members when multiple
+
+---
+
 #### 2021-01-19
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-01-19)
 
