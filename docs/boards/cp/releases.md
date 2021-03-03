@@ -24,6 +24,35 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2021-03-03
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-03)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-03
+iswkudos/kudos-boards:provider-2021-03-03
+iswkudos/kudos-boards:licence-2021-03-03
+iswkudos/kudos-boards:notification-2021-03-03
+iswkudos/kudos-boards:webfront-2021-03-03
+iswkudos/kudos-boards:core-2021-03-03
+iswkudos/kudos-boards:boards-2021-03-03
+iswkudos/kudos-boards:activity-migration-2021-03-03
+```
+
+Improvements:
+
+- Ability to sync profiles from Connections & Microsoft (please follow the steps on the Admin page of each Client)
+- Ability to automatically link user aliases in 2 different clients (eg Connections & Microsoft)
+- Support for Activity URL with entryId
+
+Fixes:
+
+- Redirect to login if required when accessing Activity URL
+- Board ACL updates for membership escallation
+
+---
+
 #### 2021-02-19
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-02-19)
 
