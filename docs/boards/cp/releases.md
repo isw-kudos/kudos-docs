@@ -24,6 +24,28 @@ helm upgrade kudos-boards-cp https://docs.kudosapps.com/assets/config/kubernetes
 
 ---
 
+#### 2021-03-04
+[Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-03)
+
+Images:
+
+```
+iswkudos/kudos-boards:user-2021-03-04
+iswkudos/kudos-boards:provider-2021-03-04
+iswkudos/kudos-boards:licence-2021-03-04
+iswkudos/kudos-boards:notification-2021-03-04
+iswkudos/kudos-boards:webfront-2021-03-04
+iswkudos/kudos-boards:core-2021-03-04
+iswkudos/kudos-boards:boards-2021-03-04
+iswkudos/kudos-boards:activity-migration-2021-03-04
+```
+
+Fixes:
+
+- Connections login no longer sends redirect_uri (connections will use the one configred in wsadmin)
+
+---
+
 #### 2021-03-03
 [Dockerhub](https://hub.docker.com/repository/docker/iswkudos/kudos-boards/tags?page=1&name=2021-03-03)
 
