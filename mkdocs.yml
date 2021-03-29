@@ -87,15 +87,7 @@ nav:
       - Boards Hybrid: boards/hybrid.md
       - FAQ:
           - Languages: boards/faq/languages.md
-      - Troubleshooting:
-          - Activities Plus: boards/troubleshooting/activities-plus-install.md
-          - Boards Hybrid: boards/troubleshooting/conn-hybrid.md
-          - Boards Docker: boards/troubleshooting/conn-on-prem.md
-          - Boards WebSphere: boards/troubleshooting/websphere.md
-          - Office 365: boards/troubleshooting/office365.md
-          - Notifications: boards/troubleshooting/notifications.md
-          - Browsers:
-              - Safari: boards/troubleshooting/safari.md
+      - Troubleshooting: boards/troubleshooting.md
       # - API Documentation: /assets/boards/api-documentation.html
       - How To Guide:
           - Knowledge Base & Support: boards/howto/knowledgebase.md
